@@ -228,6 +228,18 @@ a.c-feb:hover{
     padding: 0 2rem 0 1rem;
     color: #fff;
 }
+.img-cart{
+    position: absolute;
+    left: 0;
+    font-size: 22px;
+    white-space: nowrap;
+    text-transform: uppercase;
+    font-weight: 600;
+    line-height: 86px;
+    background: -webkit-linear-gradient(45deg, orange, #ffce59, orange);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 
 .header-menu .body-sticker{
 	position: relative;

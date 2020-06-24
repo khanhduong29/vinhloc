@@ -36,7 +36,7 @@
 										<button type="submit"></button> 
 									</form> 
 								</div> 
-								<a href="" title=""><img src="/vinhloc/theme/frontend/images/ic-cart.png" alt="error"></a>
+								<a href="" title="" class="img-cart"><img src="/vinhloc/theme/frontend/images/icon/ic-cart.png" alt="error"></a>
 							</div>
 						</div> 
 					</div>
