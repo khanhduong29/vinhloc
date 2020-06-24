@@ -48,13 +48,13 @@
 							<div class="row">
 								<div class="col-lg-5">
 									<ul class="menu-left d-flex justify-content-center">
-										<li><a href="index.html" class="active">Trang chủ</a></li>
-										<li><a href="about.html">Giới thiệu</a></li>
+										<li><a href="home" class="active">Trang chủ</a></li>
+										<li><a href="about">Giới thiệu</a></li>
 										<li>
 											<i class="fa fa-angle-right"></i>
-											<a href="product.html">Sản phẩm</a>
+											<a href="product">Sản phẩm</a>
 											<ul>
-												<li><a href="" class="smooth">Link 2 Lorem ipsum dolor</a></li>
+												<li><a href="#" class="smooth">Link 2 Lorem ipsum dolor</a></li>
 							    				<li>
 							    					<i class="fa fa-angle-right"></i>
 							    					<a href="#" class="smooth">Dropdown</a>
@@ -70,13 +70,13 @@
 									</ul>
 								</div>
 								<div class="col-lg-2">
-									<a href="" title="" class="logo-word">Vĩnh lộc luxury</a>
+									<a href="home" title="" class="logo-word">Vĩnh lộc luxury</a>
 								</div>
 								<div class="col-lg-5">
 									<ul class="menu-right d-flex justify-content-center">
-										<li><a href="service.html">Dịch vụ</a></li>
-										<li><a href="construction.html">Công trình</a></li>
-										<li><a href="contact.html">Liên hệ</a></li>
+										<li><a href="service">Dịch vụ</a></li>
+										<li><a href="construction">Công trình</a></li>
+										<li><a href="contact">Liên hệ</a></li>
 									</ul>
 								</div>
 							</div>

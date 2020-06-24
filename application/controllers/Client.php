@@ -5,7 +5,7 @@ class Client extends CI_Controller {
 
 	// Hàm khởi tạo
     function __construct() {
-        parent::__construct();
+		parent::__construct();
     }
 
 	public function index()
