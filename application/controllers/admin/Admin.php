@@ -15,6 +15,10 @@
         	$data['title'] = 'Giới thiệu';
 			$this->load->view('layouts/main_admin', $data);
 	    }
+
+	    public function login() {
+			$this->load->view('admin/login');
+	    }
 	}
 
  ?>
