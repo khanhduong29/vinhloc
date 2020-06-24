@@ -111,6 +111,8 @@ $('[data-fancybox="images"]').fancybox({
 		autoStart : true
 	}
 });
+
+
 $('.nav-tabs a[data-toggle="tab"]').on('shown.bs.tab', function(e) {
 	$('.slick2').slick('setPosition');
 });

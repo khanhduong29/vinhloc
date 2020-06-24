@@ -122,9 +122,9 @@
 		            	</ul>
 		            	<div class="tab-content pt-lg-5 pt-4">
 		            		<div role="tabpanel" class="tab-pane active list-pro" id="home">
-			            		<div class="slick2 sublist">
+			            		<div class="slick2 sublist imglist">
 			            			<div class="item"> 
-			                           <a href="" class="smooth hv-scale" title="Ảnh nhà hàng" data-fancybox="images" data-caption="Mallorca, Llubí, Spain">
+			                           <a href="" class="smooth hv-scale" title="Ảnh nhà hàng" data-fancybox="images" data-caption="">
 			                              <img src="/vinhloc/theme/frontend/images/slide/bn-ctent.jpg" alt="Ảnh nhà hàng" title="Ảnh nhà hàng" class="img-fluid" />
 			                           </a> 
 			                        </div>
@@ -451,7 +451,7 @@
 				</div>
 			</section>
 		</main>
-		<p class="imglist" style="max-width: 1000px;">
+<!-- 		<p class="imglist" style="max-width: 1000px;">
   <a href="https://source.unsplash.com/juHayWuaaoQ/1500x1000" data-fancybox="images" data-caption="">
     <img src="https://source.unsplash.com/juHayWuaaoQ/240x160" />
   </a>
@@ -483,5 +483,5 @@
   <a href="https://source.unsplash.com/B2LYYV9-y0s/1500x1000" data-fancybox="images" data-caption="On them Indiana Nights">
     <img src="https://source.unsplash.com/B2LYYV9-y0s/240x160" />
   </a>
-</p>
+</p> -->
 		
