@@ -124,22 +124,22 @@
 		            		<div role="tabpanel" class="tab-pane active list-pro" id="home">
 			            		<div class="slick2 sublist imglist">
 			            			<div class="item"> 
-			                           <a href="" class="smooth hv-scale" title="Ảnh nhà hàng" data-fancybox="images" data-caption="">
+			                           <a href="" class="smooth hv-scale" title="Ảnh nhà hàng" >
 			                              <img src="/vinhloc/theme/frontend/images/slide/bn-ctent.jpg" alt="Ảnh nhà hàng" title="Ảnh nhà hàng" class="img-fluid" />
 			                           </a> 
 			                        </div>
 			                        <div class="item"> 
-			                           <a href="" class="smooth hv-scale" title="Ảnh nhà hàng" data-fancybox="images" data-caption="Mallorca, Llubí, Spain">
+			                           <a href="" class="smooth hv-scale" title="Ảnh nhà hàng" >
 			                              <img src="/vinhloc/theme/frontend/images/slide/bn-ctent.jpg" alt="Ảnh nhà hàng" title="Ảnh nhà hàng" class="img-fluid" />
 			                           </a> 
 			                        </div>
 			                        <div class="item"> 
-			                           <a href="" class="smooth hv-scale" title="Ảnh nhà hàng" data-fancybox="images" data-caption="Mallorca, Llubí, Spain">
+			                           <a href="" class="smooth hv-scale" title="Ảnh nhà hàng" >
 			                              <img src="/vinhloc/theme/frontend/images/slide/bn-slider1.jpg" alt="Ảnh nhà hàng" title="Ảnh nhà hàng" class="img-fluid" />
 			                           </a> 
 			                        </div>
 			                        <div class="item"> 
-			                           <a href="" class="smooth hv-scale" title="Ảnh nhà hàng" data-fancybox="images" data-caption="Mallorca, Llubí, Spain">
+			                           <a href="" class="smooth hv-scale" title="Ảnh nhà hàng" >
 			                              <img src="/vinhloc/theme/frontend/images/slide/bn-ctent.jpg" alt="Ảnh nhà hàng" title="Ảnh nhà hàng" class="img-fluid" />
 			                           </a> 
 			                        </div>
@@ -451,37 +451,4 @@
 				</div>
 			</section>
 		</main>
-<!-- 		<p class="imglist" style="max-width: 1000px;">
-  <a href="https://source.unsplash.com/juHayWuaaoQ/1500x1000" data-fancybox="images" data-caption="">
-    <img src="https://source.unsplash.com/juHayWuaaoQ/240x160" />
-  </a>
-
-  <a href="https://source.unsplash.com/eWFdaPRFjwE/1500x1000" data-fancybox="images" data-caption="Mallorca, Llubí, Spain">
-    <img src="https://source.unsplash.com/eWFdaPRFjwE/240x160" />
-  </a>
-
-  <a href="https://source.unsplash.com/c1JxO-uAZd0/1500x1000" data-fancybox="images" data-caption="Danish summer">
-    <img src="https://source.unsplash.com/c1JxO-uAZd0/240x160" />
-  </a>
-
-  <a href="https://source.unsplash.com/eXHeq48Z-Q4/1500x1000" data-fancybox="images" data-caption="Sunrise above a sandy beach">
-    <img src="https://source.unsplash.com/eXHeq48Z-Q4/240x160" />
-  </a>
-
-  <a href="https://source.unsplash.com/RFgO9B_OR4g/1500x1000" data-fancybox="images" data-caption="Woman on a slope by the shore">
-    <img src="https://source.unsplash.com/RFgO9B_OR4g/240x160" />
-  </a>
-
-  <a href="https://source.unsplash.com/7bwQXzbF6KE/1500x1000" data-fancybox="images" data-caption="Mountain hiking sunset">
-    <img src="https://source.unsplash.com/7bwQXzbF6KE/240x160" />
-  </a>
-
-  <a href="https://source.unsplash.com/NhU0nUR7920/1500x1000" data-fancybox="images" data-caption="Sunset Picnic">
-    <img src="https://source.unsplash.com/NhU0nUR7920/240x160" />
-  </a>
-
-  <a href="https://source.unsplash.com/B2LYYV9-y0s/1500x1000" data-fancybox="images" data-caption="On them Indiana Nights">
-    <img src="https://source.unsplash.com/B2LYYV9-y0s/240x160" />
-  </a>
-</p> -->
 		
