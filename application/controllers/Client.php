@@ -59,7 +59,7 @@ class Client extends CI_Controller {
 	public function service()
 	{
 		$data['main'] = 'client/service';
-        $data['title'] = 'Sản phẩm';
+        $data['title'] = 'Dịch vụ';
 		$this->load->view('layouts/main', $data);
 	}
 }
