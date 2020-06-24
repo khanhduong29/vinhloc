@@ -29,13 +29,14 @@
 							<div class="col-lg-9 col-md-9 col-xs-12 d-none d-md-block d-lg-block"> 
 								<a href="tel:091 668 1919" class="pline text-left c-feb hv-c-fff" title="091 668 1919">091 668 1919</a> 
 							</div> 
-							<div class="col-lg-3 col-md-3 col-xs-12"> 
+							<div class="col-lg-3 col-md-3 col-xs-12 d-flex"> 
 								<div class="fr-search text-right"> 
 									<form action="tim-kiem" method="get"> 
 										<input type="text" name="name" placeholder="Tìm kiếm sản phẩm ..." value=""> 
 										<button type="submit"></button> 
 									</form> 
 								</div> 
+								<a href="" title=""><img src="/vinhloc/theme/frontend/images/ic-cart.png" alt="error"></a>
 							</div>
 						</div> 
 					</div>
