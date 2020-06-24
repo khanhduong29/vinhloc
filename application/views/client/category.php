@@ -37,7 +37,7 @@
 			                    </div>
 							</div>
 							<div class="col-12 col-sm-6 col-md-4 col-lg-3">
-								<div class="pt-2">
+								<div class="pt-4">
 		                            <div class="thumbnail pb-4">
 		                            	<a href="" class="hv-scale p-3 b-ra-30">
 		                            		<img src="/vinhloc/theme/frontend/images/product/0fcdb1b05c06ba58e317.jpg" class="img-fluid"  alt="a" />

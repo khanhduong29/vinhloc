@@ -21,6 +21,10 @@
 		            				</span>
 		            				<ul> 
 		            					<li> 
+		            						<span class="tb1">Mã sản phẩm: </span> 
+		            						<span class="tb2">MT8137D-10+5+5</span> 
+		            					</li> 
+		            					<li> 
 		            						<span class="tb1">Xuất xứ: </span> 
 		            						<span class="tb2">Đài Loan</span> 
 		            					</li> 
