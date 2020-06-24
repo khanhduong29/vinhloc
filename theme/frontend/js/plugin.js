@@ -99,6 +99,18 @@ jQuery(document).ready(function($) {
   });
 });
 
+$('[data-fancybox="images"]').fancybox({
+	buttons : [ 
+		'slideShow',
+		'share',
+		'zoom',
+		'fullScreen',
+		'close'
+	],
+	thumbs : {
+		autoStart : true
+	}
+});
 $('.nav-tabs a[data-toggle="tab"]').on('shown.bs.tab', function(e) {
 	$('.slick2').slick('setPosition');
 });
