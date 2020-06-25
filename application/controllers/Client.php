@@ -62,4 +62,9 @@ class Client extends CI_Controller {
         $data['title'] = 'Dịch vụ';
 		$this->load->view('layouts/main', $data);
 	}
+	public function blog_detail() {
+		$data['main'] = 'client/blog_detail';
+		$data['title'] = 'Blog Detail';
+		$this->load->view('layouts/main',$data);
+	}
 }

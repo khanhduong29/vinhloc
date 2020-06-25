@@ -58,3 +58,4 @@ $route['product'] = 'client/product';
 $route['service'] = 'client/service';
 $route['construction'] = 'client/construction';
 $route['contact'] = 'client/contact';
+$route['blog_detail'] = 'client/blog_detail';
