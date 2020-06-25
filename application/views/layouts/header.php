@@ -37,7 +37,7 @@
 										<button type="submit"></button> 
 									</form> 
 								</div> 
-								<a href="#" title="" class="img-cart"><img src="/vinhloc/theme/frontend/images/icon/ic-cart-feb.png" alt="error"></a>
+								<a  title="" class="img-cart cart-lap"><img src="/vinhloc/theme/frontend/images/icon/ic-cart-feb.png" alt="error"></a>
 								<span class="amount-cart">3</span>
 								<div class="cart-hover">
 	                                <table class="select-items">
@@ -135,8 +135,37 @@
 								    	</form>
 								  	</div>
 								</div>
-								<a href="" title="" class="img-cart"><img src="/vinhloc/theme/frontend/images/icon/ic-cart-feb.png" alt="error"></a>
+								<a title="" class="img-cart cart-mobile"><img src="/vinhloc/theme/frontend/images/icon/ic-cart-feb.png" alt="error"></a>
 								<span class="amount-cart">3</span>
+								<div class="cart-hover">
+	                                <table class="select-items">
+	                                    <tr ng-repeat="c in carts">
+	                                        <td class="si-img">
+	                                            <img src="/vinhloc/theme/frontend/images/product/061915d98b626d3c3473.jpg" alt="">
+	                                        </td>
+	                                        <td class="si-content">
+	                                            <div class="si-product">
+	                                                <p>200.000 VNĐ <span>x 1</span></p>
+	                                                <h6>Đèn mâm ốp đồng</h6>
+	                                            </div>
+	                                        </td>
+	                                        <td class="si-close">
+	                                            <a href="#"  ng-click="clear_product($index)" ><i class="far fa-times-circle"></i></a>
+	                                        </td>
+	                                    </tr>
+	                                </table>
+	                                <div class="select-total">
+	                                    <span>Total:</span>
+	                                    <span> 
+	                                        <i class="fas fa-dollar-sign"></i>
+	                                        <span class="d-inline-block ml-1">{{total_amount | number : 2}}</span>
+	                                    </span>
+	                                </div>
+	                                <div class="select-button">
+	                                    <a href="resource/pages/cart.php" class="btn btn-dark btn-lg">View card</a>
+	                                    <a href="resource/pages/checkout.php" class="btn btn-danger btn-lg"> Check out</a>
+	                                </div>
+	                            </div>
 							</div> 
 						</div>
 						<button class="nav-toggler col-1 pl-0">

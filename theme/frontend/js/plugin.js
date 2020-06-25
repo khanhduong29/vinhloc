@@ -327,18 +327,18 @@ $(document).ready(function() {
 
 // giỏ hàng
 
-$('.img-cart').hover(function() {
-    $('.cart-hover').toggleClass('cart-hover-active')
+$('.cart-lap').hover(function() {
+    $('.cart-hover').toggleClass('cart-hover-active');
 });
 $('.cart-hover').hover(function() {
-    $(this).toggleClass('cart-hover-active')
+    $(this).toggleClass('cart-hover-active');
 });
 
 // click cart 
-$('.img-cart').click(function() {
-    $('.cart-hover').toggleClass('cart-hover-active')
+$('.cart-mobile').click(function() {
+    $('.cart-hover').toggleClass('cart-hover-active');
 });
 $('.cart-hover').click(function() {
-    $(this).toggleClass('cart-hover-active')
+    $(this).toggleClass('cart-hover-active');
 });
 

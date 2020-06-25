@@ -1494,15 +1494,15 @@ a.c-feb:hover{
 
 .cart-hover {
     position: absolute;
-    background: #ffffff;
+    background: rgba(0, 0, 0, 0.8);
     width: 350px;
     padding: 10px 20px;
     opacity: 0;
     z-index: -1;
     visibility: hidden;
     transition: all 0.5s;
-    /* left: -250px; */
     top: 40px;
+    color: #fff;
 }
 
 .cart-hover-active {
