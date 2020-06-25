@@ -64,6 +64,7 @@
 	<script src="/vinhloc/theme/frontend/js/jquery-3.5.1.min.js"></script>	
 	<script src="/vinhloc/theme/frontend/js/bootstrap.min.js"></script>
 	<script src="/vinhloc/theme/frontend/js/slick.js"></script>
+	<script src="/vinhloc/theme/frontend/dist/jquery.fancybox.js"></script>
 	<script src="/vinhloc/theme/frontend/js/select2.min.js"></script>
 	<script src="/vinhloc/theme/frontend/js/wow.min.js"></script>
 	<script src="/vinhloc/theme/frontend/js/plugin.js"></script>
