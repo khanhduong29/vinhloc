@@ -1501,7 +1501,8 @@ a.c-feb:hover{
     z-index: -1;
     visibility: hidden;
     transition: all 0.5s;
-    left: -250px;
+    /* left: -250px; */
+    top: 40px;
 }
 
 .cart-hover-active {

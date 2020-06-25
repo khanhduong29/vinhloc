@@ -37,18 +37,18 @@
 										<button type="submit"></button> 
 									</form> 
 								</div> 
-								<a href="" title="" class="img-cart"><img src="/vinhloc/theme/frontend/images/icon/ic-cart-feb.png" alt="error"></a>
+								<a href="#" title="" class="img-cart"><img src="/vinhloc/theme/frontend/images/icon/ic-cart-feb.png" alt="error"></a>
 								<span class="amount-cart">3</span>
 								<div class="cart-hover">
 	                                <table class="select-items">
 	                                    <tr ng-repeat="c in carts">
 	                                        <td class="si-img">
-	                                            <img src="{{c.image}}" alt="">
+	                                            <img src="/vinhloc/theme/frontend/images/product/061915d98b626d3c3473.jpg" alt="">
 	                                        </td>
 	                                        <td class="si-content">
 	                                            <div class="si-product">
-	                                                <p>${{c.sale_price | number : 2}} <span>x 1</span></p>
-	                                                <h6>{{c.name}}</h6>
+	                                                <p>200.000 VNĐ <span>x 1</span></p>
+	                                                <h6>Đèn mâm ốp đồng</h6>
 	                                            </div>
 	                                        </td>
 	                                        <td class="si-close">
