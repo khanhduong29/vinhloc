@@ -10,7 +10,7 @@
   <!-- Font Awesome -->
   <link rel="stylesheet" href="/vinhloc/theme/frontend/admin/plugins/fontawesome-free/css/all.min.css">
   <!-- Ionicons -->
-  <link rel="stylesheet" href="/vinhloc/theme/frontend/admin/plugins/ionicons.min.css">
+  <link rel="stylesheet" href="/vinhloc/theme/frontend/admin/plugins/ionicons-2.0.1/css/ionicons.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="/vinhloc/theme/frontend/admin/dist/css/adminlte.css">
   <!-- overlayScrollbars -->
