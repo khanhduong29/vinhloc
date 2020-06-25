@@ -13,6 +13,7 @@ main{
 }
 body{
 	background-image: url('../images/bg-wreapper.png');
+	overflow-x: hidden;
 }
 .back-top {
     display: none;
@@ -367,7 +368,7 @@ a.c-feb:hover{
 }
 
 .body-sticker ul ul ul {
-    left: 98%;
+    left: 100%;
     top: 0;
 }
 .body-sticker li ul li a{
