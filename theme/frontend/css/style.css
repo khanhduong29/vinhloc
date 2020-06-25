@@ -383,6 +383,7 @@ a.c-feb:hover{
     font-weight: 600;
     line-height: 86px;
     background: -webkit-linear-gradient(45deg, orange, #ffce59, orange);
+    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 .header-menu .logo{
@@ -973,6 +974,7 @@ a.c-feb:hover{
     border:1px solid #b19655;
     background:#fff;
     border-radius: .5rem;
+    vertical-align:middle;
     text-align:center;
     padding:1rem;
     margin: 10px;
@@ -989,6 +991,8 @@ a.c-feb:hover{
     margin:auto;
 
 }
+
+
 
 /* footer */
 
