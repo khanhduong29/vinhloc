@@ -67,4 +67,10 @@ class Client extends CI_Controller {
 		$data['title'] = 'Blog Detail';
 		$this->load->view('layouts/main',$data);
 	}
+	public function login()
+	{
+		$data['main'] = 'client/login';
+        $data['title'] = 'Login';
+		$this->load->view('layouts/main', $data);
+	}
 }
