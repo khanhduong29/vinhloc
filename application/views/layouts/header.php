@@ -10,6 +10,7 @@
 		<link rel="stylesheet" type="text/css" href="/vinhloc/theme/frontend/css/select2.min.css">
 		<link rel="stylesheet" type="text/css" href="/vinhloc/theme/frontend/css/slick.css">
 		<link rel="stylesheet" type="text/css" href="/vinhloc/theme/frontend/css/slick-theme.css">
+		<link rel="stylesheet" href="/vinhloc/theme/frontend/dist/jquery.fancybox.css">
 		<link rel="stylesheet" type="text/css" href="/vinhloc/theme/frontend/fonts/fontawesome-free-5.13.0-web/css/all.min.css">
 		<link rel="stylesheet" type="text/css" href="/vinhloc/theme/frontend/css/style.css">
 		<link rel="stylesheet" type="text/css" href="/vinhloc/theme/frontend/css/reponsive.css">
