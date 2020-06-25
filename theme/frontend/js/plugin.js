@@ -319,6 +319,42 @@ $('.slick5').slick({
 	]
 });
 
+$('.slick6').slick({
+	dots:true,
+	infinite:true,
+	speed:2000,
+	pause:5000,
+	slidesToShow:1,
+	slidesToScroll:1,
+	rows:8,
+	prevArrow:'',
+	nextArrow:'',
+	responsive:[{
+		breakpoint:1280,
+		settings:{
+			slidesToShow:1,
+			slidesToScroll:1,
+			infinite:true,
+			dots:true
+		}
+	},
+	{
+		breakpoint:800,
+		settings:{
+			slidesToShow:1,
+			slidesToScroll:1
+		}
+	},
+	{
+		breakpoint:480,
+		settings:{
+			slidesToShow:1,
+			slidesToScroll:1
+		}
+	}
+	]
+});
+
 
 $(document).ready(function() {
   	$(".js-example-basic-single").select2();

@@ -1405,9 +1405,6 @@ a.c-feb:hover{
     padding-right: 10px;
 }
 
-
-
-
 .select2-search--dropdown {
     display: none;
 }
@@ -1484,6 +1481,40 @@ a.c-feb:hover{
 /* select2-selection select2-selection--single */
 .select2-selection:focus .fa-caret-down{
     transform: rotate(-90deg);
+}
+.list-content h1 {
+	margin-top: 0;
+	font-size: 1.2rem;
+    line-height: 1.6;
+    color: #ffcb49;
+    text-transform: uppercase;
+    font-family: 'Lora-Regular',sans-serif;
+    margin-bottom: 1rem;
+}
+.list-content .word-ctent {
+	color: #c6ceca;
+    font-family: 'Lora-Regular',sans-serif;
+}
+.list-content .word-ctent p {
+	font-size: 1rem;
+}
+.list-content .word-ctent a {
+	color: #feb300;
+}
+.s-content h2 {
+	display: block;
+    font-size: 1.5em;
+    margin-top: 0.83em;
+    margin-bottom: 0.83em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+}
+
+.slick6 {
+    background: url(/vinhloc/theme/frontend/images/border/bk-sharing.png) no-repeat;
+    background-size: 100% 100%;
+    padding: 1.4rem;
 }
 
 
@@ -1573,3 +1604,4 @@ a.c-feb:hover{
     background: #e7ab3c !important;
     border: #e7ab3c !important;
 }
+
