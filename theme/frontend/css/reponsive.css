@@ -15,7 +15,11 @@
 		top: 150px;
 	}
 	.fr-search input::placeholder {
-	    font-size: 14px;
+	    font-size: 12px;
+	}
+	.fr-search button{
+		width: 20px;
+		height: 18px;
 	}
 	
 }

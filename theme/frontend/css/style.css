@@ -206,6 +206,7 @@ a.c-feb:hover{
     height: 22px;
     right: 15px;
     top: 0;
+    background-size: contain;
     background: url(../images/icon/ic-search.png) no-repeat;
     outline: none;
 	border: none;
@@ -228,12 +229,9 @@ a.c-feb:hover{
     padding: 0 3rem 0 1rem;
     color: #fff;
 }
-.img-cart{
-    background: -webkit-linear-gradient(45deg, orange, #ffce59, orange);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+.fr-search input::placeholder{
+    font-size: 14px;
 }
-
 .header-menu .body-sticker{
 	position: relative;
     background: url(../images/border/bk-menu.png) no-repeat;
@@ -424,7 +422,30 @@ a.c-feb:hover{
 }
 .fr-search-mobile button{
     top: 4px;
-    right: 0;
+    right: 45px;
+}
+.img-cart img{
+    position: relative;
+
+}
+.mobile-phone .img-cart img{
+    padding-top: 3px;
+    width: 25px;
+    float: right;
+    margin-right: 10px;
+}
+.amount-cart {
+    position: absolute;
+    color: #fff;
+    right: -5px;
+    top: -10px;
+    padding: 5px;
+    border: 1px solid #feb300;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    font-size: 12px;
+    line-height: 5px;
 }
 
 .nav-toggler {
@@ -1463,4 +1484,91 @@ a.c-feb:hover{
 /* select2-selection select2-selection--single */
 .select2-selection:focus .fa-caret-down{
     transform: rotate(-90deg);
+}
+
+
+
+
+/* hover giỏ hàng */
+
+
+.cart-hover {
+    position: absolute;
+    background: #ffffff;
+    width: 350px;
+    padding: 10px 20px;
+    opacity: 0;
+    z-index: -1;
+    visibility: hidden;
+    transition: all 0.5s;
+    left: -250px;
+}
+
+.cart-hover-active {
+    opacity: 1;
+    z-index: 999;
+    visibility: visible;
+    transition: all 0.5s;
+}
+
+.select-items {
+    width: 100%;
+    border-bottom: solid 1px #3b3b3b;
+}
+
+.si-img {
+    width: 72px;
+    height: 72px;
+    overflow: hidden;
+}
+
+.si-img img {
+    max-width: 100%;
+    height: auto;
+}
+
+.si-content {
+    padding: 20px;
+    font-weight: bold;
+}
+
+.si-product p {
+    color: #e7ab3c;
+    font-weight: 700;
+}
+
+.si-close {
+    text-align: right;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.select-total {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+    width: 100%;
+}
+
+.select-total span {
+    text-transform: uppercase;
+}
+
+.select-button {
+    display: inline-block;
+    width: 100%;
+}
+
+.select-button a {
+    margin-bottom: 10px;
+    display: inline-block;
+    width: 100%;
+    text-transform: uppercase;
+    color: #ced4da;
+    font-size: 14px;
+}
+
+.select-button a:last-child {
+    background: #e7ab3c !important;
+    border: #e7ab3c !important;
 }

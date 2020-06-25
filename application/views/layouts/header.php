@@ -29,7 +29,7 @@
 							<div class="col-lg-9 col-md-9 col-xs-12 d-none d-md-block d-lg-block"> 
 								<a href="tel:091 668 1919" class="pline text-left c-feb hv-c-fff" title="091 668 1919">091 668 1919</a> 
 							</div> 
-							<div class="col-lg-3 col-md-3 col-xs-12 d-flex"> 
+							<div class="col-lg-3 col-md-3 col-xs-12 d-flex "> 
 								<div class="fr-search text-right"> 
 									<form action="tim-kiem" method="get"> 
 										<input type="text" name="name" placeholder="Tìm kiếm sản phẩm ..." value=""> 
@@ -37,6 +37,36 @@
 									</form> 
 								</div> 
 								<a href="" title="" class="img-cart"><img src="/vinhloc/theme/frontend/images/icon/ic-cart-feb.png" alt="error"></a>
+								<span class="amount-cart">3</span>
+								<div class="cart-hover">
+	                                <table class="select-items">
+	                                    <tr ng-repeat="c in carts">
+	                                        <td class="si-img">
+	                                            <img src="{{c.image}}" alt="">
+	                                        </td>
+	                                        <td class="si-content">
+	                                            <div class="si-product">
+	                                                <p>${{c.sale_price | number : 2}} <span>x 1</span></p>
+	                                                <h6>{{c.name}}</h6>
+	                                            </div>
+	                                        </td>
+	                                        <td class="si-close">
+	                                            <a href="#"  ng-click="clear_product($index)" ><i class="far fa-times-circle"></i></a>
+	                                        </td>
+	                                    </tr>
+	                                </table>
+	                                <div class="select-total">
+	                                    <span>Total:</span>
+	                                    <span> 
+	                                        <i class="fas fa-dollar-sign"></i>
+	                                        <span class="d-inline-block ml-1">{{total_amount | number : 2}}</span>
+	                                    </span>
+	                                </div>
+	                                <div class="select-button">
+	                                    <a href="resource/pages/cart.php" class="btn btn-dark btn-lg">View card</a>
+	                                    <a href="resource/pages/checkout.php" class="btn btn-danger btn-lg"> Check out</a>
+	                                </div>
+	                            </div>
 							</div>
 						</div> 
 					</div>
@@ -92,7 +122,7 @@
 								<img src="/vinhloc/theme/frontend/images/logo-ft.png" alt="">
 							</a>
 						</div>
-						<div class="mobile-phone col-7">
+						<div class="mobile-phone col-8">
 							<div class="fr-search fr-search-mobile"> 
 								<button type="button" onclick="openSearch()"></button> 
 								<div id="myOverlay" class="overlay">
@@ -104,9 +134,11 @@
 								    	</form>
 								  	</div>
 								</div>
+								<a href="" title="" class="img-cart"><img src="/vinhloc/theme/frontend/images/icon/ic-cart-feb.png" alt="error"></a>
+								<span class="amount-cart">3</span>
 							</div> 
 						</div>
-						<button class="nav-toggler col-2">
+						<button class="nav-toggler col-1 pl-0">
 				          	<span></span>
 				        </button>
 					</div>

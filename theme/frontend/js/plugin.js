@@ -323,3 +323,22 @@ $('.slick5').slick({
 $(document).ready(function() {
   	$(".js-example-basic-single").select2();
 });
+
+
+// giỏ hàng
+
+$('.img-cart').hover(function() {
+    $('.cart-hover').toggleClass('cart-hover-active')
+});
+$('.cart-hover').hover(function() {
+    $(this).toggleClass('cart-hover-active')
+});
+
+// click cart 
+$('.img-cart').click(function() {
+    $('.cart-hover').toggleClass('cart-hover-active')
+});
+$('.cart-hover').click(function() {
+    $(this).toggleClass('cart-hover-active')
+});
+
