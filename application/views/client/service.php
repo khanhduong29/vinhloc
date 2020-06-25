@@ -76,9 +76,6 @@
 									 	<div class="form-group"> 
 									 		<input type="number" class="form-control" name="phone" placeholder="Số điện thoại"> 
 									 	</div> 
-									 	<div class="form-group"> 
-									 		<input type="number" class="form-control nuber" name="number" placeholder="Số lượng"> 
-									 	</div> 
 									 	<button type="submit" class="form-control btn-lg-feb">Đặt hàng</button> 
 									</form> 
 								</div> 

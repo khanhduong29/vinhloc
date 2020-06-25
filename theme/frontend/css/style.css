@@ -949,7 +949,8 @@ a.c-feb:hover{
 }
 .slick-dots{
     text-align:center;
-    bottom: 10px;
+	bottom: 10px;
+	left: 0;
 }
 .slick-dots button{
     display:none
@@ -1500,6 +1501,9 @@ a.c-feb:hover{
 }
 .list-content .word-ctent a {
 	color: #feb300;
+}
+.word-ctent .wp-caption img {
+	height: 100%;
 }
 .s-content h2 {
 	display: block;
