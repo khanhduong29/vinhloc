@@ -342,14 +342,16 @@ $('.slick6').slick({
 		breakpoint:800,
 		settings:{
 			slidesToShow:1,
-			slidesToScroll:1
+			slidesToScroll:1,
+			rows:6
 		}
 	},
 	{
 		breakpoint:480,
 		settings:{
 			slidesToShow:1,
-			slidesToScroll:1
+			slidesToScroll:1,
+			rows:5
 		}
 	}
 	]

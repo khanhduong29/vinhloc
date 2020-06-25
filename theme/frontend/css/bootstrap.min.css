@@ -233,6 +233,8 @@ th {
 label {
   display: inline-block;
   margin-bottom: .5rem;
+  text-transform: uppercase;
+    color: #dbaf56;
 }
 
 button {

@@ -16,7 +16,7 @@
 						<p>Những phong cách đèn nội thất luôn được nhiều người chọn lựa nhất sau đây sẽ giúp bạn hiểu
 							hơn về ngành đèn này.</p>
 						<p>Xem thêm:&nbsp;<a
-								href="/vinhloc/theme/frontend/images/giay-dan-tuong-da-nang-compressed.jpg">Những
+								href="">Những
 								mẫu đèn nội thất dành riêng cho mùa Tết Trung Thu</a></p>
 						<h2><strong>TRANG TRÍ ĐÈN NỘI THẤT ĐƠN GIẢN, CỔ ĐIỂN</strong></h2>
 						<div id="attachment_410" class="wp-caption aligncenter"><img class="size-full wp-image-410"
@@ -40,7 +40,7 @@
 							<p class="wp-caption-text" style="text-align: center;">Den trang tri tinh te, dac sac</p>
 						</div>
 						<p>Nếu bạn đang sở hữu trong tay một không gian đương đại, tân cổ điển thì<span>&nbsp;</span><a
-								rel="noopener noreferrer" href="http://denvinhloc.vn/" target="_blank">đèn nội
+								rel="noopener noreferrer" href="" target="_blank">đèn nội
 								thất</a><span>&nbsp;</span>phải được thiết kế rất cầu kỳ, tinh xảo thì mới hài hòa được
 							với không gian. Đại diện cho không gian này, những bộ đèn pha lê với những chi tiết bắt mắt
 							hay đơn giản là những bộ đèn Châu Âu cầu kỳ từ hình thức. Tất cả đều được thể hiện theo đúng
@@ -59,11 +59,11 @@
 							được thể hiện ngay trên chính những bộ đèn mà bạn chọn lựa. Và kiểu trang trí này hợp với
 							người Á Đông, cho nên phần nhiều chất liệu được sử dụng là gỗ, nhựa giả gỗ, da động vật,..
 							Ánh sáng đèn thường có màu vàng hoặc trắng vàng. Những bộ<span>&nbsp;</span><a
-								rel="noopener noreferrer" href="http://denvinhloc.vn/san-pham/den-op-tran.html"
+								rel="noopener noreferrer" href=""
 								target="_blank">đèn trần</a>,<span>&nbsp;</span><a rel="noopener noreferrer"
 								href="/vinhloc/theme/frontend/images/giay-dan-tuong-da-nang-compressed.jpg"
 								target="_blank">đèn tường</a>,
-							đèn thả hay<span>&nbsp;</span><a href="http://denvinhloc.vn/san-pham/den-ban.html"
+							đèn thả hay<span>&nbsp;</span><a href=""
 								target="_parent">đèn bàn</a><span>&nbsp;</span>đều được thể hiện tốt với phong cách này.
 						</p>
 						<p>Như vậy dù bạn chọn phong cách nào, dù có hiện đại, cổ điển hay chỉ là những mẫu đơn giản thì

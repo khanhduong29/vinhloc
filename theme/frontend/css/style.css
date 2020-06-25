@@ -13,6 +13,7 @@ main{
 }
 body{
 	background-image: url('../images/bg-wreapper.png');
+	overflow-x: hidden;
 }
 .back-top {
     display: none;
@@ -372,7 +373,7 @@ a.c-feb:hover{
 }
 
 .body-sticker ul ul ul {
-    left: 98%;
+    left: 100%;
     top: 0;
 }
 .body-sticker li ul li a{
@@ -955,7 +956,8 @@ a.c-feb:hover{
 }
 .slick-dots{
     text-align:center;
-    bottom: 10px;
+	bottom: 10px;
+	left: 0;
 }
 .slick-dots button{
     display:none
@@ -1506,6 +1508,9 @@ a.c-feb:hover{
 }
 .list-content .word-ctent a {
 	color: #feb300;
+}
+.word-ctent .wp-caption img {
+	height: 100%;
 }
 .s-content h2 {
 	display: block;
