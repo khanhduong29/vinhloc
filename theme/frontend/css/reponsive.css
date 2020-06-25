@@ -21,6 +21,9 @@
 		width: 20px;
 		height: 18px;
 	}
+	.cart-hover {
+        left: -95px;
+    }
 	
 }
 @media (max-width: 1280px){
@@ -51,6 +54,9 @@
 	.nav-toggler {
 		padding-top: 20px;
 	}
+	.cart-hover {
+        left: 150px;
+    }
 	
 }
 @media only screen and (min-width: 1024px){
@@ -99,7 +105,10 @@
 	}
 	.contain-sr .word-left{
 	    width: 100%;
-}
+	}
+	.cart-hover {
+        left: 50px;
+    }
 	
 }
 @media only screen and (max-width: 575px){
@@ -121,6 +130,11 @@
 	.nav-toggler{
 	    padding-top: 10px;
 	}
+	.cart-hover {
+        padding: 5px;
+        left: -55px;
+        width: 315px;
+    }
 }
 @media (min-width: 991px) and (max-width: 1200px){
 	.body-sticker ul li a {
@@ -175,6 +189,13 @@
 	.menu-mobile img{
 		width: 75px;
 	}
+	.cart-hover {
+        left: -80px;
+    }
 }
-
+@media (min-width: 319px) and (max-width: 350px){
+	.cart-hover {
+		width: 290px;
+    }
+}
 

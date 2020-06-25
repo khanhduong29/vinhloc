@@ -196,6 +196,11 @@ a.c-feb:hover{
     top: 0;
     background: url(../images/icon/ic-phone.png) no-repeat;
 }
+#headerTop{
+    padding: 10px;
+    border-bottom: 1px solid #4f4d4d;
+    color: #fff;
+}
 .fr-search{
     position: relative;
 }
@@ -389,7 +394,7 @@ a.c-feb:hover{
 .header-menu .logo{
 	position: absolute;
     width: 288px;
-    top: 0;
+    top: 45px;
     left: 50%;
     -webkit-transform: translate(-50%, -44%);
     transform: translate(-50%, 0);
@@ -426,6 +431,7 @@ a.c-feb:hover{
 }
 .img-cart img{
     position: relative;
+    cursor: pointer;
 
 }
 .mobile-phone .img-cart img{
@@ -517,12 +523,12 @@ a.c-feb:hover{
     color: #fff;
 }
 .sticker-menu .title{
-    font-size: 30px;
+    font-size: 20px;
     margin: 20px 0;
 }
 .sticker-menu .close-menu{
     position: absolute;
-    top: 45px;
+    top: 33px;
     right: 10px;
 }
 .sticker-menu .mobile-search{
@@ -1525,18 +1531,20 @@ a.c-feb:hover{
 
 .cart-hover {
     position: absolute;
-    background: rgba(0, 0, 0, 0.8);
-    width: 350px;
+    background: rgba(0, 0, 0, 0.9);
+    width: 320px;
     padding: 10px 20px;
     opacity: 0;
     z-index: -1;
     visibility: hidden;
     transition: all 0.5s;
-    top: 40px;
+    left: 0;
+    top: -100%;
     color: #fff;
 }
 
 .cart-hover-active {
+    top: 40px;
     opacity: 1;
     z-index: 999;
     visibility: visible;
@@ -1596,12 +1604,5 @@ a.c-feb:hover{
     display: inline-block;
     width: 100%;
     text-transform: uppercase;
-    color: #ced4da;
     font-size: 14px;
 }
-
-.select-button a:last-child {
-    background: #e7ab3c !important;
-    border: #e7ab3c !important;
-}
-

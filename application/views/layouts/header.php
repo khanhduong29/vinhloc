@@ -23,6 +23,23 @@
 			<a href="tel:091 668 1919" class="pline c-feb hv-c-fff" title="091 668 1919">091 668 1919</a>
 		</div>
 		<header>
+			<div id="headerTop" class="d-none d-lg-block">
+	            <div class="container d-flex justify-content-between">
+	                <div class="d-flex flex-row">
+	                    <div class="ht-email pr-5 d-none d-md-block">
+	                        <i class="fas fa-envelope"></i><span class="d-inline-block ml-2">Denvinhloc243@gmail.com</span>
+	                    </div>
+	                </div>
+	                <div class="d-flex flex-row">
+	                    <a href="resource/pages/login.php" class="pr-2  c-fff">
+	                        <span class="d-inline-block ml-2">Đăng nhập</span>
+	                    </a>
+	                    <a href="resource/pages/login.php" class="border-left pl-2 c-fff">
+	                        <span class="d-inline-block ml-2">Đăng ký</span>
+	                    </a>
+	                </div>
+	            </div>
+	        </div>
 			<nav class="d-none d-lg-block">
 				<section class="header-top pt-5"> 
 					<div class="container"> 
@@ -60,12 +77,12 @@
 	                                    <span>Total:</span>
 	                                    <span> 
 	                                        <i class="fas fa-dollar-sign"></i>
-	                                        <span class="d-inline-block ml-1">{{total_amount | number : 2}}</span>
+	                                        <span class="d-inline-block ml-1">200.000 VNĐ </span>
 	                                    </span>
 	                                </div>
 	                                <div class="select-button">
 	                                    <a href="resource/pages/cart.php" class="btn btn-dark btn-lg">View card</a>
-	                                    <a href="resource/pages/checkout.php" class="btn btn-danger btn-lg"> Check out</a>
+	                                    <a href="resource/pages/checkout.php" class="btn btn-lg btn-lg-feb"> Check out</a>
 	                                </div>
 	                            </div>
 							</div>
@@ -158,12 +175,12 @@
 	                                    <span>Total:</span>
 	                                    <span> 
 	                                        <i class="fas fa-dollar-sign"></i>
-	                                        <span class="d-inline-block ml-1">{{total_amount | number : 2}}</span>
+	                                        <span class="d-inline-block ml-1">200.000 VNĐ </span>
 	                                    </span>
 	                                </div>
 	                                <div class="select-button">
 	                                    <a href="resource/pages/cart.php" class="btn btn-dark btn-lg">View card</a>
-	                                    <a href="resource/pages/checkout.php" class="btn btn-danger btn-lg"> Check out</a>
+	                                    <a href="resource/pages/checkout.php" class="btn btn-lg-feb btn-lg"> Check out</a>
 	                                </div>
 	                            </div>
 							</div> 
@@ -173,7 +190,12 @@
 				        </button>
 					</div>
 			        <div class="sticker-menu" id="menu-mobile">
-			        	<div class="title">Menu</div>
+			        	<div class="title">
+			        		<a href="resource/pages/login.php" class="ht-login border-left-1px c-fff">
+		                        <i class="fas fa-sign-in-alt"></i>
+		                        <span class="d-inline-block ml-2">Login</span>
+		                    </a>
+			        	</div>
 			        	<div class="close-menu">
 			        		<i class="fas fa-arrow-left"></i>
 			        	</div>
