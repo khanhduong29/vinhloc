@@ -75,15 +75,14 @@
 	                                    </tr>
 	                                </table>
 	                                <div class="select-total">
-	                                    <span>Total:</span>
+	                                    <span>Tổng:</span>
 	                                    <span> 
-	                                        <i class="fas fa-dollar-sign"></i>
 	                                        <span class="d-inline-block ml-1">200.000 VNĐ </span>
 	                                    </span>
 	                                </div>
 	                                <div class="select-button">
-	                                    <a href="resource/pages/cart.php" class="btn btn-dark btn-lg">View card</a>
-	                                    <a href="resource/pages/checkout.php" class="btn btn-lg btn-lg-feb"> Check out</a>
+	                                    <a href="cart" class="btn btn-dark btn-lg">Giỏ hàng</a>
+	                                    <a href="checkout" class="btn btn-lg btn-lg-feb">Thanh toán</a>
 	                                </div>
 	                            </div>
 							</div>
@@ -173,9 +172,8 @@
 	                                    </tr>
 	                                </table>
 	                                <div class="select-total">
-	                                    <span>Total:</span>
+	                                    <span>Tổng:</span>
 	                                    <span> 
-	                                        <i class="fas fa-dollar-sign"></i>
 	                                        <span class="d-inline-block ml-1">200.000 VNĐ </span>
 	                                    </span>
 	                                </div>
