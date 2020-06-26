@@ -79,4 +79,10 @@ class Client extends CI_Controller {
         $data['title'] = 'register';
 		$this->load->view('layouts/main', $data);
 	}
+	public function cart()
+	{
+		$data['main'] = 'client/cart';
+        $data['title'] = 'Cart';
+		$this->load->view('layouts/main', $data);
+	}
 }
