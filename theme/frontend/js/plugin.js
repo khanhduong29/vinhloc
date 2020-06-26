@@ -110,7 +110,7 @@ $(".slick0").slick({
 	slidesToShow:1,
 	slidesToScroll:1,
 	pauseOnHover:true,
-	autoplay:false,
+	autoplay:true,
 	arrows:true,
 	prevArrow:'<img src="theme/frontend/images/icon/ic-prevPr.png" alt="" class="bn-prev"></i>',
 	nextArrow:'<img src="theme/frontend/images/icon/ic-nextPr.png" alt="" class="bn-next"></i>',

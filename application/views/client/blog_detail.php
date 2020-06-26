@@ -74,7 +74,7 @@
 				</div>
 			</div>
 			<div class="col-lg-4 col-xs-12 ">
-				<div class="item slick6">
+				<div class="item slick6 border-2">
 					<div class="box">
 						<a href="" class="smooth hv-scale">
 							<img src="/vinhloc/theme/frontend/images/den-nao-thich-hop-cho-van-phong-cong-ty-2.png"
