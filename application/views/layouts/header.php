@@ -31,10 +31,10 @@
 	                    </div>
 	                </div>
 	                <div class="d-flex flex-row">
-	                    <a href="resource/pages/login.php" class="pr-2  c-fff">
+	                    <a href="register" class="pr-2  c-fff">
 	                        <span class="d-inline-block ml-2">Đăng nhập</span>
 	                    </a>
-	                    <a href="resource/pages/login.php" class="border-left pl-2 c-fff">
+	                    <a href="login" class="border-left pl-2 c-fff">
 	                        <span class="d-inline-block ml-2">Đăng ký</span>
 	                    </a>
 	                </div>

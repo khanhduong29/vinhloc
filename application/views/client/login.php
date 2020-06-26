@@ -29,7 +29,6 @@
 										</div>
 										<div class="col-12  form-group">
 											<button type="submit" class="btn btn-primary btn-lg-feb">Đăng nhập </button>
-											
 										</div>
 									</div>
 								</form>
