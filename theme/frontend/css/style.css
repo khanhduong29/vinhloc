@@ -1546,10 +1546,11 @@ a.c-feb:hover{
     left: 0;
     top: -100%;
     color: #fff;
+    border-radius: 5px;
 }
 
 .cart-hover-active {
-    top: 40px;
+    top: 35px;
     opacity: 1;
     z-index: 999;
     visibility: visible;
@@ -1581,13 +1582,19 @@ a.c-feb:hover{
     color: #e7ab3c;
     font-weight: 700;
 }
-
+.select-items a,
+.select-items i{
+    color: #fff;
+}
+.select-items a:hover,
+.select-items a:hover i{
+    color: #feb300;
+}
 .si-close {
     text-align: right;
     font-size: 25px;
     cursor: pointer;
 }
-
 .select-total {
     display: flex;
     justify-content: space-between;
