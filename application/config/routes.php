@@ -54,6 +54,7 @@ $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 $route['home'] = 'client/index';
 $route['about'] = 'client/about';
+$route['category'] = 'client/category';
 $route['product'] = 'client/product';
 $route['product-detail'] = 'client/product_detail';
 $route['service'] = 'client/service';

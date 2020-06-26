@@ -3,13 +3,13 @@
 			<div class="container">
 				<div class="menu-footer text-center">
 					<ul>
-						<li><a href="category.html">Đèn chùm</a></li>
-						<li><a href="category.html">Đèn thả pha lê</a></li>
-						<li><a href="category.html">Đèn ốp trần</a></li>
-						<li><a href="category.html">Đèn mâm ốp trần</a></li>
-						<li><a href="category.html">Đèn treo tường</a></li>
-						<li><a href="category.html">Đèn bàn, đèn cây</a></li>
-						<li><a href="category.html">Đèn soi tranh</a></li>
+						<li><a href="category">Đèn chùm</a></li>
+						<li><a href="category">Đèn thả pha lê</a></li>
+						<li><a href="category">Đèn ốp trần</a></li>
+						<li><a href="category">Đèn mâm ốp trần</a></li>
+						<li><a href="category">Đèn treo tường</a></li>
+						<li><a href="category">Đèn bàn, đèn cây</a></li>
+						<li><a href="category">Đèn soi tranh</a></li>
 					</ul>
 				</div>
 			</div>

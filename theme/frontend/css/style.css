@@ -933,7 +933,7 @@ a.c-feb:hover{
 
 .share .item {
     position: relative;
-    background: url(../images/border/ic-border1.png) top left no-repeat, url(../images/border/ic-border2.png) top right no-repeat, url(theme/frontend/images/ic-border3.png) bottom left no-repeat, url(theme/frontend/images/ic-border4.png) right bottom no-repeat;
+    background: url(../images/border/ic-border1.png) top left no-repeat, url(../images/border/ic-border2.png) top right no-repeat, url(../images/border/ic-border3.png) bottom left no-repeat, url(../images/border/ic-border4.png) right bottom no-repeat;
     padding: 1.4rem;
     min-height: 100%;
     border: 1px solid #ffcb49;
@@ -1523,9 +1523,11 @@ a.c-feb:hover{
 }
 
 .border-2 {
-    background: url(/vinhloc/theme/frontend/images/border/bk-sharing.png) no-repeat;
-    background-size: 100% 100%;
-    padding: 20px;
+    position: relative;
+    background: url(../images/border/ic-border1.png) top left no-repeat, url(../images/border/ic-border2.png) top right no-repeat, url(../images/border/ic-border3.png) bottom left no-repeat, url(../images/border/ic-border4.png) right bottom no-repeat;
+    padding: 1.4rem;
+    min-height: 100%;
+    border: 1px solid #ffcb49;
 }
 
 
