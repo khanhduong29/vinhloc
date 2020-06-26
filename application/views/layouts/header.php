@@ -5,6 +5,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title><?php echo $title; ?></title>
+		<link rel="icon" href="/vinhloc/theme/frontend/images/logo1.png">
 		<link rel="stylesheet" type="text/css" href="/vinhloc//theme/frontend/css/bootstrap.min.css">
 		<link rel="stylesheet" type="text/css" href="/vinhloc/theme/frontend/css/animate.css">
 		<link rel="stylesheet" type="text/css" href="/vinhloc/theme/frontend/css/select2.min.css">
@@ -31,10 +32,10 @@
 	                    </div>
 	                </div>
 	                <div class="d-flex flex-row">
-	                    <a href="resource/pages/login.php" class="pr-2  c-fff">
+	                    <a href="login" class="pr-2  c-fff">
 	                        <span class="d-inline-block ml-2">Đăng nhập</span>
 	                    </a>
-	                    <a href="resource/pages/login.php" class="border-left pl-2 c-fff">
+	                    <a href="register" class="border-left pl-2 c-fff">
 	                        <span class="d-inline-block ml-2">Đăng ký</span>
 	                    </a>
 	                </div>
@@ -191,9 +192,9 @@
 					</div>
 			        <div class="sticker-menu" id="menu-mobile">
 			        	<div class="title">
-			        		<a href="resource/pages/login.php" class="ht-login border-left-1px c-fff">
+			        		<a href="login" class="ht-login border-left-1px c-fff">
 		                        <i class="fas fa-sign-in-alt"></i>
-		                        <span class="d-inline-block ml-2">Login</span>
+		                        <span class="d-inline-block ml-2">Đăng nhập</span>
 		                    </a>
 			        	</div>
 			        	<div class="close-menu">
