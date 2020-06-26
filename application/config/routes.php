@@ -62,6 +62,5 @@ $route['construction'] = 'client/construction';
 $route['contact'] = 'client/contact';
 $route['blog_detail'] = 'client/blog_detail';
 $route['login'] = 'client/login';
-$route['register'] = 'client/register';
-$route['checkout'] = 'client/checkout';
-
+$route['login'] = 'client/register';
+$route['cart'] = 'client/cart';

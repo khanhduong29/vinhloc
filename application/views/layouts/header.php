@@ -136,7 +136,7 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-3">
-							<a href="index.html" title="" class="logo-mobile">
+							<a href="home" title="" class="logo-mobile">
 								<img src="/vinhloc/theme/frontend/images/logo-ft.png" alt="">
 							</a>
 						</div>
@@ -205,11 +205,11 @@
 			        		</form>
 			        	</div>
 			        	<ul>
-			        		<li><a href="index.html">Trang chủ</a></li>
-			        		<li><a href="about.html">Giới thiệu</a></li>
+			        		<li><a href="home">Trang chủ</a></li>
+			        		<li><a href="about">Giới thiệu</a></li>
 			        		<li>
 			        			<i class="change-down fa fa-angle-right"></i>	
-								<a href="product.html">Sản phẩm</a>
+								<a href="product">Sản phẩm</a>
 								<ul>
 									<li><a href="" class="smooth">Link 2 Lorem ipsum dolor</a></li>
 				    				<li>
@@ -224,9 +224,9 @@
 				    				<li><a href="" class="smooth">Link 3 Lorem ipsum dolor</a></li>
 				    			</ul>
 			        		</li>
-			        		<li><a href="service.html">Dịch vụ</a></li>
-			        		<li><a href="construction.html">Cồng trình</a></li>
-			        		<li><a href="contact.html">Liên hệ</a></li>
+			        		<li><a href="service">Dịch vụ</a></li>
+			        		<li><a href="construction">Cồng trình</a></li>
+			        		<li><a href="contact">Liên hệ</a></li>
 			        	</ul>
 			        </div>
 				</div>

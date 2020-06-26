@@ -56,13 +56,22 @@
 	}
 	.cart-hover {
         left: 150px;
-    }
+	}
+	.proceed-checkout {
+		margin-bottom: 15px;
+	}
 	
 }
 @media only screen and (min-width: 1024px){
 	.list-pro .desc,
 	.list-pro .sublist::before {
 		width: 30%;
+	}
+	.cart-buttons .up-cart {
+		display: block
+	}
+	.proceed-checkout {
+		margin-bottom: 15px;
 	}
 
 }
@@ -108,7 +117,21 @@
 	}
 	.cart-hover {
         left: 50px;
-    }
+	}
+	.cart-table table tbody tr td.cart-pic {
+		padding-top: 15px;
+	}
+
+	.cart-table table tr th {
+		padding: 10px;
+		text-align: left;
+	}
+	.discount-coupon {
+		margin-top: 30px;
+	}
+	.proceed-checkout {
+		margin-bottom: 20px;
+	}
 	
 }
 @media only screen and (max-width: 575px){
@@ -198,4 +221,3 @@
 		width: 290px;
     }
 }
-
