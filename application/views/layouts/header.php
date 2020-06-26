@@ -5,6 +5,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title><?php echo $title; ?></title>
+		<link rel="icon" href="/vinhloc/theme/frontend/images/logo1.png">
 		<link rel="stylesheet" type="text/css" href="/vinhloc//theme/frontend/css/bootstrap.min.css">
 		<link rel="stylesheet" type="text/css" href="/vinhloc/theme/frontend/css/animate.css">
 		<link rel="stylesheet" type="text/css" href="/vinhloc/theme/frontend/css/select2.min.css">
@@ -31,10 +32,10 @@
 	                    </div>
 	                </div>
 	                <div class="d-flex flex-row">
-	                    <a href="resource/pages/login.php" class="pr-2  c-fff">
+	                    <a href="login" class="pr-2  c-fff">
 	                        <span class="d-inline-block ml-2">Đăng nhập</span>
 	                    </a>
-	                    <a href="resource/pages/login.php" class="border-left pl-2 c-fff">
+	                    <a href="register" class="border-left pl-2 c-fff">
 	                        <span class="d-inline-block ml-2">Đăng ký</span>
 	                    </a>
 	                </div>
@@ -74,15 +75,14 @@
 	                                    </tr>
 	                                </table>
 	                                <div class="select-total">
-	                                    <span>Total:</span>
+	                                    <span>Tổng:</span>
 	                                    <span> 
-	                                        <i class="fas fa-dollar-sign"></i>
 	                                        <span class="d-inline-block ml-1">200.000 VNĐ </span>
 	                                    </span>
 	                                </div>
 	                                <div class="select-button">
-	                                    <a href="cart" class="btn btn-dark btn-lg">View card</a>
-	                                    <a href="cart" class="btn btn-lg btn-lg-feb"> Check out</a>
+	                                    <a href="cart" class="btn btn-dark btn-lg">Giỏ hàng</a>
+	                                    <a href="checkout" class="btn btn-lg btn-lg-feb">Thanh toán</a>
 	                                </div>
 	                            </div>
 							</div>
@@ -172,9 +172,8 @@
 	                                    </tr>
 	                                </table>
 	                                <div class="select-total">
-	                                    <span>Total:</span>
+	                                    <span>Tổng:</span>
 	                                    <span> 
-	                                        <i class="fas fa-dollar-sign"></i>
 	                                        <span class="d-inline-block ml-1">200.000 VNĐ </span>
 	                                    </span>
 	                                </div>
@@ -191,9 +190,9 @@
 					</div>
 			        <div class="sticker-menu" id="menu-mobile">
 			        	<div class="title">
-			        		<a href="resource/pages/login.php" class="ht-login border-left-1px c-fff">
+			        		<a href="login" class="ht-login border-left-1px c-fff">
 		                        <i class="fas fa-sign-in-alt"></i>
-		                        <span class="d-inline-block ml-2">Login</span>
+		                        <span class="d-inline-block ml-2">Đăng nhập</span>
 		                    </a>
 			        	</div>
 			        	<div class="close-menu">

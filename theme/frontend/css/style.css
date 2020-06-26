@@ -1522,10 +1522,10 @@ a.c-feb:hover{
     font-weight: bold;
 }
 
-.slick6 {
+.border-2 {
     background: url(/vinhloc/theme/frontend/images/border/bk-sharing.png) no-repeat;
     background-size: 100% 100%;
-    padding: 1.4rem;
+    padding: 20px;
 }
 
 

@@ -64,19 +64,19 @@ class Client extends CI_Controller {
 	}
 	public function blog_detail() {
 		$data['main'] = 'client/blog_detail';
-		$data['title'] = 'Blog Detail';
+		$data['title'] = 'tên chia sẻ';
 		$this->load->view('layouts/main',$data);
 	}
 	public function login()
 	{
 		$data['main'] = 'client/login';
-        $data['title'] = 'Login';
+        $data['title'] = 'Đăng nhập';
 		$this->load->view('layouts/main', $data);
 	}
 	public function register()
 	{
 		$data['main'] = 'client/register';
-        $data['title'] = 'register';
+        $data['title'] = 'Đăng ký';
 		$this->load->view('layouts/main', $data);
 	}
 	public function cart()
