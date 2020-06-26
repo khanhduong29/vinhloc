@@ -60,12 +60,12 @@
 	                                <table class="select-items">
 	                                    <tr ng-repeat="c in carts">
 	                                        <td class="si-img">
-	                                            <img src="/vinhloc/theme/frontend/images/product/061915d98b626d3c3473.jpg" alt="">
+	                                            <a href=""><img src="/vinhloc/theme/frontend/images/product/061915d98b626d3c3473.jpg" alt=""></a>
 	                                        </td>
 	                                        <td class="si-content">
 	                                            <div class="si-product">
 	                                                <p>200.000 VNĐ <span>x 1</span></p>
-	                                                <h6>Đèn mâm ốp đồng</h6>
+	                                                <h6><a href="">Đèn mâm ốp đồng</a></h6>
 	                                            </div>
 	                                        </td>
 	                                        <td class="si-close">
@@ -158,12 +158,12 @@
 	                                <table class="select-items">
 	                                    <tr ng-repeat="c in carts">
 	                                        <td class="si-img">
-	                                            <img src="/vinhloc/theme/frontend/images/product/061915d98b626d3c3473.jpg" alt="">
+	                                            <a href=""><img src="/vinhloc/theme/frontend/images/product/061915d98b626d3c3473.jpg" alt=""></a>
 	                                        </td>
 	                                        <td class="si-content">
 	                                            <div class="si-product">
 	                                                <p>200.000 VNĐ <span>x 1</span></p>
-	                                                <h6>Đèn mâm ốp đồng</h6>
+	                                                <h6><a href="">Đèn mâm ốp đồng</a></h6>
 	                                            </div>
 	                                        </td>
 	                                        <td class="si-close">

@@ -28,6 +28,7 @@
 											<input type="text" class="form-control" id="" placeholder="Password">
 										</div>
 										<div class="col-12  form-group">
+											<button type="submit" class="btn btn-lg btn-primary btn-lg-feb">Đăng nhập </button>
 											<button type="submit" class="btn btn-primary btn-lg-feb">Đăng nhập </button>
 										</div>
 									</div>
@@ -35,7 +36,6 @@
 
 							</div>
 						</div>
-						
 					</section>
 				</div>
 			</section>
