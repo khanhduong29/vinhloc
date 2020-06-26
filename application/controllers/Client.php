@@ -73,4 +73,10 @@ class Client extends CI_Controller {
         $data['title'] = 'Login';
 		$this->load->view('layouts/main', $data);
 	}
+	public function register()
+	{
+		$data['main'] = 'client/register';
+        $data['title'] = 'register';
+		$this->load->view('layouts/main', $data);
+	}
 }
