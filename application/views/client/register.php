@@ -11,7 +11,15 @@
 									<div class="row border-2 m-0 pt-5 pb-5">
 										<div class="col-12 form-group">
 											<label for="" >Họ và tên</label>
-											<input type="email" class="form-control" id="" placeholder="Họ và tên">
+											<input type="text" class="form-control" id="" placeholder="Họ và tên">
+										</div>
+										<div class="col-12 form-group">
+											<label for="" >Số điện thoại</label>
+											<input type="text" class="form-control" id="" placeholder="Số điện thoại">
+										</div>
+										<div class="col-12 form-group">
+											<label for="" >Địa chỉ</label>
+											<input type="text" class="form-control" id="" placeholder="Địa chỉ">
 										</div>
 										<div class="col-12 form-group">
 											<label for="" >Email</label>
@@ -19,12 +27,13 @@
 										</div>
 										<div class="col-12  form-group">
 											<label for="">Mật khẩu	</label>
-											<input type="text" class="form-control" id="" placeholder="Password">
+											<input type="password" class="form-control" id="" placeholder="Password">
 										</div>
 										<div class="col-12  form-group">
 											<label for="">Nhập lại mật khẩu	</label>
-											<input type="text" class="form-control" id="" placeholder="Confirm password">
+											<input type="password" class="form-control" id="" placeholder="Confirm password">
 										</div>
+
 										<div class="col-12  form-group">
 											<button type="submit" class="btn btn-lg btn-primary btn-lg-feb">Đăng ký </button>
 										</div>
