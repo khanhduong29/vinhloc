@@ -6,6 +6,7 @@ class Client extends CI_Controller {
 	// Hàm khởi tạo
     function __construct() {
 		parent::__construct();
+		$this->load->helper('url');
     }
 
 	public function index()

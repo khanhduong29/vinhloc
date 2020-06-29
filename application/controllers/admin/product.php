@@ -6,7 +6,7 @@
 	    function __construct() {
 	        parent::__construct();
 	    }
-	    public function list() {
+	    public function list_pro() {
 	    	$data['main'] = 'admin/product/list';
         	$data['title'] = 'Danh sách sản phẩm';
 			$this->load->view('layouts/main_admin', $data);
