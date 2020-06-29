@@ -803,6 +803,7 @@ a.c-feb:hover{
     -webkit-transition: all 1s ease-in-out;
     transition: all 1s ease-in-out;
     z-index: 1;
+    cursor: pointer;
 }
 .bn-prev{
     left: 10px;
