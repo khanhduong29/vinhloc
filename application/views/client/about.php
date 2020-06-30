@@ -1,7 +1,7 @@
 		<main> 
 			<div class="container">
 			    <section class="big-carousel">
-			    	<img src="<?php echo base_url() ?>theme/frontend/images/slide/slide0.jpg" alt="">
+			    	<img src="<?php echo public_url() ?>images/slide/slide0.jpg" alt="">
 			    </section>
 			</div>
 			<section class="content-about space-title">
@@ -51,7 +51,7 @@
 	                    <div class="pt-2">
                             <div class="thumbnail pb-4">
                             	<a href="" class="hv-scale p-3 b-ra-30">
-                            		<img src="<?php echo base_url() ?>theme/frontend/images/product/8b1b1592df0d3953601c.jpg" class="img-fluid"  alt="a" />
+                            		<img src="<?php echo public_url() ?>images/product/8b1b1592df0d3953601c.jpg" class="img-fluid"  alt="a" />
                             	</a>
                             	<div class="desc text-center">
                             		<h3>
@@ -64,7 +64,7 @@
 	                    <div class="pt-2">
                             <div class="thumbnail pb-4">
                             	<a href="" class="hv-scale p-3 b-ra-30">
-                            		<img src="<?php echo base_url() ?>theme/frontend/images/product/9717852538bddee387ac.jpg" class="img-fluid"  alt="a" />
+                            		<img src="<?php echo public_url() ?>images/product/9717852538bddee387ac.jpg" class="img-fluid"  alt="a" />
                             	</a>
                             	<div class="desc text-center">
                             		<h3>
@@ -77,7 +77,7 @@
 	                    <div class="pt-2">
                             <div class="thumbnail pb-4">
                             	<a href="" class="hv-scale p-3 b-ra-30">
-                            		<img src="<?php echo base_url() ?>theme/frontend/images/product/bc7a454119fdffa3a6ec.jpg" class="img-fluid"  alt="a" />
+                            		<img src="<?php echo public_url() ?>images/product/bc7a454119fdffa3a6ec.jpg" class="img-fluid"  alt="a" />
                             	</a>
                             	<div class="desc text-center">
                             		<h3>
@@ -90,7 +90,7 @@
 	                    <div class="pt-2">
                             <div class="thumbnail pb-4">
                             	<a href="" class="hv-scale p-3 b-ra-30">
-                            		<img src="<?php echo base_url() ?>theme/frontend/images/product/feb2ffd14249a417fd581.jpg" class="img-fluid"  alt="a" />
+                            		<img src="<?php echo public_url() ?>images/product/feb2ffd14249a417fd581.jpg" class="img-fluid"  alt="a" />
                             	</a>
                             	<div class="desc text-center">
                             		<h3>
@@ -111,42 +111,42 @@
 		            <section class="slick5 pt-lg-5 pt-4 pb-5 wow zoomIn">
 	            		<div>
 	            			<a href="" title="" class="avt">
-	            				<img src="<?php echo base_url() ?>theme/frontend/images/thumbs/02fe85320661ff3fa670.jpg" alt="">
+	            				<img src="<?php echo public_url() ?>images/thumbs/02fe85320661ff3fa670.jpg" alt="">
 	            			</a>
 	            		</div>
 	            		<div>
 	            			<a href="" title="" class="avt">
-	            				<img src="<?php echo base_url() ?>theme/frontend/images/thumbs/dabaco-logo.jpg" alt="">
+	            				<img src="<?php echo public_url() ?>images/thumbs/dabaco-logo.jpg" alt="">
 	            			</a>
 	            		</div>
 	            		<div>
 	            			<a href="" title="" class="avt">
-	            				<img src="<?php echo base_url() ?>theme/frontend/images/thumbs/logo-phuthai.jpg" alt="">
+	            				<img src="<?php echo public_url() ?>images/thumbs/logo-phuthai.jpg" alt="">
 	            			</a>
 	            		</div>
 	            		<div>
 	            			<a href="" title="" class="avt">
-	            				<img src="<?php echo base_url() ?>theme/frontend/images/thumbs/single-logo.png" alt="">
+	            				<img src="<?php echo public_url() ?>images/thumbs/single-logo.png" alt="">
 	            			</a>
 	            		</div>
 	            		<div>
 	            			<a href="" title="" class="avt">
-	            				<img src="<?php echo base_url() ?>theme/frontend/images/thumbs/tai-xuong-1.jpg" alt="">
+	            				<img src="<?php echo public_url() ?>images/thumbs/tai-xuong-1.jpg" alt="">
 	            			</a>
 	            		</div>
 	            		<div>
 	            			<a href="" title="" class="avt">
-	            				<img src="<?php echo base_url() ?>theme/frontend/images/thumbs/tai-xuong.jpg" alt="">
+	            				<img src="<?php echo public_url() ?>images/thumbs/tai-xuong.jpg" alt="">
 	            			</a>
 	            		</div>
 	            		<div>
 	            			<a href="" title="" class="avt">
-	            				<img src="<?php echo base_url() ?>theme/frontend/images/thumbs/tai-xuong.png" alt="">
+	            				<img src="<?php echo public_url() ?>images/thumbs/tai-xuong.png" alt="">
 	            			</a>
 	            		</div>
 	            		<div>
 	            			<a href="" title="" class="avt">
-	            				<img src="<?php echo base_url() ?>theme/frontend/images/thumbs/thong-tu-quy-dinh-ve-cac-bieu-mau-su-dung-de-xu-phat-vi-pham-hanh-chinh-thuoc-tham-quyen-cua-cong-an-nhan-dan-2.png" alt="">
+	            				<img src="<?php echo public_url() ?>images/thumbs/thong-tu-quy-dinh-ve-cac-bieu-mau-su-dung-de-xu-phat-vi-pham-hanh-chinh-thuoc-tham-quyen-cua-cong-an-nhan-dan-2.png" alt="">
 	            			</a>
 	            		</div>
 		            </section>

@@ -6,18 +6,18 @@
   <title>AdminRusu | name admin</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="shortcut icon" type="image/x-icon" href="<?php echo base_url() ?>theme/frontend/img/favicon.ico">
+  <link rel="shortcut icon" type="image/x-icon" href="<?php echo public_url() ?>img/favicon.ico">
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="<?php echo base_url() ?>theme/frontend/admin/plugins/fontawesome-free/css/all.min.css">
+  <link rel="stylesheet" href="<?php echo public_url() ?>admin/plugins/fontawesome-free/css/all.min.css">
   <!-- Ionicons -->
-  <link rel="stylesheet" href="<?php echo base_url() ?>theme/frontend/admin/plugins/ionicons-2.0.1/css/ionicons.min.css">
+  <link rel="stylesheet" href="<?php echo public_url() ?>admin/plugins/ionicons-2.0.1/css/ionicons.min.css">
   <!-- Theme style -->
-  <link rel="stylesheet" href="<?php echo base_url() ?>theme/frontend/admin/dist/css/adminlte.css">
+  <link rel="stylesheet" href="<?php echo public_url() ?>admin/dist/css/adminlte.css">
   <!-- overlayScrollbars -->
-  <link rel="stylesheet" href="<?php echo base_url() ?>theme/frontend/admin/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+  <link rel="stylesheet" href="<?php echo public_url() ?>admin/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
   <!-- summernote -->
-  <link rel="stylesheet" href="<?php echo base_url() ?>theme/frontend/admin/plugins/summernote/summernote-bs4.css">
-  <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>theme/frontend/admin/plugins/datatables-bs4/css/dataTables.bootstrap4.css">
+  <link rel="stylesheet" href="<?php echo public_url() ?>admin/plugins/summernote/summernote-bs4.css">
+  <link rel="stylesheet" type="text/css" href="<?php echo public_url() ?>admin/plugins/datatables-bs4/css/dataTables.bootstrap4.css">
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
@@ -82,7 +82,7 @@
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="{{route('admin')}}" class="brand-link">
-      <img src="<?php echo base_url() ?>theme/frontend/admin/dist/img/logo-2.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
+      <img src="<?php echo public_url() ?>admin/dist/img/logo-2.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
            style="opacity: .8">
       <span class="brand-text font-weight-light">AdminRusu</span>
     </a>

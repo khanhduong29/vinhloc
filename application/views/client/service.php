@@ -12,7 +12,7 @@
 					<div class="row">
 						<div class="col-12 col-sm-12 col-md-12 col-lg-9 pt-4">
 							<div class="border-1 p-2 banner-sv">
-								<img src="<?php echo base_url() ?>theme/frontend/images/slide/slide3.jpg" alt="">
+								<img src="<?php echo public_url() ?>images/slide/slide3.jpg" alt="">
 							</div>
 							<div class="s-content">
 								<h3>
@@ -33,7 +33,7 @@
 								</h3>
 								<div class="contain-sr">
 									<div class="img-right">
-										<img src="<?php echo base_url() ?>theme/frontend/images/product/2e3d45f2764a9014c95b.jpg" alt="">
+										<img src="<?php echo public_url() ?>images/product/2e3d45f2764a9014c95b.jpg" alt="">
 									</div>
 									<div class="word-left">
 										Những công trình chúng tôi thi công chính là bằng chứng xác thực nhất để khẳng định chất lượng của Vĩnh Lộc. Quý khách sẽ bắt gặp bất cứ một công trình trang trí đèn nội thất nào đó, nhưng nó chỉ là vẻ đẹp thông thường do bộ đèn ấy mang lại thôi mà không thể nhìn được nghệ thuật toát lên từ những tác phẩm đó. Nhưng đến với Vĩnh Lộc Luxury, ngắm những công trình chúng tôi thi công, chắc chắn quý khách sẽ cảm thấy hoàn toàn khác biệt so với những bên khác làm. Quý khách hãy ghé thăm công trình của chúng tôi để biết thêm về những thành công mà chúng tôi đạt được.
@@ -44,7 +44,7 @@
 								</h3>
 								<div class="contain-sr">
 									<div class="img-right">
-										<img src="<?php echo base_url() ?>theme/frontend/images/product/0fcdb1b05c06ba58e317.jpg" alt="">
+										<img src="<?php echo public_url() ?>images/product/0fcdb1b05c06ba58e317.jpg" alt="">
 									</div>
 									<div class="word-left">
 										<p>Trong số các dự án Vĩnh Lộc thi công, một câu nói của vị khách hàng đã giúp chúng tôi có thêm động lực và phát triển như hôm nay. Mr.Đoàn – Tổng giám đốc Phú Thái Group VT 15 – Ecopark bày tỏ cảm xúc:</p>
@@ -92,42 +92,42 @@
 		            <section class="slick5 pt-lg-5 pt-4 pb-5 wow zoomIn">
 	            		<div>
 	            			<a href="" title="" class="avt">
-	            				<img src="<?php echo base_url() ?>theme/frontend/images/thumbs/02fe85320661ff3fa670.jpg" alt="">
+	            				<img src="<?php echo public_url() ?>images/thumbs/02fe85320661ff3fa670.jpg" alt="">
 	            			</a>
 	            		</div>
 	            		<div>
 	            			<a href="" title="" class="avt">
-	            				<img src="<?php echo base_url() ?>theme/frontend/images/thumbs/dabaco-logo.jpg" alt="">
+	            				<img src="<?php echo public_url() ?>images/thumbs/dabaco-logo.jpg" alt="">
 	            			</a>
 	            		</div>
 	            		<div>
 	            			<a href="" title="" class="avt">
-	            				<img src="<?php echo base_url() ?>theme/frontend/images/thumbs/logo-phuthai.jpg" alt="">
+	            				<img src="<?php echo public_url() ?>images/thumbs/logo-phuthai.jpg" alt="">
 	            			</a>
 	            		</div>
 	            		<div>
 	            			<a href="" title="" class="avt">
-	            				<img src="<?php echo base_url() ?>theme/frontend/images/thumbs/single-logo.png" alt="">
+	            				<img src="<?php echo public_url() ?>images/thumbs/single-logo.png" alt="">
 	            			</a>
 	            		</div>
 	            		<div>
 	            			<a href="" title="" class="avt">
-	            				<img src="<?php echo base_url() ?>theme/frontend/images/thumbs/tai-xuong-1.jpg" alt="">
+	            				<img src="<?php echo public_url() ?>images/thumbs/tai-xuong-1.jpg" alt="">
 	            			</a>
 	            		</div>
 	            		<div>
 	            			<a href="" title="" class="avt">
-	            				<img src="<?php echo base_url() ?>theme/frontend/images/thumbs/tai-xuong.jpg" alt="">
+	            				<img src="<?php echo public_url() ?>images/thumbs/tai-xuong.jpg" alt="">
 	            			</a>
 	            		</div>
 	            		<div>
 	            			<a href="" title="" class="avt">
-	            				<img src="<?php echo base_url() ?>theme/frontend/images/thumbs/tai-xuong.png" alt="">
+	            				<img src="<?php echo public_url() ?>images/thumbs/tai-xuong.png" alt="">
 	            			</a>
 	            		</div>
 	            		<div>
 	            			<a href="" title="" class="avt">
-	            				<img src="<?php echo base_url() ?>theme/frontend/images/thumbs/thong-tu-quy-dinh-ve-cac-bieu-mau-su-dung-de-xu-phat-vi-pham-hanh-chinh-thuoc-tham-quyen-cua-cong-an-nhan-dan-2.png" alt="">
+	            				<img src="<?php echo public_url() ?>images/thumbs/thong-tu-quy-dinh-ve-cac-bieu-mau-su-dung-de-xu-phat-vi-pham-hanh-chinh-thuoc-tham-quyen-cua-cong-an-nhan-dan-2.png" alt="">
 	            			</a>
 	            		</div>
 		            </section>

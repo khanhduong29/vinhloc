@@ -9,30 +9,30 @@
 						<div class="list-pro">
 							<div class="slick2 sublist">
 								<div class="item">
-									<a href="<?php echo base_url() ?>theme/frontend/images/slide/bn-ctent.jpg" class="smooth hv-scale"
+									<a href="<?php echo public_url() ?>images/slide/bn-ctent.jpg" class="smooth hv-scale"
 										title="Ảnh nhà hàng" data-fancybox="gallery">
-										<img src="<?php echo base_url() ?>theme/frontend/images/slide/bn-ctent.jpg" alt="Ảnh nhà hàng"
+										<img src="<?php echo public_url() ?>images/slide/bn-ctent.jpg" alt="Ảnh nhà hàng"
 											title="Ảnh nhà hàng" class="img-fluid" />
 									</a>
 								</div>
 								<div class="item">
-									<a href="<?php echo base_url() ?>theme/frontend/images/slide/slide3.jpg" class="smooth hv-scale"
+									<a href="<?php echo public_url() ?>images/slide/slide3.jpg" class="smooth hv-scale"
 										title="Ảnh nhà hàng" data-fancybox="gallery">
-										<img src="<?php echo base_url() ?>theme/frontend/images/slide/slide3.jpg" alt="Ảnh nhà hàng"
+										<img src="<?php echo public_url() ?>images/slide/slide3.jpg" alt="Ảnh nhà hàng"
 											title="Ảnh nhà hàng" class="img-fluid" />
 									</a>
 								</div>
 								<div class="item">
-									<a href="<?php echo base_url() ?>theme/frontend/images/slide/slide0.jpg" class="smooth hv-scale"
+									<a href="<?php echo public_url() ?>images/slide/slide0.jpg" class="smooth hv-scale"
 										title="Ảnh nhà hàng" data-fancybox="gallery">
-										<img src="<?php echo base_url() ?>theme/frontend/images/slide/slide0.jpg" alt="Ảnh nhà hàng"
+										<img src="<?php echo public_url() ?>images/slide/slide0.jpg" alt="Ảnh nhà hàng"
 											title="Ảnh nhà hàng" class="img-fluid" />
 									</a>
 								</div>
 								<div class="item">
-									<a href="<?php echo base_url() ?>theme/frontend/images/slide/slide1.jpg" class="smooth hv-scale"
+									<a href="<?php echo public_url() ?>images/slide/slide1.jpg" class="smooth hv-scale"
 										title="Ảnh nhà hàng" data-fancybox="gallery">
-										<img src="<?php echo base_url() ?>theme/frontend/images/slide/slide1.jpg" alt="Ảnh nhà hàng"
+										<img src="<?php echo public_url() ?>images/slide/slide1.jpg" alt="Ảnh nhà hàng"
 											title="Ảnh nhà hàng" class="img-fluid" />
 									</a>
 								</div>
@@ -54,30 +54,30 @@
 						<div class="list-pro">
 							<div class="slick2 sublist">
 								<div class="item">
-									<a href="<?php echo base_url() ?>theme/frontend/images/slide/bn-ctent.jpg" class="smooth hv-scale"
+									<a href="<?php echo public_url() ?>images/slide/bn-ctent.jpg" class="smooth hv-scale"
 										title="Ảnh nhà hàng" data-fancybox="gallery">
-										<img src="<?php echo base_url() ?>theme/frontend/images/slide/bn-ctent.jpg" alt="Ảnh nhà hàng"
+										<img src="<?php echo public_url() ?>images/slide/bn-ctent.jpg" alt="Ảnh nhà hàng"
 											title="Ảnh nhà hàng" class="img-fluid" />
 									</a>
 								</div>
 								<div class="item">
-									<a href="<?php echo base_url() ?>theme/frontend/images/slide/slide3.jpg" class="smooth hv-scale"
+									<a href="<?php echo public_url() ?>images/slide/slide3.jpg" class="smooth hv-scale"
 										title="Ảnh nhà hàng" data-fancybox="gallery">
-										<img src="<?php echo base_url() ?>theme/frontend/images/slide/slide3.jpg" alt="Ảnh nhà hàng"
+										<img src="<?php echo public_url() ?>images/slide/slide3.jpg" alt="Ảnh nhà hàng"
 											title="Ảnh nhà hàng" class="img-fluid" />
 									</a>
 								</div>
 								<div class="item">
-									<a href="<?php echo base_url() ?>theme/frontend/images/slide/slide0.jpg" class="smooth hv-scale"
+									<a href="<?php echo public_url() ?>images/slide/slide0.jpg" class="smooth hv-scale"
 										title="Ảnh nhà hàng" data-fancybox="gallery">
-										<img src="<?php echo base_url() ?>theme/frontend/images/slide/slide0.jpg" alt="Ảnh nhà hàng"
+										<img src="<?php echo public_url() ?>images/slide/slide0.jpg" alt="Ảnh nhà hàng"
 											title="Ảnh nhà hàng" class="img-fluid" />
 									</a>
 								</div>
 								<div class="item">
-									<a href="<?php echo base_url() ?>theme/frontend/images/slide/slide1.jpg" class="smooth hv-scale"
+									<a href="<?php echo public_url() ?>images/slide/slide1.jpg" class="smooth hv-scale"
 										title="Ảnh nhà hàng" data-fancybox="gallery">
-										<img src="<?php echo base_url() ?>theme/frontend/images/slide/slide1.jpg" alt="Ảnh nhà hàng"
+										<img src="<?php echo public_url() ?>images/slide/slide1.jpg" alt="Ảnh nhà hàng"
 											title="Ảnh nhà hàng" class="img-fluid" />
 									</a>
 								</div>
@@ -99,30 +99,30 @@
 						<div class="list-pro">
 							<div class="slick2 sublist">
 								<div class="item">
-									<a href="<?php echo base_url() ?>theme/frontend/images/slide/bn-ctent.jpg" class="smooth hv-scale"
+									<a href="<?php echo public_url() ?>images/slide/bn-ctent.jpg" class="smooth hv-scale"
 										title="Ảnh nhà hàng" data-fancybox="gallery">
-										<img src="<?php echo base_url() ?>theme/frontend/images/slide/bn-ctent.jpg" alt="Ảnh nhà hàng"
+										<img src="<?php echo public_url() ?>images/slide/bn-ctent.jpg" alt="Ảnh nhà hàng"
 											title="Ảnh nhà hàng" class="img-fluid" />
 									</a>
 								</div>
 								<div class="item">
-									<a href="<?php echo base_url() ?>theme/frontend/images/slide/slide3.jpg" class="smooth hv-scale"
+									<a href="<?php echo public_url() ?>images/slide/slide3.jpg" class="smooth hv-scale"
 										title="Ảnh nhà hàng" data-fancybox="gallery">
-										<img src="<?php echo base_url() ?>theme/frontend/images/slide/slide3.jpg" alt="Ảnh nhà hàng"
+										<img src="<?php echo public_url() ?>images/slide/slide3.jpg" alt="Ảnh nhà hàng"
 											title="Ảnh nhà hàng" class="img-fluid" />
 									</a>
 								</div>
 								<div class="item">
-									<a href="<?php echo base_url() ?>theme/frontend/images/slide/slide0.jpg" class="smooth hv-scale"
+									<a href="<?php echo public_url() ?>images/slide/slide0.jpg" class="smooth hv-scale"
 										title="Ảnh nhà hàng" data-fancybox="gallery">
-										<img src="<?php echo base_url() ?>theme/frontend/images/slide/slide0.jpg" alt="Ảnh nhà hàng"
+										<img src="<?php echo public_url() ?>images/slide/slide0.jpg" alt="Ảnh nhà hàng"
 											title="Ảnh nhà hàng" class="img-fluid" />
 									</a>
 								</div>
 								<div class="item">
-									<a href="<?php echo base_url() ?>theme/frontend/images/slide/slide1.jpg" class="smooth hv-scale"
+									<a href="<?php echo public_url() ?>images/slide/slide1.jpg" class="smooth hv-scale"
 										title="Ảnh nhà hàng" data-fancybox="gallery">
-										<img src="<?php echo base_url() ?>theme/frontend/images/slide/slide1.jpg" alt="Ảnh nhà hàng"
+										<img src="<?php echo public_url() ?>images/slide/slide1.jpg" alt="Ảnh nhà hàng"
 											title="Ảnh nhà hàng" class="img-fluid" />
 									</a>
 								</div>
@@ -144,30 +144,30 @@
 						<div class="list-pro">
 							<div class="slick2 sublist">
 								<div class="item">
-									<a href="<?php echo base_url() ?>theme/frontend/images/slide/bn-ctent.jpg" class="smooth hv-scale"
+									<a href="<?php echo public_url() ?>images/slide/bn-ctent.jpg" class="smooth hv-scale"
 										title="Ảnh nhà hàng" data-fancybox="gallery">
-										<img src="<?php echo base_url() ?>theme/frontend/images/slide/bn-ctent.jpg" alt="Ảnh nhà hàng"
+										<img src="<?php echo public_url() ?>images/slide/bn-ctent.jpg" alt="Ảnh nhà hàng"
 											title="Ảnh nhà hàng" class="img-fluid" />
 									</a>
 								</div>
 								<div class="item">
-									<a href="<?php echo base_url() ?>theme/frontend/images/slide/slide3.jpg" class="smooth hv-scale"
+									<a href="<?php echo public_url() ?>images/slide/slide3.jpg" class="smooth hv-scale"
 										title="Ảnh nhà hàng" data-fancybox="gallery">
-										<img src="<?php echo base_url() ?>theme/frontend/images/slide/slide3.jpg" alt="Ảnh nhà hàng"
+										<img src="<?php echo public_url() ?>images/slide/slide3.jpg" alt="Ảnh nhà hàng"
 											title="Ảnh nhà hàng" class="img-fluid" />
 									</a>
 								</div>
 								<div class="item">
-									<a href="<?php echo base_url() ?>theme/frontend/images/slide/slide0.jpg" class="smooth hv-scale"
+									<a href="<?php echo public_url() ?>images/slide/slide0.jpg" class="smooth hv-scale"
 										title="Ảnh nhà hàng" data-fancybox="gallery">
-										<img src="<?php echo base_url() ?>theme/frontend/images/slide/slide0.jpg" alt="Ảnh nhà hàng"
+										<img src="<?php echo public_url() ?>images/slide/slide0.jpg" alt="Ảnh nhà hàng"
 											title="Ảnh nhà hàng" class="img-fluid" />
 									</a>
 								</div>
 								<div class="item">
-									<a href="<?php echo base_url() ?>theme/frontend/images/slide/slide1.jpg" class="smooth hv-scale"
+									<a href="<?php echo public_url() ?>images/slide/slide1.jpg" class="smooth hv-scale"
 										title="Ảnh nhà hàng" data-fancybox="gallery">
-										<img src="<?php echo base_url() ?>theme/frontend/images/slide/slide1.jpg" alt="Ảnh nhà hàng"
+										<img src="<?php echo public_url() ?>images/slide/slide1.jpg" alt="Ảnh nhà hàng"
 											title="Ảnh nhà hàng" class="img-fluid" />
 									</a>
 								</div>
@@ -194,42 +194,42 @@
 					<section class="slick5 pt-lg-5 pt-4 pb-5 wow zoomIn">
 						<div>
 							<a href="" title="" class="avt">
-								<img src="<?php echo base_url() ?>theme/frontend/images/thumbs/02fe85320661ff3fa670.jpg" alt="">
+								<img src="<?php echo public_url() ?>images/thumbs/02fe85320661ff3fa670.jpg" alt="">
 							</a>
 						</div>
 						<div>
 							<a href="" title="" class="avt">
-								<img src="<?php echo base_url() ?>theme/frontend/images/thumbs/dabaco-logo.jpg" alt="">
+								<img src="<?php echo public_url() ?>images/thumbs/dabaco-logo.jpg" alt="">
 							</a>
 						</div>
 						<div>
 							<a href="" title="" class="avt">
-								<img src="<?php echo base_url() ?>theme/frontend/images/thumbs/logo-phuthai.jpg" alt="">
+								<img src="<?php echo public_url() ?>images/thumbs/logo-phuthai.jpg" alt="">
 							</a>
 						</div>
 						<div>
 							<a href="" title="" class="avt">
-								<img src="<?php echo base_url() ?>theme/frontend/images/thumbs/single-logo.png" alt="">
+								<img src="<?php echo public_url() ?>images/thumbs/single-logo.png" alt="">
 							</a>
 						</div>
 						<div>
 							<a href="" title="" class="avt">
-								<img src="<?php echo base_url() ?>theme/frontend/images/thumbs/tai-xuong-1.jpg" alt="">
+								<img src="<?php echo public_url() ?>images/thumbs/tai-xuong-1.jpg" alt="">
 							</a>
 						</div>
 						<div>
 							<a href="" title="" class="avt">
-								<img src="<?php echo base_url() ?>theme/frontend/images/thumbs/tai-xuong.jpg" alt="">
+								<img src="<?php echo public_url() ?>images/thumbs/tai-xuong.jpg" alt="">
 							</a>
 						</div>
 						<div>
 							<a href="" title="" class="avt">
-								<img src="<?php echo base_url() ?>theme/frontend/images/thumbs/tai-xuong.png" alt="">
+								<img src="<?php echo public_url() ?>images/thumbs/tai-xuong.png" alt="">
 							</a>
 						</div>
 						<div>
 							<a href="" title="" class="avt">
-								<img src="<?php echo base_url() ?>theme/frontend/images/thumbs/thong-tu-quy-dinh-ve-cac-bieu-mau-su-dung-de-xu-phat-vi-pham-hanh-chinh-thuoc-tham-quyen-cua-cong-an-nhan-dan-2.png"
+								<img src="<?php echo public_url() ?>images/thumbs/thong-tu-quy-dinh-ve-cac-bieu-mau-su-dung-de-xu-phat-vi-pham-hanh-chinh-thuoc-tham-quyen-cua-cong-an-nhan-dan-2.png"
 									alt="">
 							</a>
 						</div>

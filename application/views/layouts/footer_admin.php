@@ -16,20 +16,20 @@
 <!-- ./wrapper -->
 
 <!-- jQuery -->
-<script src="<?php echo base_url() ?>theme/frontend/admin/plugins/jquery/jquery.min.js"></script>
+<script src="<?php echo public_url() ?>admin/plugins/jquery/jquery.min.js"></script>
 <!-- jQuery UI 1.11.4 -->
-<script src="<?php echo base_url() ?>theme/frontend/admin/plugins/jquery-ui/jquery-ui.min.js"></script>
+<script src="<?php echo public_url() ?>admin/plugins/jquery-ui/jquery-ui.min.js"></script>
 <!-- Bootstrap 4 -->
-<script src="<?php echo base_url() ?>theme/frontend/admin/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="<?php echo public_url() ?>admin/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- Summernote -->
-<script src="<?php echo base_url() ?>theme/frontend/admin/plugins/summernote/summernote-bs4.min.js"></script>
+<script src="<?php echo public_url() ?>admin/plugins/summernote/summernote-bs4.min.js"></script>
 <!-- AdminLTE App -->
-<script src="<?php echo base_url() ?>theme/frontend/admin/dist/js/adminlte.js"></script>
+<script src="<?php echo public_url() ?>admin/dist/js/adminlte.js"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-<script src="<?php echo base_url() ?>theme/frontend/admin/dist/js/pages/dashboard.js"></script>
+<script src="<?php echo public_url() ?>admin/dist/js/pages/dashboard.js"></script>
 <!-- dataTable -->
-<script src="<?php echo base_url() ?>theme/frontend/admin/plugins/datatables/jquery.dataTables.js"></script>
-<script src="<?php echo base_url() ?>theme/frontend/admin/plugins/datatables-bs4/js/dataTables.bootstrap4.js"></script>
+<script src="<?php echo public_url() ?>admin/plugins/datatables/jquery.dataTables.js"></script>
+<script src="<?php echo public_url() ?>admin/plugins/datatables-bs4/js/dataTables.bootstrap4.js"></script>
 
 <script>
   $(function () {

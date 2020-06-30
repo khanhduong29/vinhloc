@@ -25,7 +25,7 @@
 					<tr>
 						<td class="cart-pic">
 							<a href="">
-								<img src="<?php echo base_url() ?>theme/frontend/images/product/061915d98b626d3c3473.jpg" alt="error">
+								<img src="<?php echo public_url() ?>images/product/061915d98b626d3c3473.jpg" alt="error">
 							</a>
 						</td>
 						<td class="">
@@ -49,7 +49,7 @@
 					<tr>
 						<td class="cart-pic">
 							<a href="">
-								<img src="<?php echo base_url() ?>theme/frontend/images/product/061915d98b626d3c3473.jpg" alt="error">
+								<img src="<?php echo public_url() ?>images/product/061915d98b626d3c3473.jpg" alt="error">
 							</a>
 						</td>
 						<td class="">
@@ -73,7 +73,7 @@
 					<tr>
 						<td class="cart-pic">
 							<a href="">
-								<img src="<?php echo base_url() ?>theme/frontend/images/product/061915d98b626d3c3473.jpg" alt="error">
+								<img src="<?php echo public_url() ?>images/product/061915d98b626d3c3473.jpg" alt="error">
 							</a>
 						</td>
 						<td class="">

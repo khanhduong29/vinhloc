@@ -61,13 +61,13 @@
 		<!-- end footer -->
 
 	</body>
-	<script src="<?php echo base_url() ?>theme/frontend/js/jquery-3.5.1.min.js"></script>	
-	<script src="<?php echo base_url() ?>theme/frontend/js/bootstrap.min.js"></script>
-	<script src="<?php echo base_url() ?>theme/frontend/js/slick.js"></script>
-	<script src="<?php echo base_url() ?>theme/frontend/dist/jquery.fancybox.js"></script>
-	<script src="<?php echo base_url() ?>theme/frontend/js/select2.min.js"></script>
-	<script src="<?php echo base_url() ?>theme/frontend/js/wow.min.js"></script>
-	<script src="<?php echo base_url() ?>theme/frontend/js/plugin.js"></script>
+	<script src="<?php echo public_url() ?>js/jquery-3.5.1.min.js"></script>	
+	<script src="<?php echo public_url() ?>js/bootstrap.min.js"></script>
+	<script src="<?php echo public_url() ?>js/slick.js"></script>
+	<script src="<?php echo public_url() ?>dist/jquery.fancybox.js"></script>
+	<script src="<?php echo public_url() ?>js/select2.min.js"></script>
+	<script src="<?php echo public_url() ?>js/wow.min.js"></script>
+	<script src="<?php echo public_url() ?>js/plugin.js"></script>
       <script>
       	new WOW().init();
       </script>

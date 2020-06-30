@@ -5,20 +5,20 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title><?php echo $title; ?></title>
-		<link rel="icon" href="<?php echo base_url() ?>theme/frontend/images/logo1.png">
-		<link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>theme/frontend/css/bootstrap.min.css">
-		<link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>theme/frontend/css/animate.css">
-		<link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>theme/frontend/css/select2.min.css">
-		<link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>theme/frontend/css/slick.css">
-		<link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>theme/frontend/css/slick-theme.css">
-		<link rel="stylesheet" href="<?php echo base_url() ?>theme/frontend/dist/jquery.fancybox.css">
-		<link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>theme/frontend/fonts/fontawesome-free-5.13.0-web/css/all.min.css">
-		<link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>theme/frontend/css/style.css">
-		<link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>theme/frontend/css/reponsive.css">
+		<link rel="icon" href="<?php echo public_url() ?>images/logo1.png">
+		<link rel="stylesheet" type="text/css" href="<?php echo public_url() ?>css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="<?php echo public_url() ?>css/animate.css">
+		<link rel="stylesheet" type="text/css" href="<?php echo public_url() ?>css/select2.min.css">
+		<link rel="stylesheet" type="text/css" href="<?php echo public_url() ?>css/slick.css">
+		<link rel="stylesheet" type="text/css" href="<?php echo public_url() ?>css/slick-theme.css">
+		<link rel="stylesheet" href="<?php echo public_url() ?>dist/jquery.fancybox.css">
+		<link rel="stylesheet" type="text/css" href="<?php echo public_url() ?>fonts/fontawesome-free-5.13.0-web/css/all.min.css">
+		<link rel="stylesheet" type="text/css" href="<?php echo public_url() ?>css/style.css">
+		<link rel="stylesheet" type="text/css" href="<?php echo public_url() ?>css/reponsive.css">
 	</head>
 	<body>
 		<div class="back-top" onclick="fc_top()" id="icon-back-top">
-			<img src="<?php echo base_url() ?>theme/frontend/images/icon/ic-btop.png" alt="">
+			<img src="<?php echo public_url() ?>images/icon/ic-btop.png" alt="">
 		</div>
 		<div class="number-phone-mobile d-lg-none wow swing">
 			<a href="tel:091 668 1919" class="pline c-feb hv-c-fff" title="091 668 1919">091 668 1919</a>
@@ -55,13 +55,13 @@
 										<button type="submit"></button> 
 									</form> 
 								</div> 
-								<a  title="" class="img-cart cart-lap"><img src="<?php echo base_url() ?>theme/frontend/images/icon/ic-cart-feb.png" alt="error"></a>
+								<a  title="" class="img-cart cart-lap"><img src="<?php echo public_url() ?>images/icon/ic-cart-feb.png" alt="error"></a>
 								<span class="amount-cart">3</span>
 								<div class="cart-hover">
 	                                <table class="select-items">
 	                                    <tr ng-repeat="c in carts">
 	                                        <td class="si-img">
-	                                            <a href=""><img src="<?php echo base_url() ?>theme/frontend/images/product/061915d98b626d3c3473.jpg" alt=""></a>
+	                                            <a href=""><img src="<?php echo public_url() ?>images/product/061915d98b626d3c3473.jpg" alt=""></a>
 	                                        </td>
 	                                        <td class="si-content">
 	                                            <div class="si-product">
@@ -91,7 +91,7 @@
 				</section>
 				<section class="header-menu" id="header">
 					<div class="container">
-						<img src="<?php echo base_url() ?>theme/frontend/images/logo1.png" class="logo" alt="">
+						<img src="<?php echo public_url() ?>images/logo1.png" class="logo" alt="">
 						<div class="body-sticker text-center">
 							<div class="row">
 								<div class="col-lg-5">
@@ -137,7 +137,7 @@
 					<div class="row">
 						<div class="col-3">
 							<a href="home" title="" class="logo-mobile">
-								<img src="<?php echo base_url() ?>theme/frontend/images/logo-ft.png" alt="">
+								<img src="<?php echo public_url() ?>images/logo-ft.png" alt="">
 							</a>
 						</div>
 						<div class="mobile-phone col-8">
@@ -152,13 +152,13 @@
 								    	</form>
 								  	</div>
 								</div>
-								<a title="" class="img-cart cart-mobile"><img src="<?php echo base_url() ?>theme/frontend/images/icon/ic-cart-feb.png" alt="error"></a>
+								<a title="" class="img-cart cart-mobile"><img src="<?php echo public_url() ?>images/icon/ic-cart-feb.png" alt="error"></a>
 								<span class="amount-cart">3</span>
 								<div class="cart-hover">
 	                                <table class="select-items">
 	                                    <tr ng-repeat="c in carts">
 	                                        <td class="si-img">
-	                                            <a href=""><img src="<?php echo base_url() ?>theme/frontend/images/product/061915d98b626d3c3473.jpg" alt=""></a>
+	                                            <a href=""><img src="<?php echo public_url() ?>images/product/061915d98b626d3c3473.jpg" alt=""></a>
 	                                        </td>
 	                                        <td class="si-content">
 	                                            <div class="si-product">
