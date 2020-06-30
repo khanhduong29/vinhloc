@@ -1,7 +1,7 @@
 		<main> 
 			<div class="container">
 			    <section class="big-carousel">
-			    	<img src="/vinhloc/theme/frontend/images/slide/slide0.jpg" alt="">
+			    	<img src="<?php echo base_url() ?>theme/frontend/images/slide/slide0.jpg" alt="">
 			    </section>
 			</div>
 			<section class="content-contact pb-5 space-title">

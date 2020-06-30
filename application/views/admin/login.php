@@ -6,18 +6,18 @@
   <title>AdminLTE  | Log in</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="shortcut icon" type="image/x-icon" href="/vinhloc/theme/frontend/img/favicon.ico">
+  <link rel="shortcut icon" type="image/x-icon" href="<?php echo base_url() ?>theme/frontend/img/favicon.ico">
 
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="/vinhloc/theme/frontend/admin/plugins/fontawesome-free/css/all.min.css">
+  <link rel="stylesheet" href="<?php echo base_url() ?>theme/frontend/admin/plugins/fontawesome-free/css/all.min.css">
   <!-- Ionicons -->
-  <link rel="stylesheet" href="/vinhloc/theme/frontend/admin/plugins/ionicons.min.css">
+  <link rel="stylesheet" href="<?php echo base_url() ?>theme/frontend/admin/plugins/ionicons.min.css">
   <!-- icheck bootstrap -->
   <!-- <link rel="stylesheet" href="../../plugins/icheck-bootstrap/icheck-bootstrap.min.css"> -->
   <!-- Theme style -->
-  <link rel="stylesheet" href="/vinhloc/theme/frontend/admin/dist/css/adminlte.css">
+  <link rel="stylesheet" href="<?php echo base_url() ?>theme/frontend/admin/dist/css/adminlte.css">
   <!-- Google Font: Source Sans Pro -->
-  <link rel="stylesheet" href="/vinhloc/theme/frontend/admin/plugins/css.css">
+  <link rel="stylesheet" href="<?php echo base_url() ?>theme/frontend/admin/plugins/css.css">
 
 </head>
 <body class="hold-transition login-page">
@@ -89,12 +89,12 @@
 <!-- /.login-box -->
 
 <!-- jQuery -->
-<script src="/vinhloc/theme/frontend/admin/plugins/jquery/jquery.min.js"></script>
+<script src="<?php echo base_url() ?>theme/frontend/admin/plugins/jquery/jquery.min.js"></script>
 <!-- Bootstrap 4 -->
-<script src="/vinhloc/theme/frontend/admin/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="<?php echo base_url() ?>theme/frontend/admin/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- AdminLTE App -->
 <!-- <script src="../../dist/js/adminlte.min.js"></script> -->
-<script src="/vinhloc/theme/frontend/admin/dist/js/adminlte.js"></script>
+<script src="<?php echo base_url() ?>theme/frontend/admin/dist/js/adminlte.js"></script>
 
 </body>
 </html>

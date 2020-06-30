@@ -42,7 +42,7 @@
 							</div>
 							<div class="d-none d-md-block col-md-6 col-lg-6 pt-lg-5 pt-4">
 								<div class="border-2">
-									<img src="/vinhloc/theme/frontend/images/den-nom-2.jpg"  alt="error" />
+									<img src="<?php echo base_url() ?>theme/frontend/images/den-nom-2.jpg"  alt="error" />
 								</div>
 							</div>
 						</div>

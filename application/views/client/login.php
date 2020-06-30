@@ -8,7 +8,7 @@
 						<div class="row">
 							<div class="d-none d-md-block col-md-6 col-lg-6 pt-lg-5 pt-4">
 								<div class="border-2">
-									<img src="/vinhloc/theme/frontend/images/img-ctnw.png"  alt="error" />
+									<img src="<?php echo base_url() ?>theme/frontend/images/img-ctnw.png"  alt="error" />
 								</div>
 							</div>
 							<div class="col-md-6 col-lg-6 pt-lg-5 pt-4">

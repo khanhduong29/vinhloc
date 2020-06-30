@@ -3,7 +3,7 @@
 		<div class="row list-content">
 			<div class="col-lg-8 col-xs-12">
 				<h1>3 PHONG CÁCH ĐÈN NỘI THẤT KHÔNG BAO GIỜ LỖI THỜI</h1>
-				<img src="/vinhloc/theme/frontend/images/giay-dan-tuong-da-nang-compressed.jpg"
+				<img src="<?php echo base_url() ?>theme/frontend/images/giay-dan-tuong-da-nang-compressed.jpg"
 					alt="3 PHONG CÁCH ĐÈN NỘI THẤT KHÔNG BAO GIỜ LỖI THỜI"
 					title="3 PHONG CÁCH ĐÈN NỘI THẤT KHÔNG BAO GIỜ LỖI THỜI" class="img_item">
 				<div class="word-ctent s-content">
@@ -21,7 +21,7 @@
 						<h2><strong>TRANG TRÍ ĐÈN NỘI THẤT ĐƠN GIẢN, CỔ ĐIỂN</strong></h2>
 						<div id="attachment_410" class="wp-caption aligncenter"><img class="size-full wp-image-410"
 								style="display: block; margin-left: auto; margin-right: auto;"
-								src="/vinhloc/theme/frontend/images/giay-dan-tuong-da-nang-compressed.jpg"
+								src="<?php echo base_url() ?>theme/frontend/images/giay-dan-tuong-da-nang-compressed.jpg"
 								alt="den-trang-tri-phong-ngu" width="746" height="497">
 							<p class="wp-caption-text" style="text-align: center;">den-trang-tri-phong-ngu</p>
 						</div>
@@ -35,7 +35,7 @@
 						<h2><strong>ĐÈN TRANG TRÍ TINH TẾ, ĐẶC SẮC</strong></h2>
 						<div id="attachment_411" class="wp-caption aligncenter"><img class="size-full wp-image-411"
 								style="display: block; margin-left: auto; margin-right: auto;"
-								src="/vinhloc/theme/frontend/images/giay-dan-tuong-da-nang-compressed.jpg"
+								src="<?php echo base_url() ?>theme/frontend/images/giay-dan-tuong-da-nang-compressed.jpg"
 								alt="Den trang tri tinh te, dac sac" width="600" height="500">
 							<p class="wp-caption-text" style="text-align: center;">Den trang tri tinh te, dac sac</p>
 						</div>
@@ -51,7 +51,7 @@
 						<h2><strong>ĐÈN TRANG TRÍ THEO NÉT CỔ ĐIỂN</strong></h2>
 						<div id="attachment_412" class="wp-caption aligncenter"><img class="size-full wp-image-412"
 								style="display: block; margin-left: auto; margin-right: auto;"
-								src="/vinhloc/theme/frontend/images/giay-dan-tuong-da-nang-compressed.jpg"
+								src="<?php echo base_url() ?>theme/frontend/images/giay-dan-tuong-da-nang-compressed.jpg"
 								alt="Den trang tri theo net co dien" width="600" height="500">
 							<p class="wp-caption-text" style="text-align: center;">Den trang tri theo net co dien</p>
 						</div>
@@ -61,7 +61,7 @@
 							Ánh sáng đèn thường có màu vàng hoặc trắng vàng. Những bộ<span>&nbsp;</span><a
 								rel="noopener noreferrer" href=""
 								target="_blank">đèn trần</a>,<span>&nbsp;</span><a rel="noopener noreferrer"
-								href="/vinhloc/theme/frontend/images/giay-dan-tuong-da-nang-compressed.jpg"
+								href="<?php echo base_url() ?>theme/frontend/images/giay-dan-tuong-da-nang-compressed.jpg"
 								target="_blank">đèn tường</a>,
 							đèn thả hay<span>&nbsp;</span><a href=""
 								target="_parent">đèn bàn</a><span>&nbsp;</span>đều được thể hiện tốt với phong cách này.
@@ -77,7 +77,7 @@
 				<div class="item slick6 border-2">
 					<div class="box">
 						<a href="" class="smooth hv-scale">
-							<img src="/vinhloc/theme/frontend/images/den-nao-thich-hop-cho-van-phong-cong-ty-2.png"
+							<img src="<?php echo base_url() ?>theme/frontend/images/den-nao-thich-hop-cho-van-phong-cong-ty-2.png"
 								alt="lỗi" title="" class="img-fluid" />
 						</a>
 						<div class="desc">
@@ -91,7 +91,7 @@
 					</div>
 					<div class="box">
 						<a href="" class="smooth hv-scale">
-							<img src="/vinhloc/theme/frontend/images/den-nao-thich-hop-cho-van-phong-cong-ty-2.png"
+							<img src="<?php echo base_url() ?>theme/frontend/images/den-nao-thich-hop-cho-van-phong-cong-ty-2.png"
 								alt="lỗi" title="" class="img-fluid" />
 						</a>
 						<div class="desc">
@@ -105,7 +105,7 @@
 					</div>
 					<div class="box">
 						<a href="" class="smooth hv-scale">
-							<img src="/vinhloc/theme/frontend/images/den-nao-thich-hop-cho-van-phong-cong-ty-2.png"
+							<img src="<?php echo base_url() ?>theme/frontend/images/den-nao-thich-hop-cho-van-phong-cong-ty-2.png"
 								alt="lỗi" title="" class="img-fluid" />
 						</a>
 						<div class="desc">
@@ -119,7 +119,7 @@
 					</div>
 					<div class="box">
 						<a href="" class="smooth hv-scale">
-							<img src="/vinhloc/theme/frontend/images/den-nao-thich-hop-cho-van-phong-cong-ty-2.png"
+							<img src="<?php echo base_url() ?>theme/frontend/images/den-nao-thich-hop-cho-van-phong-cong-ty-2.png"
 								alt="lỗi" title="" class="img-fluid" />
 						</a>
 						<div class="desc">
@@ -133,7 +133,7 @@
 					</div>
 					<div class="box">
 						<a href="" class="smooth hv-scale">
-							<img src="/vinhloc/theme/frontend/images/den-nao-thich-hop-cho-van-phong-cong-ty-2.png"
+							<img src="<?php echo base_url() ?>theme/frontend/images/den-nao-thich-hop-cho-van-phong-cong-ty-2.png"
 								alt="lỗi" title="" class="img-fluid" />
 						</a>
 						<div class="desc">
@@ -147,7 +147,7 @@
 					</div>
 					<div class="box">
 						<a href="" class="smooth hv-scale">
-							<img src="/vinhloc/theme/frontend/images/den-nao-thich-hop-cho-van-phong-cong-ty-2.png"
+							<img src="<?php echo base_url() ?>theme/frontend/images/den-nao-thich-hop-cho-van-phong-cong-ty-2.png"
 								alt="lỗi" title="" class="img-fluid" />
 						</a>
 						<div class="desc">
@@ -161,7 +161,7 @@
 					</div>
 					<div class="box">
 						<a href="" class="smooth hv-scale">
-							<img src="/vinhloc/theme/frontend/images/den-nao-thich-hop-cho-van-phong-cong-ty-2.png"
+							<img src="<?php echo base_url() ?>theme/frontend/images/den-nao-thich-hop-cho-van-phong-cong-ty-2.png"
 								alt="lỗi" title="" class="img-fluid" />
 						</a>
 						<div class="desc">
@@ -175,7 +175,7 @@
 					</div>
 					<div class="box">
 						<a href="" class="smooth hv-scale">
-							<img src="/vinhloc/theme/frontend/images/den-nao-thich-hop-cho-van-phong-cong-ty-2.png"
+							<img src="<?php echo base_url() ?>theme/frontend/images/den-nao-thich-hop-cho-van-phong-cong-ty-2.png"
 								alt="lỗi" title="" class="img-fluid" />
 						</a>
 						<div class="desc">
@@ -189,7 +189,7 @@
 					</div>
 					<div class="box">
 						<a href="" class="smooth hv-scale">
-							<img src="/vinhloc/theme/frontend/images/den-nao-thich-hop-cho-van-phong-cong-ty-2.png"
+							<img src="<?php echo base_url() ?>theme/frontend/images/den-nao-thich-hop-cho-van-phong-cong-ty-2.png"
 								alt="lỗi" title="" class="img-fluid" />
 						</a>
 						<div class="desc">
@@ -203,7 +203,7 @@
 					</div>
 					<div class="box">
 						<a href="" class="smooth hv-scale">
-							<img src="/vinhloc/theme/frontend/images/den-nao-thich-hop-cho-van-phong-cong-ty-2.png"
+							<img src="<?php echo base_url() ?>theme/frontend/images/den-nao-thich-hop-cho-van-phong-cong-ty-2.png"
 								alt="lỗi" title="" class="img-fluid" />
 						</a>
 						<div class="desc">
@@ -217,7 +217,7 @@
 					</div>
 					<div class="box">
 						<a href="" class="smooth hv-scale">
-							<img src="/vinhloc/theme/frontend/images/den-nao-thich-hop-cho-van-phong-cong-ty-2.png"
+							<img src="<?php echo base_url() ?>theme/frontend/images/den-nao-thich-hop-cho-van-phong-cong-ty-2.png"
 								alt="lỗi" title="" class="img-fluid" />
 						</a>
 						<div class="desc">
@@ -231,7 +231,7 @@
 					</div>
 					<div class="box">
 						<a href="" class="smooth hv-scale">
-							<img src="/vinhloc/theme/frontend/images/den-nao-thich-hop-cho-van-phong-cong-ty-2.png"
+							<img src="<?php echo base_url() ?>theme/frontend/images/den-nao-thich-hop-cho-van-phong-cong-ty-2.png"
 								alt="lỗi" title="" class="img-fluid" />
 						</a>
 						<div class="desc">
@@ -245,7 +245,7 @@
 					</div>
 					<div class="box">
 						<a href="" class="smooth hv-scale">
-							<img src="/vinhloc/theme/frontend/images/den-nao-thich-hop-cho-van-phong-cong-ty-2.png"
+							<img src="<?php echo base_url() ?>theme/frontend/images/den-nao-thich-hop-cho-van-phong-cong-ty-2.png"
 								alt="lỗi" title="" class="img-fluid" />
 						</a>
 						<div class="desc">
@@ -259,7 +259,7 @@
 					</div>
 					<div class="box">
 						<a href="" class="smooth hv-scale">
-							<img src="/vinhloc/theme/frontend/images/den-nao-thich-hop-cho-van-phong-cong-ty-2.png"
+							<img src="<?php echo base_url() ?>theme/frontend/images/den-nao-thich-hop-cho-van-phong-cong-ty-2.png"
 								alt="lỗi" title="" class="img-fluid" />
 						</a>
 						<div class="desc">
@@ -273,7 +273,7 @@
 					</div>
 					<div class="box">
 						<a href="" class="smooth hv-scale">
-							<img src="/vinhloc/theme/frontend/images/den-nao-thich-hop-cho-van-phong-cong-ty-2.png"
+							<img src="<?php echo base_url() ?>theme/frontend/images/den-nao-thich-hop-cho-van-phong-cong-ty-2.png"
 								alt="lỗi" title="" class="img-fluid" />
 						</a>
 						<div class="desc">
@@ -297,42 +297,42 @@
 			<section class="slick5 pt-lg-5 pt-4 pb-5 wow zoomIn">
 				<div>
 					<a href="" title="" class="avt">
-						<img src="/vinhloc/theme/frontend/images/thumbs/02fe85320661ff3fa670.jpg" alt="">
+						<img src="<?php echo base_url() ?>theme/frontend/images/thumbs/02fe85320661ff3fa670.jpg" alt="">
 					</a>
 				</div>
 				<div>
 					<a href="" title="" class="avt">
-						<img src="/vinhloc/theme/frontend/images/thumbs/dabaco-logo.jpg" alt="">
+						<img src="<?php echo base_url() ?>theme/frontend/images/thumbs/dabaco-logo.jpg" alt="">
 					</a>
 				</div>
 				<div>
 					<a href="" title="" class="avt">
-						<img src="/vinhloc/theme/frontend/images/thumbs/logo-phuthai.jpg" alt="">
+						<img src="<?php echo base_url() ?>theme/frontend/images/thumbs/logo-phuthai.jpg" alt="">
 					</a>
 				</div>
 				<div>
 					<a href="" title="" class="avt">
-						<img src="/vinhloc/theme/frontend/images/thumbs/single-logo.png" alt="">
+						<img src="<?php echo base_url() ?>theme/frontend/images/thumbs/single-logo.png" alt="">
 					</a>
 				</div>
 				<div>
 					<a href="" title="" class="avt">
-						<img src="/vinhloc/theme/frontend/images/thumbs/tai-xuong-1.jpg" alt="">
+						<img src="<?php echo base_url() ?>theme/frontend/images/thumbs/tai-xuong-1.jpg" alt="">
 					</a>
 				</div>
 				<div>
 					<a href="" title="" class="avt">
-						<img src="/vinhloc/theme/frontend/images/thumbs/tai-xuong.jpg" alt="">
+						<img src="<?php echo base_url() ?>theme/frontend/images/thumbs/tai-xuong.jpg" alt="">
 					</a>
 				</div>
 				<div>
 					<a href="" title="" class="avt">
-						<img src="/vinhloc/theme/frontend/images/thumbs/tai-xuong.png" alt="">
+						<img src="<?php echo base_url() ?>theme/frontend/images/thumbs/tai-xuong.png" alt="">
 					</a>
 				</div>
 				<div>
 					<a href="" title="" class="avt">
-						<img src="/vinhloc/theme/frontend/images/thumbs/thong-tu-quy-dinh-ve-cac-bieu-mau-su-dung-de-xu-phat-vi-pham-hanh-chinh-thuoc-tham-quyen-cua-cong-an-nhan-dan-2.png"
+						<img src="<?php echo base_url() ?>theme/frontend/images/thumbs/thong-tu-quy-dinh-ve-cac-bieu-mau-su-dung-de-xu-phat-vi-pham-hanh-chinh-thuoc-tham-quyen-cua-cong-an-nhan-dan-2.png"
 							alt="">
 					</a>
 				</div>
