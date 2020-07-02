@@ -28,10 +28,10 @@
                 <thead>
                 <tr>
                   <th width="5%">ID</th>
-                  <th width="5%">Code</th>
-                  <th width="26%">Name</th>
+                  <th width="26%">Name product</th>
                   <th width="10%">Category</th>
                   <th width="5%">Price</th>
+                  <th width="14%">Sale price</th>
                   <th width="10%">Image</th>
                   <th width="5%">Status</th>
                   <th width="20%">Date</th>
@@ -39,25 +39,22 @@
                 </tr>
                 </thead>
                 <tbody>
-                <?php foreach($products as $pro){ ?>
-                
+                <!-- @foreach($products as $pro) -->
                   <tr>
-                    <td><?php echo $pro[id] ?></td>
-                    <td><?php echo $pro[code] ?></td>
-                    <td><?php echo $pro[name] ?></td>
-                    <td><?php echo $pro[id_cat] ?></td>
-                    <td><?php echo $pro[price] ?></td>
+                    <td>id</td>
+                    <td>name</td>
+                    <td>name-cat</td>
+                    <td>price</td>
+                    <td>sale-price</td>
+                    <td><img src="../../theme/frontend/images/den-nom-2.jpg" style="width: 100px;" alt=""></td>
+                    <td>Hiện</td>
+                    <td>ngày</td>
                     <td>
-                      <?php echo $pro[image] ?>
-                      <img src="" style="width: 100px;" alt=""></td>
-                    <td><?php echo $pro[status] ?></td>
-                    <td><?php echo $pro[created_at] ?></td>
-                    <td>
-                      <a href="<?php echo base_url() ?>/edit/<?php echo $pro[id] ?>" class="btn btn-primary btn-xs">Sửa</a>
-                      <a href="" class="btn btn-danger btn-xs" onclick="return confirm('Xác nhận xoá ?')">Xóa</a>
+                      <a href="{{ Route('edit-product',['id_pro'=>$pro->id_pro]) }}" class="btn btn-primary btn-xs">Sửa</a>
+                      <a href="{{Route('deleteProduct',['id_pro'=>$pro->id_pro])}}" class="btn btn-danger btn-xs" onclick="return confirm('Xác nhận xoá ?')">Xóa</a>
                     </td>
                   </tr>
-                <?php } ?>
+                <!-- @endforeach -->
                 
                 </tbody>
                 <tfoot>
