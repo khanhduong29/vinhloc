@@ -20,14 +20,13 @@
 										</div>
 										<div class="col-12  form-group">
 											<label for="">Mật khẩu	</label>
-											<input type="text" name="password" class="form-control" id="" placeholder="Password">
+											<input type="password" name="password" class="form-control" id="" placeholder="Password">
 										</div>
 										<div class="col-12  form-group">
-											<button type="submit" class="btn btn-lg btn-primary btn-lg-feb">Đăng nhập </button>
+											<button type="submit" name="submit" class="btn btn-lg btn-primary btn-lg-feb">Đăng nhập</button>
 										</div>
 									</div>
 								</form>
-
 							</div>
 						</div>
 					</section>
