@@ -56,7 +56,7 @@ $route['home'] = 'client/index';
 $route['about'] = 'client/about';
 $route['category'] = 'client/category'	;
 $route['product'] = 'client/product';
-$route['product-detail'] = 'client/product_detail';
+$route['product_detail'] = 'client/product_detail';
 $route['service'] = 'client/service';
 $route['construction'] = 'client/construction';
 $route['contact'] = 'client/contact';
@@ -64,6 +64,7 @@ $route['blog_detail'] = 'client/blog_detail';
 
 $route['login'] = 'login/login';
 $route['register'] = 'login/register';
+$route['logout'] = 'login/logout';
 
 $route['cart'] = 'client/cart';
 $route['checkout'] = 'client/checkout';
