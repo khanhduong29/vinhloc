@@ -14,16 +14,12 @@
 											<input type="text" class="form-control" id="" placeholder="Họ và tên">
 										</div>
 										<div class="col-12 form-group">
-											<label for="" >Số điện thoại</label>
-											<input type="text" class="form-control" id="" placeholder="Số điện thoại">
-										</div>
-										<div class="col-12 form-group">
-											<label for="" >Địa chỉ</label>
-											<input type="text" class="form-control" id="" placeholder="Địa chỉ">
-										</div>
-										<div class="col-12 form-group">
 											<label for="" >Email</label>
 											<input type="email" class="form-control" id="" placeholder="Email">
+										</div>
+										<div class="col-12 form-group">
+											<label for="" >Số điện thoại</label>
+											<input type="text" class="form-control" id="" placeholder="Số điện thoại">
 										</div>
 										<div class="col-12  form-group">
 											<label for="">Mật khẩu	</label>
