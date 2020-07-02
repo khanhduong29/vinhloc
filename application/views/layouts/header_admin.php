@@ -105,7 +105,7 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item">
-            <a href="{{ asset('/') }}admin" class="nav-link">
+            <a href="<?php echo base_url(); ?>/admin/admin/index" class="nav-link">
               <i class="nav-icon fas fa-th"></i>
               <p>
                 Trang chủ
@@ -114,19 +114,10 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="{{ route('home" class="nav-link" target="_blank">
+            <a href="<?php echo base_url(); ?>" class="nav-link" target="_blank">
               <i class="nav-icon fas fa-shopping-cart"></i>
               <p>
                 Website
-                <!-- <span class="right badge badge-danger">New</span> -->
-              </p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="{{ route('admin-about" class="nav-link">
-              <i class="nav-icon fas fa-shopping-cart"></i>
-              <p>
-                Trang giới thiệu
                 <!-- <span class="right badge badge-danger">New</span> -->
               </p>
             </a>
@@ -164,13 +155,13 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="{{route('add-categories')}}" class="nav-link">
+                <a href="<?php echo base_url(); ?>admin/category/add" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Thêm danh mục</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="{{route('list-categories')}}" class="nav-link">
+                <a href="<?php echo base_url(); ?>admin/category/list_cat" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Danh sách danh mục</p>
                 </a>
@@ -187,13 +178,13 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="{{route('add-product')}}" class="nav-link">
+                <a href="<?php echo base_url(); ?>admin/product/add" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Thêm sản phẩm</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="{{route('list-product')}}" class="nav-link">
+                <a href="<?php echo base_url(); ?>admin/product/list_pro" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Danh sách sản phẩm</p>
                 </a>

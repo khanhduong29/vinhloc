@@ -67,3 +67,5 @@ $route['register'] = 'login/register';
 
 $route['cart'] = 'client/cart';
 $route['checkout'] = 'client/checkout';
+
+

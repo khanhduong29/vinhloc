@@ -6,7 +6,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h3><a href="{{route('add-product')}}">Thêm sản phẩm</a></h3>
+            <h3><a href="add">Thêm danh mục</a></h3>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -28,43 +28,32 @@
                 <thead>
                 <tr>
                   <th width="5%">ID</th>
-                  <th width="26%">Name product</th>
-                  <th width="10%">Category</th>
-                  <th width="5%">Price</th>
-                  <th width="14%">Sale price</th>
-                  <th width="10%">Image</th>
+                  <th width="26%">Name</th>
                   <th width="5%">Status</th>
                   <th width="20%">Date</th>
                   <th width="5%">#</th>
                 </tr>
                 </thead>
                 <tbody>
-                <!-- @foreach($products as $pro) -->
+                <?php foreach($categorys as $cat){ ?>
+                
                   <tr>
-                    <td>id</td>
-                    <td>name</td>
-                    <td>name-cat</td>
-                    <td>price</td>
-                    <td>sale-price</td>
-                    <td><img src="../../theme/frontend/images/den-nom-2.jpg" style="width: 100px;" alt=""></td>
-                    <td>Hiện</td>
-                    <td>ngày</td>
+                    <td><?php echo $cat['id'] ?></td>
+                    <td><?php echo $cat['name'] ?></td>
+                    <td><?php echo $cat['status'] ? 'Hiện' : 'Ẩn' ?></td>
+                    <td><?php echo $cat['created_at'] ?></td>
                     <td>
-                      <a href="{{ Route('edit-product',['id_pro'=>$pro->id_pro]) }}" class="btn btn-primary btn-xs">Sửa</a>
-                      <a href="{{Route('deleteProduct',['id_pro'=>$pro->id_pro])}}" class="btn btn-danger btn-xs" onclick="return confirm('Xác nhận xoá ?')">Xóa</a>
+                      <a href="<?php echo base_url(); ?>admin/category/edit/<?php echo $cat['id']; ?>" class="btn btn-primary btn-xs">Sửa</a>
+                      <a href="<?php echo base_url(); ?>admin/category/delete/<?php echo $cat['id']; ?>" class="btn btn-danger btn-xs" onclick="return confirm('Xác nhận xoá ?')">Xóa</a>
                     </td>
                   </tr>
-                <!-- @endforeach -->
+                <?php } ?>
                 
                 </tbody>
                 <tfoot>
                   <tr>
                       <th>ID</th>
-                      <th>Name product</th>
-                      <th>Category</th>
-                      <th>Price</th>
-                      <th>Sale price</th>
-                      <th>Image</th>
+                      <th>Name </th>
                       <th>Status</th>
                       <th>Date</th>
                       <th>#</th>
