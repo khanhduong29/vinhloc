@@ -7,8 +7,21 @@
 	        parent::__construct();
 	    }
 	     
-	    public function insert($data_insert){
-	        $this->db->insert($this->_table,$data_insert);
+	    public function insert(){ 
+		    $slug = url_title($this->input->post('name'), 'dash', TRUE);
+
+		    $data = array(
+		        "id" => $this->input->post("id"),
+	            "code" => $this->input->post("code"),
+	            "id_cat" => $this->input->post("id_cat"),
+	            "slug"    => $slug,
+	            "name"    => $this->input->post("name"),
+	            "price"    => $this->input->post("price"),
+	            "image"    => $this->input->post("image"),
+	            "status"    => $this->input->post("status"),
+		    );
+
+		    return $this->db->insert($this->_table, $data);
 	    }
 
 

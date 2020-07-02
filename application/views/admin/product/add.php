@@ -26,6 +26,15 @@
             <div class="card card-primary">             
                <!-- form start -->
               <form action="<?php echo base_url(); ?>/admin/product/add" method="post" role="form" enctype="multipart/form-data">
+                <?php
+                echo "<div class='mess_error'>";
+                echo "<ul>";
+                    if(validation_errors() != ''){
+                        echo "<li>".validation_errors()."</li>";
+                    }
+                echo "</ul>";
+                echo "</div>";
+                ?>
                 <div class="card-body">
                   <div class="form-group">
                     <label for="">Mã sản phẩm</label>
@@ -35,11 +44,6 @@
                   <div class="form-group">
                     <label for="">Tên sản phẩm</label>
                     <input type="text" class="form-control" id="name" name="name" placeholder="Nhập tên sản phẩm">
-                    <div class="help-block"></div>
-                  </div>
-                  <div class="form-group">
-                    <label for="">Slug</label>
-                    <input type="text" class="form-control" id="name" name="slug" placeholder="Nhập tên sản phẩm">
                     <div class="help-block"></div>
                   </div>
                   <div class="form-group">
