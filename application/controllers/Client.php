@@ -67,18 +67,6 @@ class Client extends CI_Controller {
 		$data['title'] = 'tên chia sẻ';
 		$this->load->view('layouts/main',$data);
 	}
-	public function login()
-	{
-		$data['main'] = 'client/login';
-        $data['title'] = 'Đăng nhập';
-		$this->load->view('layouts/main', $data);
-	}
-	public function register()
-	{
-		$data['main'] = 'client/register';
-        $data['title'] = 'Đăng ký';
-		$this->load->view('layouts/main', $data);
-	}
 	public function cart()
 	{
 		$data['main'] = 'client/cart';

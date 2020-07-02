@@ -16,11 +16,11 @@
 									<div class="row border-2 m-0 pt-5 pb-5">
 										<div class="col-12 form-group">
 											<label for="" >Email</label>
-											<input type="email" class="form-control" id="" placeholder="Email">
+											<input type="email" name="email" class="form-control" id="" placeholder="Email">
 										</div>
 										<div class="col-12  form-group">
 											<label for="">Mật khẩu	</label>
-											<input type="text" class="form-control" id="" placeholder="Password">
+											<input type="text" name="password" class="form-control" id="" placeholder="Password">
 										</div>
 										<div class="col-12  form-group">
 											<button type="submit" class="btn btn-lg btn-primary btn-lg-feb">Đăng nhập </button>
