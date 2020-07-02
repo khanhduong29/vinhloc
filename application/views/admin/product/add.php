@@ -61,8 +61,7 @@
                   <div class="form-group">
                     <label for="exampleInputFile">Chọn ảnh sản phẩm</label>
                     <div class="input-group">
-                      <input type="text" class="form-control" id="price" name="image" placeholder="Nhập giá sản phẩm">
-                      <!-- <input type="file" name="file" class="text-center center-block file-upload" accept="image/gif, image/jpeg, image/jpg, image/png"/>   -->
+                      <input type="file" name="file" class="text-center center-block file-upload" accept="image/gif, image/jpeg, image/jpg, image/png"/>  
                     </div>
                   </div>
                   <div class="form-check">

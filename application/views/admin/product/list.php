@@ -48,13 +48,13 @@
                     <td><?php echo $pro['id_cat'] ?></td>
                     <td><?php echo $pro['price'] ?></td>
                     <td>
-                      <?php echo $pro['image'] ?>
-                      <img src="" style="width: 100px;" alt=""></td>
-                    <td><?php echo $pro['status'] ?></td>
+                      
+                      <img src="<?php echo base_url(); ?>Uploads/<?php echo $pro['image'] ?>" style="width: 100px;" alt=""></td>
+                    <td><?php echo $pro['status'] ? 'Hiện' : 'Ẩn' ?></td>
                     <td><?php echo $pro['created_at'] ?></td>
                     <td>
                       <a href="<?php echo base_url(); ?>admin/product/edit/<?php echo $pro['id']; ?>" class="btn btn-primary btn-xs">Sửa</a>
-                      <a href="" class="btn btn-danger btn-xs" onclick="return confirm('Xác nhận xoá ?')">Xóa</a>
+                      <a href="<?php echo base_url(); ?>admin/product/delete/<?php echo $pro['id']; ?>" class="btn btn-danger btn-xs" onclick="return confirm('Xác nhận xoá ?')">Xóa</a>
                     </td>
                   </tr>
                 <?php } ?>

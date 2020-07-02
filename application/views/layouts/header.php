@@ -32,15 +32,24 @@
 	                    </div>
 	                </div>
 	                <div class="d-flex flex-row">
-	                    <a href="login" class="pr-2  c-fff">
-	                        <span class="d-inline-block ml-2">Đăng nhập</span>
-	                    </a>
-	                    <a href="register" class="border-left pl-2 c-fff">
-	                        <span class="d-inline-block ml-2">Đăng ký</span>
-	                    </a>
+						<?php if($this->session->has_userdata('login')) { ?>
+							<a href="userDetail" class="pr-2  c-fff">
+								<span class="d-inline-block ml-2"><?php echo $this->session->userdata('login')->name ?></span>
+							</a>
+							<a href="logout" class="border-left pl-2 c-fff">
+								<span class="d-inline-block ml-2">Đăng xuat</span>
+							</a>
+						<?php } else { ?>
+							<a href="login" class="pr-2  c-fff">
+								<span class="d-inline-block ml-2">Đăng nhập</span>
+							</a>
+							<a href="register" class="border-left pl-2 c-fff">
+								<span class="d-inline-block ml-2">Đăng ký</span>
+							</a>
+						<?php } ?>
 	                </div>
 	            </div>
-	        </div>
+			</div>
 			<nav class="d-none d-lg-block">
 				<section class="header-top pt-5"> 
 					<div class="container"> 
