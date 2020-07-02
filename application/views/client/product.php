@@ -22,22 +22,24 @@
 					</form>
 		            <section class="show-pro pt-lg-5 pt-4">
 						<div class="row">
+						<?php foreach($product as $value){ ?>
 							<div class="col-12 col-sm-6 col-md-4 col-lg-3">
 								<div class="pt-4">
 		                            <div class="thumbnail pb-4">
-		                            	<a href="product-detail.html" class="hv-scale p-3 b-ra-30">
+		                            	<a href="" class="hv-scale p-3 b-ra-30">
 		                            		<img src="<?php echo public_url() ?>images/product/8b1b1592df0d3953601c.jpg" class="img-fluid"  alt="a" />
 		                            	</a>
 		                            	<div class="desc text-center">
 		                            		<h3>
-		                            			<a href="product-detail.html" title="" class="c-fff text-uppercase f-16">Đèn chùm pha lê</a>
+		                            			<a href="" title="" class="c-fff text-uppercase f-16">Đèn chùm pha lê</a>
 		                            		</h3>
 		                            		<span class="c-feb f-16 text-uppercase">Liên hệ</span>
 		                            	</div>
 		                            </div>
 			                    </div>
 							</div>
-							<div class="col-12 col-sm-6 col-md-4 col-lg-3">
+						<?php } ?>
+							<!-- <div class="col-12 col-sm-6 col-md-4 col-lg-3">
 								<div class="pt-4">
 		                            <div class="thumbnail pb-4">
 		                            	<a href="product-detail.html" class="hv-scale p-3 b-ra-30">
@@ -141,8 +143,9 @@
 		                            	</div>
 		                            </div>
 			                    </div>
-							</div>
+							</div> -->
 						</div>
+						
 		            	<div class="pagination">
 		            		<strong>1</strong>
 		            		<a href="">2</a>
@@ -159,6 +162,7 @@
 						<span class="title-big">Sản phẩm tương tự</span>
 					</h2>
 		            <section class="slick3 pt-lg-5 pt-4 wow fadeInUp">
+		            	<?php foreach($product as $value){ ?>
 	                    <div class="pt-2">
                             <div class="thumbnail pb-4">
                             	<a href="product-detail.html" class="hv-scale p-3 b-ra-30">
@@ -172,7 +176,8 @@
                             	</div>
                             </div>
 	                    </div>
-	                    <div class="pt-2">
+	                    <?php } ?>
+	                   <!--  <div class="pt-2">
                             <div class="thumbnail pb-4">
                             	<a href="product-detail.html" class="hv-scale p-3 b-ra-30">
                             		<img src="<?php echo public_url() ?>images/product/9717852538bddee387ac.jpg" class="img-fluid"  alt="a" />
@@ -210,7 +215,7 @@
                             		<span class="c-feb f-16 text-uppercase">Liên hệ</span>
                             	</div>
                             </div>
-	                    </div>
+	                    </div> -->
 		            </section>
 				</div>
 			</section>
@@ -220,12 +225,14 @@
 						<span class="title-big">Khách hàng tiêu biểu</span>
 					</h2>
 		            <section class="slick5 pt-lg-5 pt-4 pb-5 wow zoomIn">
+		            	<?php foreach($product as $value){ ?>
 	            		<div>
 	            			<a href="" title="" class="avt">
 	            				<img src="<?php echo public_url() ?>images/thumbs/02fe85320661ff3fa670.jpg" alt="">
 	            			</a>
 	            		</div>
-	            		<div>
+	            		<?php } ?>
+	            		<!-- <div>
 	            			<a href="" title="" class="avt">
 	            				<img src="<?php echo public_url() ?>images/thumbs/dabaco-logo.jpg" alt="">
 	            			</a>
@@ -259,7 +266,8 @@
 	            			<a href="" title="" class="avt">
 	            				<img src="<?php echo public_url() ?>images/thumbs/thong-tu-quy-dinh-ve-cac-bieu-mau-su-dung-de-xu-phat-vi-pham-hanh-chinh-thuoc-tham-quyen-cua-cong-an-nhan-dan-2.png" alt="">
 	            			</a>
-	            		</div>
+	            		</div> -->
+	            		
 		            </section>
 				</div>
 			</section>

@@ -6,6 +6,7 @@
 					</h2>
 		            <section class="show-pro pt-lg-5 pt-4">
 						<div class="row">
+						<?php foreach($category as $value){ ?>
 							<div class="col-12 col-sm-6 col-md-4 col-lg-3">
 								<div class="pt-4">
 		                            <div class="thumbnail pb-4">
@@ -21,7 +22,8 @@
 		                            </div>
 			                    </div>
 							</div>
-							<div class="col-12 col-sm-6 col-md-4 col-lg-3">
+						<?php } ?>
+							<!-- <div class="col-12 col-sm-6 col-md-4 col-lg-3">
 								<div class="pt-4">
 		                            <div class="thumbnail pb-4">
 		                            	<a href="" class="hv-scale p-3 b-ra-30">
@@ -125,7 +127,7 @@
 		                            	</div>
 		                            </div>
 			                    </div>
-							</div>
+							</div> -->
 						</div>
 		            	<div class="pagination">
 		            		<strong>1</strong>
@@ -143,12 +145,13 @@
 						<span class="title-big">Khách hàng tiêu biểu</span>
 					</h2>
 		            <section class="slick5 pt-lg-5 pt-4 pb-5 wow zoomIn">
+		            	<?php foreach($category as $value){ ?>
 	            		<div>
 	            			<a href="" title="" class="avt">
 	            				<img src="<?php echo public_url() ?>images/thumbs/02fe85320661ff3fa670.jpg" alt="">
 	            			</a>
 	            		</div>
-	            		<div>
+	            		<!-- <div>
 	            			<a href="" title="" class="avt">
 	            				<img src="<?php echo public_url() ?>images/thumbs/dabaco-logo.jpg" alt="">
 	            			</a>
@@ -182,7 +185,8 @@
 	            			<a href="" title="" class="avt">
 	            				<img src="<?php echo public_url() ?>images/thumbs/thong-tu-quy-dinh-ve-cac-bieu-mau-su-dung-de-xu-phat-vi-pham-hanh-chinh-thuoc-tham-quyen-cua-cong-an-nhan-dan-2.png" alt="">
 	            			</a>
-	            		</div>
+	            		</div> -->
+	            		<?php } ?>
 		            </section>
 				</div>
 			</section>

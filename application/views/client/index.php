@@ -22,6 +22,7 @@
 						<span class="title-big">Các dòng sản phẩm</span>
 					</h2>
 		            <section class="slick1 pt-lg-5 pt-4 wow fadeInUp">
+		            	<?php foreach($product as $value){ ?>
 	            		<div class="pt-2">
                             <div class="thumbnail">
                             	<a href="" class="hv-scale p-3">
@@ -37,7 +38,8 @@
                             	</div>
                             </div>
 	                    </div>
-	                    <div class="pt-2">
+	                    <?php } ?>
+	                    <!-- <div class="pt-2">
                             <div class="thumbnail">
                             	<a href="" class="hv-scale p-3">
                             		<img src="<?php echo public_url() ?>images/product/0fcdb1b05c06ba58e317.jpg"  alt="a" />
@@ -96,7 +98,7 @@
                             		</h3>
                             	</div>
                             </div>
-	                    </div>
+	                    </div> -->
 		            </section>
 				</div>
 			</section>
