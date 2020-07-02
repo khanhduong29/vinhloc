@@ -31,19 +31,19 @@ class MY_Controller extends CI_Controller {
             default:
             {
                 //lấy danh sách danh mục
-            $this->load->model('category_model');
-            $category_list = $this->category_model->get_list(); 
-            $this->data['category_list'] =   $category_list;
+            // $this->load->model('category_model');
+            // $category_list = $this->category_model->get_list(); 
+            // $this->data['category_list'] =   $category_list;
 
-            //sản phẩm
-            $this->load->model('product_model');
-            $product_list = $this->product_model->getList(); 
-            $this->data['product_list'] =   $product_list;
-            //công trình
-            $this->load->model('construction_model');
-            $construction_list = $this->construction_model->get_list();
-            $this->data['construction_list'] = $construction_list;
-                break;
+            // //sản phẩm
+            // $this->load->model('product_model');
+            // $product_list = $this->product_model->getList(); 
+            // $this->data['product_list'] =   $product_list;
+            // //công trình
+            // $this->load->model('construction_model');
+            // $construction_list = $this->construction_model->get_list();
+            // $this->data['construction_list'] = $construction_list;
+            //     break;
             }
         }
  
