@@ -22,130 +22,24 @@
 					</form>
 		            <section class="show-pro pt-lg-5 pt-4">
 						<div class="row">
-						<?php foreach($product as $value){ ?>
+						<?php foreach($list as $value){ ?>
 							<div class="col-12 col-sm-6 col-md-4 col-lg-3">
 								<div class="pt-4">
 		                            <div class="thumbnail pb-4">
 		                            	<a href="" class="hv-scale p-3 b-ra-30">
 		                            	<a href="product_detail" class="hv-scale p-3 b-ra-30">
-		                            		<img src="<?php echo public_url() ?>images/product/8b1b1592df0d3953601c.jpg" class="img-fluid"  alt="a" />
+		                            		<img src="<?php echo base_url() ?>Uploads/<?php echo $value['image']?>" class="img-fluid"  alt="a" />
 		                            	</a>
 		                            	<div class="desc text-center">
 		                            		<h3>
-		                            			<a href="" title="" class="c-fff text-uppercase f-16">Đèn chùm pha lê</a>
-		                            			<a href="product_detail" title="" class="c-fff text-uppercase f-16">Đèn chùm pha lê</a>
+		                            			<a href="product_detail" title="" class="c-fff text-uppercase f-16"><?php echo $value['name'] ?></a>
 		                            		</h3>
-		                            		<span class="c-feb f-16 text-uppercase">Liên hệ</span>
+		                            		<span class="c-feb f-16 text-uppercase"><?php echo $value['price'] ?> $</span>
 		                            	</div>
 		                            </div>
 			                    </div>
 							</div>
 						<?php } ?>
-							<!-- <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-								<div class="pt-4">
-		                            <div class="thumbnail pb-4">
-		                            	<a href="product_detail" class="hv-scale p-3 b-ra-30">
-		                            		<img src="<?php echo public_url() ?>images/product/061915d98b626d3c3473.jpg" class="img-fluid"  alt="a" />
-		                            	</a>
-		                            	<div class="desc text-center">
-		                            		<h3>
-		                            			<a href="product_detail" title="" class="c-fff text-uppercase f-16">Đèn chùm pha lê</a>
-		                            		</h3>
-		                            		<span class="c-feb f-16 text-uppercase">Liên hệ</span>
-		                            	</div>
-		                            </div>
-			                    </div>
-							</div>
-							<div class="col-12 col-sm-6 col-md-4 col-lg-3">
-								<div class="pt-4">
-		                            <div class="thumbnail pb-4">
-		                            	<a href="product_detail" class="hv-scale p-3 b-ra-30">
-		                            		<img src="<?php echo public_url() ?>images/product/0fcdb1b05c06ba58e317.jpg" class="img-fluid"  alt="a" />
-		                            	</a>
-		                            	<div class="desc text-center">
-		                            		<h3>
-		                            			<a href="product_detail" title="" class="c-fff text-uppercase f-16">Đèn chùm pha lê</a>
-		                            		</h3>
-		                            		<span class="c-feb f-16 text-uppercase">Liên hệ</span>
-		                            	</div>
-		                            </div>
-			                    </div>
-							</div>
-							<div class="col-12 col-sm-6 col-md-4 col-lg-3">
-								<div class="pt-4">
-		                            <div class="thumbnail pb-4">
-		                            	<a href="product_detail" class="hv-scale p-3 b-ra-30">
-		                            		<img src="<?php echo public_url() ?>images/product/137edd4960d1868fdfc0.jpg" class="img-fluid"  alt="a" />
-		                            	</a>
-		                            	<div class="desc text-center">
-		                            		<h3>
-		                            			<a href="product_detail" title="" class="c-fff text-uppercase f-16">Đèn chùm pha lê</a>
-		                            		</h3>
-		                            		<span class="c-feb f-16 text-uppercase">Liên hệ</span>
-		                            	</div>
-		                            </div>
-			                    </div>
-							</div>
-							<div class="col-12 col-sm-6 col-md-4 col-lg-3">
-								<div class="pt-4">
-		                            <div class="thumbnail pb-4">
-		                            	<a href="product_detail" class="hv-scale p-3 b-ra-30">
-		                            		<img src="<?php echo public_url() ?>images/product/2e3d45f2764a9014c95b.jpg" class="img-fluid"  alt="a" />
-		                            	</a>
-		                            	<div class="desc text-center">
-		                            		<h3>
-		                            			<a href="product_detail" title="" class="c-fff text-uppercase f-16">Đèn chùm pha lê</a>
-		                            		</h3>
-		                            		<span class="c-feb f-16 text-uppercase">Liên hệ</span>
-		                            	</div>
-		                            </div>
-			                    </div>
-							</div>
-							<div class="col-12 col-sm-6 col-md-4 col-lg-3">
-								<div class="pt-4">
-		                            <div class="thumbnail pb-4">
-		                            	<a href="product_detail" class="hv-scale p-3 b-ra-30">
-		                            		<img src="<?php echo public_url() ?>images/product/feb2ffd14249a417fd581.jpg" class="img-fluid"  alt="a" />
-		                            	</a>
-		                            	<div class="desc text-center">
-		                            		<h3>
-		                            			<a href="product_detail" title="" class="c-fff text-uppercase f-16">Đèn chùm pha lê</a>
-		                            		</h3>
-		                            		<span class="c-feb f-16 text-uppercase">Liên hệ</span>
-		                            	</div>
-		                            </div>
-			                    </div>
-							</div>
-							<div class="col-12 col-sm-6 col-md-4 col-lg-3">
-								<div class="pt-4">
-		                            <div class="thumbnail pb-4">
-		                            	<a href="product_detail" class="hv-scale p-3 b-ra-30">
-		                            		<img src="<?php echo public_url() ?>images/product/9717852538bddee387ac.jpg" class="img-fluid"  alt="a" />
-		                            	</a>
-		                            	<div class="desc text-center">
-		                            		<h3>
-		                            			<a href="product_detail" title="" class="c-fff text-uppercase f-16">Đèn chùm pha lê</a>
-		                            		</h3>
-		                            		<span class="c-feb f-16 text-uppercase">Liên hệ</span>
-		                            	</div>
-		                            </div>
-			                    </div>
-							</div>
-							<div class="col-12 col-sm-6 col-md-4 col-lg-3">
-								<div class="pt-4">
-		                            <div class="thumbnail pb-4">
-		                            	<a href="product_detail" class="hv-scale p-3 b-ra-30">
-		                            		<img src="<?php echo public_url() ?>images/product/bc7a454119fdffa3a6ec.jpg" class="img-fluid"  alt="a" />
-		                            	</a>
-		                            	<div class="desc text-center">
-		                            		<h3>
-		                            			<a href="product_detail" title="" class="c-fff text-uppercase f-16">Đèn chùm pha lê</a>
-		                            		</h3>
-		                            		<span class="c-feb f-16 text-uppercase">Liên hệ</span>
-		                            	</div>
-		                            </div>
-			                    </div>
-							</div> -->
 						</div>
 						
 		            	<div class="pagination">
