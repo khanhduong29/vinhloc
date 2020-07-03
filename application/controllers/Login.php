@@ -5,6 +5,7 @@
 		function __construct() {
 			parent::__construct();
 			$this->load->model('User_model');
+			$this->load->model('Mcategory');
 		}
 		function check_email() {
 			$email = $this->input->post('email');
@@ -30,6 +31,7 @@
 			}
 			$data['main'] = 'client/register';
 			$data['title'] = 'Đăng ký';
+			$data['category'] = $this->Mcategory->getList();
 			$this->load->view('layouts/main', $data);
 		}
 
@@ -68,6 +70,7 @@
 				}
 			$data['main'] = 'client/login';
 			$data['title'] = 'Đăng nhập';
+			$data['category'] = $this->Mcategory->getList();
 			$this->load->view('layouts/main', $data);
 		}
 		private function _user_is_login()
