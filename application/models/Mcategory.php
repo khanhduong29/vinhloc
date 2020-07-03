@@ -41,7 +41,6 @@
 		    	$status = 0;
 		    }
 	   		$data_update = array(
-                "id" => $this->input->post("id"),
 	            "slug"    => $slug,
 	            "name"    => $this->input->post("name"),
 	            "status"    => $status,

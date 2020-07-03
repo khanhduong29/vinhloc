@@ -8,8 +8,6 @@
 	  	// Hàm khởi tạo
 	    function __construct() {
 	        parent::__construct();
-	        $this->load->helper('url');
-	        $this->load->library('upload');
 	        $this->load->model("Mproduct");
 	        $this->load->model("Mcategory");
 	    }

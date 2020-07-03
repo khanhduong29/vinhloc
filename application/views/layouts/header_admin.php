@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>AdminRusu | name admin</title>
+  <title>Admin | name admin</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="shortcut icon" type="image/x-icon" href="<?php echo public_url() ?>img/favicon.ico">
@@ -105,7 +105,7 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item">
-            <a href="<?php echo base_url(); ?>/admin/admin/index" class="nav-link">
+            <a href="<?php echo base_url(); ?>admin/admin/index" class="nav-link">
               <i class="nav-icon fas fa-th"></i>
               <p>
                 Trang chủ
@@ -187,6 +187,29 @@
                 <a href="<?php echo base_url(); ?>admin/product/list_pro" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Danh sách sản phẩm</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <p>
+                Công trình
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="<?php echo base_url(); ?>admin/construction/add" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Thêm công trình</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="<?php echo base_url(); ?>admin/construction/list_con" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Danh sách công trình</p>
                 </a>
               </li>
             </ul>
