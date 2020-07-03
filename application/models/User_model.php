@@ -2,6 +2,9 @@
 	class User_model extends MY_Model {
 		public $table = 'user';
 
+		function __construct() {
+            parent::__construct();
+        }
 		public function insert() {
 			$value = array(
 				'name' => $this->input->post('name'),

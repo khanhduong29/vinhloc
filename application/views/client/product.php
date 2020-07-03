@@ -38,7 +38,12 @@
 		                            		<h3>
 		                            			<a href="product_detail" title="" class="c-fff text-uppercase f-16"><?php echo $value['name'] ?></a>
 		                            		</h3>
-		                            		<span class="c-feb f-16 text-uppercase"><?php echo $value['price'] ?> $</span>
+											<span class="c-feb f-16 text-uppercase"><?php echo $value['price'] ?> $</span>
+											<form action="" method="post">
+												<input type="hidden" name="id_user" value="<?php if($this->session->has_userdata('login')) echo $this->session->userdata('login')->id ?>">
+												<input type="hidden" name="id_pro" value="<?php echo $value['id'] ?>">
+												<button type="submit" name="submit">Add Cart</button>
+											</form>
 		                            	</div>
 		                            </div>
 			                    </div>
