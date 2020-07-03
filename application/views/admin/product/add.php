@@ -52,11 +52,12 @@
                   </div>
                   <div class="form-group">
                     <label for="">Loại sản phẩm</label>
-                    <input type="text" class="form-control" id="price" name="id_cat" placeholder="Nhập giá sản phẩm">
-                    <!-- <select name="id_cat" class="form-control">
+                    <select name="id_cat" class="form-control">
                       <option value="0">--Chọn loại sản phẩm--</option>
-                      <option value="1">11</option>
-                    </select> -->
+                      <?php foreach($category as $cat){ ?>
+                      <option value="<?php echo $cat['id'] ?>"><?php echo $cat['name'] ?></option>
+                      <?php } ?>
+                    </select>
                   </div>
                   <div class="form-group">
                     <label for="exampleInputFile">Chọn ảnh sản phẩm</label>

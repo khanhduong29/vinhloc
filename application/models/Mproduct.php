@@ -71,8 +71,9 @@
 		        } else{
 		          	$img = $pro['image'];
 		        }
-		    }else{
-		        $img = $pro['image'];
+		    }
+		    if($_FILES['file']['name'] == ''){
+		    	$img = $pro['image'];
 		    }
 	   		$status = $this->input->post("status");
 		    if($status){
@@ -81,13 +82,12 @@
 		    	$status = 0;
 		    }
 	   		$data_update = array(
-                "id" => $this->input->post("id"),
 	            "code" => $this->input->post("code"),
 	            "id_cat" => $this->input->post("id_cat"),
 	            "slug"    => $slug,
 	            "name"    => $this->input->post("name"),
 	            "price"    => $this->input->post("price"),
-	            "image"    => $this->input->post("image"),
+	            "image"    => $img,
 	            "status"    => $status,
             );
 	        $this->db->where("id", $id);

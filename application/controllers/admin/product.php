@@ -16,7 +16,6 @@
 	    public function list_pro() {
 	    	$this->_data['main'] = 'admin/product/list';
         	$this->_data['title'] = 'Danh sách sản phẩm';
-        	$this->load->model('Mproduct');
         	$this->_data['products'] = $this->Mproduct->getList();
 
 			$this->load->view('layouts/main_admin', $this->_data);
@@ -24,7 +23,8 @@
 	    // thêm sản phẩm
 	    public function add() {
 	    	$this->_data['main'] = 'admin/product/add';
-        	$this->_data['title'] = 'Thêm sản phẩm';		    
+        	$this->_data['title'] = 'Thêm sản phẩm';
+        	$this->_data['category'] = $this->Mcategory->getList();		    
 
 		    $this->form_validation->set_rules('code', 'Mã sản phẩm', 'required');
 		    $this->form_validation->set_rules('name', 'Tên sản phẩm', 'required');

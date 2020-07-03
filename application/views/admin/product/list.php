@@ -27,15 +27,15 @@
               <table id="example1" class="table table-bordered table-striped">
                 <thead>
                 <tr>
-                  <th width="5%">ID</th>
-                  <th width="5%">Code</th>
-                  <th width="26%">Name</th>
-                  <th width="10%">Category</th>
-                  <th width="5%">Price</th>
-                  <th width="10%">Image</th>
-                  <th width="5%">Status</th>
-                  <th width="20%">Date</th>
-                  <th width="5%">#</th>
+                  <th>ID</th>
+                  <th>Code</th>
+                  <th>Name</th>
+                  <th>Category</th>
+                  <th>Price</th>
+                  <th>Image</th>
+                  <th>Status</th>
+                  <th>Date</th>
+                  <th>#</th>
                 </tr>
                 </thead>
                 <tbody>
