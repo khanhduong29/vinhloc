@@ -22,7 +22,6 @@
 	            "name"    => $this->input->post("name"),
 	            "status"    => $status,
 		    );
-
 		    return $this->db->insert($this->_table, $data);
 	    }
 
@@ -47,16 +46,12 @@
             );
 	        $this->db->where("id", $id);
 	        $this->db->update($this->_table, $data_update);
-
 		}
 		// xóa danh mục trong bảng
 		function deleteCol($id){
 			$this->db->where("id", $id);
 			$this->db->delete($this->_table);
 		}
-
-	   
-	 
 	   	public function countAll(){
 	        return $this->db->count_all($this->_table); 
 	    }

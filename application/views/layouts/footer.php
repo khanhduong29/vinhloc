@@ -3,13 +3,9 @@
 			<div class="container">
 				<div class="menu-footer text-center">
 					<ul>
-						<li><a href="category">Đèn chùm</a></li>
-						<li><a href="category">Đèn thả pha lê</a></li>
-						<li><a href="category">Đèn ốp trần</a></li>
-						<li><a href="category">Đèn mâm ốp trần</a></li>
-						<li><a href="category">Đèn treo tường</a></li>
-						<li><a href="category">Đèn bàn, đèn cây</a></li>
-						<li><a href="category">Đèn soi tranh</a></li>
+						<?php foreach($category as $cate){ ?>
+							<li><a href="category" ><?php echo $cate['name'] ?></a></li>
+						<?php } ?>
 					</ul>
 				</div>
 			</div>

@@ -58,7 +58,6 @@
 						<span class="title-big">Sản phẩm tương tự</span>
 					</h2>
 		            <section class="slick3 pt-lg-5 pt-4 wow fadeInUp">
-		            	<?php foreach($product as $value){ ?>
 	                    <div class="pt-2">
                             <div class="thumbnail pb-4">
                             	<a href="product_detail" class="hv-scale p-3 b-ra-30">
@@ -72,7 +71,6 @@
                             	</div>
                             </div>
 	                    </div>
-	                    <?php } ?>
 	                   <!--  <div class="pt-2">
                             <div class="thumbnail pb-4">
                             	<a href="product_detail" class="hv-scale p-3 b-ra-30">
@@ -121,14 +119,7 @@
 						<span class="title-big">Khách hàng tiêu biểu</span>
 					</h2>
 		            <section class="slick5 pt-lg-5 pt-4 pb-5 wow zoomIn">
-		            	<?php foreach($product as $value){ ?>
 	            		<div>
-	            			<a href="" title="" class="avt">
-	            				<img src="<?php echo public_url() ?>images/thumbs/02fe85320661ff3fa670.jpg" alt="">
-	            			</a>
-	            		</div>
-	            		<?php } ?>
-	            		<!-- <div>
 	            			<a href="" title="" class="avt">
 	            				<img src="<?php echo public_url() ?>images/thumbs/dabaco-logo.jpg" alt="">
 	            			</a>
@@ -162,7 +153,7 @@
 	            			<a href="" title="" class="avt">
 	            				<img src="<?php echo public_url() ?>images/thumbs/thong-tu-quy-dinh-ve-cac-bieu-mau-su-dung-de-xu-phat-vi-pham-hanh-chinh-thuoc-tham-quyen-cua-cong-an-nhan-dan-2.png" alt="">
 	            			</a>
-	            		</div> -->
+	            		</div>
 	            		
 		            </section>
 				</div>

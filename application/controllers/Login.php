@@ -5,6 +5,7 @@
 		function __construct() {
 			parent::__construct();
 			$this->load->model('User_model');
+			$this->load->model('Mcategory');
 		}
 		function check_email() {
 			$email = $this->input->post('email');
@@ -26,10 +27,11 @@
 
 			if($this->form_validation->run() === true) {
 				$this->User_model->insert();
-				redirect('login');	
+				redirect(base_url().'login');	
 			}
 			$data['main'] = 'client/register';
 			$data['title'] = 'Đăng ký';
+			$data['category'] = $this->Mcategory->getList();
 			$this->load->view('layouts/main', $data);
 		}
 
@@ -62,13 +64,13 @@
 					$where = array('email' => $email, 'password' => $password);
 					//lay thong tin thanh vien
 					$user = $this->User_model->get_info_rule($where);
-					
 					//luu thong tin thanh vien vao session
 					$this->session->set_userdata('login', $user);
-					redirect('home');
+					redirect(base_url());
 				}
 			$data['main'] = 'client/login';
 			$data['title'] = 'Đăng nhập';
+			$data['category'] = $this->Mcategory->getList();
 			$this->load->view('layouts/main', $data);
 		}
 		private function _user_is_login()
@@ -88,7 +90,7 @@
 				//neu thanh vien da dang nhap thi xoa session login
 				$this->session->unset_userdata('login');
 				}
-				redirect('login');
+				redirect(base_url().'login');
 			}
 	}
 ?>
