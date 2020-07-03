@@ -67,7 +67,6 @@ class Client extends CI_Controller {
         $data['title'] = 'Sản phẩm';
         $this->load->model('Mproduct');
         $data['product'] = $this->Mproduct->getList();
-		
 		$this->load->view('layouts/main', $data);
 	}
 	public function service()
