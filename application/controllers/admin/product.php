@@ -11,6 +11,7 @@
 	        $this->load->helper('url');
 	        $this->load->library('upload');
 	        $this->load->model("Mproduct");
+	        $this->load->model("Mcategory");
 	    }
 	    // hiển thị danh sách sản phẩm
 	    public function list_pro() {
@@ -40,6 +41,7 @@
 	    public function edit($id) {
 	    	$this->_data['main'] = 'admin/product/edit';
         	$this->_data['title'] = 'Sửa sản phẩm';
+        	$this->_data['category'] = $this->Mcategory->getList();		
 
         	$this->_data['products'] = $this->Mproduct->getId($id);
         	$this->form_validation->set_rules('code', 'Code', 'required');
