@@ -22,11 +22,11 @@
 						<span class="title-big">Các dòng sản phẩm</span>
 					</h2>
 		            <section class="slick1 pt-lg-5 pt-4 wow fadeInUp">
-		            	<?php foreach($product as $value){ ?>
+		            	<?php foreach($product as $pro){ ?>
 	            		<div class="pt-2">
                             <div class="thumbnail">
                             	<a href="" class="hv-scale p-3">
-                            		<img src="<?php echo public_url() ?>images/product/061915d98b626d3c3473.jpg"  alt="a" />
+                            		<img src="<?php echo base_url() ?>Uploads/<?php echo $pro['image']?>"  alt="a" />
                             	</a>
                             	<div class="desc text-center">
                             		<div class="img">

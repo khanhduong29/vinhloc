@@ -26,7 +26,7 @@
 
 			if($this->form_validation->run() === true) {
 				$this->User_model->insert();
-				redirect('login');	
+				redirect(base_url().'login');	
 			}
 			$data['main'] = 'client/register';
 			$data['title'] = 'Đăng ký';
@@ -65,7 +65,7 @@
 					
 					//luu thong tin thanh vien vao session
 					$this->session->set_userdata('login', $user);
-					redirect('home');
+					redirect(base_url());
 				}
 			$data['main'] = 'client/login';
 			$data['title'] = 'Đăng nhập';
@@ -88,7 +88,7 @@
 				//neu thanh vien da dang nhap thi xoa session login
 				$this->session->unset_userdata('login');
 				}
-				redirect('login');
+				redirect(base_url().'login');
 			}
 	}
 ?>

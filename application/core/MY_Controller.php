@@ -27,10 +27,10 @@ class MY_Controller extends CI_Controller {
                 break;
             }
  
-            //Trang chủ
+			//Trang chủ
             default:
             {
-
+				
             }
         }
  
