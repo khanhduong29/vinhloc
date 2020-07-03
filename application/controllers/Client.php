@@ -29,6 +29,7 @@ class Client extends CI_Controller {
 	{
 		$data['main'] = 'client/category';
 		$data['title'] = 'Đèn mâm ốp trần';
+		$data['product'] = $this->Mproduct->getList();
 		$data['category'] = $this->Mcategory->getList();
 		$this->load->view('layouts/main', $data);
 
@@ -69,7 +70,8 @@ class Client extends CI_Controller {
 		$data['main'] = 'client/product';
         $data['title'] = 'Sản phẩm';
 		$this->load->model('Mproduct');
-		$data['list'] = $this->Mproduct->getList();
+		$where = $this->db->where('status',1);
+		$data['list'] = $this->Mproduct->getList($where);
 		$data['category'] = $this->Mcategory->getList();
 		$this->load->view('layouts/main', $data);
 	}
