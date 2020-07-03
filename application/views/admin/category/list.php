@@ -27,11 +27,11 @@
               <table id="example1" class="table table-bordered table-striped">
                 <thead>
                 <tr>
-                  <th width="5%">ID</th>
-                  <th width="26%">Name</th>
-                  <th width="5%">Status</th>
-                  <th width="20%">Date</th>
-                  <th width="5%">#</th>
+                  <th>ID</th>
+                  <th>Name</th>
+                  <th>Status</th>
+                  <th>Date</th>
+                  <th>#</th>
                 </tr>
                 </thead>
                 <tbody>

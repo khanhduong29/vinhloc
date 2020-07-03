@@ -26,27 +26,25 @@
             <div class="card-body">
               <table id="example1" class="table table-bordered table-striped">
                 <thead>
-                <tr>
-                  <th>ID</th>
-                  <th>Code</th>
-                  <th>Name</th>
-                  <th>Category</th>
-                  <th>Price</th>
-                  <th>Image</th>
-                  <th>Status</th>
-                  <th>Date</th>
-                  <th>#</th>
-                </tr>
+                  <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>title</th>
+                    <th>des</th>
+                    <th>Image</th>
+                    <th>Status</th>
+                    <th>Date</th>
+                    <th>#</th>
+                  </tr>
                 </thead>
                 <tbody>
                 <?php foreach($constructions as $con){ ?>
                 
                   <tr>
                     <td><?php echo $con['id'] ?></td>
-                    <td><?php echo $con['code'] ?></td>
                     <td><?php echo $con['name'] ?></td>
-                    <td><?php echo $con['id_cat'] ?></td>
-                    <td><?php echo $con['price'] ?></td>
+                    <td><?php echo $con['title'] ?></td>
+                    <td><?php echo $con['des'] ?></td>
                     <td>
                       
                       <img src="<?php echo base_url(); ?>Uploads/<?php echo $con['image'] ?>" style="width: 100px;" alt=""></td>
@@ -62,15 +60,14 @@
                 </tbody>
                 <tfoot>
                   <tr>
-                      <th>ID</th>
-                      <th>Name construction</th>
-                      <th>Category</th>
-                      <th>Price</th>
-                      <th>Sale price</th>
-                      <th>Image</th>
-                      <th>Status</th>
-                      <th>Date</th>
-                      <th>#</th>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>title</th>
+                    <th>des</th>
+                    <th>Image</th>
+                    <th>Status</th>
+                    <th>Date</th>
+                    <th>#</th>
                     </tr>
                 </tfoot>
               </table>
