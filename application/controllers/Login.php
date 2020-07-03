@@ -26,7 +26,7 @@
 
 			if($this->form_validation->run() === true) {
 				$this->User_model->insert();
-				redirect('login');	
+				redirect('login');
 			}
 			$data['main'] = 'client/register';
 			$data['title'] = 'Đăng ký';
@@ -62,10 +62,9 @@
 					$where = array('email' => $email, 'password' => $password);
 					//lay thong tin thanh vien
 					$user = $this->User_model->get_info_rule($where);
-					
 					//luu thong tin thanh vien vao session
 					$this->session->set_userdata('login', $user);
-					redirect('home');
+					redirect();
 				}
 			$data['main'] = 'client/login';
 			$data['title'] = 'Đăng nhập';
