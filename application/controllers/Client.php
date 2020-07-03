@@ -29,11 +29,11 @@ class Client extends CI_Controller {
 	public function category()
 	{
 		
+		// $input['where'] = 
 		$data['main'] = 'client/category';
         $data['title'] = 'Đèn mâm ốp trần';
         // $this->load->model('Mcategory');
        	$data['category'] = $this->Mcategory->getList();
-
 		$data['title'] = 'Đèn mâm ốp trần';
 		$data['product'] = $this->Mproduct->getList();
 		$data['category'] = $this->Mcategory->getList();
@@ -74,11 +74,28 @@ class Client extends CI_Controller {
 	}
 	public function product()
 	{
+		// $total_rows = $this->Mproduct->get_total();
+		// $this->data['$total_rows'] = $total_rows
+
+		$this->load->library('pagination');
+		$config = array();
+    	$config['total_rows'] = $this->Mproduct->countAll();//lấy ra tất cả bản ghi
+    	$config['base_url'] = base_url('client/product');
+    	$config['per_page'] = 2;//số sản phẩm trên 1 trang;
+    	$config['uri_segment'] = 3 ;//hiển thị số trang trên url
+    	$config['next_link']   = "Next";
+		$config['prev_link']   = "Prev";
+		$this->pagination->initialize($config);//khởi tạo	
+		$segment = $this->uri->segment(3);
+		$segment = intval($segment);
+		$input = array();
+		$input['limit'] = array($config['per_page'],$segment);
+		//
 		$data['main'] = 'client/product';
         $data['title'] = 'Sản phẩm';
         $this->load->model('Mproduct');
         $data['product'] = $this->Mproduct->getList();
-        $data['list'] = $this->Mproduct->getList();
+        $data['list'] = $this->Mproduct->getList($input);
         $data['category'] = $this->Mcategory->getList();
 		$this->load->model('Mproduct');
 		$where = $this->db->where('status',1);
