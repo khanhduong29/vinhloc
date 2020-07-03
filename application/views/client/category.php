@@ -145,13 +145,12 @@
 						<span class="title-big">Khách hàng tiêu biểu</span>
 					</h2>
 		            <section class="slick5 pt-lg-5 pt-4 pb-5 wow zoomIn">
-		            	<?php foreach($category as $value){ ?>
 	            		<div>
 	            			<a href="" title="" class="avt">
 	            				<img src="<?php echo public_url() ?>images/thumbs/02fe85320661ff3fa670.jpg" alt="">
 	            			</a>
 	            		</div>
-	            		<!-- <div>
+	            		<div>
 	            			<a href="" title="" class="avt">
 	            				<img src="<?php echo public_url() ?>images/thumbs/dabaco-logo.jpg" alt="">
 	            			</a>
@@ -185,8 +184,7 @@
 	            			<a href="" title="" class="avt">
 	            				<img src="<?php echo public_url() ?>images/thumbs/thong-tu-quy-dinh-ve-cac-bieu-mau-su-dung-de-xu-phat-vi-pham-hanh-chinh-thuoc-tham-quyen-cua-cong-an-nhan-dan-2.png" alt="">
 	            			</a>
-	            		</div> -->
-	            		<?php } ?>
+	            		</div>
 		            </section>
 				</div>
 			</section>

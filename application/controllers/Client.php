@@ -26,8 +26,8 @@ class Client extends CI_Controller {
 	{
 		$data['main'] = 'client/category';
         $data['title'] = 'Đèn mâm ốp trần';
-        $this->load->model('Mcategory');
-        $data['category'] = $this->Mcategory->get_list();
+        // $this->load->model('Mcategory');
+        // $data['category'] = $this->Mcategory->get_list();
 		$this->load->view('layouts/main', $data);
 
 	}
