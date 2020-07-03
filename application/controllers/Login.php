@@ -62,7 +62,6 @@
 					$where = array('email' => $email, 'password' => $password);
 					//lay thong tin thanh vien
 					$user = $this->User_model->get_info_rule($where);
-					
 					//luu thong tin thanh vien vao session
 					$this->session->set_userdata('login', $user);
 					redirect(base_url());

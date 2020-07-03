@@ -272,13 +272,13 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="{{route('add-brand')}}" class="nav-link">
+                <a href="<?php echo base_url(); ?>admin/brand/add" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Thêm nhãn hiệu</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="{{route('list-brand')}}" class="nav-link">
+                <a href="<?php echo base_url(); ?>admin/brand/list_bra" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Danh sách nhãn hiệu</p>
                 </a>
