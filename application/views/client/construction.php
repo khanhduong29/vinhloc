@@ -4,7 +4,6 @@
 					<h2 class="text-center">
 						<span class="title-big c-fff">Công trình</span>
 					</h2>
-					<?php foreach($construction as $value){ ?>
 					<div class="subconstruc pt-lg-5 pt-4">
 						<a href="" title="" class="btn btn-lg-feb">Nhà hàng khách sạn</a>
 						<div class="list-pro">
@@ -50,8 +49,7 @@
 							</div>
 						</div>
 					</div>
-					<?php } ?>
-					<!-- <div class="subconstruc pt-lg-5 pt-4">
+					<div class="subconstruc pt-lg-5 pt-4">
 						<a href="" title="" class="btn btn-lg-feb">Chung cư và biệt thự</a>
 						<div class="list-pro">
 							<div class="slick2 sublist">
@@ -185,7 +183,7 @@
 									Các dự án nhà hàng và khách sạn nổi </p>
 							</div>
 						</div>
-					</div> -->
+					</div>
 				</div>
 			</section>
 			<section class="thumbs-cus space-title">
@@ -194,14 +192,12 @@
 						<span class="title-big">Khách hàng tiêu biểu</span>
 					</h2>
 					<section class="slick5 pt-lg-5 pt-4 pb-5 wow zoomIn">
-						<?php foreach($product as $value){ ?>
 						<div>
 							<a href="" title="" class="avt">
 								<img src="<?php echo public_url() ?>images/thumbs/02fe85320661ff3fa670.jpg" alt="">
 							</a>
 						</div>
-						<?php } ?>
-						<!-- <div>
+						<div>
 							<a href="" title="" class="avt">
 								<img src="<?php echo public_url() ?>images/thumbs/dabaco-logo.jpg" alt="">
 							</a>
@@ -236,7 +232,7 @@
 								<img src="<?php echo public_url() ?>images/thumbs/thong-tu-quy-dinh-ve-cac-bieu-mau-su-dung-de-xu-phat-vi-pham-hanh-chinh-thuoc-tham-quyen-cua-cong-an-nhan-dan-2.png"
 									alt="">
 							</a>
-						</div> -->
+						</div>
 					</section>
 				</div>
 			</section>

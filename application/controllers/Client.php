@@ -51,9 +51,9 @@ class Client extends CI_Controller {
 	{
 		$data['main'] = 'client/construction';
         $data['title'] = 'Công trình';
-        $this->load->model('Mconstruction');
-        $data['construction'] = $this->Mconstruction->get_list();
-        $data['product'] = $this->Mproduct->getList();
+        // $this->load->model('Mconstruction');
+        // $data['construction'] = $this->Mconstruction->get_list();
+        // $data['product'] = $this->Mproduct->getList();
         $data['category'] = $this->Mcategory->getList();
 
 		$this->load->view('layouts/main', $data);
