@@ -4,7 +4,7 @@
 				<div class="menu-footer text-center">
 					<ul>
 						<?php foreach($category as $cate){ ?>
-							<li><a href="category"><?php echo $cate['name'] ?></a></li>
+							<li><a href="category" ><?php echo $cate['name'] ?></a></li>
 						<?php } ?>
 					</ul>
 				</div>

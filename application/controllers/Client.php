@@ -33,6 +33,10 @@ class Client extends CI_Controller {
         $data['title'] = 'Đèn mâm ốp trần';
         // $this->load->model('Mcategory');
        	$data['category'] = $this->Mcategory->getList();
+
+		$data['title'] = 'Đèn mâm ốp trần';
+		$data['product'] = $this->Mproduct->getList();
+		$data['category'] = $this->Mcategory->getList();
 		$this->load->view('layouts/main', $data);
 
 	}
@@ -76,6 +80,11 @@ class Client extends CI_Controller {
         $data['product'] = $this->Mproduct->getList();
         $data['list'] = $this->Mproduct->getList();
         $data['category'] = $this->Mcategory->getList();
+		$this->load->model('Mproduct');
+		$where = $this->db->where('status',1);
+		$data['list'] = $this->Mproduct->getList($where);
+		$data['category'] = $this->Mcategory->getList();
+
 		$this->load->view('layouts/main', $data);
 	}
 	public function service()
