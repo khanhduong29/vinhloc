@@ -6,12 +6,14 @@ class Client extends CI_Controller {
 	// Hàm khởi tạo
     function __construct() {
 		parent::__construct();
+		$this->load->helper('url');
+	    $this->load->model("Mproduct");
     }
-
 	public function index()
 	{
 		$data['main'] = 'client/index';
         $data['title'] = 'Vĩnh Lộc Luxyry';
+        $data['product'] = $this->Mproduct->getList();
 		$this->load->view('layouts/main', $data);
 	}
 	public function about()
@@ -24,7 +26,10 @@ class Client extends CI_Controller {
 	{
 		$data['main'] = 'client/category';
         $data['title'] = 'Đèn mâm ốp trần';
+        $this->load->model('Mcategory');
+        $data['category'] = $this->Mcategory->get_list();
 		$this->load->view('layouts/main', $data);
+
 	}
 	public function checkout()
 	{
@@ -36,6 +41,9 @@ class Client extends CI_Controller {
 	{
 		$data['main'] = 'client/construction';
         $data['title'] = 'Công trình';
+        $this->load->model('Mconstruction');
+        $data['construction'] = $this->Mconstruction->get_list();
+         $data['product'] = $this->Mproduct->getList();
 		$this->load->view('layouts/main', $data);
 	}
 	public function contact()
@@ -54,6 +62,9 @@ class Client extends CI_Controller {
 	{
 		$data['main'] = 'client/product';
         $data['title'] = 'Sản phẩm';
+        $this->load->model('Mproduct');
+        $data['product'] = $this->Mproduct->getList();
+        $data['list'] = $this->Mproduct->getList();
 		$this->load->view('layouts/main', $data);
 	}
 	public function service()

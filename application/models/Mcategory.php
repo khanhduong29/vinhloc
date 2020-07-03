@@ -1,5 +1,4 @@
 <?php 
-
 	class Mcategory extends MY_Model{
 
 		protected $_table = 'category';

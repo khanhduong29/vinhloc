@@ -30,11 +30,7 @@ class MY_Controller extends CI_Controller {
             //Trang chủ
             default:
             {
-                //load các file sử dụng nhiều cho trang chủ
-                //Xử lý ngôn ngữ
-                //Xử lý tiền tệ
-                //....
-                break;
+
             }
         }
  
