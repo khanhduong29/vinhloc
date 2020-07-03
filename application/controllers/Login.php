@@ -27,7 +27,7 @@
 
 			if($this->form_validation->run() === true) {
 				$this->User_model->insert();
-				redirect(base_url().'login');	
+				redirect(base_url().'login');
 			}
 			$data['main'] = 'client/register';
 			$data['title'] = 'Đăng ký';
@@ -37,7 +37,7 @@
 
 		public function check_login()
 			{
-				$email    = $this->input->post('email');
+				$email = $this->input->post('email');
 				$password = $this->input->post('password');
 				$password = md5($password);
 				$where = array('email' => $email, 'password' => $password);
