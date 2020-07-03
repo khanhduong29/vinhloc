@@ -13,7 +13,6 @@ class Client extends CI_Controller {
 	{
 		$data['main'] = 'client/index';
         $data['title'] = 'Vĩnh Lộc Luxyry';
-         $this->load->model('Mproduct');
         $data['product'] = $this->Mproduct->getList();
 		$this->load->view('layouts/main', $data);
 	}
@@ -25,8 +24,6 @@ class Client extends CI_Controller {
 	}
 	public function category()
 	{
-
-
 		$data['main'] = 'client/category';
         $data['title'] = 'Đèn mâm ốp trần';
         $this->load->model('Mcategory');
@@ -67,6 +64,7 @@ class Client extends CI_Controller {
         $data['title'] = 'Sản phẩm';
         $this->load->model('Mproduct');
         $data['product'] = $this->Mproduct->getList();
+        $data['list'] = $this->Mproduct->getList();
 		$this->load->view('layouts/main', $data);
 	}
 	public function service()
