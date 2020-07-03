@@ -37,7 +37,6 @@
 
 		public function check_login()
 			{
-				//lay du lieu tu form
 				$email    = $this->input->post('email');
 				$password = $this->input->post('password');
 				$password = md5($password);
@@ -50,6 +49,7 @@
 				}
 				return true;
 			}
+			
 		public function login()
 		{
 			$this->form_validation->set_rules('email','Email','required');

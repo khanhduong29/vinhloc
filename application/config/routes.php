@@ -68,5 +68,3 @@ $route['logout'] = 'login/logout';
 
 $route['cart'] = 'client/cart';
 $route['checkout'] = 'client/checkout';
-
-
