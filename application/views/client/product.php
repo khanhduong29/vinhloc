@@ -6,7 +6,7 @@
 					</h2>
 					<form action="" method="get" accept-charset="utf-8" class="filter-pro d-lg-flex d-md-flex justify-content-center mt-5">
 						<select class="js-example-basic-single m-2">
-							<?php foreach($list as $value){ ?>
+							<?php foreach($category as $value){ ?>
 						  	<option value="AL"><?php echo $value['name']  ?></option>
 						  	<!-- <option value="WY">Wyoming</option>
 						  	<option value="3">Wyoming</option>
@@ -14,19 +14,19 @@
 						  <?php } ?>
 						</select>
 						<select class="js-example-basic-single m-2">
-							<?php foreach($list as $value){ ?>
+							<?php foreach($category as $value){ ?>
 						  	<option value="AL"><?php echo $value['name'] ?></option>
 						  	 <?php } ?>
 						</select>
 						<select class="js-example-basic-single m-2">
-							<?php foreach($list as $value){ ?>
+							<?php foreach($category as $value){ ?>
 						  	<option value="AL"><?php echo $value['name'] ?></option>
 						  	<?php } ?>
 						</select>
 					</form>
 		            <section class="show-pro pt-lg-5 pt-4">
 						<div class="row">
-						<?php foreach($list as $value){ ?>
+						<?php foreach($list_data as $value){ ?>
 							<div class="col-12 col-sm-6 col-md-4 col-lg-3">
 								<div class="pt-4">
 		                            <div class="thumbnail pb-4">
@@ -51,7 +51,7 @@
 						<?php } ?>
 						</div>
 		            	<div class="pagination">
-		            		<?php echo $this->pagination->create_links()?>
+		            		<?php echo $this->pagination->create_links();?>
 		            	</div>
 		            </section>
 				</div>

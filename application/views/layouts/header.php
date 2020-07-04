@@ -59,8 +59,8 @@
 							</div> 
 							<div class="col-lg-3 col-md-3 col-xs-12 d-flex "> 
 								<div class="fr-search text-right"> 
-									<form action="tim-kiem" method="get"> 
-										<input type="text" name="name" placeholder="Tìm kiếm sản phẩm ..." value=""> 
+									<form action="<?php base_url('client/product') ?>" method="get"> 
+										<input type="text" name="name" placeholder="Tìm kiếm sản phẩm ..." value=" <?php echo $this->input->get('name') ?>"> 
 										<button type="submit"></button> 
 									</form> 
 								</div> 
@@ -111,17 +111,21 @@
 											<i class="fa fa-angle-right"></i>
 											<a href="product">Sản phẩm</a>
 											<ul>
-												<li><a href="#" class="smooth">Link 2 Lorem ipsum dolor</a></li>
+												<?php foreach($list_data as $value){ ?>
+												<li><a href="#" class="smooth"><?php echo $value['name'] ?></a></li>
 							    				<li>
+							    				<?php } ?>
 							    					<i class="fa fa-angle-right"></i>
-							    					<a href="#" class="smooth">Dropdown</a>
+							    					<a href="#" class="smooth"><?php echo $value['name'] ?></a>
 							    					<ul>
-									    				<li><a href="news-detail.html" class="smooth">Chi tiết tin</a></li>
-									    				<li><a href="" class="smooth">Link 2 Lorem ipsum dolor</a></li>
-									    				<li><a href="" class="smooth">Link 3 Lorem ipsum dolor</a></li>
+							    						<?php foreach($list_data as $value){ ?>
+									    				<li><a href="news-detail.html" class="smooth"><?php echo $value['name'] ?></a></li>
+									    				<?php } ?>
+									    				<!-- <li><a href="" class="smooth">Link 2 Lorem ipsum dolor</a></li>
+									    				<li><a href="" class="smooth">Link 3 Lorem ipsum dolor</a></li -->>
 									    			</ul>
 							    				</li>
-							    				<li><a href="" class="smooth">Link 3 Lorem ipsum dolor</a></li>
+							    				
 							    			</ul>
 										</li>
 									</ul>
