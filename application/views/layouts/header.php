@@ -111,21 +111,17 @@
 											<i class="fa fa-angle-right"></i>
 											<a href="product">Sản phẩm</a>
 											<ul>
-												<?php foreach($list_data as $value){ ?>
-												<li><a href="#" class="smooth"><?php echo $value['name'] ?></a></li>
+												<li><a href="#" class="smooth">Link 2 Lorem ipsum dolor</a></li>
 							    				<li>
-							    				<?php } ?>
 							    					<i class="fa fa-angle-right"></i>
-							    					<a href="#" class="smooth"><?php echo $value['name'] ?></a>
+							    					<a href="#" class="smooth">Dropdown</a>
 							    					<ul>
-							    						<?php foreach($list_data as $value){ ?>
-									    				<li><a href="news-detail.html" class="smooth"><?php echo $value['name'] ?></a></li>
-									    				<?php } ?>
-									    				<!-- <li><a href="" class="smooth">Link 2 Lorem ipsum dolor</a></li>
-									    				<li><a href="" class="smooth">Link 3 Lorem ipsum dolor</a></li -->>
+									    				<li><a href="news-detail.html" class="smooth">Chi tiết tin</a></li>
+									    				<li><a href="" class="smooth">Link 2 Lorem ipsum dolor</a></li>
+									    				<li><a href="" class="smooth">Link 3 Lorem ipsum dolor</a></li>
 									    			</ul>
 							    				</li>
-							    				
+							    				<li><a href="" class="smooth">Link 3 Lorem ipsum dolor</a></li>
 							    			</ul>
 										</li>
 									</ul>
