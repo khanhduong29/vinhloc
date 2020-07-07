@@ -90,8 +90,8 @@
 	                                    </span>
 	                                </div>
 	                                <div class="select-button">
-	                                    <a href="cart" class="btn btn-dark btn-lg">Giỏ hàng</a>
-	                                    <a href="checkout" class="btn btn-lg btn-lg-feb">Thanh toán</a>
+	                                    <a href="<?php base_url()?>cart" class="btn btn-dark btn-lg">Giỏ hàng</a>
+	                                    <a href="<?php base_url()?>checkout" class="btn btn-lg btn-lg-feb">Thanh toán</a>
 	                                </div>
 	                            </div>
 							</div>
@@ -105,11 +105,11 @@
 							<div class="row">
 								<div class="col-lg-5">
 									<ul class="menu-left d-flex justify-content-center">
-										<li><a href="home" class="active">Trang chủ</a></li>
-										<li><a href="about">Giới thiệu</a></li>
+										<li><a href="<?php base_url()?>home" class="active">Trang chủ</a></li>
+										<li><a href="<?php base_url()?>about">Giới thiệu</a></li>
 										<li>
 											<i class="fa fa-angle-right"></i>
-											<a href="product">Sản phẩm</a>
+											<a href="<?php base_url()?>product">Sản phẩm</a>
 											<ul>
 												<li><a href="#" class="smooth">Link 2 Lorem ipsum dolor</a></li>
 							    				<li>
@@ -127,13 +127,13 @@
 									</ul>
 								</div>
 								<div class="col-lg-2">
-									<a href="home" title="" class="logo-word">Vĩnh lộc luxury</a>
+									<a href="<?php base_url()?>home" title="" class="logo-word">Vĩnh lộc luxury</a>
 								</div>
 								<div class="col-lg-5">
 									<ul class="menu-right d-flex justify-content-center">
-										<li><a href="service">Dịch vụ</a></li>
-										<li><a href="construction">Công trình</a></li>
-										<li><a href="contact">Liên hệ</a></li>
+										<li><a href="<?php base_url()?>service">Dịch vụ</a></li>
+										<li><a href="<?php base_url()?>construction">Công trình</a></li>
+										<li><a href="<?php base_url()?>contact">Liên hệ</a></li>
 									</ul>
 								</div>
 							</div>

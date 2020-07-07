@@ -9,6 +9,7 @@ class Client extends CI_Controller {
 		$this->load->helper('url');
 	    $this->load->model("Mproduct");
 		$this->load->model('Mcategory');
+		$this->load->model('Cart_model');
     }
 	public function index()
 	{
@@ -118,7 +119,10 @@ class Client extends CI_Controller {
         $data['category'] = $this->Mproduct->getDataDetail(array(
             'table'=>'category',
             'where'=>array(array('key'=>'status','compare'=>'=','value'=>1))
-        ));
+		));
+		if(isset($_POST['add-Cart'])) {
+			$this->Cart_model->insert();
+		}
 		$this->pagination->initialize($config);
 		$this->load->view('layouts/main', $data);
 	}
@@ -167,12 +171,5 @@ class Client extends CI_Controller {
 		$data['title'] = 'tên chia sẻ';
 		$data['category'] = $this->Mcategory->getList();
 		$this->load->view('layouts/main',$data);
-	}
-	public function cart()
-	{
-		$data['main'] = 'client/cart';
-        $data['title'] = 'Cart';
-        $data['category'] = $this->Mcategory->getList();
-		$this->load->view('layouts/main', $data);
 	}
 }

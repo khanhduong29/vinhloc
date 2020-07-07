@@ -40,9 +40,11 @@
 		                            		</h3>
 											<span class="c-feb f-16 text-uppercase"><?php echo $value['price'] ?> $</span>
 											<form action="" method="post">
-												<input type="hidden" name="id_user" value="<?php if($this->session->has_userdata('login')) echo $this->session->userdata('login')->id ?>">
-												<input type="hidden" name="id_pro" value="<?php echo $value['id'] ?>">
-												<button type="submit" name="submit">Add Cart</button>
+												<input type="hidden" name="user_id" value="<?php if($this->session->has_userdata('login')) echo $this->session->userdata('login')->id ?>">
+												<input type="hidden" name="pro_name" value="<?php echo $value['name'] ?>">
+												<input type="hidden" name="pro_image" value="<?php echo $value['image'] ?>">
+												<input type="hidden" name="pro_price" value="<?php echo $value['price'] ?>">
+												<button type="submit" name="add-Cart">Add Cart</button>
 											</form>
 		                            	</div>
 		                            </div>

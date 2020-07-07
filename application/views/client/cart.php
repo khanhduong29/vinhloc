@@ -37,7 +37,7 @@
 						<td>
 							<div class="quantity">
 								<div class="pro-qty">
-									<input type="text" value="" min="0" class="qty" id="" placeholder="Quantity">
+									<input type="number" value="" min="0" class="qty" id="" placeholder="Quantity">
 								</div>
 							</div>
 						</td>
@@ -61,7 +61,7 @@
 						<td>
 							<div class="quantity">
 								<div class="pro-qty">
-									<input type="text" value="" min="0" class="qty" id="" placeholder="Quantity">
+									<input type="number" value="" min="0" class="qty" id="" placeholder="Quantity">
 								</div>
 							</div>
 						</td>
@@ -85,7 +85,7 @@
 						<td>
 							<div class="quantity">
 								<div class="pro-qty">
-									<input type="text" value="" min="0" class="qty" id="" placeholder="Quantity">
+									<input type="number" value="" min="0" class="qty" id="" placeholder="Quantity">
 								</div>
 							</div>
 						</td>
