@@ -58,10 +58,13 @@
 		    }
 		}
 		//
-		// public function search($name){
-		// 	$this->db->like('name',$name);
-		// 	return $this->db->get('product');
-		// }
+		public function search($name){
+		    {
+		        $this->db->like('name',$name);
+		        $query  =   $this->db->get('product');
+		        return $query->result_array();
+		    }
+		}   
 	    public function insert(){ 
 		    $slug = url_title($this->convert_vi_to_en($this->input->post('name')), 'dash', TRUE);
 		    if (isset($_FILES['file']['name'])) {

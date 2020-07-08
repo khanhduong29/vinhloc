@@ -77,7 +77,7 @@
                             	</div>
                             </div>
 	                    </div>
-	                   <!--  <div class="pt-2">
+	                    <div class="pt-2">
                             <div class="thumbnail pb-4">
                             	<a href="product_detail" class="hv-scale p-3 b-ra-30">
                             		<img src="<?php echo public_url() ?>images/product/9717852538bddee387ac.jpg" class="img-fluid"  alt="a" />
@@ -115,7 +115,7 @@
                             		<span class="c-feb f-16 text-uppercase">Liên hệ</span>
                             	</div>
                             </div>
-	                    </div> -->
+	                    </div>
 		            </section>
 				</div>
 			</section>

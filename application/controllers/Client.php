@@ -82,7 +82,6 @@ class Client extends CI_Controller {
 		$data['main'] = 'client/contact';
         $data['title'] = 'Liên hệ';
         $data['category'] = $this->Mcategory->getList();
-        $data['list_data'] = $this->Mproduct->getList();
 		$this->load->view('layouts/main', $data);
 	}
 	public function product_detail()
@@ -130,10 +129,13 @@ class Client extends CI_Controller {
 		$this->load->view('layouts/main', $data);
 	}
 	public function search(){
+		 $this->load->model('Mproduct');
         $segment =3;
         $pp= (int)$this->Mproduct->uri->segment($segment,0);
         if(!$pp) $pp=0;
-        $datasearch = $this->Mproduct->input->get(); // Lấy dữ liệu từ form
+        $datasearch = $this->Mproduct->input->get('name'); // Lấy dữ liệu từ form
+        $data['results']    =   $this->Mproduct->search($name);
+        $name['like'] = array('name',$name);
         $q=@$datasearch && @$datasearch['q']?$datasearch['q']:"";
         $q=addslashes($q);
         $where=array();
@@ -167,14 +169,12 @@ class Client extends CI_Controller {
 		$data['main'] = 'client/service';
         $data['title'] = 'Dịch vụ';
         $data['category'] = $this->Mcategory->getList();
-        $data['list_data'] = $this->Mproduct->getList();
 		$this->load->view('layouts/main', $data);
 	}
 	public function blog_detail() {
 		$data['main'] = 'client/blog_detail';
 		$data['title'] = 'tên chia sẻ';
 		$data['category'] = $this->Mcategory->getList();
-		$data['list_data'] = $this->Mproduct->getList();
 		$this->load->view('layouts/main',$data);
 	}
 }

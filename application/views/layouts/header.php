@@ -61,7 +61,7 @@
 								<div class="fr-search text-right"> 
 									<form action="<?php base_url('client/product') ?>" method="get"> 
 										<input type="text" name="name" placeholder="Tìm kiếm sản phẩm ..." value=" <?php echo $this->input->get('name') ?>"> 
-										<button type="submit"></button> 
+										<button type="submit" value="search"></button> 
 									</form> 
 								</div> 
 								<a  title="" class="img-cart cart-lap"><img src="<?php echo public_url() ?>images/icon/ic-cart-feb.png" alt="error"></a>
