@@ -175,5 +175,6 @@ class Client extends CI_Controller {
 		$data['title'] = 'tên chia sẻ';
 		$data['category'] = $this->Mcategory->getList();
 		$data['list_data'] = $this->Mproduct->getList();
+		$this->load->view('layouts/main',$data);
 	}
 }
