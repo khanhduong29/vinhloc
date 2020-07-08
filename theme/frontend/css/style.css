@@ -268,10 +268,13 @@ a.c-feb:hover{
 .fr-search input::placeholder{
     font-size: 14px;
 }
+.header-menu {
+	text-transform: uppercase;
+}
 .header-menu .body-sticker{
 	position: relative;
     background: url(../images/border/bk-menu.png) no-repeat;
-    background-size: 100% 100%;
+	background-size: 100% 100%;
     /* overflow: hidden; */
 }
 .header-menu .body-sticker::before {

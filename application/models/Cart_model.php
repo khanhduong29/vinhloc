@@ -5,8 +5,12 @@
 		function __construct() {
 			parent::__construct();
 			$this->load->library("cart");
-        }
-
+		}
+		
+		public function getList(){
+	        $this->db->select('*');
+	        return $this->db->get($this->table)->result_array();
+	    }
 		public function insert(){
 			$data = array(
 				"user_id" => $this->input->post('user_id'),
@@ -16,6 +20,6 @@
 				"quantity" => "1"
 			);
 			return $this->db->insert($this->table,$data);
-	}
+		}
 	}
 ?>

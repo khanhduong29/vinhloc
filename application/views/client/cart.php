@@ -22,22 +22,23 @@
 					</tr>
 				</thead>
 				<tbody>
+					<?php foreach($listCart as $list) { ?>
 					<tr>
 						<td class="cart-pic">
 							<a href="">
-								<img src="<?php echo public_url() ?>images/product/061915d98b626d3c3473.jpg" alt="error">
+								<img src="<?php echo base_url() ?>Uploads/<?php echo $list['pro_image'] ?>" alt="error">
 							</a>
 						</td>
 						<td class="">
 							<a href="">
-								<p>Đền pha lê ốp trần</p>
+								<p><?php echo $list['pro_name'] ?></p>
 							</a>
 						</td>
-						<td class="price-root">100.000 VND</td>
+						<td class="price-root"><?php echo $list['price'] ?></td>
 						<td>
 							<div class="quantity">
 								<div class="pro-qty">
-									<input type="number" value="" min="0" class="qty" id="" placeholder="Quantity">
+									<input type="number" value="<?php echo $list['quantity'] ?>" min="0" class="qty" id="" placeholder="Quantity">
 								</div>
 							</div>
 						</td>
@@ -46,54 +47,7 @@
 							<a href=""><i class="fas fa-times"></i></a>
 						</td>
 					</tr>
-					<tr>
-						<td class="cart-pic">
-							<a href="">
-								<img src="<?php echo public_url() ?>images/product/061915d98b626d3c3473.jpg" alt="error">
-							</a>
-						</td>
-						<td class="">
-							<a href="">
-								<p>Đền pha lê ốp trần</p>
-							</a>
-						</td>
-						<td class="price-root">100.000 VND</td>
-						<td>
-							<div class="quantity">
-								<div class="pro-qty">
-									<input type="number" value="" min="0" class="qty" id="" placeholder="Quantity">
-								</div>
-							</div>
-						</td>
-						<td class="price">100.000 VND</td>
-						<td>
-							<a href=""><i class="fas fa-times"></i></a>
-						</td>
-					</tr>
-					<tr>
-						<td class="cart-pic">
-							<a href="">
-								<img src="<?php echo public_url() ?>images/product/061915d98b626d3c3473.jpg" alt="error">
-							</a>
-						</td>
-						<td class="">
-							<a href="">
-								<p>Đền pha lê ốp trần</p>
-							</a>
-						</td>
-						<td class="price-root">100.000 VND</td>
-						<td>
-							<div class="quantity">
-								<div class="pro-qty">
-									<input type="number" value="" min="0" class="qty" id="" placeholder="Quantity">
-								</div>
-							</div>
-						</td>
-						<td class="price">100.000 VND</td>
-						<td>
-							<a href=""><i class="fas fa-times"></i></a>
-						</td>
-					</tr>
+					<?php } ?>
 				</tbody>
 			</table>
 		</div>

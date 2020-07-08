@@ -8,5 +8,12 @@
 			$this->load->model('Mcategory');
 			$this->load->model('Cart_model');
 		}
+		function cart() {
+			$data['main'] = 'client/cart';
+			$data['title'] = 'Dịch vụ';
+			$data['list_data'] = $this->Mcategory->getList();
+			$data['listCart'] = $this->Cart_model->getList();
+			$this->load->view('layouts/main', $data);
+		}
 	}
 ?>
