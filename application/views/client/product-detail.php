@@ -6,14 +6,14 @@
 					</h2>
 		            <section class="pro-detail pt-4">
 		            	<div class="row">
-		            		<?php foreach($list_data as $value){ ?>
+		            		
 		            		<div class="col-12 col-sm-12 col-md-6 col-lg-6"> 
 		            			<div class="border-1 mt-2 mb-4">
-		            				
+		            			<?php foreach($list_data as $value){ ?>	
 		            				<a href="" title="" class="img-detail">
 		            					<img src="<?php echo base_url() ?>Uploads/<?php echo $value['image']?>" class=""  alt="a" />
 		            				</a>
-		            				
+		            			<?php } ?>
 		            			</div>
 		            		</div>
 		            		<div class="col-12 col-sm-12 col-md-6 col-lg-6">
@@ -56,11 +56,10 @@
 		            					 	<span class="tb2">24 tháng</span> 
 		            					 </li> 
 		            				</ul>
-
 		            				<a href="checkout.html" title="" class="btn btn-lg-feb btn-cart">Thêm vào giỏ hàng</a>
 		            			</div>
 		            		</div>
-		            		<?php } ?>
+		            	
 		            	</div>
 		            </section>
 				</div>

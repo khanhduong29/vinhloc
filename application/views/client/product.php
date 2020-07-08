@@ -8,9 +8,6 @@
 						<select class="js-example-basic-single m-2">
 							<?php foreach($category as $value){ ?>
 						  	<option value="AL"><?php echo $value['name']  ?></option>
-						  	<!-- <option value="WY">Wyoming</option>
-						  	<option value="3">Wyoming</option>
-						  	<option value="4">Wyoming</option> -->
 						  <?php } ?>
 						</select>
 						<select class="js-example-basic-single m-2">

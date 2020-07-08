@@ -59,8 +59,8 @@
 							</div> 
 							<div class="col-lg-3 col-md-3 col-xs-12 d-flex "> 
 								<div class="fr-search text-right"> 
-									<form action="<?php base_url('client/product') ?>" method="get"> 
-										<input type="text" name="name" placeholder="Tìm kiếm sản phẩm ..." value=" <?php echo $this->input->get('name') ?>"> 
+									<form action="<?php base_url('client/search') ?>" method="get"> 
+										<input type="text" name="q" placeholder="Tìm kiếm sản phẩm ..." value=" <?php echo $this->input->get('q') ?>"> 
 										<button type="submit" value="search"></button> 
 									</form> 
 								</div> 
@@ -121,11 +121,10 @@
 							    						<?php foreach($list_data as $value){ ?>
 									    				<li><a href="news-detail.html" class="smooth"><?php echo $value['name'] ?></a></li>
 									    				<?php } ?>
-									    				<!-- <li><a href="" class="smooth">Link 2 Lorem ipsum dolor</a></li>
-									    				<li><a href="" class="smooth">Link 3 Lorem ipsum dolor</a></li> -->
+									    				
 									    			</ul>
 							    				</li>
-							    				<!-- <li><a href="" class="smooth">Link 3 Lorem ipsum dolor</a></li> -->
+							    			
 							    			</ul>
 										</li>
 									</ul>

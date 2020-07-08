@@ -58,13 +58,17 @@
 		    }
 		}
 		//
-		public function search($name){
+		public function product_detail($id) {
+		  $query = $this->db->query('SELECT * FROM product WHERE id = ' . $id);
+		  return $query->result_array();
+		}
+		public function search($q){
 		    {
-		        $this->db->like('name',$name);
+		        $this->db->like('q',$q);
 		        $query  =   $this->db->get('product');
 		        return $query->result_array();
 		    }
-		}   
+		} 
 	    public function insert(){ 
 		    $slug = url_title($this->convert_vi_to_en($this->input->post('name')), 'dash', TRUE);
 		    if (isset($_FILES['file']['name'])) {

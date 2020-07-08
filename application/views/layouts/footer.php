@@ -3,7 +3,7 @@
 			<div class="container">
 				<div class="menu-footer text-center">
 					<ul>
-						<?php foreach($category as $cate){ ?>
+						<?php foreach($list_data as $cate){ ?>
 							<li><a href="category" ><?php echo $cate['name'] ?></a></li>
 						<?php } ?>
 					</ul>

@@ -33,7 +33,7 @@
                             			<img src="<?php echo public_url() ?>images/thumbs-cat/untitled-1.png" alt="">
                             		</div>
                             		<h3 class="m-0">
-                            			<a href="" title=""><?php echo $pro['name'] ?></a>
+                            			<a href="product_detail" title=""><?php echo $pro['name'] ?></a>
                             		</h3>
                             	</div>
                             </div>
