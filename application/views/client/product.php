@@ -44,7 +44,7 @@
 												<input type="hidden" name="pro_name" value="<?php echo $value['name'] ?>">
 												<input type="hidden" name="pro_image" value="<?php echo $value['image'] ?>">
 												<input type="hidden" name="pro_price" value="<?php echo $value['price'] ?>">
-												<button type="submit" name="add-Cart">Add Cart</button>
+												<button type="submit" name="add-Cart" class="btn btn-lg-feb btn-cart">Add Cart</button>
 											</form>
 		                            	</div>
 		                            </div>

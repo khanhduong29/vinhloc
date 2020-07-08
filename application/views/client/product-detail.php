@@ -2,22 +2,25 @@
 			<section class="contain-pro-detail">
 				<div class="container">
 					<h2 class="text-center">
-						<span class="title-big c-fff">Sản phẩm</span>
+						<span class="title-big c-fff">Chi tiết sản phẩm</span>
 					</h2>
 		            <section class="pro-detail pt-4">
 		            	<div class="row">
-		            		<div class="col-12 col-sm-12 col-md-6 col-lg-6">
+		            		<?php foreach($list_data as $value){ ?>
+		            		<div class="col-12 col-sm-12 col-md-6 col-lg-6"> 
 		            			<div class="border-1 mt-2 mb-4">
+		            				
 		            				<a href="" title="" class="img-detail">
-		            					<img src="<?php echo public_url() ?>images/product/2e3d45f2764a9014c95b.jpg" alt="">
+		            					<img src="<?php echo base_url() ?>Uploads/<?php echo $value['image']?>" class=""  alt="a" />
 		            				</a>
+		            				
 		            			</div>
 		            		</div>
 		            		<div class="col-12 col-sm-12 col-md-6 col-lg-6">
 		            			<div class="s-content">
-		            				<h1 class="c-fff f-24">Đèn đồng ốp trần </h1>
+		            				<h1 class="c-fff f-24"><?php echo $value['name'] ?></h1>
 		            				<span class="c-feb font-weight-bold f-18">
-		            					Giá : Liên hệ
+		            					Giá : <?php echo $value['price'] ?>
 		            				</span>
 		            				<ul> 
 		            					<li> 
@@ -57,6 +60,7 @@
 		            				<a href="checkout.html" title="" class="btn btn-lg-feb btn-cart">Thêm vào giỏ hàng</a>
 		            			</div>
 		            		</div>
+		            		<?php } ?>
 		            	</div>
 		            </section>
 				</div>

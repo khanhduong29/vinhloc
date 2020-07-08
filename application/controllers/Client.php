@@ -15,7 +15,7 @@ class Client extends CI_Controller {
 	{
 		$data['main'] = 'client/index';
         $data['title'] = 'Vĩnh Lộc Luxyry';
-        $data['product'] = $this->Mproduct->getList();
+        $data['list_data'] = $this->Mproduct->getList();
 		$data['category'] = $this->Mcategory->getList();
 		$this->load->view('layouts/main', $data);
 	}
@@ -24,7 +24,7 @@ class Client extends CI_Controller {
 		$data['main'] = 'client/about';
         $data['title'] = 'Giới thiệu';
         $data['category'] = $this->Mcategory->getList();
-		
+		$data['list_data'] = $this->Mproduct->getList();
 		$this->load->view('layouts/main', $data);
 	}
 	public function category()
@@ -74,7 +74,7 @@ class Client extends CI_Controller {
         // $data['construction'] = $this->Mconstruction->get_list();
         // $data['product'] = $this->Mproduct->getList();
         $data['category'] = $this->Mcategory->getList();
-
+        $data['list_data'] = $this->Mproduct->getList();
 		$this->load->view('layouts/main', $data);
 	}
 	public function contact()
@@ -82,6 +82,7 @@ class Client extends CI_Controller {
 		$data['main'] = 'client/contact';
         $data['title'] = 'Liên hệ';
         $data['category'] = $this->Mcategory->getList();
+        $data['list_data'] = $this->Mproduct->getList();
 		$this->load->view('layouts/main', $data);
 	}
 	public function product_detail()
@@ -89,7 +90,9 @@ class Client extends CI_Controller {
 		$data['main'] = 'client/product-detail';
         $data['title'] = 'Đèn mâm ốp trần';
         $data['category'] = $this->Mcategory->getList();
+        $data['list_data'] = $this->Mproduct->getList();
 		$this->load->view('layouts/main', $data);
+
 	}
 	public function product()
 	{
@@ -164,12 +167,14 @@ class Client extends CI_Controller {
 		$data['main'] = 'client/service';
         $data['title'] = 'Dịch vụ';
         $data['category'] = $this->Mcategory->getList();
+        $data['list_data'] = $this->Mproduct->getList();
 		$this->load->view('layouts/main', $data);
 	}
 	public function blog_detail() {
 		$data['main'] = 'client/blog_detail';
 		$data['title'] = 'tên chia sẻ';
 		$data['category'] = $this->Mcategory->getList();
+		$data['list_data'] = $this->Mproduct->getList();
 		$this->load->view('layouts/main',$data);
 	}
 }
