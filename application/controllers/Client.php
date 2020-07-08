@@ -138,7 +138,7 @@ class Client extends CI_Controller {
         $pp= (int)$this->Mproduct->uri->segment($segment,0);
         if(!$pp) $pp=0;
         $datasearch = $this->Mproduct->input->get(); // Lấy dữ liệu từ form
-        var_dumpt($datasearch);die();
+        var_dump($datasearch);die();
         $data['results']    =   $this->Mproduct->search($q);
         $name['like'] = array('q',$q);
         $q=@$datasearch && @$datasearch['q']?$datasearch['q']:"";
