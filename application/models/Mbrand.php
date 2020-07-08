@@ -12,19 +12,23 @@
 	    public function insert(){ 
 		    $slug = url_title($this->convert_vi_to_en($this->input->post('name')), 'dash', TRUE);
 		    if (isset($_FILES['file']['name'])) {
-		        $config['upload_path'] = 'Uploads';
-		        $config['allowed_types'] = 'jpg|jpeg|png|gif';
-		        $config['file_name'] = $_FILES['file']['name'];
+		    	if (file_exists('Uploads/'.$_FILES['file']['name'])){
+				    $img = $_FILES['file']['name'];
+				}else{
+					$config['upload_path'] = 'Uploads';
+			        $config['allowed_types'] = 'jpg|jpeg|png|gif';
+			        $config['file_name'] = $_FILES['file']['name'];
 
-		        $this->load->library('upload', $config);
-		        $this->upload->initialize($config);
+			        $this->load->library('upload', $config);
+			        $this->upload->initialize($config);
 
-		        if ($this->upload->do_upload('file')) {
-		          	$uploadData = $this->upload->data();
-		          	$img = $uploadData['file_name'];
-		        } else{
-		          	$img = '';
-		        }
+			        if ($this->upload->do_upload('file')) {
+			          	$uploadData = $this->upload->data();
+			          	$img = $uploadData['file_name'];
+			        } else{
+			          	$img = '';
+			        }
+				}
 		    }else{
 		        $img = '';
 		    }
