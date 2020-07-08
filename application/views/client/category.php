@@ -6,7 +6,7 @@
 					</h2>
 		            <section class="show-pro pt-lg-5 pt-4">
 						<div class="row">
-						<?php foreach($product as $pro){ ?>
+						<?php foreach($list_data as $pro){ ?>
 							<div class="col-12 col-sm-6 col-md-4 col-lg-3">
 								<div class="pt-4">
 		                            <div class="thumbnail pb-4">
@@ -25,11 +25,8 @@
 						<?php } ?>
 						</div>
 		            	<div class="pagination">
-		            		<strong>1</strong>
-		            		<a href="">2</a>
-		            		<a href="">3</a>
-		            		<a href=""><i class="fas fa-angle-right"></i></a>
-		            		<a href=""><i class="fas fa-angle-double-right"></i></a>
+		            		<?php echo $this->pagination->create_links();?>
+		            	</div>
 		            	</div>
 		            </section>
 				</div>

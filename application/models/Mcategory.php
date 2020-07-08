@@ -8,6 +8,53 @@
 	        $this->db->select('id, slug, name, status, created_at');
 	        return $this->db->get($this->_table)->result_array();
 	    }
+	    public function getNumDataDetail($table,$where){
+	        $sql = "select * from $table where 1=1 ";
+	        if(is_array($where)){
+	            foreach ($where as $w=>$k) {
+	                $sql .=" and ".$k['key']." ".$k['compare']." ".$k['value'];
+	            }
+	        }
+	        $q =$this->db->query($sql);
+	        return $q->num_rows();
+	    }
+	    public function getDataDetail($options){
+		    $default = array(
+		        'table'=>'',
+		        'input'=>'*',
+		        'order'=>'id',
+		        'where'=>array(),
+		        'limit'=>'',
+		        'escape'=>0,
+		        'group_by'=>''
+		    );
+		    if(is_array($options)){
+		        $options = array_replace($default, $options);
+		        if(($options['table'] == '')) return;
+		        $sql = "select ". $options['input']." from ".$options['table']." where 1 = 1 ";
+		        if(is_array($options['where'])){
+		            foreach ($options['where'] as $subwhere) {
+		                $swhere = $subwhere['value'];
+		                if($options['escape']==1){
+		                    $swhere = $this->db->escape($swhere);
+		                }
+		                $con = 'and';
+		                $sql .= " ".$con." ".$subwhere['key']." ".$subwhere['compare']." ".$swhere;
+		            }
+		        }
+		        if(!($options['group_by']) == ''){
+		            $sql .=" group by ".$options['group_by'];
+		        }
+		        if(!($options['order']) == ''){
+		            $sql .=" order by ".$options['order'];
+		        }
+		        if(!($options['limit']) == ''){
+		            $sql .=" limit ".$options['limit'];
+		        }
+		        $q = $this->db->query($sql);
+		        return $q->result_array();
+		    }
+		}
 	    public function insert(){ 
 		    $slug = url_title($this->convert_vi_to_en($this->input->post('name')), 'dash', TRUE);
 		    $status = $this->input->post("status");

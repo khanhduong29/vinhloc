@@ -61,6 +61,15 @@ img:focus{
     background-color: #fff;
     border: 2px solid #fdb300;
 }
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
 .col-md-15 {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 20%;

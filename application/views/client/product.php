@@ -6,23 +6,27 @@
 					</h2>
 					<form action="" method="get" accept-charset="utf-8" class="filter-pro d-lg-flex d-md-flex justify-content-center mt-5">
 						<select class="js-example-basic-single m-2">
-						  	<option value="AL">Alabama</option>
-						  	<option value="WY">Wyoming</option>
+							<?php foreach($category as $value){ ?>
+						  	<option value="AL"><?php echo $value['name']  ?></option>
+						  	<!-- <option value="WY">Wyoming</option>
 						  	<option value="3">Wyoming</option>
-						  	<option value="4">Wyoming</option>
+						  	<option value="4">Wyoming</option> -->
+						  <?php } ?>
 						</select>
 						<select class="js-example-basic-single m-2">
-						  	<option value="AL">Alabama</option>
-						  	<option value="WY">Wyoming</option>
+							<?php foreach($category as $value){ ?>
+						  	<option value="AL"><?php echo $value['name'] ?></option>
+						  	 <?php } ?>
 						</select>
 						<select class="js-example-basic-single m-2">
-						  	<option value="AL">Alabama</option>
-						  	<option value="WY">Wyoming</option>
+							<?php foreach($category as $value){ ?>
+						  	<option value="AL"><?php echo $value['name'] ?></option>
+						  	<?php } ?>
 						</select>
 					</form>
 		            <section class="show-pro pt-lg-5 pt-4">
 						<div class="row">
-						<?php foreach($list as $value){ ?>
+						<?php foreach($list_data as $value){ ?>
 							<div class="col-12 col-sm-6 col-md-4 col-lg-3">
 								<div class="pt-4">
 		                            <div class="thumbnail pb-4">
@@ -34,20 +38,22 @@
 		                            		<h3>
 		                            			<a href="product_detail" title="" class="c-fff text-uppercase f-16"><?php echo $value['name'] ?></a>
 		                            		</h3>
-		                            		<span class="c-feb f-16 text-uppercase"><?php echo $value['price'] ?> $</span>
+											<span class="c-feb f-16 text-uppercase"><?php echo $value['price'] ?> $</span>
+											<form action="" method="post">
+												<input type="hidden" name="user_id" value="<?php if($this->session->has_userdata('login')) echo $this->session->userdata('login')->id ?>">
+												<input type="hidden" name="pro_name" value="<?php echo $value['name'] ?>">
+												<input type="hidden" name="pro_image" value="<?php echo $value['image'] ?>">
+												<input type="hidden" name="pro_price" value="<?php echo $value['price'] ?>">
+												<button type="submit" name="add-Cart">Add Cart</button>
+											</form>
 		                            	</div>
 		                            </div>
 			                    </div>
 							</div>
 						<?php } ?>
 						</div>
-						
 		            	<div class="pagination">
-		            		<strong>1</strong>
-		            		<a href="">2</a>
-		            		<a href="">3</a>
-		            		<a href=""><i class="fas fa-angle-right"></i></a>
-		            		<a href=""><i class="fas fa-angle-double-right"></i></a>
+		            		<?php echo $this->pagination->create_links();?>
 		            	</div>
 		            </section>
 				</div>
