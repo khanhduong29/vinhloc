@@ -118,6 +118,27 @@ button:focus{
     vertical-align: top;
     width: 100%;
 }
+.add-cart{
+	position: absolute;
+    top: 40%;
+    left: 50%;
+    z-index: 99;
+    transition: all .2s ease-in-out;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    padding: 10px 13px;
+    border: none;
+    box-shadow: 0 0 3px;
+    opacity: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+.add-cart:hover{
+	background: rgba(0, 0, 0, .8);
+	cursor: pointer;
+}
+.add-cart img {
+	width: 27px;
+}
 .img-fluid{
 	transition: transform 1s;
 }
@@ -792,6 +813,9 @@ a.c-feb:hover{
     border-bottom: 1px solid transparent;
     margin: 0 10px;
     box-sizing: border-box;
+}
+.thumbnail:hover .add-cart{
+	opacity: 1;
 }
 .cat-pro .thumbnail::before {
     content: '';
