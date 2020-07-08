@@ -11,7 +11,7 @@
 		function cart() {
 			$data['main'] = 'client/cart';
 			$data['title'] = 'Dịch vụ';
-			$data['list_data'] = $this->Mcategory->getList();
+			$data['category'] = $this->Mcategory->getList();
 			$data['listCart'] = $this->Cart_model->getList();
 			$this->load->view('layouts/main', $data);
 		}
