@@ -58,14 +58,14 @@
 		    }
 		}
 		//
-
 		public function product_detail($id) {
 		  $query = $this->db->query("SELECT * FROM product WHERE id = '$id'");
-
+		}
 		public function pro_detail($id) {
 		  $query = $this->db->query('SELECT * FROM product WHERE id =  '.$id);
 		  return $query->result_array();
 		}
+
 		public function search($q){
 		    {
 		        $this->db->like('q',$q);
