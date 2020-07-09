@@ -94,8 +94,6 @@ class Client extends CI_Controller {
         $data['list_data'] = $this->Mproduct->getList();
         
 		$this->load->view('layouts/main', $data);
-
-
 	}
 	public function product()
 	{
@@ -148,7 +146,7 @@ class Client extends CI_Controller {
             array_push($where, array("key"=>"name",'compare'=>'like','value'=>$q));
         }
         array_push($where, array('key'=>'act','compare'=>'=','value'=>1));
-        $config['base_url']= base_url('client/product');// Điền link của bạn vào
+        $config['base_url']= base_url('client/product'); 
         $config['per_page']= 8;
         $config['total_rows']=$this->Mproduct->getNumDataDetail('product',$where);
         $limit = $pp.",".$config['per_page'];
