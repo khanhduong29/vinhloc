@@ -28,12 +28,12 @@
 								<div class="pt-4">
 		                            <div class="thumbnail pb-4">
 		                            	<a href="" class="hv-scale p-3 b-ra-30">
-		                            	<a href="<?php echo base_url() ?>product_detail" class="hv-scale p-3 b-ra-30">
+		                            	<a href="product_detail" class="hv-scale p-3 b-ra-30">
 		                            		<img src="<?php echo base_url() ?>Uploads/<?php echo $value['image']?>" class="img-fluid"  alt="a" />
 		                            	</a>
 		                            	<div class="desc text-center">
 		                            		<h3>
-		                            			<a href="<?php echo base_url() ?>product_detail" title="" class="c-fff text-uppercase f-16"><?php echo $value['name'] ?></a>
+		                            			<a href="product_detail" title="" class="c-fff text-uppercase f-16"><?php echo $value['name'] ?></a>
 		                            		</h3>
 											<span class="c-feb f-16 text-uppercase"><?php echo $value['price'] ?> $</span>
 											<form action="" method="post">
