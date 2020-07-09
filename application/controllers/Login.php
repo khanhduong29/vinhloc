@@ -6,6 +6,7 @@
 			parent::__construct();
 			$this->load->model('User_model');
 			$this->load->model('Mcategory');
+			$this->load->model('Mproduct');
 		}
 		function check_email() {
 			$email = $this->input->post('email');
@@ -31,7 +32,9 @@
 			}
 			$data['main'] = 'client/register';
 			$data['title'] = 'Đăng ký';
+			
 			$data['category'] = $this->Mcategory->getList();
+			$data['list_data'] = $this->Mproduct->getList();
 			$this->load->view('layouts/main', $data);
 		}
 
@@ -71,6 +74,7 @@
 			$data['main'] = 'client/login';
 			$data['title'] = 'Đăng nhập';
 			$data['category'] = $this->Mcategory->getList();
+			$data['list_data'] = $this->Mproduct->getList();
 			$this->load->view('layouts/main', $data);
 		}
 		private function _user_is_login()
