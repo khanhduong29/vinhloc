@@ -7,10 +7,20 @@
             <h2 class="text-center">
                 <span class="title-big">Đăng ký</span>
             </h2>
+            @if ($errors->any())
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+             @endif
             <section class="s-content">
                 <div class="row">
                     <div class="col-md-6 col-lg-6 pt-lg-5 pt-4">
-                        <form action="" method="POST" role="form">
+                    <form action="{{route('postRegister')}}" method="POST" role="form">
+                            @csrf
                             <div class="row border-2 m-0 pt-5 pb-5">
                                 <div class="col-12 form-group">
                                     <label for="" >Họ và tên</label>
