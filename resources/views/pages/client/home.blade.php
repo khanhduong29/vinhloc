@@ -23,66 +23,22 @@
                 <span class="title-big">Các dòng sản phẩm</span>
             </h2>
             <section class="slick1 pt-lg-5 pt-4 wow fadeInUp">
+               @foreach($products as $pro )
                 <div class="pt-2">
                     <div class="thumbnail">
-                        <a href="" class="hv-scale p-3">
-                            <img src="{{url('public')}}/frontend/images/product/0fcdb1b05c06ba58e317.jpg"  alt="a" />
+                        <a href="" class="hv-scale p-3 b-ra-30">
+                             <img src="{{asset('public/Uploads')}}/{{$pro -> image}}" alt="a"  class ="img-fluid">
                         </a>
                         <div class="desc text-center">
-                            <div class="img">
-                                <img src="{{url('public')}}/frontend/images/thumbs-cat/untitled-2.png" alt="">
-                            </div>
+                           
                             <h3 class="m-0">
-                                <a href="" title="">Đèn chùm</a>
+                                <a href="" title="">{{$pro->name}}</a>
                             </h3>
                         </div>
                     </div>
                 </div>
-                <div class="pt-2">
-                    <div class="thumbnail">
-                        <a href="" class="hv-scale p-3">
-                            <img src="{{url('public')}}/frontend/images/product/137edd4960d1868fdfc0.jpg"  alt="a" />
-                        </a>
-                        <div class="desc text-center">
-                            <div class="img">
-                                <img src="{{url('public')}}/frontend/images/thumbs-cat/untitled-3.png" alt="">
-                            </div>
-                            <h3 class="m-0">
-                                <a href="" title="">Đèn chùm</a>
-                            </h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="pt-2">
-                    <div class="thumbnail">
-                        <a href="" class="hv-scale p-3">
-                            <img src="{{url('public')}}/frontend/images/product/2e3d45f2764a9014c95b.jpg"  alt="a" />
-                        </a>
-                        <div class="desc text-center">
-                            <div class="img">
-                                <img src="{{url('public')}}/frontend/images/thumbs-cat/untitled-4.png" alt="">
-                            </div>
-                            <h3 class="m-0">
-                                <a href="" title="">Đèn chùm</a>
-                            </h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="pt-2">
-                    <div class="thumbnail">
-                        <a href="" class="hv-scale p-3">
-                            <img src="{{url('public')}}/frontend/images/product/8b1b1592df0d3953601c.jpg"  alt="a" />
-                        </a>
-                        <div class="desc text-center">
-                            <div class="img">
-                                <img src="{{url('public')}}/frontend/images/thumbs-cat/untitled-5.png" alt="">
-                            </div>
-                            <h3 class="m-0">
-                                <a href="" title="">Đèn chùm</a>
-                            </h3>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
+               
             </section>
         </div>
     </section>
