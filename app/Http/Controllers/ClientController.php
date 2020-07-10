@@ -3,10 +3,19 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Categories;
+use App\Models\Categories;
 
 class ClientController extends Controller {
 
+    public function __construct(){
+        $this->middleware(function($request,$next){
+            view()->share([
+                'categories' => Categories::where('status',1) -> get(),
+                // 'cart' => new cart()
+            ]);
+            return $next($request);
+        });
+    }
     public function home() {
         return view('pages.client.home');
     }
@@ -32,7 +41,8 @@ class ClientController extends Controller {
         return view('pages.client.blog-detail');
     }
     public function cate_product() {
-        $category = Categories::where('status',1)->get();
-        return view('pages.client.cate-product',compact('category'));
+        return view('pages.client.cate-product');
     }
+
+
 }
