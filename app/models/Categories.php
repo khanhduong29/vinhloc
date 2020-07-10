@@ -12,7 +12,7 @@ class categories extends Model
     protected $fillable = ['slug','name','status'];
     // lấy dữ liệu
     public function list_cat(){
-    	return categories::where('status',1)->orderBy('id','DESC')->get();
+    	return categories::orderBy('id','DESC')->get();
     }
     // thêm dữ liệu
     public function add(){

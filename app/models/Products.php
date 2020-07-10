@@ -1,12 +1,135 @@
 <?php
 
-namespace App;
-
+namespace App\Models;
+use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\products;
 
 class Products extends Model
 {
     protected $table = 'products';
 
     protected $fillable = ['cate_id','code','slug','name','price','image','dess','status'];
+    // lấy dữ liệu
+    public function list_cat(){
+    	return categories::orderBy('id','DESC')->get();
+    }
+    // thêm dữ liệu
+    public function add(){
+    	$validate = request()->validate(
+			[
+				'code' => 'required|unique:products',
+				'name' => 'required',
+				'price' => 'required',
+				'cate_id' => 'required',
+				'dess' => 'required',
+				'file'=>'required|max:10000|mimes:jpg,jpeg,png,gif'
+			],
+			[
+				'required' => ':attribute Đang bỏ trống.',
+				'unique' => ':attribute đã tồn tại',
+				'min' => ':attribute chưa được chọn',
+				'max' => 'Cỡ ảnh quá lớn',
+				'mimes' => 'Không đúng định dạng ảnh'
+			],
+			[
+                 'code' => 'Mã sản phẩm',
+                 'name' => 'Tên',
+                 'image' => 'Ảnh',
+                 'price' => 'Giá',
+                 'descriptions' => 'Mô tả',
+                 'cate_id' => 'Loại sản phẩm',
+                 'file' =>'Ảnh'
+			]
+		);
+    	$status = request()->status;
+	    if($status){
+	    	$status = 1;
+	    }else{
+	    	$status = 0;
+	    }
+	    $image = '';
+		if(request() -> has('file')){
+			$file = request() -> file;
+			$file -> move(base_path('public/Uploads'),$file -> getClientOriginalName());
+			$image = $file -> getClientOriginalName();
+		}
+		 $models = $this->create([
+			'cate_id' => request()->cate_id,
+			'code' => request()->code,
+			'name' => request()->name,
+			'slug' => Str::slug(request()->name),
+			'price' => request()->price,
+			'dess' => request()->dess,
+			'image' => $image,
+			'status' => $status,
+		]);
+		return $models;
+
+	}
+	// cập nhật dữ liệu
+	public function update_data($pro){
+		$validate = request()->validate(
+			[
+				'name' => 'required',
+				'price' => 'required',
+				'cate_id' => 'required',
+				'dess' => 'required',
+				'file'=>'max:10000|mimes:jpg,jpeg,png,gif'
+			],
+			[
+				'required' => ':attribute Đang bỏ trống.',
+				'unique' => ':attribute đã tồn tại',
+				'min' => ':attribute chưa được chọn',
+				'max' => 'Cỡ ảnh quá lớn',
+				'mimes' => 'Không đúng định dạng ảnh'
+			],
+			[
+                 'name' => 'Tên',
+                 'image' => 'Ảnh',
+                 'price' => 'Giá',
+                 'descriptions' => 'Mô tả',
+                 'cate_id' => 'Loại sản phẩm',
+                 'file' =>'Ảnh'
+			]
+		);
+		if(request()->code != $pro->code){
+			$validate = request()->validate(
+				[
+					'code' => 'required|unique:products'
+				],
+				[
+					'unique' => ':attribute đã tồn tại',
+				],
+				[
+	                 'code' => 'Mã sản phẩm',
+				]
+			);
+		}
+		$status = request()->status;
+	    if($status){
+	    	$status = 1;
+	    }else{
+	    	$status = 0;
+	    }
+	    $image = '';
+		if(request() -> has('file')){
+			$file = request() -> file;
+			$file -> move(base_path('public/Uploads'),$file -> getClientOriginalName());
+			$image = $file -> getClientOriginalName();
+		}else{
+			$image = $pro->image;
+		}
+		$updated = $this->update([
+			'cate_id' => request()->cate_id,
+			'code' => request()->code,
+			'name' => request()->name,
+			'slug' => Str::slug(request()->name),
+			'price' => request()->price,
+			'dess' => request()->dess,
+			'image' => $image,
+			'status' => $status,
+		]);
+	}
 }

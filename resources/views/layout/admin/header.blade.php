@@ -6,7 +6,7 @@
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="{{ asset('/') }}admin" class="nav-link">Home</a>
+        <a href="{{route('admin')}}" class="nav-link">Home</a>
       </li>
     </ul>
 
@@ -81,7 +81,7 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item">
-            <a href="{{ asset('/') }}admin" class="nav-link">
+            <a href="{{ route('admin') }}" class="nav-link">
               <i class="nav-icon fas fa-th"></i>
               <p>
                 Trang chủ
@@ -140,13 +140,13 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="" class="nav-link">
+                <a href="{{route('add-categories')}}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Thêm danh mục</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="" class="nav-link">
+                <a href="{{route('list-categories')}}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Danh sách danh mục</p>
                 </a>
@@ -163,13 +163,13 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="" class="nav-link">
+                <a href="{{route('add-products')}}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Thêm sản phẩm</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="" class="nav-link">
+                <a href="{{route('list-products')}}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Danh sách sản phẩm</p>
                 </a>

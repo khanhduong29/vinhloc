@@ -1,16 +1,16 @@
-@extends('layouts.admin_main')
+@extends('layout.admin.index')
 @section('content')
 
-<!-- Content Wrapper. Contains page content -->
+  <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <section class="content-header">
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <!-- <h1>Sửa sản phẩm</h1> -->
+            <!-- <h1>Sửa user</h1> -->
             <section class="content-header">
              <?php $url = url('').'/'.Request::segment(1).'/'?>
-             <h4>
+             <h5>
                <?php for ($i = 1; $i <= count(Request::segments()) ; $i ++): ?>
                  <?php if ($i > 1): ?>
                   <?php $url .= Request::segment($i).'/'?>
@@ -22,7 +22,7 @@
                   <?= '/' ?>
                 <?php endif ?>
               <?php endfor ?>
-            </h4>
+            </h5>
           </section>
           </div>
           <div class="col-sm-6">
@@ -45,51 +45,66 @@
               <div class="card-header">
                 <h3 class="card-title">Quick Example</h3>
               </div>
+              @if ($errors->any())
+                  <div class="alert alert-danger">
+                      <ul>
+                          @foreach ($errors->all() as $error)
+                              <li>{{ $error }}</li>
+                          @endforeach
+                      </ul>
+                  </div>
+              @endif
               <!-- /.card-header -->
               <!-- form start -->
               <form  method="post" role="form" enctype="multipart/form-data">
                 <div class="card-body">
                   <div class="form-group">
+                    <label for="">Mã sản phẩm</label>
+                    <input type="text" class="form-control" id="code" name="code" value="{{$products->code}}" required placeholder="code">
+                    <div class="help-block"></div>
+                  </div>
+                  <div class="form-group">
                     <label for="">Tên sản phẩm</label>
-                    <input type="text" class="form-control" id="name_pro" name="name_pro" value="{{$models->name_pro}}" placeholder="Nhập tên sản phẩm">
-                  </div>
-                  <div class="form-group">
-                    <label for="">Giá</label>
-                    <input type="text" class="form-control" id="price" name="price" value="{{$models->price}}" placeholder="Nhập giá sản phẩm">
-                  </div>
-                  <div class="form-group">
-                    <label for="">Giá sale</label>
-                    <input type="text" class="form-control" id="sale_price" name="sale_price" value="{{$models->sale_price}}" placeholder="Nhập giá sản phẩm">
+                    <input type="text" class="form-control" id="name_cat" value="{{$products->name}}" name="name" required placeholder="Name">
+                    <div class="help-block"></div>
                   </div>
                   <div class="form-group">
                     <label for="">Loại sản phẩm</label>
-                    <select name="id_cat" class="form-control">
+                    <select name="cate_id" class="form-control" required>
                       <option value="0">--Chọn loại sản phẩm--</option>
-                      @foreach($Categories as $cat)
-                        <option {{ $models->id_cat == $cat->id_cat ? "selected" : "" }} value="{{ $cat->id_cat }}">{{ $cat->name_cat }}</option>
+                      @foreach($categories as $cat)
+                        <option value="{{ $cat->id }}" {{ $products->cate_id == $cat->id ? "selected" : "" }}>{{ $cat->name }}</option>
                       @endforeach
                     </select>
                   </div>
                   <div class="form-group">
                     <label for="exampleInputFile">Chọn ảnh sản phẩm</label>
-                    <div class="input-group">
-                      <input type="file" name="file" class="text-center center-block file-upload" value="{{$models->image}}" accept="image/gif, image/jpeg, image/jpg, image/png"/>  
+                    <div class="input-group row">
+                      <div class="col-8"><input type="file" name="file" class="text-center center-block file-upload" accept="image/gif, image/jpeg, image/jpg, image/png"/>  </div>
+                      <div class="col-4"><img src="{{asset('public/Uploads')}}/{{$products-> image}}" alt="Chưa có hình ảnh" ></div>
+                      
                     </div>
                   </div>
-                   <div class="form-group">
+                  <div class="form-group">
+                    <label for="">Giá sản phẩm</label>
+                    <input type="text" class="form-control" id="price" name="price" value="{{$products->price}}" required placeholder="price">
+                    <div class="help-block"></div>
+                  </div>
+                  <div class="form-group">
                       <label for="">Mô tả</label>
                       <div class="mb-3">
-                        <textarea class="textarea" id="descriptions" name="descriptions" placeholder="Place some text here"
-                                  style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;">{{$models->descriptions}}</textarea>
+                        <textarea class="textarea form-control" required id="dess" name="dess" placeholder="Place some text here">
+                            {{$products->dess}}        
+                        </textarea>
                       </div>
-                    </div>
+                  </div>
                   <div class="form-check">
-                    <input type="checkbox" class="form-check-input" id="exampleCheck2" {{ $models->status == 1 ? "checked" : "" }} name="status">
-                    <label class="form-check-label" for="exampleCheck2">Check me out</label>
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1" {{ $products->status == 1 ? "checked" : "" }} name="status">
+                    <label class="form-check-label" for="exampleCheck1">Hiện</label>
                   </div>
                 </div>
                 <!-- /.card-body -->
-
+                
                 <div class="card-footer">
                   <button type="submit" class="btn btn-primary">Sửa sản phẩm</button>
                 </div>
@@ -122,3 +137,6 @@
 <!-- AdminLTE App -->
 
 @stop()
+
+
+

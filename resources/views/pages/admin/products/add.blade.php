@@ -1,5 +1,6 @@
-@extends('layouts.admin_main')
+@extends('layout.admin.index')
 @section('content')
+
 
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
@@ -42,64 +43,67 @@
           <div class="col-md-12">
             <!-- general form elements -->
             <div class="card card-primary">
-              <div>
-                @if($errors->any())
-                <div style="background-color:#ffcccb;border: 5px double red;font-size: 15px;padding: 10px">
-                  @foreach($errors->all() as $errors)
-                  <li><?= $errors ?></li>
-                  @endforeach
-                </div>
-                @endif
-              </div>
+              @if ($errors->any())
+                  <div class="alert alert-danger">
+                      <ul>
+                          @foreach ($errors->all() as $error)
+                              <li>{{ $error }}</li>
+                          @endforeach
+                      </ul>
+                  </div>
+              @endif
               <div class="card-header">
                 <h3 class="card-title">Quick Example</h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
+              
               <form  method="post" role="form" enctype="multipart/form-data">
+                
                 <div class="card-body">
                   <div class="form-group">
-                    <label for="">Tên sản phẩm</label>
-                    <input type="text" class="form-control" id="name_pro" name="name_pro" placeholder="Nhập tên sản phẩm">
+                    <label for="">Mã sản phẩm</label>
+                    <input type="text" class="form-control" id="code" name="code" required placeholder="code">
                     <div class="help-block"></div>
                   </div>
                   <div class="form-group">
-                    <label for="">Giá</label>
-                    <input type="text" class="form-control" id="price" name="price" placeholder="Nhập giá sản phẩm">
-                  </div>
-                  <div class="form-group">
-                    <label for="">Giá sale</label>
-                    <input type="text" class="form-control" id="sale_price" name="sale_price" placeholder="Nhập giá sale sản phẩm">
+                    <label for="">Tên sản phẩm</label>
+                    <input type="text" class="form-control" id="name" name="name" required placeholder="Name">
+                    <div class="help-block"></div>
                   </div>
                   <div class="form-group">
                     <label for="">Loại sản phẩm</label>
-                    <select name="id_cat" class="form-control">
+                    <select name="cate_id" class="form-control" required>
                       <option value="0">--Chọn loại sản phẩm--</option>
-                      @foreach($Categories as $cat)
-                        <option value="{{ $cat->id_cat }}">{{ $cat->name_cat }}</option>
+                      @foreach($categories as $cat)
+                        <option value="{{ $cat->id }}">{{ $cat->name }}</option>
                       @endforeach
                     </select>
                   </div>
                   <div class="form-group">
                     <label for="exampleInputFile">Chọn ảnh sản phẩm</label>
                     <div class="input-group">
-                      <input type="file" name="file" class="text-center center-block file-upload" accept="image/gif, image/jpeg, image/jpg, image/png"/>  
+                      <input type="file" name="file" required class="text-center center-block file-upload" accept="image/gif, image/jpeg, image/jpg, image/png"/>  
                     </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="">Giá sản phẩm</label>
+                    <input type="text" class="form-control" id="price" name="price" required placeholder="price">
+                    <div class="help-block"></div>
                   </div>
                   <div class="form-group">
                       <label for="">Mô tả</label>
                       <div class="mb-3">
-                        <textarea class="textarea" id="descriptions" name="descriptions" placeholder="Place some text here"
+                        <textarea class="textarea" required id="dess" name="dess" placeholder="Place some text here"
                                   style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"></textarea>
                       </div>
                   </div>
                   <div class="form-check">
                     <input type="checkbox" class="form-check-input" id="exampleCheck1" name="status">
-                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                  </div> 
+                    <label class="form-check-label" for="exampleCheck1">Hiện</label>
+                  </div>
                 </div>
                 <!-- /.card-body -->
-                
                 <div class="card-footer">
                   <button type="submit" class="btn btn-primary">Thêm sản phẩm</button>
                 </div>
@@ -122,14 +126,6 @@
 
 
 </div>
-  <script>
-  $(function () {
-    // Summernote
-    $('.textarea').summernote()
-  })
-</script>
-<script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-<!-- AdminLTE App -->
 
 @stop()
 

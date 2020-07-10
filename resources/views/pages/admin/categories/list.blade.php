@@ -11,7 +11,7 @@
             <!-- <h1>DataTables</h1> -->
             <section class="content-header">
              <?php $url = url('').'/'.Request::segment(1).'/'?>
-             <h4>
+             <h5>
                <?php for ($i = 1; $i <= count(Request::segments()) ; $i ++): ?>
                  <?php if ($i > 1): ?>
                   <?php $url .= Request::segment($i).'/'?>
@@ -23,7 +23,7 @@
                   <?= '/' ?>
                 <?php endif ?>
               <?php endfor ?>
-            </h4>
+            </h5>
           </section>
             <a href="{{route('add-categories')}}">Thêm danh mục</a>
 
@@ -73,9 +73,7 @@
                     </td>
                   </tr>
                   @endforeach
-                </tbody>
-                
-                
+                </tbody>                
               </table>
             </div>
             <!-- /.card-body -->
