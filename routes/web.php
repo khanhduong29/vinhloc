@@ -35,6 +35,12 @@ Route::group(['prefix' => 'admin','namespace'=>'admin','middleware'=>'auth'],fun
     include 'admin/products.php';
 });
 
+// giao diện login
+Route::get('admin/login','admin\adminController@login') -> name('login');
+Route::post('admin/login','admin\adminController@postLogin') -> name('postLogin');
+Route::get('admin/logout','admin\adminController@logout') -> name('logout');
+
+
 Route::group(['prefix' => 'cart'], function () {
     Route::get('cart','CartController@cart')->name('cart');
     Route::get('checkout','CartController@checkout')->name('checkout');

@@ -63,7 +63,7 @@ class Admin extends Model
 			[
 				'useradmin' => 'required',
 				'email' => 'required',
-				'file'=>'required|max:10000|mimes:jpg,jpeg,png,gif',
+				'file'=>'max:10000|mimes:jpg,jpeg,png,gif',
 				'password'=>'required|min:6|max:100'
 			],
 			[

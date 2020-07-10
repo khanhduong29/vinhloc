@@ -39,7 +39,7 @@
         	]);
 		}
 		public function update(request $request,admin $id){
-			$updated = $id->update_data();
+			$updated = $id->update_data($id);
 	       	if ($id) {
 	        	return redirect()->route('list-admin') -> with('success','Sửa thành công');
 	    	} else {
@@ -57,6 +57,28 @@
 	        return redirect()->back()->with('error','Delete category '.request()->cate_name.' fail');
 	       }
 	    }
+
+
+
+	    function login(){
+			return view('pages.admin.login',[
+			]);
+		}
+		public function postLogin(Request $request){
+			$info = $request->only('email', 'password');
+	        if (Auth::guard('admin')->attempt($info)) {
+	            return redirect()->route('admin') -> with('success','Đăng nhập thành công');
+	            
+	        }
+	        else{
+	        	// echo 'đăng nhập thất bại';
+	            return back();
+	        }
+		}
+		public function logout(){
+			Auth::guard('admin') -> logout();
+			return redirect()->route('login');
+		}
     }
 
  ?>
