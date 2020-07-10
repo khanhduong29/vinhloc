@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Categories;
 
 class ClientController extends Controller {
 
@@ -31,6 +32,7 @@ class ClientController extends Controller {
         return view('pages.client.blog-detail');
     }
     public function cate_product() {
-        return view('pages.client.cate-product');
+        $category = Categories::where('status',1)->get();
+        return view('pages.client.cate-product',compact('category'));
     }
 }

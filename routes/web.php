@@ -25,12 +25,11 @@ Route::group(['prefix' => '/'],function(){
     Route::get('blog-detail','ClientController@blog_detail')->name('blog-detail');
     Route::get('cate-product','ClientController@cate_product')->name('cate-product');
 
-Route::group(['prefix' => 'admin','namespace'=>'admin'],function(){
-	// giao diện quản trị
-	Route::get('admin','adminController@admin')->name('admin');
-	
-	include 'admin/category.php';
-    
+    Route::get('cart','CartController@cart')->name('cart');
+    Route::get('checkout','CartController@checkout')->name('checkout');
+
+    Route::get('login','LoginController@login')->name('login');
+    Route::get('register','LoginController@register')->name('register');
 
 });
 
