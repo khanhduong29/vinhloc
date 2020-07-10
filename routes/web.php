@@ -18,7 +18,7 @@ use Illuminate\Support\Facades\Route;
 // });
 
 
-Route::group(['namespace'=>'admin'],function(){
+Route::group(['prefix' => 'admin','namespace'=>'admin'],function(){
 	// giao diện quản trị
 	Route::get('admin','adminController@admin')->name('admin');
 	

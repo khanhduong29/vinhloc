@@ -1,17 +1,18 @@
 <?php 
+	
 
-	Route::group(['prefix' => 'category'],function(){
+	Route::group(['prefix' => 'categories'],function(){
 		//danh sách danh mục
-		Route::get('/','categoryController@list_cat') -> name('list-category');
+		Route::get('/','categoriesController@list_cat') -> name('list-categories');
 		// thêm danh mục
-		Route::get('/addCategory','categoryController@create') -> name('add');
-		Route::post('/addCategory','categoryController@store') -> name('add-category');
+		Route::get('/addcategories','categoriesController@create') -> name('add');
+		Route::post('/addcategories','categoriesController@store') -> name('add-categories');
 
 		// sửa danh mục
-		Route::get('editCategory/{id_cat}','categoryController@edit') -> name('edit');
-		Route::post('editCategory/{id_cat}','categoryController@update') -> name('edit-category');
+		Route::get('editcategories/{id}','categoriesController@edit') -> name('edit');
+		Route::post('editcategories/{id}','categoriesController@update') -> name('edit-categories');
 
 		// xóa danh mục
-		Route::get('deleteCategory','categoryController@deleteCat')->name('deleteCat');
+		Route::get('deletecategories/{id}','categoriesController@delete')->name('deleteCat');
 	});
  ?>

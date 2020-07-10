@@ -1,4 +1,4 @@
-@extends('layouts.admin_main')
+@extends('layout.admin.index')
 @section('content')
 
   <!-- Content Wrapper. Contains page content -->
@@ -61,15 +61,15 @@
                 </thead>
                 
                 <tbody>
-                  @foreach($Categories as $cat)
+                  @foreach($categories as $cat)
                   <tr>
-                    <td>{{$cat -> id_cat}}</td>
-                    <td>{{$cat -> name_cat}}</td>
+                    <td>{{$cat -> id}}</td>
+                    <td>{{$cat -> name}}</td>
                     <td>{{ $cat->status == 1 ? "Hiện" : "Ẩn" }}</td>
                     <td>{{$cat -> created_at}}</td>
                     <td>
-                      <a href="{{ Route('edit-categories',['id_cat'=>$cat->id_cat]) }}" class="btn btn-primary btn-xs">Sửa</a>
-                      <a href="{{Route('deleteCat',['id_cat'=>$cat->id_cat])}}" class="btn btn-danger btn-xs" onclick="return confirm('Xác nhận xoá ?')">Xóa</a>
+                      <a href="{{ Route('edit-categories',$cat) }}" class="btn btn-primary btn-xs">Sửa</a>
+                      <a href="{{ Route('deleteCat',$cat) }}" class="btn btn-danger btn-xs" onclick="return confirm('Xác nhận xoá ?')">Xóa</a>
                     </td>
                   </tr>
                   @endforeach
