@@ -4,6 +4,8 @@
     use App\Http\Controllers\Controller;
     use Illuminate\Http\Request;
     use App\Models\Admin;
+    use Auth;
+	use Hash;
 
     class adminController extends Controller {
         public function admin() {
@@ -60,22 +62,21 @@
 
 
 
-	    function login(){
+	    function login_admin(){
 			return view('pages.admin.login',[
 			]);
 		}
-		public function postLogin(Request $request){
+		public function postLogin_admin(Request $request){
 			$info = $request->only('email', 'password');
 	        if (Auth::guard('admin')->attempt($info)) {
 	            return redirect()->route('admin') -> with('success','Đăng nhập thành công');
-	            
 	        }
 	        else{
 	        	// echo 'đăng nhập thất bại';
 	            return back();
 	        }
 		}
-		public function logout(){
+		public function logout_admin(){
 			Auth::guard('admin') -> logout();
 			return redirect()->route('login');
 		}

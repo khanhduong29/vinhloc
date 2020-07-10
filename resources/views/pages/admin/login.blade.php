@@ -30,7 +30,7 @@
     <div class="card-body login-card-body">
       <p class="login-box-msg">Sign in to start your session</p>
 
-      <form action="{{ Route('postLogin_admin') }}" method="post">
+      <form action="{{ Route('postLogin') }}" method="post">
         <input type="hidden" name="_token" value="{{csrf_token()}}"> 
         <div class="input-group mb-3">
           <input type="email" class="form-control" name="email" placeholder="Email">
