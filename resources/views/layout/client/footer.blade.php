@@ -3,13 +3,9 @@
     <div class="container">
         <div class="menu-footer text-center">
             <ul>
-                <li><a href="{{route('cate-product')}}">Đèn chùm</a></li>
-                <li><a href="{{route('cate-product')}}">Đèn thả pha lê</a></li>
-                <li><a href="{{route('cate-product')}}">Đèn ốp trần</a></li>
-                <li><a href="{{route('cate-product')}}">Đèn mâm ốp trần</a></li>
-                <li><a href="{{route('cate-product')}}">Đèn treo tường</a></li>
-                <li><a href="{{route('cate-product')}}">Đèn bàn, đèn cây</a></li>
-                <li><a href="{{route('cate-product')}}">Đèn soi tranh</a></li>
+                @foreach($categories as $cat)
+                <li><a href="{{$cat -> slug}}">{{$cat -> name}}</a></li>
+                @endforeach
             </ul>
         </div>
     </div>
