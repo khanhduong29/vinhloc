@@ -34,13 +34,26 @@ Route::group(['prefix' => 'admin','namespace'=>'admin'],function(){
 
 });
 
+Route::group(['prefix' => 'cart'], function () {
+    Route::get('cart','CartController@cart')->name('cart');
+    Route::get('checkout','CartController@checkout')->name('checkout');
+});
+
 Route::group(['prefix' => 'account'], function () {
     Route::get('register','LoginController@register')->name('register');
-    Route::post('register','LoginController@postRegister');
+    Route::post('register','LoginController@postRegister')->name('postRegister');
 
     Route::get('login','LoginController@login')->name('login');
     Route::post('login','LoginController@postLogin');
 
     Route::get('log-out','LoginController@postLogOut')->name('log-out');
+
+    // Route::get('/','categoriesController@list_cat') -> name('list-categories');
+    // Route::get('/addcategories','categoriesController@create') -> name('add');
+    // Route::post('/addcategories','categoriesController@store') -> name('add-categories');
+
+    // Route::get('editcategories/{id}','categoriesController@edit') -> name('edit');
+    // Route::post('editcategories/{id}','categoriesController@update') -> name('edit-categories');
+    // Route::get('deletecategories/{id}','categoriesController@delete')->name('deleteCat');
 });
 

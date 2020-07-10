@@ -1,5 +1,4 @@
-<?php 
-	
+<?php
 
 	Route::group(['prefix' => 'categories'],function(){
 		//danh sách danh mục

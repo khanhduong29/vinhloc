@@ -28,7 +28,7 @@ class categories extends Model
 			'status' => $status,
 		]);
 		return $models;
-		
+
 	}
 	// cập nhật dữ liệu
 	public function update_data(){
