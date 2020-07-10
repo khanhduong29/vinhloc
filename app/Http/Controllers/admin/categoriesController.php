@@ -7,7 +7,6 @@
 	use File;
 
 	class categoriesController extends Controller {
-
 		//danh sách dữ liệu
 		public function list_cat(){
 			$categories=categories::all();
@@ -15,8 +14,6 @@
         		'categories' => $categories
         	]);
 		}
-
-
 		// thêm dữ liệu
 		public function create(){
 			return view('pages.admin.categories.add');
@@ -48,7 +45,6 @@
 	     		return redirect()->back()->with('error','Update category'.request()->cate_name.' fail');
 	    	}
 		}
-
 		// xóa dữ liệu
 		public function delete(Categories $id)
 	    {

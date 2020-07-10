@@ -23,134 +23,26 @@
             </form>
             <section class="show-pro pt-lg-5 pt-4">
                 <div class="row">
+                    @foreach($products as $pro)
                     <div class="col-12 col-sm-6 col-md-4 col-lg-3">
                         <div class="pt-4">
                             <div class="thumbnail pb-4">
                                 <a href="{{route('product-detail')}}" class="hv-scale p-3 b-ra-30">
-                                    <img src="{{url('public')}}/frontend/images/product/8b1b1592df0d3953601c.jpg" class="img-fluid"  alt="a" />
+                                    <img src="{{asset('public/Uploads')}}/{{$pro -> image}}" alt="" width="a"class ="img-fluid">
                                 </a>
                                 <div class="desc text-center">
                                     <h3>
-                                        <a href="{{route('product-detail')}}" title="" class="c-fff text-uppercase f-16">Đèn chùm pha lê</a>
+                                        <a href="{{route('product-detail')}}" title="" class="c-fff text-uppercase f-16">{{$pro -> name}}</a>
                                     </h3>
                                     <span class="c-feb f-16 text-uppercase">Liên hệ</span>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                        <div class="pt-4">
-                            <div class="thumbnail pb-4">
-                                <a href="{{route('product-detail')}}" class="hv-scale p-3 b-ra-30">
-                                    <img src="{{url('public')}}/frontend/images/product/061915d98b626d3c3473.jpg" class="img-fluid"  alt="a" />
-                                </a>
-                                <div class="desc text-center">
-                                    <h3>
-                                        <a href="{{route('product-detail')}}" title="" class="c-fff text-uppercase f-16">Đèn chùm pha lê</a>
-                                    </h3>
-                                    <span class="c-feb f-16 text-uppercase">Liên hệ</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                        <div class="pt-4">
-                            <div class="thumbnail pb-4">
-                                <a href="{{route('product-detail')}}" class="hv-scale p-3 b-ra-30">
-                                    <img src="{{url('public')}}/frontend/images/product/0fcdb1b05c06ba58e317.jpg" class="img-fluid"  alt="a" />
-                                </a>
-                                <div class="desc text-center">
-                                    <h3>
-                                        <a href="{{route('product-detail')}}" title="" class="c-fff text-uppercase f-16">Đèn chùm pha lê</a>
-                                    </h3>
-                                    <span class="c-feb f-16 text-uppercase">Liên hệ</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                        <div class="pt-4">
-                            <div class="thumbnail pb-4">
-                                <a href="{{route('product-detail')}}" class="hv-scale p-3 b-ra-30">
-                                    <img src="{{url('public')}}/frontend/images/product/137edd4960d1868fdfc0.jpg" class="img-fluid"  alt="a" />
-                                </a>
-                                <div class="desc text-center">
-                                    <h3>
-                                        <a href="{{route('product-detail')}}" title="" class="c-fff text-uppercase f-16">Đèn chùm pha lê</a>
-                                    </h3>
-                                    <span class="c-feb f-16 text-uppercase">Liên hệ</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                        <div class="pt-4">
-                            <div class="thumbnail pb-4">
-                                <a href="{{route('product-detail')}}" class="hv-scale p-3 b-ra-30">
-                                    <img src="{{url('public')}}/frontend/images/product/2e3d45f2764a9014c95b.jpg" class="img-fluid"  alt="a" />
-                                </a>
-                                <div class="desc text-center">
-                                    <h3>
-                                        <a href="{{route('product-detail')}}" title="" class="c-fff text-uppercase f-16">Đèn chùm pha lê</a>
-                                    </h3>
-                                    <span class="c-feb f-16 text-uppercase">Liên hệ</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                        <div class="pt-4">
-                            <div class="thumbnail pb-4">
-                                <a href="{{route('product-detail')}}" class="hv-scale p-3 b-ra-30">
-                                    <img src="{{url('public')}}/frontend/images/product/feb2ffd14249a417fd581.jpg" class="img-fluid"  alt="a" />
-                                </a>
-                                <div class="desc text-center">
-                                    <h3>
-                                        <a href="{{route('product-detail')}}" title="" class="c-fff text-uppercase f-16">Đèn chùm pha lê</a>
-                                    </h3>
-                                    <span class="c-feb f-16 text-uppercase">Liên hệ</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                        <div class="pt-4">
-                            <div class="thumbnail pb-4">
-                                <a href="{{route('product-detail')}}" class="hv-scale p-3 b-ra-30">
-                                    <img src="{{url('public')}}/frontend/images/product/9717852538bddee387ac.jpg" class="img-fluid"  alt="a" />
-                                </a>
-                                <div class="desc text-center">
-                                    <h3>
-                                        <a href="{{route('product-detail')}}" title="" class="c-fff text-uppercase f-16">Đèn chùm pha lê</a>
-                                    </h3>
-                                    <span class="c-feb f-16 text-uppercase">Liên hệ</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                        <div class="pt-4">
-                            <div class="thumbnail pb-4">
-                                <a href="{{route('product-detail')}}" class="hv-scale p-3 b-ra-30">
-                                    <img src="{{url('public')}}/frontend/images/product/bc7a454119fdffa3a6ec.jpg" class="img-fluid"  alt="a" />
-                                </a>
-                                <div class="desc text-center">
-                                    <h3>
-                                        <a href="{{route('product-detail')}}" title="" class="c-fff text-uppercase f-16">Đèn chùm pha lê</a>
-                                    </h3>
-                                    <span class="c-feb f-16 text-uppercase">Liên hệ</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
-                <div class="pagination">
-                    <strong>1</strong>
-                    <a href="">2</a>
-                    <a href="">3</a>
-                    <a href=""><i class="fas fa-angle-right"></i></a>
-                    <a href=""><i class="fas fa-angle-double-right"></i></a>
-                </div>
+                <div class="pagination">{{$products->links()}}</div>
+                
             </section>
         </div>
     </section>
