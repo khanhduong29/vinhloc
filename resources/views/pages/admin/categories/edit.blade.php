@@ -1,4 +1,4 @@
-@extends('layouts.admin_main')
+@extends('layout.admin.index')
 @section('content')
 
   <!-- Content Wrapper. Contains page content -->
@@ -50,13 +50,13 @@
               <form  method="post" role="form" enctype="multipart/form-data">
                 <div class="card-body">
                   <div class="form-group">
-                    <label for="">Name</label>
-                    <input type="text" class="form-control" id="name_cat" value="{{$models->name_cat}}" name="name_cat" required placeholder="Name">
+                    <label for="">Tên danh mục</label>
+                    <input type="text" class="form-control" id="name_cat" value="{{$categories->name}}" name="name" required placeholder="Name">
                     <div class="help-block"></div>
                   </div>
                   <div class="form-check">
-                    <input type="checkbox" class="form-check-input" id="exampleCheck1" {{ $models->status == 1 ? "checked" : "" }} name="status">
-                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1" {{ $categories->status == 1 ? "checked" : "" }} name="status">
+                    <label class="form-check-label" for="exampleCheck1">Hiện</label>
                   </div>
                 </div>
                 <!-- /.card-body -->
