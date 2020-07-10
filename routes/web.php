@@ -38,8 +38,6 @@ Route::group(['prefix' => '/'],function(){
 	Route::get('admin','adminController@admin')->name('admin');
 
 	include 'admin/category.php';
-
-
 });
 
 Route::group(['prefix' => 'cart'], function () {
