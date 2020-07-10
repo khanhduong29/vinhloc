@@ -13,10 +13,10 @@
                 </div>
             </div>
             <div class="d-flex flex-row">
-                    <a href="login" class="pr-2  c-fff">
+                    <a href="{{route('login')}}" class="pr-2  c-fff">
                         <span class="d-inline-block ml-2">Đăng nhập</span>
                     </a>
-                    <a href="register" class="border-left pl-2 c-fff">
+                    <a href="{{route('register')}}" class="border-left pl-2 c-fff">
                         <span class="d-inline-block ml-2">Đăng ký</span>
                     </a>
             </div>
@@ -62,8 +62,8 @@
                                 </span>
                             </div>
                             <div class="select-button">
-                                <a href="" class="btn btn-dark btn-lg">Giỏ hàng</a>
-                                <a href="checkout" class="btn btn-lg btn-lg-feb">Thanh toán</a>
+                                <a href="{{route('cart')}}" class="btn btn-dark btn-lg">Giỏ hàng</a>
+                                <a href="{{route('checkout')}}" class="btn btn-lg btn-lg-feb">Thanh toán</a>
                             </div>
                         </div>
                     </div>

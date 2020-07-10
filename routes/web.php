@@ -13,30 +13,34 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('home', function () {
-//     return view('welcome');,'middleware'=>'auth'
-// });
+Route::group(['prefix' => '/'],function(){
 
+	Route::get('/','ClientController@home')->name('home');
+    Route::get('about','ClientController@about')->name('about');
+    Route::get('product','ClientController@product')->name('product');
+    Route::get('service','ClientController@service')->name('service');
+    Route::get('construction','ClientController@construction')->name('construction');
+    Route::get('contact','ClientController@contact')->name('contact');
+    Route::get('product-detail','ClientController@product_detail')->name('product-detail');
+    Route::get('blog-detail','ClientController@blog_detail')->name('blog-detail');
+    Route::get('cate-product','ClientController@cate_product')->name('cate-product');
 
 Route::group(['prefix' => 'admin','namespace'=>'admin'],function(){
 	// giao diện quản trị
 	Route::get('admin','adminController@admin')->name('admin');
 	
 	include 'admin/category.php';
+    
 
-	
 });
 
 
 
-Route::get('/','ClientController@home')->name('home');
-Route::get('about','ClientController@about')->name('about');
-Route::get('product','ClientController@product')->name('product');
-Route::get('service','ClientController@service')->name('service');
-Route::get('construction','ClientController@construction')->name('construction');
-Route::get('contact','ClientController@contact')->name('contact');
-Route::get('product-detail','ClientController@product_detail')->name('product-detail');
-Route::get('blog-detail','ClientController@blog_detail')->name('blog-detail');
-Route::get('cate-product','ClientController@cate_product')->name('cate-product');
+Route::group(['namespace'=>'admin'],function(){
+	// giao diện quản trị
+	Route::get('admin','adminController@admin')->name('admin');
+
+	include 'admin/category.php';
 
 
+});
