@@ -1,6 +1,6 @@
-<?php 
+<?php
 	namespace App\Http\Controllers\admin;
-	
+
 	use App\Http\Controllers\Controller;
 	use Illuminate\Http\Request;
 	use App\Models\products;
@@ -30,7 +30,7 @@
 	        if ($products) {
 	            return redirect()->route('list-products') -> with('success','Thêm mới thành công');
 	        }else{
-	            return redirect()->back()->with('error','Add products ' .request()->cate_name. ' fail' );
+	            return redirect()->back()->with('error','Add products fail' );
 	        }
 		}
 		// sửa dữ liệu
@@ -47,7 +47,7 @@
 	       	if ($id) {
 	        	return redirect()->route('list-products') -> with('success','Sửa thành công');
 	    	} else {
-	     		return redirect()->back()->with('error','Update category'.request()->cate_name.' fail');
+	     		return redirect()->back()->with('error','Update category fail');
 	    	}
 		}
 
@@ -58,11 +58,11 @@
 	        if ($id) {
 	           return redirect()->route('list-products') -> with('success','Xóa thành công');
 	       } else {
-	        return redirect()->back()->with('error','Delete category '.request()->cate_name.' fail');
+	        return redirect()->back()->with('error','Delete category fail');
 	       }
 	    }
 	}
 
-		
+
 
  ?>
