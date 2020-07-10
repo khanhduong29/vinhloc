@@ -35,6 +35,7 @@
                                         <a href="{{route('product-detail')}}" title="" class="c-fff text-uppercase f-16">{{$pro -> name}}</a>
                                     </h3>
                                     <span class="c-feb f-16 text-uppercase">Liên hệ</span>
+                                    <a href="" class="add-cart"><img src="{{url('public')}}/frontend/images/icon/ic-cart-feb.png" alt=""></a>
                                 </div>
                             </div>
                         </div>
@@ -42,7 +43,7 @@
                     @endforeach
                 </div>
                 <div class="pagination">{{$products->links()}}</div>
-                
+
             </section>
         </div>
     </section>

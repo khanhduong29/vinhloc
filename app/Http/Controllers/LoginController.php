@@ -3,10 +3,23 @@
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Models\categories;
+use App\Models\products;
 use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller
 {
+    public function __construct(){
+        $this->middleware(function($request,$next){
+            view()->share([
+                'categories' => Categories::where('status',1) -> get(),
+                'products' => products::where('status',1)->paginate(4),
+
+                // 'cart' => new cart()
+            ]);
+            return $next($request);
+        });
+    }
     public function register() {
         return view('pages.client.register');
     }
