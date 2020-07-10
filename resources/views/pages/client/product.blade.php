@@ -9,11 +9,12 @@
             </h2>
             <form action="" method="get" accept-charset="utf-8" class="filter-pro d-lg-flex d-md-flex justify-content-center mt-5">
                 <select class="js-example-basic-single m-2">
-                    <option value="AL">Alabama</option>
-                    <option value="WY">Wyoming</option>
+                    @foreach($categories as $cate)
+                    <option value="AL">{{$cate -> name}}</option>
+                    @endforeach
                 </select>
                 <select class="js-example-basic-single m-2">
-                    <option value="AL">Alabama</option>
+                    <option value="AL">Chọn khoảng giá</option>
                     <option value="WY">Wyoming</option>
                 </select>
                 <select class="js-example-basic-single m-2">

@@ -26,27 +26,29 @@ Route::group(['prefix' => '/'],function(){
     Route::get('cate-product','ClientController@cate_product')->name('cate-product');
 });
 
-Route::group(['prefix' => 'admin','namespace'=>'admin'],function(){
-	// giao diện quản trị
-	Route::get('','adminController@admin')->name('admin');
 
-	include 'admin/category.php';
-    include 'admin/products.php';
-});
-
-Route::group(['prefix' => 'cart'], function () {
     Route::get('cart','CartController@cart')->name('cart');
     Route::get('checkout','CartController@checkout')->name('checkout');
+
+    Route::get('login','LoginController@login')->name('login');
+    Route::get('register','LoginController@register')->name('register');
+
+Route::group(['prefix' => 'admin','namespace'=>'admin'],function(){
+	// giao diện quản trị
+	Route::get('admin','adminController@admin')->name('admin');
+
+	include 'admin/category.php';
+
+
 });
 
 Route::group(['prefix' => 'account'], function () {
     Route::get('register','LoginController@register')->name('register');
-    Route::post('register','LoginController@postRegister')->name('postRegister');
+    Route::post('register','LoginController@postRegister');
 
     Route::get('login','LoginController@login')->name('login');
-    Route::post('login','LoginController@postLogin')->name('postLogin');
+    Route::post('login','LoginController@postLogin');
 
     Route::get('log-out','LoginController@postLogOut')->name('log-out');
-
 });
 
