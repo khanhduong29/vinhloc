@@ -35,7 +35,7 @@ Route::get('register','LoginController@register')->name('register');
 
 Route::group(['prefix' => 'admin','namespace'=>'admin'],function(){
 	// giao diện quản trị
-	Route::get('admin','adminController@admin')->name('admin');
+	Route::get('','adminController@admin')->name('admin');
 
 	include 'admin/category.php';
 
@@ -56,12 +56,5 @@ Route::group(['prefix' => 'account'], function () {
 
     Route::get('log-out','LoginController@postLogOut')->name('log-out');
 
-    // Route::get('/','categoriesController@list_cat') -> name('list-categories');
-    // Route::get('/addcategories','categoriesController@create') -> name('add');
-    // Route::post('/addcategories','categoriesController@store') -> name('add-categories');
-
-    // Route::get('editcategories/{id}','categoriesController@edit') -> name('edit');
-    // Route::post('editcategories/{id}','categoriesController@update') -> name('edit-categories');
-    // Route::get('deletecategories/{id}','categoriesController@delete')->name('deleteCat');
 });
 
