@@ -13,7 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-
 Route::group(['prefix' => '/'],function(){
 
 	Route::get('/','ClientController@home')->name('home');
@@ -28,5 +27,16 @@ Route::group(['prefix' => '/'],function(){
 
     Route::get('cart','CartController@cart')->name('cart');
     Route::get('checkout','CartController@checkout')->name('checkout');
+
+});
+
+
+
+Route::group(['namespace'=>'admin'],function(){
+	// giao diện quản trị
+	Route::get('admin','adminController@admin')->name('admin');
+
+	include 'admin/category.php';
+
 
 });
