@@ -44,7 +44,7 @@ Route::group(['prefix' => 'account'], function () {
     Route::post('register','LoginController@postRegister')->name('postRegister');
 
     Route::get('login','LoginController@login')->name('login');
-    Route::post('login','LoginController@postLogin');
+    Route::post('login','LoginController@postLogin')->name('postLogin');
 
     Route::get('log-out','LoginController@postLogOut')->name('log-out');
 

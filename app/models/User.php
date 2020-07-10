@@ -6,6 +6,8 @@ use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Auth;
 
 class User extends Authenticatable
 {
@@ -17,7 +19,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email','phone', 'password',
+        'name', 'email','phone', 'password','remember_token',
     ];
 
     /**
@@ -38,11 +40,11 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    function add() {
+    public function register() {
         $validate = request()->validate(
 			[
 				'name' => 'required',
-				'email' => 'required|unique:User,email',
+				'email' => 'required|unique:Users,email',
 				'phone' => 'required',
 				'password' => 'required|min:6',
 				'confirm_password' => 'required|same:password',
@@ -63,8 +65,34 @@ class User extends Authenticatable
             'name' => request()->name,
             'email' => request()->email,
             'phone' => request()->phone,
-            'password' => Hash::make(request()['password'])
+            'password' => Hash::make(request()['password']),
+            'remember_token' => Str::random(60)
         ]);
         return $models;
+    }
+
+    public function login() {
+        $validate = request()->validate(
+			[
+				'email' => 'required',
+				'password' => 'required',
+			],
+			[
+				'required' => ':attribute Đang bỏ trống.',
+			],
+			[
+                 'email' => 'Email',
+                 'password' => 'Mat khau',
+			]
+        );
+        if (Auth::attempt(request()->only('email','password'))){
+            return true;
+         } else {
+            return false;
+         }
+    }
+
+    public function logout() {
+        Auth::logout();
     }
 }
