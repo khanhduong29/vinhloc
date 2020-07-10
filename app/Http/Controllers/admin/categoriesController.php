@@ -53,13 +53,9 @@
 	    	}
 		}
 
+		// xóa dữ liệu
 		public function delete(Categories $id)
 	    {
-	        /**
-	     * Remove the specified resource from storage.
-	     *
-	     * xóa danh mục
-	     */
 	        $delete = $id->delete();
 	        if ($id) {
 	           return redirect()->route('list-categories') -> with('success','Xóa thành công');
