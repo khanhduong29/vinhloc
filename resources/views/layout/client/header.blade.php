@@ -14,10 +14,10 @@
             </div>
             <div class="d-flex flex-row">
                 @if(Auth::User() == null)
-                    <a href="{{route('login')}}" class="pr-2  c-fff">
+                    <a href="{{route('login_user')}}" class="pr-2  c-fff">
                         <span class="d-inline-block ml-2">Đăng nhập</span>
                     </a>
-                    <a href="{{route('register')}}" class="border-left pl-2 c-fff">
+                    <a href="{{route('register_user')}}" class="border-left pl-2 c-fff">
                         <span class="d-inline-block ml-2">Đăng ký</span>
                     </a>
                 @else

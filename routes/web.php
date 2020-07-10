@@ -41,10 +41,10 @@ Route::group(['prefix' => 'cart'], function () {
 });
 
 Route::group(['prefix' => 'account'], function () {
-    Route::get('register','LoginController@register')->name('register');
+    Route::get('register','LoginController@register')->name('register_user');
     Route::post('register','LoginController@postRegister')->name('postRegister');
 
-    Route::get('login','LoginController@login')->name('login');
+    Route::get('login','LoginController@login')->name('login_user');
     Route::post('login','LoginController@postLogin')->name('postLogin');
 
     Route::get('log-out','LoginController@postLogOut')->name('log-out');
