@@ -26,11 +26,12 @@ Route::group(['prefix' => '/'],function(){
     Route::get('cate-product','ClientController@cate_product')->name('cate-product');
 });
 
-Route::group(['prefix' => 'admin','namespace'=>'admin'],function(){
+Route::group(['prefix' => 'admin','namespace'=>'admin','middleware'=>'auth'],function(){
 	// giao diện quản trị
 	Route::get('','adminController@admin')->name('admin');
 
-	include 'admin/category.php';
+	include 'admin/admin.php';
+    include 'admin/category.php';
     include 'admin/products.php';
 });
 
