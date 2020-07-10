@@ -46,6 +46,6 @@ class LoginController extends Controller
     }
     public function postLogOut(Request $request,User $user){
         $user->logout();
-        return redirect()->route('login') -> with('success','Dang xuat thanh cong');
+        return redirect()->route('login_user') -> with('success','Dang xuat thanh cong');
     }
 }
