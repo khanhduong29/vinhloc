@@ -38,8 +38,6 @@ Route::group(['prefix' => 'admin','namespace'=>'admin'],function(){
 	Route::get('','adminController@admin')->name('admin');
 
 	include 'admin/category.php';
-
-
 });
 
 Route::group(['prefix' => 'cart'], function () {
