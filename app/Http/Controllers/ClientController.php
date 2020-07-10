@@ -12,7 +12,7 @@ class ClientController extends Controller {
         $this->middleware(function($request,$next){
             view()->share([
                 'categories' => Categories::where('status',1) -> get(),
-                'products' => products::where('status',1)->paginate(4),
+               
               
                 // 'cart' => new cart()
             ]);
@@ -20,13 +20,15 @@ class ClientController extends Controller {
         });
     }
     public function home() {
-        return view('pages.client.home');
+        $products = products::all();
+        return view('pages.client.home',compact('products'));
     }
     public function about() {
         return view('pages.client.about');
     }
     public function product() {
-        return view('pages.client.product');
+        $products = products::where('status',1)->paginate(4);
+        return view('pages.client.product',compact('products'));
     }
     public function service() {
         return view('pages.client.service');
