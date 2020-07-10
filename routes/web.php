@@ -27,6 +27,7 @@ Route::group(['prefix' => '/'],function(){
 });
 
 
+
     Route::get('cart','CartController@cart')->name('cart');
     Route::get('checkout','CartController@checkout')->name('checkout');
 
@@ -34,11 +35,19 @@ Route::group(['prefix' => '/'],function(){
     Route::get('register','LoginController@register')->name('register');
 
 Route::group(['prefix' => 'admin','namespace'=>'admin'],function(){
+
+Route::group(['prefix' => 'admin','namespace'=>'admin','middleware'=>'auth'],function(){
+
 	// giao diện quản trị
 	Route::get('admin','adminController@admin')->name('admin');
 
+
 	include 'admin/category.php';
 
+	include 'admin/admin.php';
+    include 'admin/category.php';
+    include 'admin/products.php';
+});
 
 });
 
