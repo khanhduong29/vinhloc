@@ -30,17 +30,6 @@ Route::group(['prefix' => 'admin','namespace'=>'admin'],function(){
 	Route::get('admin','adminController@admin')->name('admin');
 	
 	include 'admin/category.php';
-    
-
-});
-
-
-
-Route::group(['namespace'=>'admin'],function(){
-	// giao diện quản trị
-	Route::get('admin','adminController@admin')->name('admin');
-
-	include 'admin/category.php';
 
 
 });
