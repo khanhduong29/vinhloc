@@ -68,14 +68,33 @@
 		}
 		public function postLogin_admin(Request $request){
 			$info = $request->only('email', 'password');
-	        if (Auth::guard('admin')->attempt($info)) {
-	            return redirect()->route('admin') -> with('success','Đăng nhập thành công');
+			if (Auth::guard('admin')->attempt($info)) {
+	            return redirect() -> route('admin');
+	        } else {
+	            return redirect() -> back();
+	            $validate = $request->validate(
+	               [
+		                'email' => 'required|exists:admin',
+		                'password' => 'required|exists:admin'
+		            ],
+		            [
+		                'required' => ':attribute đang bỏ trống.',
+		                'exists' => ':attribute không chính xác.',
+		            ],
+		            [
+		                 'email' => 'Email',
+		                 'password' => 'Mật khẩu',
+		            ]
+	            );
 	        }
-	        else{
-	        	// echo 'đăng nhập thất bại';
-	        	dd($info);
-	            return back();
-	        }
+	        // if (Auth::guard('admin')->attempt($info)) {
+	        //     return redirect()->route('admin') -> with('success','Đăng nhập thành công');
+	        // }
+	        // else{
+	        // 	// echo 'đăng nhập thất bại';
+	        // 	dd($info);
+	        //     return back();
+	        // }
 		}
 		public function logout_admin(){
 			Auth::guard('admin') -> logout();

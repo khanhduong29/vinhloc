@@ -1,16 +1,23 @@
 <?php
 
 namespace App\Models;
+// use Illuminate\Database\Eloquent\Model;
+use Illuminate\Notifications\Notifiable;
+use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Illuminate\Foundation\Auth\User as Authenticatable;
 use Auth;
 use Hash;
 
-use Illuminate\Database\Eloquent\Model;
 
-class Admin extends Model
+class Admin extends Authenticatable
 {
+	use Notifiable;
     protected $table = 'admin';
-
+    protected $guard = 'admin';
     protected $fillable = ['useradmin','email','image','password'];
+    protected $hidden = [
+        'password', 
+    ];
 
     // lấy dữ liệu
     public function list_cat(){
