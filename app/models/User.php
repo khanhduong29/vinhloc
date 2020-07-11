@@ -39,11 +39,6 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
-
-    protected $table = 'admin';
-
-    protected $fillable = ['useradmin','email','image','password'];
-
     // lấy dữ liệu
     public function list_cat(){
     	return admin::orderBy('id','DESC')->get();

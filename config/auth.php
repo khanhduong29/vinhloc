@@ -46,13 +46,13 @@ return [
             'provider' => 'users',
             'hash' => false,
         ],
-        'admin' => [
+        'customer' => [
             'driver' => 'session',
-            'provider' => 'admin',
+            'provider' => 'customer',
         ],
-        'admin-api' => [
+        'customer-api' => [
             'driver' => 'token',
-            'provider' => 'admin',
+            'provider' => 'customer',
             'hash' => false,
         ],
     ],
@@ -79,9 +79,9 @@ return [
             'driver' => 'eloquent',
             'model' => App\Models\User::class,
         ],
-        'admin' => [
+        'customer' => [
             'driver' => 'eloquent',
-            'model' => App\Models\admin::class,
+            'model' => App\Models\customer::class,
         ],
 
         // 'users' => [
@@ -112,8 +112,8 @@ return [
             'expire' => 60,
             'throttle' => 60,
         ],
-        'admin' => [
-            'provider' => 'admin',
+        'customer' => [
+            'provider' => 'customer',
             'table' => 'password_resets',
             'expire' => 60,
             'throttle' => 60,

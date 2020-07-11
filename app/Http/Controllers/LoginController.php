@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
-use App\Models\User;
+use App\Models\Customer;
 use App\Models\categories;
 use App\Models\products;
 use Illuminate\Support\Facades\Auth;
@@ -23,7 +23,7 @@ class LoginController extends Controller
     public function register() {
         return view('pages.client.register');
     }
-    public function postRegister(Request $request,User $user) {
+    public function postRegister(Request $request,Customer $user) {
         $user->register();
         if ($user) {
             return redirect()->route('login_user') -> with('success','Thêm mới thành công');
@@ -35,7 +35,7 @@ class LoginController extends Controller
     protected function login() {
         return view('pages.client.login');
     }
-    public function postLogin(Request $request,User $user) {
+    public function postLogin(Request $request,Customer $user) {
         if($user->login()) {
             $user->login();
             return redirect()->route('product') -> with('success','Thêm mới thành công');
@@ -44,7 +44,7 @@ class LoginController extends Controller
         }
 
     }
-    public function postLogOut(Request $request,User $user){
+    public function postLogOut(Request $request,Customer $user){
         $user->logout();
         return redirect()->route('login_user') -> with('success','Dang xuat thanh cong');
     }
