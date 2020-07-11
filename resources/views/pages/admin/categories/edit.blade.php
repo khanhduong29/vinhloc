@@ -54,6 +54,14 @@
                     <input type="text" class="form-control" id="name_cat" value="{{$categories->name}}" name="name" required placeholder="Name">
                     <div class="help-block"></div>
                   </div>
+                  <div class="form-group">
+                    <label for="exampleInputFile">Chọn ảnh</label>
+                    <div class="input-group row">
+                      <div class="col-8"><input type="file" name="file" class="text-center center-block file-upload" accept="image/gif, image/jpeg, image/jpg, image/png"/>  </div>
+                      <div class="col-4"><img src="{{asset('public/Uploads')}}/{{$products-> image}}" alt="Chưa có hình ảnh" width="100%"></div>
+
+                    </div>
+                  </div>
                 </div>
                 <!-- /.card-body -->
 

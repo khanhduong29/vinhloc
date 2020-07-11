@@ -67,6 +67,12 @@
                     <div class="help-block"></div>
                   </div>
                 </div>
+                <div class="form-group">
+                    <label for="exampleInputFile">Chọn ảnh</label>
+                    <div class="input-group">
+                      <input type="file" name="file" required class="text-center center-block file-upload" accept="image/gif, image/jpeg, image/jpg, image/png"/>
+                    </div>
+                  </div>
                 <!-- /.card-body -->
                 <div class="card-footer">
                   <button type="submit" class="btn btn-primary">Thêm danh mục</button>

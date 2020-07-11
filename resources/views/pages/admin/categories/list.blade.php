@@ -54,6 +54,7 @@
                   <tr>
                     <th>ID</th>
                     <th>Tên danh mục</th>
+                    <th>Ảnh</th>
                     <th>Ngày tạo</th>
                     <th>#</th>
                   </tr>
@@ -64,6 +65,7 @@
                   <tr>
                     <td>{{$cat -> id}}</td>
                     <td>{{$cat -> name}}</td>
+                    <td><img src="{{asset('public/Uploads')}}/{{$cat -> image}}" alt="" width="100px"></td>
                     <td>{{$cat -> created_at}}</td>
                     <td>
                       <a href="{{ Route('edit-categories',$cat) }}" class="btn btn-primary btn-xs">Sửa</a>
