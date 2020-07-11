@@ -14,8 +14,9 @@
                     @endforeach
                 </select>
                 <select class="js-example-basic-single m-2">
-                    <option value="AL">Chọn khoảng giá</option>
-                    <option value="WY">Wyoming</option>
+                    @foreach($products as $pr)
+                    <option value="AL">Giá : {{$pr -> price}}</option>    
+                    @endforeach
                 </select>
                 <select class="js-example-basic-single m-2">
                     <option value="AL">Alabama</option>
@@ -33,7 +34,8 @@
                                 </a>
                                 <div class="desc text-center">
                                     <h3>
-                                        <a href="{{route('product-detail')}}" title="" class="c-fff text-uppercase f-16">{{$pro -> name}}</a>
+
+                                        <a href="{{route('product-detail',['slug'=>$pro->slug])}}" title="" class="c-fff text-uppercase f-16">{{$pro -> name}}</a>
                                     </h3>
                                     <span class="c-feb f-16 text-uppercase">{{$pro -> price}}</span>
                                     <a href="" class="add-cart"><img src="{{url('public')}}/frontend/images/icon/ic-cart-feb.png" alt=""></a>
