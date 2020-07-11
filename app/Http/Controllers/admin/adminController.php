@@ -63,12 +63,11 @@
 			return view('pages.admin.login',[
 			]);
 		}
-		public function postLogin_admin(Request $request){
-			$info = $request->only('email', 'password');
-			if (Auth::attempt($info)) {
-	            return redirect() -> route('admin');
+		public function postLogin_admin(Request $request,User $user){
+			if($user->login()) {
+	            return redirect()->route('admin') -> with('success','Thêm mới thành công');
 	        } else {
-	            return redirect() -> back();
+	            return redirect()->back()->with('error','Add products ' .request()->cate_name. ' fail' );
 	        }
 		}
 		public function logout_admin(){

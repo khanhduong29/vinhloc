@@ -65,7 +65,7 @@
                   @foreach($admin as $ad)
                   <tr>
                     <td>{{$ad -> id}}</td>
-                    <td><img src="{{asset('public/Uploads')}}/{{$ad -> avatar}}" alt="" width="100px"></td>
+                    <td><img src="{{asset('public/Uploads/avatar')}}/{{$ad -> avatar}}" alt="" width="100px"></td>
                     <td>{{$ad -> name}}</td>
                     <td>{{$ad -> email}}</td>
                     <td>{{$ad -> created_at}}</td>

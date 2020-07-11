@@ -84,7 +84,7 @@
                   <div class="form-group">
                     <label for="exampleInputFile">Chọn ảnh admin</label>
                     <div class="input-group">
-                      <input type="file" name="file" required class="text-center center-block file-upload" accept="image/gif, image/jpeg, image/jpg, image/png"/>  
+                      <input type="file" name="file" class="text-center center-block file-upload" accept="image/gif, image/jpeg, image/jpg, image/png"/>  
                     </div>
                   </div>
                 </div>

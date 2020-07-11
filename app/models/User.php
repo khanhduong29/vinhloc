@@ -45,7 +45,7 @@ class User extends Authenticatable
 			[
 				'name' => 'required|unique:users',
 				'email' => 'required|unique:users',
-				'file'=>'required|max:10000|mimes:jpg,jpeg,png,gif',
+				'file'=>'max:10000|mimes:jpg,jpeg,png,gif',
 				'password'=>'required|min:6|max:100',
 				'confirm_password'=>'required|same:password',
 			],
@@ -65,7 +65,8 @@ class User extends Authenticatable
                  'file' =>'Ảnh'
 			]
 		);
-		$avatar = '';
+		// dd(request());
+		$avatar = 'user1.png';
 		if(request() -> has('file')){
 			$file = request() -> file;
 			$file -> move(base_path('public/Uploads/Avatar'),$file -> getClientOriginalName());
@@ -142,5 +143,26 @@ class User extends Authenticatable
 			'avatar' => $avatar,
 			'password' => Hash::make(request()->password),
 		]);
+    }
+
+    public function login() {
+        $validate = request()->validate(
+			[
+				'email' => 'required',
+				'password' => 'required',
+			],
+			[
+				'required' => ':attribute đang bỏ trống.',
+			],
+			[
+                 'email' => 'Email',
+                 'password' => 'Mat khau',
+			]
+        );
+        if (Auth::attempt(request()->only('email','password'))){
+            return true;
+        } else {
+            return false;
+        }
     }
 }
