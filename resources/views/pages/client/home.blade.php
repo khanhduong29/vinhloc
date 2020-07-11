@@ -23,22 +23,23 @@
                 <span class="title-big">Các dòng sản phẩm</span>
             </h2>
             <section class="slick1 pt-lg-5 pt-4 wow fadeInUp">
-               @foreach($products as $pro )
+               @foreach($categories as $cate )
                 <div class="pt-2">
                     <div class="thumbnail">
-                        <a href="" class="hv-scale p-3 b-ra-30">
-                             <img src="{{asset('public/Uploads')}}/{{$pro -> image}}" alt="a"  class ="img-fluid">
+                        <a href="" class="hv-scale p-3">
+                            <img src="{{asset('public/Uploads')}}/{{$cate -> image}}"  alt="a" />
                         </a>
                         <div class="desc text-center">
-                           
+                            <div class="img">
+                                <img src="{{url('public')}}/frontend/images/thumbs-cat/untitled-1.png" alt="">
+                            </div>
                             <h3 class="m-0">
-                                <a href="" title="">{{$pro->name}}</a>
+                                <a href="" title="">{{$cate->name}}</a>
                             </h3>
                         </div>
                     </div>
                 </div>
                 @endforeach
-               
             </section>
         </div>
     </section>
