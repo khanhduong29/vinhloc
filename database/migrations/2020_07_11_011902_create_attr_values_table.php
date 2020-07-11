@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateConstructionTable extends Migration
+class CreateAttrValuesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,10 @@ class CreateConstructionTable extends Migration
      */
     public function up()
     {
-        Schema::create('construction', function (Blueprint $table) {
+        Schema::create('attr_values', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name');
-            $table->string('title');
-            $table->text('des');
-            $table->text('image');
-            $table->boolean('status');
+            $table->integer('attr_id');
+            $table->string('value');
             $table->timestamps();
         });
     }
@@ -31,6 +28,6 @@ class CreateConstructionTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('construction');
+        Schema::dropIfExists('attr_values');
     }
 }
