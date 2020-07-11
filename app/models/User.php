@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Models;
-
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
@@ -39,17 +39,13 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
-    // lấy dữ liệu
-    public function list_cat(){
-    	return admin::orderBy('id','DESC')->get();
-    }
     // thêm dữ liệu
     public function add(){
     	$validate = request()->validate(
 			[
-				'useradmin' => 'required|unique:admin',
-				'email' => 'required|unique:admin',
-				'file'=>'required|max:10000|mimes:jpg,jpeg,png,gif',
+				'name' => 'required|unique:users',
+				'email' => 'required|unique:users',
+				// 'file'=>'required|max:10000|mimes:jpg,jpeg,png,gif',
 				'password'=>'required|min:6|max:100',
 				'confirm_password'=>'required|same:password',
 			],
@@ -62,23 +58,23 @@ class User extends Authenticatable
 				'same' => ':attribute chưa trùng khớp',
 			],
 			[
-                 'useradmin' => 'Username',
+                 'name' => 'name',
                  'email' => 'Email',
                  'password' => 'Mật khẩu',
                  'confirm_password' => 'Mật khẩu xác nhận ',
-                 'file' =>'Ảnh'
+                 // 'file' =>'Ảnh'
 			]
 		);
-		$image = '';
-		if(request() -> has('file')){
-			$file = request() -> file;
-			$file -> move(base_path('public/Uploads'),$file -> getClientOriginalName());
-			$image = $file -> getClientOriginalName();
-		}
+		// $image = '';
+		// if(request() -> has('file')){
+		// 	$file = request() -> file;
+		// 	$file -> move(base_path('public/Uploads'),$file -> getClientOriginalName());
+		// 	$image = $file -> getClientOriginalName();
+		// }
 		$models = $this->create([
-			'useradmin' => request()->useradmin,
+			'name' => request()->name,
 			'email' => request()->email,
-			'image' => $image,
+			// 'image' => $image,
 			'password' => Hash::make(request()->password),
 		]);
 		return $models;

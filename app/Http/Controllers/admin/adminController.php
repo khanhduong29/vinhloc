@@ -3,7 +3,7 @@
     namespace App\Http\Controllers\admin;
     use App\Http\Controllers\Controller;
     use Illuminate\Http\Request;
-    use App\Models\Admin;
+    use App\Models\User;
     use Auth;
 	use Hash;
 
@@ -14,9 +14,9 @@
 
         //danh sách dữ liệu
 		public function list_ad(){
-			$admin=admin::all();
+			$User=User::all();
         	return view('pages.admin.admin.list', [
-        		'admin' => $admin
+        		'admin' => $User
         	]);
 		}
 
@@ -25,9 +25,9 @@
 		public function create(){
 			return view('pages.admin.admin.add');
 		}
-		public function store(Request $request,admin $admin){
-			$model = $admin->add();
-	        if ($admin) {
+		public function store(Request $request,User $User){
+			$model = $User->add();
+	        if ($User) {
 	            return redirect()->route('list-admin') -> with('success','Thêm mới thành công');
 	        }else{
 	            return redirect()->back()->with('error','Add admin fail' );
@@ -35,12 +35,12 @@
 		}
 		// sửa dữ liệu
 		public function edit($id){
-			$admin = admin::where('id', $id)->first();
+			$User = User::where('id', $id)->first();
         	return view('pages.admin.admin.edit',[
-        		'admin' => $admin
+        		'admin' => $User
         	]);
 		}
-		public function update(request $request,admin $id){
+		public function update(request $request,User $id){
 			$updated = $id->update_data($id);
 	       	if ($id) {
 	        	return redirect()->route('list-admin') -> with('success','Sửa thành công');
@@ -50,7 +50,7 @@
 		}
 
 		// xóa dữ liệu
-		public function delete(admin $id)
+		public function delete(User $id)
 	    {
 	        $delete = $id->delete();
 	        if ($id) {
@@ -59,23 +59,20 @@
 	        return redirect()->back()->with('error','Delete category fail');
 	       }
 	    }
-
-
-
 	    function login_admin(){
 			return view('pages.admin.login',[
 			]);
 		}
 		public function postLogin_admin(Request $request){
 			$info = $request->only('email', 'password');
-			if (Auth::guard('admin')->attempt($info)) {
+			if (Auth::attempt($info)) {
 	            return redirect() -> route('admin');
 	        } else {
 	            return redirect() -> back();
 	            $validate = $request->validate(
 	               [
-		                'email' => 'required|exists:admin',
-		                'password' => 'required|exists:admin'
+		                'email' => 'required|exists:Users',
+		                'password' => 'required|exists:Users'
 		            ],
 		            [
 		                'required' => ':attribute đang bỏ trống.',
@@ -87,17 +84,9 @@
 		            ]
 	            );
 	        }
-	        // if (Auth::guard('admin')->attempt($info)) {
-	        //     return redirect()->route('admin') -> with('success','Đăng nhập thành công');
-	        // }
-	        // else{
-	        // 	// echo 'đăng nhập thất bại';
-	        // 	dd($info);
-	        //     return back();
-	        // }
 		}
 		public function logout_admin(){
-			Auth::guard('admin') -> logout();
+			Auth::logout();
 			return redirect()->route('login');
 		}
     }

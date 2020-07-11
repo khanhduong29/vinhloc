@@ -53,7 +53,7 @@
                 <thead>
                   <tr>
                     <th>ID</th>
-                    <th>Ảnh admin</th>
+                    <!-- <th>Ảnh admin</th> -->
                     <th>Username</th>
                     <th>Email</th>
                     <th>Ngày tạo</th>
@@ -65,8 +65,8 @@
                   @foreach($admin as $ad)
                   <tr>
                     <td>{{$ad -> id}}</td>
-                    <td><img src="{{asset('public/Uploads')}}/{{$ad -> image}}" alt="" width="100px"></td>
-                    <td>{{$ad -> useradmin}}</td>
+                    <!-- <td><img src="{{asset('public/Uploads')}}/{{$ad -> image}}" alt="" width="100px"></td> -->
+                    <td>{{$ad -> name}}</td>
                     <td>{{$ad -> email}}</td>
                     <td>{{$ad -> created_at}}</td>
                     <td>

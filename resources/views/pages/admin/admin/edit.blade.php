@@ -60,7 +60,7 @@
                 <div class="card-body">
                   <div class="form-group">
                     <label for="">Username</label>
-                    <input type="text" class="form-control" id="name" value="{{$admin->useradmin}}"  name="useradmin" required placeholder="Name">
+                    <input type="text" class="form-control" id="name" value="{{$admin->name}}"  name="useradmin" required placeholder="Name">
                     <div class="help-block"></div>
                   </div>
                   <div class="form-group">
@@ -73,14 +73,14 @@
                     <input type="password" class="form-control" id="password" value="{{$admin->password}}"  name="password" required placeholder="price">
                     <div class="help-block"></div>
                   </div>
-                  <div class="form-group">
+                  <!-- <div class="form-group">
                     <label for="exampleInputFile">Chọn ảnh admin</label>
                     <div class="input-group row">
                       <div class="col-8"><input type="file" name="file" class="text-center center-block file-upload" accept="image/gif, image/jpeg, image/jpg, image/png"/>  </div>
                       <div class="col-4"><img src="{{asset('public/Uploads')}}/{{$admin-> image}}" alt="Chưa có hình ảnh" width="100%"></div>
                       
                     </div>
-                  </div>
+                  </div> -->
                 <!-- /.card-body -->
                 
                 <div class="card-footer">

@@ -63,7 +63,7 @@
                 <div class="card-body">
                   <div class="form-group">
                     <label for="">Username</label>
-                    <input type="text" class="form-control" id="name" name="useradmin" required placeholder="Name">
+                    <input type="text" class="form-control" id="name" name="name" required placeholder="Name">
                     <div class="help-block"></div>
                   </div>
                   <div class="form-group">
