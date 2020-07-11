@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::group(['prefix' => '/'],function(){
 
-	Route::get('/','ClientController@home')->name('home');
+    Route::get('/','ClientController@home')->name('home');
     Route::get('about','ClientController@about')->name('about');
     Route::get('product','ClientController@product')->name('product');
     Route::get('service','ClientController@service')->name('service');
@@ -26,33 +26,23 @@ Route::group(['prefix' => '/'],function(){
     Route::get('cate-product','ClientController@cate_product')->name('cate-product');
 });
 
-
-
-    Route::get('cart','CartController@cart')->name('cart');
-    Route::get('checkout','CartController@checkout')->name('checkout');
-
-    Route::get('login','LoginController@login')->name('login');
-    Route::get('register','LoginController@register')->name('register');
-
-Route::group(['prefix' => 'admin','namespace'=>'admin'],function(){
-
 Route::group(['prefix' => 'admin','namespace'=>'admin','middleware'=>'auth'],function(){
 
-	// giao diện quản trị
-	Route::get('admin','adminController@admin')->name('admin');
+    // giao diện quản trị
+    Route::get('/','adminController@admin')->name('admin');
 
 
-	include 'admin/category.php';
+    include 'admin/category.php';
 
-	include 'admin/admin.php';
+    include 'admin/admin.php';
     include 'admin/category.php';
     include 'admin/products.php';
 });
 
 // giao diện login
-Route::get('admin/login','admin\adminController@login') -> name('login');
-Route::post('admin/login','admin\adminController@postLogin') -> name('postLogin');
-Route::get('admin/logout','admin\adminController@logout') -> name('logout');
+Route::get('admin/login','admin\adminController@login_admin') -> name('login');
+Route::post('admin/login','admin\adminController@postLogin_admin') -> name('postLogin');
+Route::get('admin/logout','admin\adminController@logout_admin') -> name('logout');
 
 
 Route::group(['prefix' => 'cart'], function () {
@@ -69,4 +59,3 @@ Route::group(['prefix' => 'account'], function () {
 
     Route::get('log-out','LoginController@postLogOut')->name('log-out');
 });
-
