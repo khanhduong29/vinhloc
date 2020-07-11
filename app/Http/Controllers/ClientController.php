@@ -11,9 +11,9 @@ class ClientController extends Controller {
     public function __construct(){
         $this->middleware(function($request,$next){
             view()->share([
-                'categories' => Categories::where('status',1) -> get(),
-               
-              
+                'categories' => Categories::all(),
+
+
                 // 'cart' => new cart()
             ]);
             return $next($request);

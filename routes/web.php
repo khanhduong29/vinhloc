@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::group(['prefix' => '/'],function(){
 
-	Route::get('/','ClientController@home')->name('home');
+    Route::get('/','ClientController@home')->name('home');
     Route::get('about','ClientController@about')->name('about');
     Route::get('product','ClientController@product')->name('product');
     Route::get('service','ClientController@service')->name('service');
@@ -28,13 +28,18 @@ Route::group(['prefix' => '/'],function(){
 
 Route::group(['prefix' => 'admin','namespace'=>'admin','middleware'=>'auth'],function(){
 
+
+    // giao diện quản trị
+    Route::get('/','adminController@admin')->name('admin');
+
 	// giao diện quản trị
 	Route::get('/','adminController@admin')->name('admin');
 
 
-	include 'admin/category.php';
 
-	include 'admin/admin.php';
+    include 'admin/category.php';
+
+    include 'admin/admin.php';
     include 'admin/category.php';
     include 'admin/products.php';
 });
@@ -59,4 +64,3 @@ Route::group(['prefix' => 'account'], function () {
 
     Route::get('log-out','LoginController@postLogOut')->name('log-out');
 });
-
