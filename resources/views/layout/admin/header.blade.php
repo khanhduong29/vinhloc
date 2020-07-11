@@ -35,14 +35,14 @@
           <div class="card card-widget widget-user">
             <!-- Add the bg color to the header using any of the bg-* classes -->
             <div class="widget-user-header bg-info">
-              <h6 class="">Admin</h6>
+              <h6 class=""></h6>
             </div>
             <div class="widget-user-image">
               <img class="img-circle elevation-2" src="{{asset('public/uploads/avatar')}}/" alt="User Avatar">
             </div>
             <div class="card-footer clearfix">
               <a href="" class="btn btn-xs btn-info float-left">Chi tiết</a>
-              <a href="" class="btn btn-xs btn-danger float-right">Đăng xuất</a>
+              <a href="{{route('logout')}}" class="btn btn-xs btn-danger float-right">Đăng xuất</a>
               <!-- /.row -->
             </div>
           </div>
