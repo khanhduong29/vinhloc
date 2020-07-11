@@ -20,7 +20,7 @@
 
 		// thêm dữ liệu
 		public function create(){
-			$categories = categories::where('status',1)->get();
+			$categories = categories::all();
 			return view('pages.admin.products.add',[
 				'categories' => $categories,
 			]);
@@ -36,7 +36,7 @@
 		// sửa dữ liệu
 		public function edit($id){
 			$products = products::where('id', $id)->first();
-			$categories = categories::where('status',1)->get();
+			$categories = categories::all();
         	return view('pages.admin.products.edit',[
         		'products' => $products,
         		'categories' => $categories,

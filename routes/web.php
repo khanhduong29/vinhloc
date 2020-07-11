@@ -55,7 +55,7 @@ Route::group(['prefix' => 'account'], function () {
     Route::post('register','LoginController@postRegister')->name('postRegister');
 
     Route::get('login','LoginController@login')->name('login_user');
-    Route::post('login','LoginController@postLogin')->name('postLogin');
+    Route::post('login','LoginController@postLogin')->name('postLogin_user');
 
     Route::get('log-out','LoginController@postLogOut')->name('log-out');
 });

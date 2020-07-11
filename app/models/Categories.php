@@ -9,39 +9,25 @@ class categories extends Model
 {
     protected $table = 'categories';
 
-    protected $fillable = ['slug','name','status'];
+    protected $fillable = ['slug','name'];
     // lấy dữ liệu
     public function list_cat(){
     	return categories::orderBy('id','DESC')->get();
     }
     // thêm dữ liệu
     public function add(){
-    	$status = request()->status;
-	    if($status){
-	    	$status = 1;
-	    }else{
-	    	$status = 0;
-	    }
-		 $models = $this->create([
+		$models = $this->create([
 			'name' => request()->name,
 			'slug' => Str::slug(request()->name),
-			'status' => $status,
 		]);
 		return $models;
 
 	}
 	// cập nhật dữ liệu
 	public function update_data(){
-		$status = request()->status;
-	    if($status){
-	    	$status = 1;
-	    }else{
-	    	$status = 0;
-	    }
 		$updated = $this->update([
 			'name' => request()->name,
 			'slug' => Str::slug(request()->name),
-			'status' => $status,
 		]);
 	}
 }

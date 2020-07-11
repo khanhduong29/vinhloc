@@ -26,13 +26,13 @@ class LoginController extends Controller
     public function postRegister(Request $request,User $user) {
         $user->register();
         if ($user) {
-            return redirect()->route('login') -> with('success','Thêm mới thành công');
+            return redirect()->route('login_user') -> with('success','Thêm mới thành công');
         }else{
             return redirect()->back()->with('error','Add products ' .request()->cate_name. ' fail' );
         }
     }
 
-    public function login() {
+    protected function login() {
         return view('pages.client.login');
     }
     public function postLogin(Request $request,User $user) {

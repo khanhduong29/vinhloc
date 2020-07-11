@@ -24,7 +24,7 @@
 						</div>
 					</div>
 					<div class="col-md-6 col-lg-6 pt-lg-5 pt-4">
-                        <form action="{{route('postLogin')}}" method="POST" role="form">
+                        <form action="{{route('postLogin_user')}}" method="POST" role="form">
                             @csrf
 							<div class="row border-2 m-0 pt-5 pb-5">
 								<div class="col-12 form-group">

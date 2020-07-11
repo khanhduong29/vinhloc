@@ -30,7 +30,7 @@
 	        if ($admin) {
 	            return redirect()->route('list-admin') -> with('success','Thêm mới thành công');
 	        }else{
-	            return redirect()->back()->with('error','Add admin ' .request()->cate_name. ' fail' );
+	            return redirect()->back()->with('error','Add admin fail' );
 	        }
 		}
 		// sửa dữ liệu
@@ -45,7 +45,7 @@
 	       	if ($id) {
 	        	return redirect()->route('list-admin') -> with('success','Sửa thành công');
 	    	} else {
-	     		return redirect()->back()->with('error','Update category'.request()->cate_name.' fail');
+	     		return redirect()->back()->with('error','Update category fail');
 	    	}
 		}
 
@@ -56,7 +56,7 @@
 	        if ($id) {
 	           return redirect()->route('list-admin') -> with('success','Xóa thành công');
 	       } else {
-	        return redirect()->back()->with('error','Delete category '.request()->cate_name.' fail');
+	        return redirect()->back()->with('error','Delete category fail');
 	       }
 	    }
 
@@ -73,6 +73,7 @@
 	        }
 	        else{
 	        	// echo 'đăng nhập thất bại';
+	        	dd($info);
 	            return back();
 	        }
 		}
