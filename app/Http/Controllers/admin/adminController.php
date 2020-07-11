@@ -69,20 +69,6 @@
 	            return redirect() -> route('admin');
 	        } else {
 	            return redirect() -> back();
-	            $validate = $request->validate(
-	               [
-		                'email' => 'required|exists:Users',
-		                'password' => 'required|exists:Users'
-		            ],
-		            [
-		                'required' => ':attribute đang bỏ trống.',
-		                'exists' => ':attribute không chính xác.',
-		            ],
-		            [
-		                 'email' => 'Email',
-		                 'password' => 'Mật khẩu',
-		            ]
-	            );
 	        }
 		}
 		public function logout_admin(){

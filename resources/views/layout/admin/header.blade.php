@@ -26,7 +26,7 @@
     <ul class="navbar-nav ml-auto">
       <li class="nav-item dropdown">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-          <img src="{{asset('public/uploads/avatar')}}/" width="30" class="img-circle elevation-2" alt="User Image">
+          <img src="{{asset('public/uploads/avatar')}}/{{Auth::user()->avatar}}" width="30" height="30" class="img-circle elevation-2" alt="User Image">
           <span class="hidden-xs">Tài khoản</span>
         </a>
         <ul class="dropdown-menu">
@@ -35,10 +35,10 @@
           <div class="card card-widget widget-user">
             <!-- Add the bg color to the header using any of the bg-* classes -->
             <div class="widget-user-header bg-info">
-              <h6 class=""></h6>
+              <h6 class="">{{Auth::user()->name}}</h6>
             </div>
             <div class="widget-user-image">
-              <img class="img-circle elevation-2" src="{{asset('public/uploads/avatar')}}/" alt="User Avatar">
+              <img class="img-circle elevation-2" src="{{asset('public/uploads/avatar')}}/{{Auth::user()->avatar}}" alt="User Avatar">
             </div>
             <div class="card-footer clearfix">
               <a href="" class="btn btn-xs btn-info float-left">Chi tiết</a>
@@ -58,9 +58,8 @@
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="{{route('admin')}}" class="brand-link">
-      <img src="{{ asset('public/frontend/admin/dist/img/logo-2.png') }}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
-           style="opacity: .8">
-      <span class="brand-text font-weight-light">AdminRusu</span>
+      <img src="{{ asset('public/frontend/admin/dist/img/logo-2.png') }}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+      <span class="brand-text font-weight-light">Admin</span>
     </a>
 
     <!-- Sidebar -->
@@ -68,10 +67,10 @@
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
-          <img src="{{asset('public/uploads/avatar')}}/" class="img-circle elevation-2" alt="User Image">
+          <img src="{{asset('public/uploads/avatar')}}/{{Auth::user()->avatar}}" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block">Admin</a>
+          <a href="#" class="d-block">{{Auth::user()->name}}</a>
         </div>
       </div>
 

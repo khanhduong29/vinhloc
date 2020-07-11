@@ -73,14 +73,14 @@
                     <input type="password" class="form-control" id="password" value="{{$admin->password}}"  name="password" required placeholder="price">
                     <div class="help-block"></div>
                   </div>
-                  <!-- <div class="form-group">
+                  <div class="form-group">
                     <label for="exampleInputFile">Chọn ảnh admin</label>
                     <div class="input-group row">
                       <div class="col-8"><input type="file" name="file" class="text-center center-block file-upload" accept="image/gif, image/jpeg, image/jpg, image/png"/>  </div>
-                      <div class="col-4"><img src="{{asset('public/Uploads')}}/{{$admin-> image}}" alt="Chưa có hình ảnh" width="100%"></div>
+                      <div class="col-4"><img src="{{asset('public/Uploads')}}/{{$admin-> avatar}}" alt="Chưa có hình ảnh" width="100%"></div>
                       
                     </div>
-                  </div> -->
+                  </div>
                 <!-- /.card-body -->
                 
                 <div class="card-footer">

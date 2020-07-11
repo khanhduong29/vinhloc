@@ -19,7 +19,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password','remember_token',
+        'name', 'email', 'avatar', 'password','remember_token',
     ];
 
     /**
@@ -45,7 +45,7 @@ class User extends Authenticatable
 			[
 				'name' => 'required|unique:users',
 				'email' => 'required|unique:users',
-				// 'file'=>'required|max:10000|mimes:jpg,jpeg,png,gif',
+				'file'=>'required|max:10000|mimes:jpg,jpeg,png,gif',
 				'password'=>'required|min:6|max:100',
 				'confirm_password'=>'required|same:password',
 			],
@@ -62,19 +62,19 @@ class User extends Authenticatable
                  'email' => 'Email',
                  'password' => 'Mật khẩu',
                  'confirm_password' => 'Mật khẩu xác nhận ',
-                 // 'file' =>'Ảnh'
+                 'file' =>'Ảnh'
 			]
 		);
-		// $image = '';
-		// if(request() -> has('file')){
-		// 	$file = request() -> file;
-		// 	$file -> move(base_path('public/Uploads'),$file -> getClientOriginalName());
-		// 	$image = $file -> getClientOriginalName();
-		// }
+		$avatar = '';
+		if(request() -> has('file')){
+			$file = request() -> file;
+			$file -> move(base_path('public/Uploads/Avatar'),$file -> getClientOriginalName());
+			$avatar = $file -> getClientOriginalName();
+		}
 		$models = $this->create([
 			'name' => request()->name,
 			'email' => request()->email,
-			// 'image' => $image,
+			'avatar' => $avatar,
 			'password' => Hash::make(request()->password),
 		]);
 		return $models;
@@ -84,7 +84,7 @@ class User extends Authenticatable
 	public function update_data($user){
 		$validate = request()->validate(
 			[
-				'useradmin' => 'required',
+				'name' => 'required',
 				'email' => 'required',
 				'file'=>'max:10000|mimes:jpg,jpeg,png,gif',
 				'password'=>'required|min:6|max:100'
@@ -96,21 +96,22 @@ class User extends Authenticatable
 				'mimes' => 'Không đúng định dạng ảnh'
 			],
 			[
+                 'name' => 'Name',
                  'email' => 'Email',
                  'password' => 'Mật khẩu',
                  'file' =>'Ảnh'
 			]
 		);
-		if(request()->useradmin != $user->useradmin){
+		if(request()->email != $user->email){
 			$validate = request()->validate(
 				[
-					'useradmin' => 'unique:admin',
+					'email' => 'unique:users',
 				],
 				[
 					'unique' => ':attribute đã tồn tại',
 				],
 				[
-                 	'useradmin' => 'Username',
+                 	'email' => 'Email',
 				]
 			);
 		}
@@ -127,18 +128,18 @@ class User extends Authenticatable
 				]
 			);
 		}
-		$image = '';
+		$avatar = '';
 		if(request() -> has('file')){
 			$file = request() -> file;
-			$file -> move(base_path('public/Uploads'),$file -> getClientOriginalName());
-			$image = $file -> getClientOriginalName();
+			$file -> move(base_path('public/Uploads/Avatar'),$file -> getClientOriginalName());
+			$avatar = $file -> getClientOriginalName();
 		}else{
-			$image = $user->image;
+			$avatar = $user->avatar;
 		}
 		$updated = $this->update([
-			'useradmin' => request()->useradmin,
+			'name' => request()->name,
 			'email' => request()->email,
-			'image' => $image,
+			'avatar' => $avatar,
 			'password' => Hash::make(request()->password),
 		]);
     }
