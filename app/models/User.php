@@ -19,7 +19,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email','phone', 'password','remember_token',
+        'name', 'email', 'password','remember_token',
     ];
 
     /**
@@ -39,60 +39,111 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
-
-    public function register() {
-        $validate = request()->validate(
+    // lấy dữ liệu
+    public function list_cat(){
+    	return admin::orderBy('id','DESC')->get();
+    }
+    // thêm dữ liệu
+    public function add(){
+    	$validate = request()->validate(
 			[
-				'name' => 'required',
-				'email' => 'required|unique:Users,email',
-				'phone' => 'required',
-				'password' => 'required|min:6',
-				'confirm_password' => 'required|same:password',
+				'useradmin' => 'required|unique:admin',
+				'email' => 'required|unique:admin',
+				'file'=>'required|max:10000|mimes:jpg,jpeg,png,gif',
+				'password'=>'required|min:6|max:100',
+				'confirm_password'=>'required|same:password',
 			],
 			[
-				'required' => ':attribute Đang bỏ trống.',
+				'required' => ':attribute đang bỏ trống.',
 				'unique' => ':attribute đã tồn tại',
-				'min' => ':attribute phai tren 6 ky tu',
+				'min' => ':attribute ít nhất 6 kí tự',
+				'max' => ':attribute quá lớn',
+				'mimes' => 'Không đúng định dạng ảnh',
+				'same' => ':attribute chưa trùng khớp',
 			],
 			[
-                 'name' => 'Ten san pham',
+                 'useradmin' => 'Username',
                  'email' => 'Email',
-                 'phone' => 'So dien thoai',
-                 'password' => 'Mat khau',
+                 'password' => 'Mật khẩu',
+                 'confirm_password' => 'Mật khẩu xác nhận ',
+                 'file' =>'Ảnh'
 			]
-        );
-        $models = $this->create([
-            'name' => request()->name,
-            'email' => request()->email,
-            'phone' => request()->phone,
-            'password' => Hash::make(request()['password']),
-            'remember_token' => Str::random(60)
-        ]);
-        return $models;
-    }
+		);
+		$image = '';
+		if(request() -> has('file')){
+			$file = request() -> file;
+			$file -> move(base_path('public/Uploads'),$file -> getClientOriginalName());
+			$image = $file -> getClientOriginalName();
+		}
+		$models = $this->create([
+			'useradmin' => request()->useradmin,
+			'email' => request()->email,
+			'image' => $image,
+			'password' => Hash::make(request()->password),
+		]);
+		return $models;
 
-    public function login() {
-        $validate = request()->validate(
+	}
+	// cập nhật dữ liệu
+	public function update_data($user){
+		$validate = request()->validate(
 			[
+				'useradmin' => 'required',
 				'email' => 'required',
-				'password' => 'required',
+				'file'=>'max:10000|mimes:jpg,jpeg,png,gif',
+				'password'=>'required|min:6|max:100'
 			],
 			[
-				'required' => ':attribute Đang bỏ trống.',
+				'required' => ':attribute đang bỏ trống.',
+				'min' => ':attribute ít nhất 6 kí tự',
+				'max' => ':attribute quá lớn',
+				'mimes' => 'Không đúng định dạng ảnh'
 			],
 			[
                  'email' => 'Email',
-                 'password' => 'Mat khau',
+                 'password' => 'Mật khẩu',
+                 'file' =>'Ảnh'
 			]
-        );
-        if (Auth::attempt(request()->only('email','password'))){
-            return true;
-         } else {
-            return false;
-         }
-    }
-
-    public function logout() {
-        Auth::logout();
+		);
+		if(request()->useradmin != $user->useradmin){
+			$validate = request()->validate(
+				[
+					'useradmin' => 'unique:admin',
+				],
+				[
+					'unique' => ':attribute đã tồn tại',
+				],
+				[
+                 	'useradmin' => 'Username',
+				]
+			);
+		}
+		if(request()->email != $user->email){
+			$validate = request()->validate(
+				[
+					'email' => 'unique:admin',
+				],
+				[
+					'unique' => ':attribute đã tồn tại',
+				],
+				[
+                 	'email' => 'Email',
+				]
+			);
+		}
+		$image = '';
+		if(request() -> has('file')){
+			$file = request() -> file;
+			$file -> move(base_path('public/Uploads'),$file -> getClientOriginalName());
+			$image = $file -> getClientOriginalName();
+		}else{
+			$image = $user->image;
+		}
+		$updated = $this->update([
+			'useradmin' => request()->useradmin,
+			'email' => request()->email,
+			'image' => $image,
+			'password' => Hash::make(request()->password),
+		]);
     }
 }

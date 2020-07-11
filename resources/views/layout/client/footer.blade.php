@@ -4,7 +4,7 @@
         <div class="menu-footer text-center">
             <ul>
                 @foreach($categories as $cat)
-                <li><a href="{{$cat -> slug}}">{{$cat -> name}}</a></li>
+                <li><a href="{{route('cate-product',['slug'=>$cat->slug])}}">{{$cat -> name}}</a></li>
                 @endforeach
             </ul>
         </div>

@@ -82,7 +82,7 @@
                     <div class="input-group row">
                       <div class="col-8"><input type="file" name="file" class="text-center center-block file-upload" accept="image/gif, image/jpeg, image/jpg, image/png"/>  </div>
                       <div class="col-4"><img src="{{asset('public/Uploads')}}/{{$products-> image}}" alt="Chưa có hình ảnh" width="100%"></div>
-                      
+
                     </div>
                   </div>
                   <div class="form-group">
@@ -93,8 +93,8 @@
                   <div class="form-group">
                       <label for="">Mô tả</label>
                       <div class="mb-3">
-                        <textarea class="textarea form-control" required id="dess" name="dess" placeholder="Place some text here">
-                            {{$products->dess}}        
+                        <textarea class="textarea form-control" required id="des" name="des" placeholder="Place some text here">
+                            {{$products->des}}
                         </textarea>
                       </div>
                   </div>
@@ -104,13 +104,13 @@
                   </div>
                 </div>
                 <!-- /.card-body -->
-                
+
                 <div class="card-footer">
                   <button type="submit" class="btn btn-primary">Sửa sản phẩm</button>
                 </div>
                 <input type="hidden" name="_token" value="{{csrf_token()}}">
               </form>
-              
+
             </div>
             <!-- /.card -->
           </div>

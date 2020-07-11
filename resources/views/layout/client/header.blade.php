@@ -13,20 +13,21 @@
                 </div>
             </div>
             <div class="d-flex flex-row">
-                @if(Auth::User() == null)
+                @if(Auth::guard('customer')->check())
+
+                    <a href="" class="pr-2  c-fff">
+                        <span class="d-inline-block ml-2">{{Auth::guard('customer')->user()->name}}</span>
+                    </a>
+                    <a href="{{route('log-out')}}" class="border-left pl-2 c-fff">
+                        <span class="d-inline-block ml-2">Đăng xuất</span>
+                    </a>
+                @else
                     <a href="{{route('login_user')}}" class="pr-2  c-fff">
                         <span class="d-inline-block ml-2">Đăng nhập</span>
                     </a>
                     <a href="{{route('register_user')}}" class="border-left pl-2 c-fff">
                         <span class="d-inline-block ml-2">Đăng ký</span>
                     </a>
-                @else
-                <a href="" class="pr-2  c-fff">
-                    <span class="d-inline-block ml-2">{{Str::limit(Auth::user()->name,8)}}</span>
-                </a>
-                <a href="{{route('log-out')}}" class="border-left pl-2 c-fff">
-                    <span class="d-inline-block ml-2">Đăng xuat</span>
-                </a>
                 @endif
             </div>
         </div>

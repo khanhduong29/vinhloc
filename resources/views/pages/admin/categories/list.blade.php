@@ -54,18 +54,16 @@
                   <tr>
                     <th>ID</th>
                     <th>Tên danh mục</th>
-                    <th>Trạng thái</th>
                     <th>Ngày tạo</th>
                     <th>#</th>
                   </tr>
                 </thead>
-                
+
                 <tbody>
                   @foreach($categories as $cat)
                   <tr>
                     <td>{{$cat -> id}}</td>
                     <td>{{$cat -> name}}</td>
-                    <td>{{ $cat->status == 1 ? "Hiện" : "Ẩn" }}</td>
                     <td>{{$cat -> created_at}}</td>
                     <td>
                       <a href="{{ Route('edit-categories',$cat) }}" class="btn btn-primary btn-xs">Sửa</a>
@@ -73,7 +71,7 @@
                     </td>
                   </tr>
                   @endforeach
-                </tbody>                
+                </tbody>
               </table>
             </div>
             <!-- /.card-body -->

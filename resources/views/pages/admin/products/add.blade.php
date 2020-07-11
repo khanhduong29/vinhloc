@@ -57,9 +57,9 @@
               </div>
               <!-- /.card-header -->
               <!-- form start -->
-              
+
               <form  method="post" role="form" enctype="multipart/form-data">
-                
+
                 <div class="card-body">
                   <div class="form-group">
                     <label for="">Mã sản phẩm</label>
@@ -83,7 +83,7 @@
                   <div class="form-group">
                     <label for="exampleInputFile">Chọn ảnh sản phẩm</label>
                     <div class="input-group">
-                      <input type="file" name="file" required class="text-center center-block file-upload" accept="image/gif, image/jpeg, image/jpg, image/png"/>  
+                      <input type="file" name="file" required class="text-center center-block file-upload" accept="image/gif, image/jpeg, image/jpg, image/png"/>
                     </div>
                   </div>
                   <div class="form-group">
@@ -94,7 +94,7 @@
                   <div class="form-group">
                       <label for="">Mô tả</label>
                       <div class="mb-3">
-                        <textarea class="textarea" required id="dess" name="dess" placeholder="Place some text here"
+                        <textarea class="textarea" required id="des" name="des" placeholder="Place some text here"
                                   style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"></textarea>
                       </div>
                   </div>
@@ -109,7 +109,7 @@
                 </div>
                 <input type="hidden" name="_token" value="{{csrf_token()}}">
               </form>
-              
+
             </div>
             <!-- /.card -->
           </div>
