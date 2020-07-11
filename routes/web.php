@@ -23,7 +23,7 @@ Route::group(['prefix' => '/'],function(){
     Route::get('contact','ClientController@contact')->name('contact');
     Route::get('product-detail','ClientController@product_detail')->name('product-detail');
     Route::get('blog-detail','ClientController@blog_detail')->name('blog-detail');
-    Route::get('cate-product','ClientController@cate_product')->name('cate-product');
+    Route::get('cate-product/{slug}','ClientController@cate_product')->name('cate-product');
 });
 
 Route::group(['prefix' => 'admin','namespace'=>'admin','middleware'=>'auth'],function(){
