@@ -57,18 +57,14 @@
               </div>
               <!-- /.card-header -->
               <!-- form start -->
-              
+
               <form  method="post" role="form" enctype="multipart/form-data">
-                
+
                 <div class="card-body">
                   <div class="form-group">
                     <label for="">Tên danh mục</label>
                     <input type="text" class="form-control" id="name" name="name" required placeholder="Name">
                     <div class="help-block"></div>
-                  </div>
-                  <div class="form-check">
-                    <input type="checkbox" class="form-check-input" id="exampleCheck1" name="status">
-                    <label class="form-check-label" for="exampleCheck1">Hiện</label>
                   </div>
                 </div>
                 <!-- /.card-body -->
@@ -77,7 +73,7 @@
                 </div>
                 <input type="hidden" name="_token" value="{{csrf_token()}}">
               </form>
-              
+
             </div>
             <!-- /.card -->
           </div>

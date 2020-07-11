@@ -54,19 +54,15 @@
                     <input type="text" class="form-control" id="name_cat" value="{{$categories->name}}" name="name" required placeholder="Name">
                     <div class="help-block"></div>
                   </div>
-                  <div class="form-check">
-                    <input type="checkbox" class="form-check-input" id="exampleCheck1" {{ $categories->status == 1 ? "checked" : "" }} name="status">
-                    <label class="form-check-label" for="exampleCheck1">Hiện</label>
-                  </div>
                 </div>
                 <!-- /.card-body -->
-                
+
                 <div class="card-footer">
                   <button type="submit" class="btn btn-primary">Sửa danh mục</button>
                 </div>
                 <input type="hidden" name="_token" value="{{csrf_token()}}">
               </form>
-              
+
             </div>
             <!-- /.card -->
           </div>

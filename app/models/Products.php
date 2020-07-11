@@ -10,7 +10,7 @@ class Products extends Model
 {
     protected $table = 'products';
 
-    protected $fillable = ['cate_id','code','slug','name','price','image','dess','status'];
+    protected $fillable = ['cate_id','code','slug','name','price','image','des','status'];
     // lấy dữ liệu
     public function list_cat(){
     	return categories::orderBy('id','DESC')->get();
@@ -23,7 +23,7 @@ class Products extends Model
 				'name' => 'required',
 				'price' => 'required',
 				'cate_id' => 'required',
-				'dess' => 'required',
+				'des' => 'required',
 				'file'=>'required|max:10000|mimes:jpg,jpeg,png,gif'
 			],
 			[
@@ -61,7 +61,7 @@ class Products extends Model
 			'name' => request()->name,
 			'slug' => Str::slug(request()->name),
 			'price' => request()->price,
-			'dess' => request()->dess,
+			'des' => request()->des,
 			'image' => $image,
 			'status' => $status,
 		]);
@@ -75,7 +75,7 @@ class Products extends Model
 				'name' => 'required',
 				'price' => 'required',
 				'cate_id' => 'required',
-				'dess' => 'required',
+				'des' => 'required',
 				'file'=>'max:10000|mimes:jpg,jpeg,png,gif'
 			],
 			[
@@ -127,7 +127,7 @@ class Products extends Model
 			'name' => request()->name,
 			'slug' => Str::slug(request()->name),
 			'price' => request()->price,
-			'dess' => request()->dess,
+			'des' => request()->des,
 			'image' => $image,
 			'status' => $status,
 		]);
