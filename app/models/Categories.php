@@ -25,6 +25,7 @@ class categories extends Model
 		$models = $this->create([
 			'name' => request()->name,
 			'slug' => Str::slug(request()->name),
+			'image' => $image,
 		]);
 		return $models;
 
@@ -42,6 +43,7 @@ class categories extends Model
 		$updated = $this->update([
 			'name' => request()->name,
 			'slug' => Str::slug(request()->name),
+			'image' => $image,
 		]);
 	}
 }
