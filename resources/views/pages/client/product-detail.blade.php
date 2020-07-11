@@ -18,9 +18,9 @@
                     </div>
                     <div class="col-12 col-sm-12 col-md-6 col-lg-6">
                         <div class="s-content">
-                            <h1 class="c-fff f-24">Đèn đồng ốp trần </h1>
+                            <h1 class="c-fff f-24">{{$pro -> name}}</h1>
                             <span class="c-feb font-weight-bold f-18">
-                                Giá : Liên hệ
+                               {{$pro -> price}}
                             </span>
                             <ul>
                                 <li>
