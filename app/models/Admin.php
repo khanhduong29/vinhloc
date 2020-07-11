@@ -8,9 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Admin extends Model
 {
-    protected $table = 'admin';
+    protected $table = 'customer';
 
-    protected $fillable = ['useradmin','email','image','password'];
+    protected $fillable = ['name','email','image','password'];
 
     // lấy dữ liệu
     public function list_cat(){
@@ -118,5 +118,61 @@ class Admin extends Model
 			'image' => $image,
 			'password' => Hash::make(request()->password),
 		]);
-	}		
+    }
+
+    public function register() {
+        $validate = request()->validate(
+			[
+				'name' => 'required',
+				'email' => 'required|unique:Users,email',
+				'phone' => 'required',
+				'password' => 'required|min:6',
+				'confirm_password' => 'required|same:password',
+			],
+			[
+				'required' => ':attribute Đang bỏ trống.',
+				'unique' => ':attribute đã tồn tại',
+				'min' => ':attribute phai tren 6 ky tu',
+			],
+			[
+                 'name' => 'Ten san pham',
+                 'email' => 'Email',
+                 'phone' => 'So dien thoai',
+                 'password' => 'Mat khau',
+			]
+        );
+        $models = $this->create([
+            'name' => request()->name,
+            'email' => request()->email,
+            'phone' => request()->phone,
+            'password' => Hash::make(request()['password']),
+            'remember_token' => Str::random(60)
+        ]);
+        return $models;
+    }
+
+    public function login() {
+        $validate = request()->validate(
+			[
+				'email' => 'required',
+				'password' => 'required',
+			],
+			[
+				'required' => ':attribute Đang bỏ trống.',
+			],
+			[
+                 'email' => 'Email',
+                 'password' => 'Mat khau',
+			]
+        );
+        if (Auth::attempt(request()->only('email','password'))){
+            return true;
+         } else {
+            return false;
+         }
+    }
+
+    public function logout() {
+        Auth::logout();
+    }
 }
