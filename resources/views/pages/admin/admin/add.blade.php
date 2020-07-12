@@ -57,9 +57,9 @@
               </div>
               <!-- /.card-header -->
               <!-- form start -->
-              
+
               <form  method="post" role="form" enctype="multipart/form-data">
-                
+
                 <div class="card-body">
                   <div class="form-group">
                     <label for="">Username</label>
@@ -81,10 +81,34 @@
                     <input type="password" class="form-control" id="password" name="confirm_password" required placeholder="price">
                     <div class="help-block"></div>
                   </div>
+                  <div class="form-check">
+                    <input type="checkbox" name="full" id="full" class="form-check-input" value="1">
+                    <label class="form-check-label" for="exampleCheck1">Full</label>
+                    <input type="checkbox" name="user" id="user" class="form-check-input" value="2">
+                    <label class="form-check-label" for="exampleCheck1">Table Admin</label>
+                    <input type="checkbox" name="customer" id="customer"  class="form-check-input" value="3">
+                    <label class="form-check-label" for="exampleCheck1">Table Customer</label>
+                    <input type="checkbox" name="category" id="category" class="form-check-input" value="4">
+                    <label class="form-check-label" for="exampleCheck1">Table Category</label>
+                    <input type="checkbox" name="product" id="product" class="form-check-input" value="5">
+                    <label class="form-check-label" for="exampleCheck1">Table Product</label>
+                  </div>
+                  {{-- <div class="form-check">
+                    <input type="checkbox" class="form-check-input" value="6" id="exampleCheck1" name="role">
+                    <label class="form-check-label" for="exampleCheck1">Full</label>
+                    <input type="checkbox" class="form-check-input" value="7" id="exampleCheck1" name="role">
+                    <label class="form-check-label" for="exampleCheck1">Table Admin</label>
+                    <input type="checkbox" class="form-check-input" value="8" id="exampleCheck1" name="role">
+                    <label class="form-check-label" for="exampleCheck1">Table Customer</label>
+                    <input type="checkbox" class="form-check-input" value="9" id="exampleCheck1" name="role">
+                    <label class="form-check-label" for="exampleCheck1">Table Category</label>
+                    <input type="checkbox" class="form-check-input" value="9" id="exampleCheck1" name="role">
+                    <label class="form-check-label" for="exampleCheck1">Table Product</label>
+                  </div> --}}
                   <div class="form-group">
                     <label for="exampleInputFile">Chọn ảnh admin</label>
                     <div class="input-group">
-                      <input type="file" name="file" class="text-center center-block file-upload" accept="image/gif, image/jpeg, image/jpg, image/png"/>  
+                      <input type="file" name="file" class="text-center center-block file-upload" accept="image/gif, image/jpeg, image/jpg, image/png"/>
                     </div>
                   </div>
                 </div>
@@ -94,7 +118,7 @@
                 </div>
                 <input type="hidden" name="_token" value="{{csrf_token()}}">
               </form>
-              
+
             </div>
             <!-- /.card -->
           </div>

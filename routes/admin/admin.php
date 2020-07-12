@@ -1,6 +1,6 @@
 <?php
 
-	Route::group(['prefix' => 'admin'],function(){
+	Route::group(['prefix' => 'admin', 'middleware'=>'hasPermission:1'],function(){
 		//danh sách admin
 		Route::get('/','adminController@list_ad') -> name('list-admin');
 		// thêm admin

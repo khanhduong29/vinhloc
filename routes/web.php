@@ -32,11 +32,6 @@ Route::group(['prefix' => 'admin','namespace'=>'admin','middleware'=>'auth'],fun
     // giao diện quản trị
     Route::get('/','adminController@admin')->name('admin');
 
-	// giao diện quản trị
-	Route::get('/','adminController@admin')->name('admin');
-
-
-
     include 'admin/category.php';
 
     include 'admin/admin.php';

@@ -60,7 +60,7 @@
                     <th>#</th>
                   </tr>
                 </thead>
-                
+
                 <tbody>
                   @foreach($admin as $ad)
                   <tr>
@@ -75,7 +75,7 @@
                     </td>
                   </tr>
                   @endforeach
-                </tbody>                
+                </tbody>
               </table>
             </div>
             <!-- /.card-body -->

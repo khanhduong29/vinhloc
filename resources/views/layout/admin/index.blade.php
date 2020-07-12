@@ -23,7 +23,7 @@
   @include('layout.admin.header')
 
   <!-- Content Wrapper. Contains page content -->
-  
+
   @yield('content')
 
   @include('layout.admin.footer')
@@ -57,6 +57,24 @@
       "ordering": true,
       "info": true,
       "autoWidth": false,
+    });
+
+    $('#full').click(function(){
+        if (this.checked) {
+            $('#user').prop("checked", false);
+            $('#customer').prop("checked", false);
+            $('#category').prop("checked", false);
+            $('#product').prop("checked ", false);
+            $('#user').attr("disabled", true);
+            $('#customer').attr("disabled", true);
+            $('#category').attr("disabled", true);
+            $('#product').attr("disabled", true);
+        } else {
+            $('#user').removeAttr("disabled");
+            $('#customer').removeAttr("disabled");
+            $('#category').removeAttr("disabled");
+            $('#product').removeAttr("disabled");
+        }
     });
   });
 </script>

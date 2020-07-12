@@ -1,6 +1,6 @@
 <?php
 
-	Route::group(['prefix' => 'categories'],function(){
+	Route::group(['prefix' => 'categories', 'middleware'=>'hasPermission:4'],function(){
 		//danh sách danh mục
 		Route::get('/','categoriesController@list_cat') -> name('list-categories');
 		// thêm danh mục

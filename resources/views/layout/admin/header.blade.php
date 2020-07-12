@@ -106,6 +106,35 @@
               </p>
             </a>
           </li>
+
+          @if(strpos(Auth::user()->role, '1') !== false )
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-copy"></i>
+              <p>
+                Admin
+                <i class="fas fa-angle-left right"></i>
+                <!-- <span class="badge badge-info right">6</span> -->
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="{{route('add-admin')}}" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Thêm admin</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{route('list-admin')}}" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Danh sách admin</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          @endif
+
+          @if(strpos(Auth::user()->role, '1') !== false || strpos(Auth::user()->role, '3') !== false)
           <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-tachometer-alt"></i>
@@ -129,6 +158,8 @@
               </li>
             </ul>
           </li>
+          @endif
+          @if(strpos(Auth::user()->role, '1') !== false || strpos(Auth::user()->role, '4') !== false)
           <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-tachometer-alt"></i>
@@ -151,7 +182,9 @@
                 </a>
               </li>
             </ul>
-          </li>    
+          </li>
+          @endif
+          @if(strpos(Auth::user()->role, '1') !== false || strpos(Auth::user()->role, '5') !== false)
           <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-tachometer-alt"></i>
@@ -175,6 +208,7 @@
               </li>
             </ul>
           </li>
+          @endif
           <!-- <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-tachometer-alt"></i>
@@ -255,31 +289,8 @@
               </li>
             </ul>
           </li>
-          <li class="nav-item has-treeview">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-copy"></i>
-              <p>
-                Admin
-                <i class="fas fa-angle-left right"></i>
-                <!-- <span class="badge badge-info right">6</span> -->
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="{{route('add-admin')}}" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Thêm admin</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="{{route('list-admin')}}" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Danh sách admin</p>
-                </a>
-              </li>
-            </ul>
-          </li>
-          
+
+
           <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-copy"></i>
@@ -303,7 +314,7 @@
               </li>
             </ul>
           </li>
-          
+
         </ul>
       </nav>
       <!-- /.sidebar-menu -->

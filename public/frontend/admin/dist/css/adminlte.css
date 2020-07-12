@@ -2050,6 +2050,7 @@ textarea.form-control {
 
 .form-check-label {
   margin-bottom: 0;
+  margin-right: 25px;
 }
 
 .form-check-inline {

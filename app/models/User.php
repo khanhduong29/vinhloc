@@ -19,7 +19,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'avatar', 'password','remember_token',
+        'name', 'email', 'avatar', 'password','remember_token','role'
     ];
 
     /**
@@ -46,7 +46,8 @@ class User extends Authenticatable
 				'name' => 'required|unique:users',
 				'email' => 'required|unique:users',
 				'file'=>'max:10000|mimes:jpg,jpeg,png,gif',
-				'password'=>'required|min:6|max:100',
+                'password'=>'required|min:6|max:100',
+                'role' => 'required',
 				'confirm_password'=>'required|same:password',
 			],
 			[
@@ -58,9 +59,10 @@ class User extends Authenticatable
 				'same' => ':attribute chưa trùng khớp',
 			],
 			[
-                 'name' => 'name',
+                 'name' => 'Name',
                  'email' => 'Email',
                  'password' => 'Mật khẩu',
+                 'role' => 'Quyền',
                  'confirm_password' => 'Mật khẩu xác nhận ',
                  'file' =>'Ảnh'
 			]
@@ -74,7 +76,8 @@ class User extends Authenticatable
 		}
 		$models = $this->create([
 			'name' => request()->name,
-			'email' => request()->email,
+            'email' => request()->email,
+            'role' => request()->role,
 			'avatar' => $avatar,
 			'password' => Hash::make(request()->password),
 		]);
@@ -116,19 +119,19 @@ class User extends Authenticatable
 				]
 			);
 		}
-		if(request()->email != $user->email){
-			$validate = request()->validate(
-				[
-					'email' => 'unique:admin',
-				],
-				[
-					'unique' => ':attribute đã tồn tại',
-				],
-				[
-                 	'email' => 'Email',
-				]
-			);
-		}
+		// if(request()->email != $user->email){
+		// 	$validate = request()->validate(
+		// 		[
+		// 			'email' => 'unique:admin',
+		// 		],
+		// 		[
+		// 			'unique' => ':attribute đã tồn tại',
+		// 		],
+		// 		[
+        //          	'email' => 'Email',
+		// 		]
+		// 	);
+		// }
 		$avatar = '';
 		if(request() -> has('file')){
 			$file = request() -> file;
