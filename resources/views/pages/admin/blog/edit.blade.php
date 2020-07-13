@@ -1,4 +1,4 @@
- @extends('layout.admin.index')
+@extends('layout.admin.index')
 @section('content')
 
   <!-- Content Wrapper. Contains page content -->
@@ -28,7 +28,7 @@
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="#">Trang chủ</a></li>
-              <li class="breadcrumb-item active">Sửa admin</li>
+              <li class="breadcrumb-item active">Sửa blog</li>
             </ol>
           </div>
         </div>
@@ -59,43 +59,39 @@
               <form  method="post" role="form" enctype="multipart/form-data">
                 <div class="card-body">
                   <div class="form-group">
-                    <label for="">Username</label>
-                    <input type="text" class="form-control" id="name" value="{{$admin->name}}"  name="name" required placeholder="Name">
+                    <label for="">Tên blog</label>
+                    <input type="text" class="form-control" id="name" value="{{$blog->name}}" name="name" required placeholder="Name">
                     <div class="help-block"></div>
                   </div>
                   <div class="form-group">
-                    <label for="">Email</label>
-                    <input type="email" class="form-control" id="email" value="{{$admin->email}}"  name="email" required placeholder="email">
-                    <div class="help-block"></div>
-                  </div>
-                  <div class="form-group">
-                    <label for="">Mật khẩu</label>
-                    <input type="password" class="form-control" id="password" value="{{$admin->password}}"  name="password" required placeholder="password">
-                    <div class="help-block"></div>
-                  </div>
-                  <div class="form-group">
-                    <label for="exampleInputFile">Chọn ảnh admin</label>
+                    <label for="exampleInputFile">Chọn ảnh blog</label>
                     <div class="input-group row">
                       <div class="col-8"><input type="file" name="file" class="text-center center-block file-upload" accept="image/gif, image/jpeg, image/jpg, image/png"/>  </div>
-                      <div class="col-4"><img src="{{asset('public/Uploads')}}/{{$admin-> avatar}}" alt="Chưa có hình ảnh" width="100%"></div>
+                      <div class="col-4"><img src="{{asset('public/Uploads')}}/{{$blog-> image}}" alt="Chưa có hình ảnh" width="100%"></div>
+
                     </div>
                   </div>
-                  <div class="form-check">
-                    <input type="checkbox" name="full" id="full" class="form-check-input" value="1" {{ in_array(1,$arr_role) ?"checked" : ""}}>
-                    <label class="form-check-label" for="exampleCheck1">Full</label>
-                    <input type="checkbox" name="user" id="user" class="form-check-input" value="2" {{ in_array(2,$arr_role) ?"checked" : ""}}>
-                    <label class="form-check-label" for="exampleCheck1">Table Admin</label>
-                    <input type="checkbox" name="customer" id="customer"  class="form-check-input" value="3" {{ in_array(3,$arr_role) ?"checked" : ""}}>
-                    <label class="form-check-label" for="exampleCheck1">Table Customer</label>
-                    <input type="checkbox" name="category" id="category" class="form-check-input" value="4" {{ in_array(4,$arr_role) ?"checked" : ""}}>
-                    <label class="form-check-label" for="exampleCheck1">Table Category</label>
-                    <input type="checkbox" name="product" id="product" class="form-check-input" value="5" {{ in_array(5,$arr_role) ?"checked" : ""}}>
-                    <label class="form-check-label" for="exampleCheck1">Table Product</label>
+                  <div class="form-group">
+                      <label for="">Mô tả ngắn</label>
+                      <div class="mb-3">
+                        <textarea class="textarea form-control" required id="des" name="des" placeholder="Place some text here">
+                            {{$blog->des}}
+                        </textarea>
+                      </div>
                   </div>
+                  <div class="form-group">
+                      <label for="">Nội dung</label>
+                      <div class="mb-3">
+                        <textarea class="textarea form-control" required id="content" name="content" placeholder="Place some text here">
+                            {{$blog->content}}
+                        </textarea>
+                      </div>
+                  </div>
+                </div>
                 <!-- /.card-body -->
 
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">Sửa admin</button>
+                  <button type="submit" class="btn btn-primary">Sửa blog</button>
                 </div>
                 <input type="hidden" name="_token" value="{{csrf_token()}}">
               </form>
