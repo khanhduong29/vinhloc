@@ -8,8 +8,6 @@ use App\Models\products;
 use App\Models\blog;
 use App\Models\banner;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Event;
-use Illuminate\Support\Facades\View;
 
 class ClientController extends Controller {
 
