@@ -152,7 +152,7 @@ class User extends Authenticatable
         }
         $role = implode(",",$roles);
 
-        if(empty($role)) {
+        if(empty($roles)) {
             $role = $user->role;
         }
 
