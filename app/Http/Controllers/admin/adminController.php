@@ -36,8 +36,11 @@
 		// sửa dữ liệu
 		public function edit($id){
 			$User = User::where('id', $id)->first();
+			$roles = $User->role;
+			$arr_role = explode(",",$roles);
         	return view('pages.admin.admin.edit',[
-        		'admin' => $User
+        		'admin' => $User,
+        		'arr_role' => $arr_role,
         	]);
 		}
 		public function update(request $request,User $id){

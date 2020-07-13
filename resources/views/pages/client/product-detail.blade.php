@@ -12,7 +12,8 @@
                     <div class="col-12 col-sm-12 col-md-6 col-lg-6">
                         <div class="border-1 mt-2 mb-4">
                             <a href="" title="" class="img-detail">
-                                <img src="{{url('public')}}/frontend/images/product/2e3d45f2764a9014c95b.jpg" alt="">
+                                <img src="{{asset('public/Uploads')}}/{{$pro -> image}}" alt="">
+                                
                             </a>
                         </div>
                     </div>

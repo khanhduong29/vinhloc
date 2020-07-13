@@ -25,7 +25,7 @@
               <?php endfor ?>
             </h5>
           </section>
-            <a href="{{route('add-admin')}}">Thêm customer</a>
+            <a href="{{route('add-brand')}}">Thêm brand</a>
 
           </div>
           <div class="col-sm-6">
@@ -53,25 +53,29 @@
                 <thead>
                   <tr>
                     <th>ID</th>
-                    <th>Name</th>
-                    <th>Email</th>
+                    <th>Tên brand</th>
+                    <th>Ảnh brand</th>
+                    <th>Trạng thái</th>
                     <th>Ngày tạo</th>
+                    <th>#</th>
                   </tr>
                 </thead>
+                
                 <tbody>
-                  @foreach($customer as $cus)
+                  @foreach($brand as $bra)
                   <tr>
-                    <td>{{$cus -> id}}</td>
-                    <td>{{$cus -> name}}</td>
-                    <td>{{$cus -> email}}</td>
-                    <td>{{$cus -> created_at}}</td>
+                    <td>{{$bra -> id}}</td>
+                    <td>{{$bra -> name}}</td>
+                    <td><img src="{{asset('public/Uploads')}}/{{$bra -> image}}" alt="" width="100px"></td>
+                    <td>{{ $bra->status == 1 ? "Hiện" : "Ẩn" }}</td>
+                    <td>{{$bra -> created_at}}</td>
                     <td>
-                      <a href="{{ Route('edit-cus',$cus) }}" class="btn btn-primary btn-xs">Sửa</a>
-                      <a href="{{ Route('delete-cus',$cus) }}" class="btn btn-danger btn-xs" onclick="return confirm('Xác nhận xoá ?')">Xóa</a>
+                      <a href="{{ Route('edit-brand',$bra) }}" class="btn btn-primary btn-xs">Sửa</a>
+                      <a href="{{ Route('delete-brand',$bra) }}" class="btn btn-danger btn-xs" onclick="return confirm('Xác nhận xoá ?')">Xóa</a>
                     </td>
                   </tr>
                   @endforeach
-                </tbody>
+                </tbody>                
               </table>
             </div>
             <!-- /.card-body -->

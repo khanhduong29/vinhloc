@@ -4,48 +4,35 @@ namespace App\Models;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use Illuminate\Database\Eloquent\Model;
-use App\Models\products;
 
-class Products extends Model
+class blog extends Model
 {
-    protected $table = 'products';
+    protected $table = 'blog';
 
-    protected $fillable = ['cate_id','code','slug','name','price','image','des','status'];
+    protected $fillable = ['slug','name','image','des','content'];
     
     // thêm dữ liệu
     public function add(){
     	$validate = request()->validate(
 			[
-				'code' => 'required|unique:products',
 				'name' => 'required',
-				'price' => 'required',
-				'cate_id' => 'required',
+				'content' => 'required',
 				'des' => 'required',
 				'file'=>'required|max:10000|mimes:jpg,jpeg,png,gif'
 			],
 			[
-				'required' => ':attribute Đang bỏ trống.',
-				'unique' => ':attribute đã tồn tại',
+				'required' => ':attribute đang bỏ trống.',
 				'min' => ':attribute chưa được chọn',
 				'max' => 'Cỡ ảnh quá lớn',
 				'mimes' => 'Không đúng định dạng ảnh'
 			],
 			[
-                 'code' => 'Mã sản phẩm',
                  'name' => 'Tên',
-                 'image' => 'Ảnh',
-                 'price' => 'Giá',
-                 'descriptions' => 'Mô tả',
-                 'cate_id' => 'Loại sản phẩm',
+                 'des' => 'Mô tả',
+                 'content' => 'Nội dung',
                  'file' =>'Ảnh'
 			]
 		);
-    	$status = request()->status;
-	    if($status){
-	    	$status = 1;
-	    }else{
-	    	$status = 0;
-	    }
 	    $image = '';
 		if(request() -> has('file')){
 			$file = request() -> file;
@@ -53,14 +40,11 @@ class Products extends Model
 			$image = $file -> getClientOriginalName();
 		}
 		 $models = $this->create([
-			'cate_id' => request()->cate_id,
-			'code' => request()->code,
 			'name' => request()->name,
 			'slug' => Str::slug(request()->name),
-			'price' => request()->price,
 			'des' => request()->des,
 			'image' => $image,
-			'status' => $status,
+			'content' => request()->content,
 		]);
 		return $models;
 
@@ -70,46 +54,23 @@ class Products extends Model
 		$validate = request()->validate(
 			[
 				'name' => 'required',
-				'price' => 'required',
-				'cate_id' => 'required',
+				'content' => 'required',
 				'des' => 'required',
-				'file'=>'max:10000|mimes:jpg,jpeg,png,gif'
+				'file'=>'required|max:10000|mimes:jpg,jpeg,png,gif'
 			],
 			[
-				'required' => ':attribute Đang bỏ trống.',
-				'unique' => ':attribute đã tồn tại',
+				'required' => ':attribute đang bỏ trống.',
 				'min' => ':attribute chưa được chọn',
 				'max' => 'Cỡ ảnh quá lớn',
 				'mimes' => 'Không đúng định dạng ảnh'
 			],
 			[
                  'name' => 'Tên',
-                 'image' => 'Ảnh',
-                 'price' => 'Giá',
-                 'descriptions' => 'Mô tả',
-                 'cate_id' => 'Loại sản phẩm',
+                 'des' => 'Mô tả',
+                 'content' => 'Nội dung',
                  'file' =>'Ảnh'
 			]
 		);
-		if(request()->code != $pro->code){
-			$validate = request()->validate(
-				[
-					'code' => 'required|unique:products'
-				],
-				[
-					'unique' => ':attribute đã tồn tại',
-				],
-				[
-	                 'code' => 'Mã sản phẩm',
-				]
-			);
-		}
-		$status = request()->status;
-	    if($status){
-	    	$status = 1;
-	    }else{
-	    	$status = 0;
-	    }
 	    $image = '';
 		if(request() -> has('file')){
 			$file = request() -> file;
@@ -119,14 +80,11 @@ class Products extends Model
 			$image = $pro->image;
 		}
 		$updated = $this->update([
-			'cate_id' => request()->cate_id,
-			'code' => request()->code,
 			'name' => request()->name,
 			'slug' => Str::slug(request()->name),
-			'price' => request()->price,
 			'des' => request()->des,
 			'image' => $image,
-			'status' => $status,
+			'content' => request()->content,
 		]);
 	}
 }

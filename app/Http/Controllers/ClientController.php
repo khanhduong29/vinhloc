@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Categories;
 use App\Models\products;
+use App\Models\blog;
 use Illuminate\Support\Facades\Auth;
 
 class ClientController extends Controller {
@@ -22,7 +23,9 @@ class ClientController extends Controller {
     }
     public function home() {
         $products = products::all();
-        return view('pages.client.home',compact('products'));
+        $blog = blog::first();
+        
+        return view('pages.client.home',compact('products','blog'));
     }
     public function about() {
         return view('pages.client.about');
@@ -40,8 +43,8 @@ class ClientController extends Controller {
     public function contact() {
         return view('pages.client.contact');
     }
-    public function product_detail($id) {
-        $pro = products::find($id);
+    public function product_detail($slug) {
+        $pro = products::where('slug',$slug)->first();
         return view('pages.client.product-detail',compact('pro'));
     }
     public function blog_detail() {
@@ -50,5 +53,8 @@ class ClientController extends Controller {
     public function cate_product() {
         return view('pages.client.cate-product');
     }
-
+    public function getsearch(Request $req){
+        $products =  products::where('name','like','%'.$req->key.'%')->orWhere('price',$req->key)->get();
+        return view('pages.client.search',compact('products'));
+    }
 }

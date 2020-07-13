@@ -8,9 +8,9 @@ Route::group(['prefix' => 'customer', 'middleware'=>'hasPermission:3'],function(
 
 		// sửa danh mục
 		// Route::get('editproducts/{id}','productsController@edit') -> name('edit');
-		// Route::post('editproducts/{id}','productsController@update') -> name('edit-products');
+		// Route::post('editproducts/{id}','productsController@update') -> name('edit-cus');
 
 		// xóa danh mục
-		// Route::get('deleteproducts/{id}','productsController@delete')->name('deletePro');
+		// Route::get('deleteproducts/{id}','productsController@delete')->name('delete-cus');
 	});
  ?>

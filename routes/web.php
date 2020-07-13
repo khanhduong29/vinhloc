@@ -21,9 +21,10 @@ Route::group(['prefix' => '/'],function(){
     Route::get('service','ClientController@service')->name('service');
     Route::get('construction','ClientController@construction')->name('construction');
     Route::get('contact','ClientController@contact')->name('contact');
-    Route::get('product-detail','ClientController@product_detail')->name('product-detail');
+    Route::get('product-detail/{slug}','ClientController@product_detail')->name('product-detail');
     Route::get('blog-detail','ClientController@blog_detail')->name('blog-detail');
     Route::get('cate-product/{slug}','ClientController@cate_product')->name('cate-product');
+    Route::get('search','ClientController@getsearch')->name('search');
 });
 
 Route::group(['prefix' => 'admin','namespace'=>'admin','middleware'=>'auth'],function(){
@@ -40,6 +41,8 @@ Route::group(['prefix' => 'admin','namespace'=>'admin','middleware'=>'auth'],fun
     include 'admin/customer.php';
     include 'admin/attribute.php';
     include 'admin/attr_values.php';
+    include 'admin/blog.php';
+    include 'admin/brand.php';
 });
 
 // giao diện login

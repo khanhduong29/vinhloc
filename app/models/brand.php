@@ -4,11 +4,11 @@ namespace App\Models;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use Illuminate\Database\Eloquent\Model;
-use App\Models\products;
+use App\Models\brand;
 
-class Products extends Model
+class brand extends Model
 {
-    protected $table = 'products';
+    protected $table = 'brand';
 
     protected $fillable = ['cate_id','code','slug','name','price','image','des','status'];
     
@@ -16,27 +16,17 @@ class Products extends Model
     public function add(){
     	$validate = request()->validate(
 			[
-				'code' => 'required|unique:products',
 				'name' => 'required',
-				'price' => 'required',
-				'cate_id' => 'required',
-				'des' => 'required',
 				'file'=>'required|max:10000|mimes:jpg,jpeg,png,gif'
 			],
 			[
 				'required' => ':attribute Đang bỏ trống.',
-				'unique' => ':attribute đã tồn tại',
 				'min' => ':attribute chưa được chọn',
 				'max' => 'Cỡ ảnh quá lớn',
 				'mimes' => 'Không đúng định dạng ảnh'
 			],
 			[
-                 'code' => 'Mã sản phẩm',
                  'name' => 'Tên',
-                 'image' => 'Ảnh',
-                 'price' => 'Giá',
-                 'descriptions' => 'Mô tả',
-                 'cate_id' => 'Loại sản phẩm',
                  'file' =>'Ảnh'
 			]
 		);
@@ -53,12 +43,7 @@ class Products extends Model
 			$image = $file -> getClientOriginalName();
 		}
 		 $models = $this->create([
-			'cate_id' => request()->cate_id,
-			'code' => request()->code,
 			'name' => request()->name,
-			'slug' => Str::slug(request()->name),
-			'price' => request()->price,
-			'des' => request()->des,
 			'image' => $image,
 			'status' => $status,
 		]);
@@ -70,40 +55,18 @@ class Products extends Model
 		$validate = request()->validate(
 			[
 				'name' => 'required',
-				'price' => 'required',
-				'cate_id' => 'required',
-				'des' => 'required',
 				'file'=>'max:10000|mimes:jpg,jpeg,png,gif'
 			],
 			[
-				'required' => ':attribute Đang bỏ trống.',
-				'unique' => ':attribute đã tồn tại',
-				'min' => ':attribute chưa được chọn',
+				'required' => ':attribute đang bỏ trống.',
 				'max' => 'Cỡ ảnh quá lớn',
 				'mimes' => 'Không đúng định dạng ảnh'
 			],
 			[
                  'name' => 'Tên',
-                 'image' => 'Ảnh',
-                 'price' => 'Giá',
-                 'descriptions' => 'Mô tả',
-                 'cate_id' => 'Loại sản phẩm',
                  'file' =>'Ảnh'
 			]
 		);
-		if(request()->code != $pro->code){
-			$validate = request()->validate(
-				[
-					'code' => 'required|unique:products'
-				],
-				[
-					'unique' => ':attribute đã tồn tại',
-				],
-				[
-	                 'code' => 'Mã sản phẩm',
-				]
-			);
-		}
 		$status = request()->status;
 	    if($status){
 	    	$status = 1;
@@ -119,12 +82,7 @@ class Products extends Model
 			$image = $pro->image;
 		}
 		$updated = $this->update([
-			'cate_id' => request()->cate_id,
-			'code' => request()->code,
 			'name' => request()->name,
-			'slug' => Str::slug(request()->name),
-			'price' => request()->price,
-			'des' => request()->des,
 			'image' => $image,
 			'status' => $status,
 		]);
