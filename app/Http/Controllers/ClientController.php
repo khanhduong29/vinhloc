@@ -6,17 +6,20 @@ use Illuminate\Http\Request;
 use App\Models\Categories;
 use App\Models\products;
 use App\Models\blog;
+use App\Models\banner;
 use Illuminate\Support\Facades\Auth;
 
 class ClientController extends Controller {
 
     public function __construct(){
+        $banner = new banner;
+        $banners = $banner -> get_list();
+        // dd($banners);
         $this->middleware(function($request,$next){
             view()->share([
                 'categories' => Categories::all(),
-
-
-                // 'cart' => new cart()
+                'banners' => banner::all(),
+                // 'banners' => $banners,
             ]);
             return $next($request);
         });
@@ -24,8 +27,11 @@ class ClientController extends Controller {
     public function home() {
         $products = products::all();
         $blog = blog::first();
+
         $blg = blog::all();
         return view('pages.client.home',compact('products','blog','blg'));
+
+        return view('pages.client.home',compact('products','blog'));
     }
     public function about() {
         return view('pages.client.about');

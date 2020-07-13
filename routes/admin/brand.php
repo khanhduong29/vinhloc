@@ -11,6 +11,6 @@ Route::group(['prefix' => 'brand', 'middleware'=>'hasPermission:7'],function(){
 		Route::post('edit-brand/{id}','brandController@update') -> name('edit-brand');
 
 		// xóa danh mục
-		Route::get('delete-brand/{id}','brandController@delete')->name('deletePro');
+		Route::get('delete-brand/{id}','brandController@delete')->name('delete-brand');
 	});
  ?>

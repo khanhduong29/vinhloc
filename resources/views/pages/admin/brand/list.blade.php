@@ -71,7 +71,7 @@
                     <td>{{$bra -> created_at}}</td>
                     <td>
                       <a href="{{ Route('edit-brand',$bra) }}" class="btn btn-primary btn-xs">Sửa</a>
-                      <a href="{{ Route('deletePro',$bra) }}" class="btn btn-danger btn-xs" onclick="return confirm('Xác nhận xoá ?')">Xóa</a>
+                      <a href="{{ Route('delete-brand',$bra) }}" class="btn btn-danger btn-xs" onclick="return confirm('Xác nhận xoá ?')">Xóa</a>
                     </td>
                   </tr>
                   @endforeach

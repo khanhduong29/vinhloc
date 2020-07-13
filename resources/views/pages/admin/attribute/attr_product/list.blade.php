@@ -25,7 +25,7 @@
               <?php endfor ?>
             </h5>
           </section>
-            <a href="{{route('add-blog')}}">Thêm blog</a>
+            <a href="{{route('add-value-attr')}}">Thêm admin</a>
 
           </div>
           <div class="col-sm-6">
@@ -53,29 +53,22 @@
                 <thead>
                   <tr>
                     <th>ID</th>
-                    <th>Tên blog</th>
-                    <th>Ảnh blog</th>
-                    <th>Mô tả</th>
+                    <th>Id thuộc tính</th>
+                    <th>Id sản phẩm</th>
                     <th>Ngày tạo</th>
-                    <th>#</th>
                   </tr>
                 </thead>
-                
+
                 <tbody>
-                  @foreach($blog as $blg)
+                  @foreach($attrProduct as $value)
                   <tr>
-                    <td>{{$blg -> id}}</td>
-                    <td>{{$blg -> name}}</td>
-                    <td><img src="{{asset('public/Uploads')}}/{{$blg -> image}}" alt="" width="100px"></td>
-                    <td>{!!$blg->des!!}</td>
-                    <td>{{$blg -> created_at}}</td>
-                    <td>
-                      <a href="{{ Route('edit-blog',$blg) }}" class="btn btn-primary btn-xs">Sửa</a>
-                      <a href="{{ Route('delete-blog',$blg) }}" class="btn btn-danger btn-xs" onclick="return confirm('Xác nhận xoá ?')">Xóa</a>
-                    </td>
+                    <td>{{$value->id}}</td>
+                    <td>{{$value->id_attr}}</td>
+                    <td>{{$value->product_id}}</td>
+                    <td>{{$value->created_at}}</td>
                   </tr>
                   @endforeach
-                </tbody>                
+                </tbody>
               </table>
             </div>
             <!-- /.card-body -->
@@ -92,10 +85,6 @@
   <!-- /.content-wrapper -->
 </div>
 <!-- ./wrapper -->
-
-
-
-
 @stop()
 
 
