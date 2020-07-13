@@ -24,6 +24,7 @@ Route::group(['prefix' => '/'],function(){
     Route::get('product-detail/{slug}','ClientController@product_detail')->name('product-detail');
     Route::get('blog-detail','ClientController@blog_detail')->name('blog-detail');
     Route::get('cate-product/{slug}','ClientController@cate_product')->name('cate-product');
+    Route::get('search','ClientController@getsearch')->name('search');
 });
 
 Route::group(['prefix' => 'admin','namespace'=>'admin','middleware'=>'auth'],function(){

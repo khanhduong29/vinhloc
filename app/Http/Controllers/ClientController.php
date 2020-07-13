@@ -50,5 +50,8 @@ class ClientController extends Controller {
     public function cate_product() {
         return view('pages.client.cate-product');
     }
-
+    public function getsearch(Request $req){
+        $products =  products::where('name','like','%'.$req->key.'%')->orWhere('price',$req->key)->get();
+        return view('pages.client.search',compact('products'));
+    }
 }
