@@ -56,6 +56,7 @@
                     <th>Ảnh admin</th>
                     <th>Username</th>
                     <th>Email</th>
+                    <th>Quyền</th>
                     <th>Ngày tạo</th>
                     <th>#</th>
                   </tr>
@@ -68,6 +69,7 @@
                     <td><img src="{{asset('public/Uploads/avatar')}}/{{$ad -> avatar}}" alt="" width="100px"></td>
                     <td>{{$ad -> name}}</td>
                     <td>{{$ad -> email}}</td>
+                    <td>{{$ad -> role}}</td>
                     <td>{{$ad -> created_at}}</td>
                     <td>
                       <a href="{{ Route('edit-admin',$ad) }}" class="btn btn-primary btn-xs">Sửa</a>
