@@ -1,4 +1,4 @@
-@extends('layout.admin.index')
+ @extends('layout.admin.index')
 @section('content')
 
   <!-- Content Wrapper. Contains page content -->
@@ -81,25 +81,25 @@
                     </div>
                   </div>
                   <div class="form-check">
-                    <input type="checkbox" name="full" id="full" class="form-check-input" value="1">
+                    <input type="checkbox" name="full" id="full" class="form-check-input" value="1" {{ $admin->role == 1 ? "checked" : "" }}>
                     <label class="form-check-label" for="exampleCheck1">Full</label>
-                    <input type="checkbox" name="user" id="user" class="form-check-input" value="2">
+                    <input type="checkbox" name="user" id="user" class="form-check-input" value="2" {{ $admin->role == 2 ? "checked" : "" }}>
                     <label class="form-check-label" for="exampleCheck1">Table Admin</label>
-                    <input type="checkbox" name="customer" id="customer"  class="form-check-input" value="3">
+                    <input type="checkbox" name="customer" id="customer"  class="form-check-input" value="3" {{ $admin->role == 3 ? "checked" : "" }}>
                     <label class="form-check-label" for="exampleCheck1">Table Customer</label>
-                    <input type="checkbox" name="category" id="category" class="form-check-input" value="4">
+                    <input type="checkbox" name="category" id="category" class="form-check-input" value="4" {{ $admin->role == 4 ? "checked" : "" }}>
                     <label class="form-check-label" for="exampleCheck1">Table Category</label>
-                    <input type="checkbox" name="product" id="product" class="form-check-input" value="5">
+                    <input type="checkbox" name="product" id="product" class="form-check-input" value="5" {{ $admin->role == 5 ? "checked" : "" }}>
                     <label class="form-check-label" for="exampleCheck1">Table Product</label>
                   </div>
                 <!-- /.card-body -->
-                
+
                 <div class="card-footer">
                   <button type="submit" class="btn btn-primary">Sửa admin</button>
                 </div>
                 <input type="hidden" name="_token" value="{{csrf_token()}}">
               </form>
-              
+
             </div>
             <!-- /.card -->
           </div>

@@ -134,6 +134,12 @@ class User extends Authenticatable
 				]
 			);
 		}
+		$model = $user->role;
+		$arr = explode(",",$model);
+		foreach ($arr as $value) {
+			echo $value.'--';
+		}
+		dd($model);
         $roles = [];
         if (request()->product) {
             array_push($roles, 5);
@@ -152,7 +158,7 @@ class User extends Authenticatable
         }
         $role = implode(",",$roles);
 
-        if(empty($role)) {
+        if(empty($roles)) {
             $role = $user->role;
         }
 
