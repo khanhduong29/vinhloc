@@ -4770,10 +4770,15 @@ tbody.collapse.show {
 }
 
 .page-item.active .page-link {
-  z-index: 1;
-  color: #fff;
-  background-color: #007bff;
-  border-color: #007bff;
+    z-index: 1;
+    color: #fff;
+    background-color: #252525;
+    /* border-color: #007bff; */
+    border: 1px solid #fdb300;
+    margin-right: .5rem;
+    text-align: center;
+    width: 2.5rem;
+    height: 2.5rem;
 }
 
 .page-item.disabled .page-link {
@@ -4782,6 +4787,9 @@ tbody.collapse.show {
   cursor: auto;
   background-color: #fff;
   border-color: #dee2e6;
+  margin-right: .5rem;
+  width: 2.5rem;
+  height: 2.5rem;
 }
 
 .pagination-lg .page-link {

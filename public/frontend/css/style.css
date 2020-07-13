@@ -1409,12 +1409,12 @@ a.c-feb:hover{
 .pagination a{
     width: 2.5rem;
     height: 2.5rem;
-    line-height: 38px;
+    
     text-align: center;
     border: 1px solid #fdb300;
     color: #fff;
     background: #252525;
-    border-radius: 50%;
+    border-radius: 10%;
     margin-right: .5rem;
     display: inline-block;
 }
