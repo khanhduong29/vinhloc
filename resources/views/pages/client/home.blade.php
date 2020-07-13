@@ -258,18 +258,18 @@
                 <div class="col-lg-6 col-md-12 col-xs-12 mb-4">
                     <div class="item">
                         <a href="{{route('blog-detail')}}" class="smooth hv-scale" title="">
-                            <img src="{{url('public')}}/frontend/images/giay-dan-tuong-da-nang-compressed.jpg" alt="lỗi" title="" class="img-fluid" />
+                            <img src="{{asset('public/Uploads')}}/{{$blog -> image}}" alt="lỗi" title="" class="img-fluid" />
                         </a>
                         <div class="desc s-content mt-2">
                             <h3>
-                                <a href="{{route('blog-detail')}}" title="" class="c-feb f-18">3 PHONG CÁCH ĐÈN NỘI THẤT KHÔNG BAO GIỜ LỖI THỜI</a>
+                                <a href="{{route('blog-detail')}}" title="" class="c-feb f-18">{{$blog -> name }}</a>
                             </h3>
                             <span class="date">12/08/2019 - 65 lượt xem</span>
                             <p class="content_news c-fff">
-                            Đèn thả là bộ đèn mang tính chất nghệ thuật, vừa cung cấp ánh sáng cho ngôi nhà, lại vừa tạo nên nét đẹp cho ngôi nhà. Vậy làm sao để nhận biết được một bộ đèn đẹp qua những dấu hiệu đơn giản? Đèn thả là bộ đèn mang tính chất nghệ thuật, vừa cung cấp ánh sáng cho ngôi nhà, lại vừa tạo nên nét đẹp cho ngôi nhà. Vậy làm sao để nhận biết được một bộ đèn đẹp qua những dấu hiệu đơn giản?
+                            {!!$blog->des!!}
                             </p>
                         </div>
-                        </div>
+                    </div>
                 </div>
                 <div class="col-lg-6 col-md-12 col-xs-12 mb-4">
                     <div class="item slick4">
