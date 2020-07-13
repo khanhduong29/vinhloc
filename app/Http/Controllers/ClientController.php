@@ -24,8 +24,8 @@ class ClientController extends Controller {
     public function home() {
         $products = products::all();
         $blog = blog::first();
-        
-        return view('pages.client.home',compact('products','blog'));
+        $blg = blog::all();
+        return view('pages.client.home',compact('products','blog','blg'));
     }
     public function about() {
         return view('pages.client.about');
@@ -47,8 +47,10 @@ class ClientController extends Controller {
         $pro = products::where('slug',$slug)->first();
         return view('pages.client.product-detail',compact('pro'));
     }
-    public function blog_detail() {
-        return view('pages.client.blog-detail');
+    public function blog_detail($slug) {
+        $detail = blog::where('slug',$slug)->first();
+        $blg = blog::all();
+        return view('pages.client.blog-detail',compact('detail','blg'));
     }
     public function cate_product() {
         return view('pages.client.cate-product');

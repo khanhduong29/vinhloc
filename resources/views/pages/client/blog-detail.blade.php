@@ -5,7 +5,7 @@
 	<div class="container">
 		<div class="row list-content">
 			<div class="col-lg-8 col-xs-12">
-				<h1>3 PHONG CÁCH ĐÈN NỘI THẤT KHÔNG BAO GIỜ LỖI THỜI</h1>
+				<h1>{{$detail -> name}}</h1>
 				<img src="{{url('public')}}/frontend/images/giay-dan-tuong-da-nang-compressed.jpg"
 					alt="3 PHONG CÁCH ĐÈN NỘI THẤT KHÔNG BAO GIỜ LỖI THỜI"
 					title="3 PHONG CÁCH ĐÈN NỘI THẤT KHÔNG BAO GIỜ LỖI THỜI" class="img_item">
