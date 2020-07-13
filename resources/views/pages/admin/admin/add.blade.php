@@ -63,35 +63,35 @@
                 <div class="card-body">
                   <div class="form-group">
                     <label for="">Username</label>
-                    <input type="text" class="form-control" id="name" name="name" required placeholder="Name">
+                    <input type="text" class="form-control" id="name" name="name" required>
                     <div class="help-block"></div>
                   </div>
                   <div class="form-group">
                     <label for="">Email</label>
-                    <input type="email" class="form-control" id="email" name="email" required placeholder="price">
+                    <input type="email" class="form-control" id="email" name="email" required >
                     <div class="help-block"></div>
                   </div>
                   <div class="form-group">
                     <label for="">Mật khẩu</label>
-                    <input type="password" class="form-control" id="password" name="password" required placeholder="price">
+                    <input type="password" class="form-control" id="password" name="password" required>
                     <div class="help-block"></div>
                   </div>
                   <div class="form-group">
                     <label for="">Nhập lại mật khẩu</label>
-                    <input type="password" class="form-control" id="password" name="confirm_password" required placeholder="price">
+                    <input type="password" class="form-control" id="password" name="confirm_password" required>
                     <div class="help-block"></div>
                   </div>
                   <div class="form-check">
                     <input type="checkbox" name="full" id="full" class="form-check-input" value="1">
-                    <label class="form-check-label" for="exampleCheck1">Full</label>
+                    <label class="form-check-label" for="full">Full</label>
                     <input type="checkbox" name="user" id="user" class="form-check-input" value="2">
-                    <label class="form-check-label" for="exampleCheck1">Table Admin</label>
+                    <label class="form-check-label" for="user">Table Admin</label>
                     <input type="checkbox" name="customer" id="customer"  class="form-check-input" value="3">
-                    <label class="form-check-label" for="exampleCheck1">Table Customer</label>
+                    <label class="form-check-label" for="customer">Table Customer</label>
                     <input type="checkbox" name="category" id="category" class="form-check-input" value="4">
-                    <label class="form-check-label" for="exampleCheck1">Table Category</label>
+                    <label class="form-check-label" for="category">Table Category</label>
                     <input type="checkbox" name="product" id="product" class="form-check-input" value="5">
-                    <label class="form-check-label" for="exampleCheck1">Table Product</label>
+                    <label class="form-check-label" for="product">Table Product</label>
                   </div>
                   {{-- <div class="form-check">
                     <input type="checkbox" class="form-check-input" value="6" id="exampleCheck1" name="role">

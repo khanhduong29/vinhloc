@@ -26,23 +26,6 @@
 			return view('pages.admin.admin.add');
 		}
 		public function store(Request $request,User $User){
-            $roles = [];
-            if ($request->product) {
-                array_push($roles, 5);
-            }
-            if ($request->category) {
-                array_push($roles, 4);
-            }
-            if ($request->customer) {
-                array_push($roles, 3);
-            }
-            if ($request->user) {
-                array_push($roles, 2);
-            }
-            if ($request->full) {
-                array_push($roles, 1);
-            }
-            $request->role = implode(",",$roles);;
             $model = $User->add();
 	        if ($User) {
 	            return redirect()->route('list-admin') -> with('success','Thêm mới thành công');

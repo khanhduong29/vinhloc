@@ -47,7 +47,6 @@ class User extends Authenticatable
 				'email' => 'required|unique:users',
 				'file'=>'max:10000|mimes:jpg,jpeg,png,gif',
                 'password'=>'required|min:6|max:100',
-                'role' => 'required',
 				'confirm_password'=>'required|same:password',
 			],
 			[
@@ -67,7 +66,23 @@ class User extends Authenticatable
                  'file' =>'Ảnh'
 			]
 		);
-		// dd(request());
+		$roles = [];
+        if (request()->product) {
+            array_push($roles, 5);
+        }
+        if (request()->category) {
+            array_push($roles, 4);
+        }
+        if (request()->customer) {
+            array_push($roles, 3);
+        }
+        if (request()->user) {
+            array_push($roles, 2);
+        }
+        if (request()->full) {
+            array_push($roles, 1);
+        }
+        $role = implode(",",$roles);
 		$avatar = 'user1.png';
 		if(request() -> has('file')){
 			$file = request() -> file;
@@ -77,7 +92,7 @@ class User extends Authenticatable
 		$models = $this->create([
 			'name' => request()->name,
             'email' => request()->email,
-            'role' => request()->role,
+            'role' => $role,
 			'avatar' => $avatar,
 			'password' => Hash::make(request()->password),
 		]);
@@ -119,19 +134,26 @@ class User extends Authenticatable
 				]
 			);
 		}
-		// if(request()->email != $user->email){
-		// 	$validate = request()->validate(
-		// 		[
-		// 			'email' => 'unique:admin',
-		// 		],
-		// 		[
-		// 			'unique' => ':attribute đã tồn tại',
-		// 		],
-		// 		[
-        //          	'email' => 'Email',
-		// 		]
-		// 	);
-		// }
+		$model = $user->role;
+		dd($model);
+		// $roles = [];
+        // if (request()->product) {
+        //     array_push($roles, 5);
+        // }
+        // if (request()->category) {
+        //     array_push($roles, 4);
+        // }
+        // if (request()->customer) {
+        //     array_push($roles, 3);
+        // }
+        // if (request()->user) {
+        //     array_push($roles, 2);
+        // }
+        // if (request()->full) {
+        //     array_push($roles, 1);
+        // }
+        // $role = implode(",",$roles);
+
 		$avatar = '';
 		if(request() -> has('file')){
 			$file = request() -> file;
