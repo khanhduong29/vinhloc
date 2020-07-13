@@ -3,7 +3,12 @@
 <main>
     <div class="container">
         <section class="big-carousel">
-            <img src="{{url('public')}}/frontend/images/slide/slide0.jpg" alt="">
+            @foreach($banners as $ban )
+                @if($ban -> location == 2)
+                <img src="{{url('public/uploads/banner')}}/{{$ban -> image}}" alt="">
+                @break
+                @endif
+            @endforeach
         </section>
     </div>
     <section class="content-about space-title">

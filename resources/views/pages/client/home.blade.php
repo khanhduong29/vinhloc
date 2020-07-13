@@ -3,18 +3,13 @@
 <main>
     <div class="container">
         <section class="slick0 big-carousel">
-            <a href="" title="">
-                <img src="{{url('public')}}/frontend/images/slide/slide0.jpg" alt="">
-            </a>
-            <a href="" title="">
-                <img src="{{url('public')}}/frontend/images/slide/slide1.jpg" alt="">
-            </a>
-            <a href="" title="">
-                <img src="{{url('public')}}/frontend/images/slide/slide2.jpg" alt="">
-            </a>
-            <a href="" title="">
-                <img src="{{url('public')}}/frontend/images/slide/slide3.jpg" alt="">
-            </a>
+            @foreach($banners as $ban )
+                @if($ban -> location == 1)
+                <a href="" title="">
+                    <img src="{{url('public/uploads/banner')}}/{{$ban -> image}}" alt="">
+                </a>
+                @endif
+            @endforeach
         </section>
     </div>
     <section class="cat-pro space-title">

@@ -219,13 +219,13 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="" class="nav-link">
+                <a href="{{route('add-banner')}}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Thêm banner</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="" class="nav-link">
+                <a href="{{route('list-banner')}}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Danh sách banner</p>
                 </a>

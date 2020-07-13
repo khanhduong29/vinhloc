@@ -15,7 +15,12 @@
             <div class="row">
                 <div class="col-12 col-sm-12 col-md-12 col-lg-9 pt-4">
                     <div class="border-1 p-2 banner-sv">
-                        <img src="{{url('public')}}/frontend/images/slide/slide3.jpg" alt="">
+                        @foreach($banners as $ban )
+                            @if($ban -> location == 3)
+                            <img src="{{url('public/uploads/banner')}}/{{$ban -> image}}" alt="">
+                            @break
+                            @endif
+                        @endforeach
                     </div>
                     <h3>
                         <span>CUNG CẤP DỊCH VỤ CHUYÊN NGHIỆP, HIỆN ĐẠI</span>
