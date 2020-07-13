@@ -252,14 +252,15 @@
             <div class="row">
                 <div class="col-lg-6 col-md-12 col-xs-12 mb-4">
                     <div class="item">
-                        <a href="{{route('blog-detail')}}" class="smooth hv-scale" title="">
+                        <a href="{{route('blog-detail',['slug'=>$blog->slug])}}" class="smooth hv-scale" title="">
                             <img src="{{asset('public/Uploads')}}/{{$blog -> image}}" alt="lỗi" title="" class="img-fluid" />
                         </a>
                         <div class="desc s-content mt-2">
                             <h3>
-                                <a href="{{route('blog-detail')}}" title="" class="c-feb f-18">{{$blog -> name }}</a>
+                                <a href="{{route('blog-detail',['slug'=>$blog->slug])}}" title="" class="c-feb f-18">{{$blog -> name }}</a>
+
                             </h3>
-                            <span class="date">12/08/2019 - 65 lượt xem</span>
+                            <span class="date">{{$blog -> created_at}} - 65 lượt xem</span>
                             <div class="content_news c-fff row-6">
                                 {!!$blog->des!!}
                             </div>
@@ -268,17 +269,19 @@
                 </div>
                 <div class="col-lg-6 col-md-12 col-xs-12 mb-4">
                     <div class="item slick4">
+                        @foreach($blg as $value)
                         <div class="box">
-                            <a href="{{route('blog-detail')}}" class="smooth hv-scale">
-                                <img src="{{url('public')}}/frontend/images/den-nao-thich-hop-cho-van-phong-cong-ty-2.png" alt="lỗi" title="" class="img-fluid" />
+                            <a href="{{route('blog-detail',['slug'=>$blog->slug])}}" class="smooth hv-scale">
+                                <img src="{{asset('public/Uploads')}}/{{$value -> image}}" />
                             </a>
                             <div class="desc">
-                                <a href="{{route('blog-detail')}}" title="" class="c-feb f-16">ĐÈN NÀO THÍCH HỢP CHO VĂN PHÒNG CÔNG TY?</a>
+                                <a href="{{route('blog-detail',['slug'=>$blog->slug])}}" title="" class="c-feb f-16">{{$value -> name}}</a>
                                 <div class="content_news c-fff f-14 row-3">
-                                Với hầu hết các sản phẩm đèn bán trên thị trường hiện nay, hầu hết đều mang tính nghệ thuật đặc sắc. những nét đẹp của các bộ đèn mang lại giúp cho không gian thêm phần lộng lẫy
+                                {!!$value->des!!}
                                 </div>
                             </div>
                         </div>
+                        @endforeach
                     </div>
                 </div>
             </div>
