@@ -1,7 +1,7 @@
 <?php
-Route::group(['prefix' => 'customer', 'middleware'=>'hasPermission:2'],function(){
+Route::group(['prefix' => 'customer', 'middleware'=>'hasPermission:3'],function(){
 		//danh sách danh mục
-		Route::get('/','productsController@list')-> name('list-customer');
+		Route::get('/','customerController@list_cus')-> name('list-customer');
 		// thêm danh mục
 		// Route::get('/addproducts','productsController@create') -> name('add');
 		// Route::post('/addproducts','productsController@store') -> name('add-products');

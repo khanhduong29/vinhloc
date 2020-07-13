@@ -61,17 +61,15 @@
                 </thead>
 
                 <tbody>
-                  @foreach($admin as $ad)
+                  @foreach($customer as $cus)
                   <tr>
-                    <td>{{$ad -> id}}</td>
-                    <td><img src="{{asset('public/Uploads/avatar')}}/{{$ad -> avatar}}" alt="" width="100px"></td>
-                    <td>{{$ad -> name}}</td>
-                    <td>{{$ad -> email}}</td>
-                    <td>{{$ad -> role}}</td>
-                    <td>{{$ad -> created_at}}</td>
+                    <td>{{$cus -> id}}</td>
+                    <td>{{$cus -> name}}</td>
+                    <td>{{$cus -> email}}</td>
+                    <td>{{$cus -> created_at}}</td>
                     <td>
-                      <a href="{{ Route('edit-admin',$ad) }}" class="btn btn-primary btn-xs">Sửa</a>
-                      <a href="{{ Route('deletead',$ad) }}" class="btn btn-danger btn-xs" onclick="return confirm('Xác nhận xoá ?')">Xóa</a>
+                      <a href="{{ Route('edit-admin',$cus) }}" class="btn btn-primary btn-xs">Sửa</a>
+                      <a href="{{ Route('deletead',$cus) }}" class="btn btn-danger btn-xs" onclick="return confirm('Xác nhận xoá ?')">Xóa</a>
                     </td>
                   </tr>
                   @endforeach

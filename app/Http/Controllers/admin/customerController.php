@@ -11,9 +11,11 @@
     class customerController extends Controller {
 
         //danh sách dữ liệu
-		public function list_ad(){
+		public function list_cus(){
 			$customer = Customer::all();
-        	return view('pages.admin.customer.list',compact('customer'));
+        	return view('pages.admin.customer.list',[
+        		'customer' => $customer
+        	]);
 		}
 
 
