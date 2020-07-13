@@ -11,7 +11,7 @@ class Products extends Model
     protected $table = 'products';
 
     protected $fillable = ['cate_id','code','slug','name','price','image','des','status'];
-    
+
     // thêm dữ liệu
     public function add(){
     	$validate = request()->validate(
