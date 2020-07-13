@@ -68,8 +68,8 @@
                     <td>{{$blg -> id}}</td>
                     <td>{{$blg -> name}}</td>
                     <td><img src="{{asset('public/Uploads')}}/{{$blg -> image}}" alt="" width="100px"></td>
-                    <td>{{$blg -> des}}</td>
-                    <td>{{$blg -> content}}</td>
+                    <td>{!!$blg->des!!}</td>
+                    <td>{!!$blg->content!!}</td>
                     <td>{{$blg -> created_at}}</td>
                     <td>
                       <a href="{{ Route('edit-blog',$blg) }}" class="btn btn-primary btn-xs">Sửa</a>
