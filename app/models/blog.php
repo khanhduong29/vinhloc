@@ -22,6 +22,7 @@ class blog extends Model
 			],
 			[
 				'required' => ':attribute đang bỏ trống.',
+				'required' => ':attribute đã tồn tại.',
 				'min' => ':attribute chưa được chọn',
 				'max' => 'Cỡ ảnh quá lớn',
 				'mimes' => 'Không đúng định dạng ảnh'
@@ -41,7 +42,7 @@ class blog extends Model
 		}
 		 $models = $this->create([
 			'name' => request()->name,
-			'slug' => Str::slug(request()->name),
+			'slug' => Str::slug(request()->name).Str::random(4),
 			'des' => request()->des,
 			'image' => $image,
 			'content' => request()->content,
