@@ -21,7 +21,7 @@
                         <div class="s-content">
                             <h1 class="c-fff f-24">{{$pro -> name}}</h1>
                             <span class="c-feb font-weight-bold f-18">
-                               {{$pro -> price}}
+                               Giá sản phẩm: {{$pro -> price}}
                             </span>
                             <ul>
                                 <li>

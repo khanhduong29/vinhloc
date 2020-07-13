@@ -8,8 +8,6 @@ use App\Models\products;
 use App\Models\blog;
 use App\Models\banner;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Event;
-use Illuminate\Support\Facades\View;
 
 class ClientController extends Controller {
 
@@ -53,7 +51,7 @@ class ClientController extends Controller {
     }
     public function product_detail($slug) {
         $pro = products::where('slug',$slug)->first();
-        return view::make('pages.client.product-detail',compact('pro'));
+        return view('pages.client.product-detail',compact('pro'));
     }
     public function blog_detail($slug) {
         $detail = blog::where('slug',$slug)->first();
