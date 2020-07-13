@@ -40,8 +40,8 @@ class ClientController extends Controller {
     public function contact() {
         return view('pages.client.contact');
     }
-    public function product_detail($id) {
-        $pro = products::find($id);
+    public function product_detail($slug) {
+        $pro = products::where('slug',$slug)->first();
         return view('pages.client.product-detail',compact('pro'));
     }
     public function blog_detail() {

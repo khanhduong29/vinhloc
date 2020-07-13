@@ -29,7 +29,7 @@
                     <div class="col-12 col-sm-6 col-md-4 col-lg-3">
                         <div class="pt-4">
                             <div class="thumbnail pb-4">
-                                <a href="{{route('product-detail')}}" class="hv-scale p-3 b-ra-30">
+                                <a href="{{route('product-detail',['slug'=>$pro->slug])}}" class="hv-scale p-3 b-ra-30">
                                     <img src="{{asset('public/Uploads')}}/{{$pro -> image}}" alt="" width="a"class ="img-fluid">
                                 </a>
                                 <div class="desc text-center">
