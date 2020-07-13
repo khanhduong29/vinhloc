@@ -11,6 +11,6 @@ Route::group(['prefix' => 'blog', 'middleware'=>'hasPermission:6'],function(){
 		Route::post('edit-blog/{id}','blogController@update') -> name('edit-blog');
 
 		// xóa danh mục
-		Route::get('delete-blog/{id}','blogController@delete')->name('deletePro');
+		Route::get('delete-blog/{id}','blogController@delete')->name('delete-blog');
 	});
  ?>

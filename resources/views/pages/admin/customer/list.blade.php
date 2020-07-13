@@ -68,8 +68,8 @@
                     <td>{{$cus -> email}}</td>
                     <td>{{$cus -> created_at}}</td>
                     <td>
-                      <a href="{{ Route('edit-admin',$cus) }}" class="btn btn-primary btn-xs">Sửa</a>
-                      <a href="{{ Route('deletead',$cus) }}" class="btn btn-danger btn-xs" onclick="return confirm('Xác nhận xoá ?')">Xóa</a>
+                      <a href="{{ Route('edit-cus',$cus) }}" class="btn btn-primary btn-xs">Sửa</a>
+                      <a href="{{ Route('delete-cus',$cus) }}" class="btn btn-danger btn-xs" onclick="return confirm('Xác nhận xoá ?')">Xóa</a>
                     </td>
                   </tr>
                   @endforeach
