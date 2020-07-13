@@ -41,6 +41,7 @@ Route::group(['prefix' => 'admin','namespace'=>'admin','middleware'=>'auth'],fun
     include 'admin/customer.php';
     include 'admin/attribute.php';
     include 'admin/attr_values.php';
+    include 'admin/attr_product.php';
     include 'admin/blog.php';
     include 'admin/brand.php';
 });

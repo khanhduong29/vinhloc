@@ -213,19 +213,93 @@
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
+                Thuộc tính sản phẩm
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item has-treeview">
+                <a href="#" class="nav-link">
+                  <i class="nav-icon fas fa-tachometer-alt"></i>
+                  <p>
+                   Tên thuộc tính
+                    <i class="right fas fa-angle-left"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="{{route('add-name-attr')}}" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Thêm tên thuộc tính</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="{{route('list-attrName')}}" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>DS tên thuộc tính</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item has-treeview">
+                <a href="#" class="nav-link">
+                  <i class="nav-icon fas fa-tachometer-alt"></i>
+                  <p>
+                    Giá trị thuộc tính
+                    <i class="right fas fa-angle-left"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="{{route('add-value-attr')}}" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Thêm giá trị thuộc tính</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="{{route('list-attrValue')}}" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>DS giá trị thuộc tính</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item has-treeview">
+                <a href="#" class="nav-link">
+                  <i class="nav-icon fas fa-tachometer-alt"></i>
+                  <p>
+                    DS thuộc tính
+                    <i class="right fas fa-angle-left"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="{{route('list-attrProduct')}}" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>DS thuộc tính sản phẩm </p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <p>
                 Banner
                 <i class="right fas fa-angle-left"></i>
               </p>
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="{{route('add-banner')}}" class="nav-link">
+                <a href="" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Thêm banner</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="{{route('list-banner')}}" class="nav-link">
+                <a href="" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Danh sách banner</p>
                 </a>
