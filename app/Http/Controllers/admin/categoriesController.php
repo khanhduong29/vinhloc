@@ -1,6 +1,6 @@
-<?php 
+<?php
 	namespace App\Http\Controllers\admin;
-	
+
 	use App\Http\Controllers\Controller;
 	use Illuminate\Http\Request;
 	use App\Models\Categories;
@@ -22,7 +22,7 @@
 			$request->validate([
 			    'name' => 'required|unique:categories|max:255',
 			]);
-    
+
 			$model = $categories->add();
 	        if ($categories) {
 	            return redirect()->route('list-categories') -> with('success','Thêm mới thành công');
@@ -57,6 +57,6 @@
 	    }
 	}
 
-		
+
 
  ?>

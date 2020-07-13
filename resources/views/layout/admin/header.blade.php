@@ -209,11 +209,12 @@
             </ul>
           </li>
           @endif
-          <!-- <li class="nav-item has-treeview">
+          @if(strpos(Auth::user()->role, '1') !== false || strpos(Auth::user()->role, '6') !== false)
+        <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
-                Chi tiết sản phẩm
+                Thuộc tính sản phẩm
                 <i class="right fas fa-angle-left"></i>
               </p>
             </a>
@@ -222,21 +223,21 @@
                 <a href="#" class="nav-link">
                   <i class="nav-icon fas fa-tachometer-alt"></i>
                   <p>
-                    Màu
+                    Tên thuộc tính
                     <i class="right fas fa-angle-left"></i>
                   </p>
                 </a>
                 <ul class="nav nav-treeview">
                   <li class="nav-item">
-                    <a href="" class="nav-link">
+                    <a href="{{route('add-name-attr')}}" class="nav-link">
                       <i class="far fa-circle nav-icon"></i>
-                      <p>Thêm màu</p>
+                      <p>Thêm tên thuộc tính</p>
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a href="" class="nav-link">
+                    <a href="{{route('list-attrName')}}" class="nav-link">
                       <i class="far fa-circle nav-icon"></i>
-                      <p>Danh sách màu</p>
+                      <p>DS tên thuộc tính</p>
                     </a>
                   </li>
                 </ul>
@@ -245,27 +246,50 @@
                 <a href="#" class="nav-link">
                   <i class="nav-icon fas fa-tachometer-alt"></i>
                   <p>
-                    Hình ảnh
+                    Giá trị thuộc tính
                     <i class="right fas fa-angle-left"></i>
                   </p>
                 </a>
                 <ul class="nav nav-treeview">
                   <li class="nav-item">
-                    <a href="" class="nav-link">
+                    <a href="{{route('add-value-attr')}}" class="nav-link">
                       <i class="far fa-circle nav-icon"></i>
-                      <p>Thêm hình ảnh</p>
+                      <p>Thêm giá trị thuộc tính</p>
                     </a>
                   </li>
                   <li class="nav-item">
+                    <a href="{{route('list-attrValue')}}" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>DS giá trị thuộc tính</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item has-treeview">
+                <a href="#" class="nav-link">
+                  <i class="nav-icon fas fa-tachometer-alt"></i>
+                  <p>
+                    Thuộc tính sản phẩm
+                    <i class="right fas fa-angle-left"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+                  {{-- <li class="nav-item">
                     <a href="" class="nav-link">
                       <i class="far fa-circle nav-icon"></i>
-                      <p>Danh sách hình ảnh</p>
+                      <p>Thêm giá trị thuộc tính</p>
+                    </a>
+                  </li> --}}
+                  <li class="nav-item">
+                    <a href="" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>DS thuộc tính sản phẩm</p>
                     </a>
                   </li>
                 </ul>
               </li>
             </ul>
-          </li> -->
+          </li>
           <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-tachometer-alt"></i>
@@ -314,7 +338,7 @@
               </li>
             </ul>
           </li>
-
+          @endif
         </ul>
       </nav>
       <!-- /.sidebar-menu -->

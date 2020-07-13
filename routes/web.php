@@ -38,6 +38,8 @@ Route::group(['prefix' => 'admin','namespace'=>'admin','middleware'=>'auth'],fun
     include 'admin/category.php';
     include 'admin/products.php';
     include 'admin/customer.php';
+    include 'admin/attribute.php';
+    include 'admin/attr_values.php';
 });
 
 // giao diện login
