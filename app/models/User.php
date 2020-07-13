@@ -134,25 +134,27 @@ class User extends Authenticatable
 				]
 			);
 		}
-		$model = $user->role;
-		dd($model);
-		// $roles = [];
-        // if (request()->product) {
-        //     array_push($roles, 5);
-        // }
-        // if (request()->category) {
-        //     array_push($roles, 4);
-        // }
-        // if (request()->customer) {
-        //     array_push($roles, 3);
-        // }
-        // if (request()->user) {
-        //     array_push($roles, 2);
-        // }
-        // if (request()->full) {
-        //     array_push($roles, 1);
-        // }
-        // $role = implode(",",$roles);
+        $roles = [];
+        if (request()->product) {
+            array_push($roles, 5);
+        }
+        if (request()->category) {
+            array_push($roles, 4);
+        }
+        if (request()->customer) {
+            array_push($roles, 3);
+        }
+        if (request()->user) {
+            array_push($roles, 2);
+        }
+        if (request()->full) {
+            array_push($roles, 1);
+        }
+        $role = implode(",",$roles);
+
+        if(empty($role)) {
+            $role = $user->role;
+        }
 
 		$avatar = '';
 		if(request() -> has('file')){
@@ -165,7 +167,8 @@ class User extends Authenticatable
 		$updated = $this->update([
 			'name' => request()->name,
 			'email' => request()->email,
-			'avatar' => $avatar,
+            'avatar' => $avatar,
+            'role' => $role,
 			'password' => Hash::make(request()->password),
 		]);
     }
