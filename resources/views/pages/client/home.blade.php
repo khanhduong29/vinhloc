@@ -3,13 +3,18 @@
 <main>
     <div class="container">
         <section class="slick0 big-carousel">
-            @foreach($banners as $ban )
-                @if($ban -> location == 1)
-                <a href="" title="">
-                    <img src="{{url('public/uploads/banner')}}/{{$ban -> image}}" alt="">
-                </a>
-                @endif
-            @endforeach
+            <a href="" title="">
+                <img src="{{url('public')}}/frontend/images/slide/slide0.jpg" alt="">
+            </a>
+            <a href="" title="">
+                <img src="{{url('public')}}/frontend/images/slide/slide1.jpg" alt="">
+            </a>
+            <a href="" title="">
+                <img src="{{url('public')}}/frontend/images/slide/slide2.jpg" alt="">
+            </a>
+            <a href="" title="">
+                <img src="{{url('public')}}/frontend/images/slide/slide3.jpg" alt="">
+            </a>
         </section>
     </div>
     <section class="cat-pro space-title">
@@ -258,7 +263,6 @@
                         <div class="desc s-content mt-2">
                             <h3>
                                 <a href="{{route('blog-detail',['slug'=>$blog->slug])}}" title="" class="c-feb f-18">{{$blog -> name }}</a>
-
                             </h3>
                             <span class="date">{{$blog -> created_at}} - 65 lượt xem</span>
                             <div class="content_news c-fff row-6">
@@ -271,11 +275,11 @@
                     <div class="item slick4">
                         @foreach($blg as $value)
                         <div class="box">
-                            <a href="{{route('blog-detail',['slug'=>$blog->slug])}}" class="smooth hv-scale">
+                            <a href="{{route('blog-detail',['slug'=>$value->slug])}}" class="smooth hv-scale">
                                 <img src="{{asset('public/Uploads')}}/{{$value -> image}}" />
                             </a>
                             <div class="desc">
-                                <a href="{{route('blog-detail',['slug'=>$blog->slug])}}" title="" class="c-feb f-16">{{$value -> name}}</a>
+                                <a href="{{route('blog-detail',['slug'=>$value->slug])}}" title="" class="c-feb f-16">{{$value -> name}}</a>
                                 <div class="content_news c-fff f-14 row-3">
                                 {!!$value->des!!}
                                 </div>
