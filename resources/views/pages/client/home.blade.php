@@ -265,9 +265,9 @@
                                 <a href="{{route('blog-detail')}}" title="" class="c-feb f-18">{{$blog -> name }}</a>
                             </h3>
                             <span class="date">12/08/2019 - 65 lượt xem</span>
-                            <p class="content_news c-fff">
-                            {!!$blog->des!!}
-                            </p>
+                            <div class="content_news c-fff row-6">
+                                {!!$blog->des!!}
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -279,64 +279,9 @@
                             </a>
                             <div class="desc">
                                 <a href="{{route('blog-detail')}}" title="" class="c-feb f-16">ĐÈN NÀO THÍCH HỢP CHO VĂN PHÒNG CÔNG TY?</a>
-                                <p class="content_news c-fff f-14 row-3">
+                                <div class="content_news c-fff f-14 row-3">
                                 Với hầu hết các sản phẩm đèn bán trên thị trường hiện nay, hầu hết đều mang tính nghệ thuật đặc sắc. những nét đẹp của các bộ đèn mang lại giúp cho không gian thêm phần lộng lẫy
-                                </p>
-                            </div>
-                        </div>
-                        <div class="box">
-                            <a href="{{route('blog-detail')}}" class="smooth hv-scale">
-                                <img src="{{url('public')}}/frontend/images/den-nao-thich-hop-cho-van-phong-cong-ty-2.png" alt="lỗi" title="" class="img-fluid" />
-                            </a>
-                            <div class="desc">
-                                <a href="{{route('blog-detail')}}" title="" class="c-feb f-16">ĐÈN NÀO THÍCH HỢP CHO VĂN PHÒNG CÔNG TY?</a>
-                                <p class="content_news c-fff f-14 row-3">
-                                Với hầu hết các sản phẩm đèn bán trên thị trường hiện nay, hầu hết đều mang tính nghệ thuật đặc sắc. những nét đẹp của các bộ đèn mang lại giúp cho không gian thêm phần lộng lẫy
-                                </p>
-                            </div>
-                        </div>
-                        <div class="box">
-                            <a href="{{route('blog-detail')}}" class="smooth hv-scale">
-                                <img src="{{url('public')}}/frontend/images/den-nao-thich-hop-cho-van-phong-cong-ty-2.png" alt="lỗi" title="" class="img-fluid" />
-                            </a>
-                            <div class="desc">
-                                <a href="{{route('blog-detail')}}" title="" class="c-feb f-16">ĐÈN NÀO THÍCH HỢP CHO VĂN PHÒNG CÔNG TY?</a>
-                                <p class="content_news c-fff f-14 row-3">
-                                Với hầu hết các sản phẩm đèn bán trên thị trường hiện nay, hầu hết đều mang tính nghệ thuật đặc sắc. những nét đẹp của các bộ đèn mang lại giúp cho không gian thêm phần lộng lẫy
-                                </p>
-                            </div>
-                        </div>
-                        <div class="box">
-                            <a href="{{route('blog-detail')}}" class="smooth hv-scale">
-                                <img src="{{url('public')}}/frontend/images/den-nao-thich-hop-cho-van-phong-cong-ty-2.png" alt="lỗi" title="" class="img-fluid" />
-                            </a>
-                            <div class="desc">
-                                <a href="" title="" class="c-feb f-16">ĐÈN NÀO THÍCH HỢP CHO VĂN PHÒNG CÔNG TY?</a>
-                                <p class="content_news c-fff f-14 row-3">
-                                Với hầu hết các sản phẩm đèn bán trên thị trường hiện nay, hầu hết đều mang tính nghệ thuật đặc sắc. những nét đẹp của các bộ đèn mang lại giúp cho không gian thêm phần lộng lẫy
-                                </p>
-                            </div>
-                        </div>
-                        <div class="box">
-                            <a href="{{route('blog-detail')}}" class="smooth hv-scale">
-                                <img src="{{url('public')}}/frontend/images/den-nao-thich-hop-cho-van-phong-cong-ty-2.png" alt="lỗi" title="" class="img-fluid" />
-                            </a>
-                            <div class="desc">
-                                <a href="{{route('blog-detail')}}" title="" class="c-feb f-16">ĐÈN NÀO THÍCH HỢP CHO VĂN PHÒNG CÔNG TY?</a>
-                                <p class="content_news c-fff f-14 row-3">
-                                Với hầu hết các sản phẩm đèn bán trên thị trường hiện nay, hầu hết đều mang tính nghệ thuật đặc sắc. những nét đẹp của các bộ đèn mang lại giúp cho không gian thêm phần lộng lẫy
-                                </p>
-                            </div>
-                        </div>
-                        <div class="box">
-                            <a href="{{route('blog-detail')}}" class="smooth hv-scale">
-                                <img src="{{url('public')}}/frontend/images/den-nao-thich-hop-cho-van-phong-cong-ty-2.png" alt="lỗi" title="" class="img-fluid" />
-                            </a>
-                            <div class="desc">
-                                <a href="{{route('blog-detail')}}" title="" class="c-feb f-16">ĐÈN NÀO THÍCH HỢP CHO VĂN PHÒNG CÔNG TY?</a>
-                                <p class="content_news c-fff f-14 row-3">
-                                Với hầu hết các sản phẩm đèn bán trên thị trường hiện nay, hầu hết đều mang tính nghệ thuật đặc sắc. những nét đẹp của các bộ đèn mang lại giúp cho không gian thêm phần lộng lẫy
-                                </p>
+                                </div>
                             </div>
                         </div>
                     </div>
