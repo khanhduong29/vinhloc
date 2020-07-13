@@ -25,7 +25,7 @@
               <?php endfor ?>
             </h5>
           </section>
-            <a href="{{route('add-admin')}}">Thêm customer</a>
+            <a href="{{route('add-value-attr')}}">Thêm admin</a>
 
           </div>
           <div class="col-sm-6">
@@ -53,21 +53,23 @@
                 <thead>
                   <tr>
                     <th>ID</th>
-                    <th>Name</th>
-                    <th>Email</th>
+                    <th>Thuộc tính</th>
+                    <th>Giá trị</th>
                     <th>Ngày tạo</th>
+                    <th>#</th>
                   </tr>
                 </thead>
+
                 <tbody>
-                  @foreach($customer as $cus)
+                  @foreach($attrValue as $value)
                   <tr>
-                    <td>{{$cus -> id}}</td>
-                    <td>{{$cus -> name}}</td>
-                    <td>{{$cus -> email}}</td>
-                    <td>{{$cus -> created_at}}</td>
+                    <td>{{$value->id}}</td>
+                    <td>{{$value->attr_id}}</td>
+                    <td>{{$value->value}}</td>
+                    <td>{{$value->created_at}}</td>
                     <td>
-                      <a href="{{ Route('edit-cus',$cus) }}" class="btn btn-primary btn-xs">Sửa</a>
-                      <a href="{{ Route('delete-cus',$cus) }}" class="btn btn-danger btn-xs" onclick="return confirm('Xác nhận xoá ?')">Xóa</a>
+                      <a href="{{ Route('edit-attrValue',$value) }}" class="btn btn-primary btn-xs">Sửa</a>
+                      <a href="{{ Route('delete-attrValue',$value) }}" class="btn btn-danger btn-xs" onclick="return confirm('Xác nhận xoá ?')">Xóa</a>
                     </td>
                   </tr>
                   @endforeach

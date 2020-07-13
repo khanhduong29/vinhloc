@@ -79,11 +79,10 @@
                   </div>
                   <div class="form-group">
                     <label for="exampleInputFile">Chọn ảnh sản phẩm</label>
-                    <div class="input-group row">
-                      <div class="col-8"><input type="file" name="file" class="text-center center-block file-upload" accept="image/gif, image/jpeg, image/jpg, image/png"/>  </div>
-                      <div class="col-4"><img src="{{asset('public/Uploads')}}/{{$products-> image}}" alt="Chưa có hình ảnh" width="100%"></div>
-
+                    <div class="input-group">
+                      <input type="file" name="file" class="form-control mb-3" accept="image/gif, image/jpeg, image/jpg, image/png"/>
                     </div>
+                    <img src="{{asset('public/Uploads')}}/{{$products-> image}}" class="d-block" alt="Chưa có hình ảnh" width="120">
                   </div>
                   <div class="form-group">
                     <label for="">Giá sản phẩm</label>
