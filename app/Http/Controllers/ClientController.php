@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Categories;
 use App\Models\products;
+use App\Models\blog;
 use Illuminate\Support\Facades\Auth;
 
 class ClientController extends Controller {
@@ -22,7 +23,9 @@ class ClientController extends Controller {
     }
     public function home() {
         $products = products::all();
-        return view('pages.client.home',compact('products'));
+        $blog = blog::first();
+        
+        return view('pages.client.home',compact('products','blog'));
     }
     public function about() {
         return view('pages.client.about');
