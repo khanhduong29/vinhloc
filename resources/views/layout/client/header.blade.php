@@ -41,8 +41,8 @@
                     </div>
                     <div class="col-lg-3 col-md-3 col-xs-12 d-flex ">
                         <div class="fr-search text-right">
-                            <form action="" method="get">
-                                <input type="text" name="q" placeholder="Tìm kiếm sản phẩm ..." value="">
+                            <form action="{{route('search')}}" method="get">
+                                <input type="text" name="key" placeholder="Tìm kiếm sản phẩm ..." value="">
                                 <button type="submit" value="search"></button>
                             </form>
                         </div>
