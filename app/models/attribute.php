@@ -4,10 +4,11 @@ namespace App\Models;
 
 use Illuminate\Support\Str;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\attributeValue;
 
-class attrName extends Model
+class attribute extends Model
 {
-    protected $table = 'attribute';
+    protected $table = 'attributes';
 
     protected $fillable = ['name'];
 
@@ -28,5 +29,10 @@ class attrName extends Model
 		$updated = $this->update([
 			'name' => $name
 		]);
-	}
+    }
+
+    public function values()
+    {
+        return $this->hasMany('App\Models\attributeValue');
+    }
 }

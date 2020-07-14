@@ -5,8 +5,8 @@
 	use Illuminate\Http\Request;
 	use App\Models\products;
     use App\Models\categories;
-    use App\Models\attrName;
-    use App\Models\attrValue;
+    use App\Models\attribute;
+    use App\Models\attributeValue;
 	use File;
 
 	class productsController extends Controller {
@@ -23,14 +23,10 @@
 		// thêm dữ liệu
 		public function create(){
             $categories = categories::all();
-            $attrName = attrName::all();
-            $where = attrName::select('name')->get()->toArray();
-            dd(($where));
-            $attrValue = attrvalue::where('attr_name',$where)->get();
+            $attributes = attribute::all();
 			return view('pages.admin.products.add',[
 				'categories' => $categories,
-                'attrName' => $attrName,
-                'attrValue' => $attrValue
+                'attributes' => $attributes
 			]);
 		}
 		public function store(Request $request,products $products){
