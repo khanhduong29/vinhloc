@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Categories;
 use App\Models\products;
+use App\Models\brand;
 use App\Models\blog;
 use App\Models\banner;
 use Illuminate\Support\Facades\Auth;
@@ -19,6 +20,8 @@ class ClientController extends Controller {
             view()->share([
                 'categories' => Categories::all(),
                 'banners' => banner::all(),
+                'brand' => brand::all(),
+
                 // 'banners' => $banners,
             ]);
             return $next($request);
@@ -27,10 +30,8 @@ class ClientController extends Controller {
     public function home() {
         $products = products::all();
         $blog = blog::first();
-
         $blg = blog::all();
         return view('pages.client.home',compact('products','blog','blg'));
-
         return view('pages.client.home',compact('products','blog'));
     }
     public function about() {

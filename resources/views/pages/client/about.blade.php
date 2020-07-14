@@ -115,47 +115,15 @@
             <h2 class="text-center">
                 <span class="title-big">Khách hàng tiêu biểu</span>
             </h2>
-            <section class="slick5 pt-lg-5 pt-4 pb-5 wow zoomIn">
+             <section class="slick5 pt-lg-5 pt-4 pb-5 wow zoomIn">
+                @foreach($brand as $value)
                 <div>
                     <a href="" title="" class="avt">
-                        <img src="{{url('public')}}/frontend/images/thumbs/02fe85320661ff3fa670.jpg" alt="">
+                        <img src="{{asset('public/Uploads')}}/{{$value -> image}}" alt="">
                     </a>
+                   
                 </div>
-                <div>
-                    <a href="" title="" class="avt">
-                        <img src="{{url('public')}}/frontend/images/thumbs/dabaco-logo.jpg" alt="">
-                    </a>
-                </div>
-                <div>
-                    <a href="" title="" class="avt">
-                        <img src="{{url('public')}}/frontend/images/thumbs/logo-phuthai.jpg" alt="">
-                    </a>
-                </div>
-                <div>
-                    <a href="" title="" class="avt">
-                        <img src="{{url('public')}}/frontend/images/thumbs/single-logo.png" alt="">
-                    </a>
-                </div>
-                <div>
-                    <a href="" title="" class="avt">
-                        <img src="{{url('public')}}/frontend/images/thumbs/tai-xuong-1.jpg" alt="">
-                    </a>
-                </div>
-                <div>
-                    <a href="" title="" class="avt">
-                        <img src="{{url('public')}}/frontend/images/thumbs/tai-xuong.jpg" alt="">
-                    </a>
-                </div>
-                <div>
-                    <a href="" title="" class="avt">
-                        <img src="{{url('public')}}/frontend/images/thumbs/tai-xuong.png" alt="">
-                    </a>
-                </div>
-                <div>
-                    <a href="" title="" class="avt">
-                        <img src="{{url('public')}}/frontend/images/thumbs/thong-tu-quy-dinh-ve-cac-bieu-mau-su-dung-de-xu-phat-vi-pham-hanh-chinh-thuoc-tham-quyen-cua-cong-an-nhan-dan-2.png" alt="">
-                    </a>
-                </div>
+                @endforeach
             </section>
         </div>
     </section>
