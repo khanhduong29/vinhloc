@@ -59,13 +59,13 @@ class banner extends Model
 
 	}
 	// cập nhật dữ liệu
-	public function update_data($pro){
+	public function update_data($ban){
 		$validate = request()->validate(
 			[
 				'name' => 'required',
 				'location' => 'required',
 				'link' => 'required',
-				'file'=>'required|max:10000|mimes:jpg,jpeg,png,gif'
+				'file'=>'max:10000|mimes:jpg,jpeg,png,gif'
 			],
 			[
 				'required' => ':attribute đang bỏ trống.',
@@ -92,7 +92,7 @@ class banner extends Model
 			$file -> move(base_path('public/Uploads/Banner'),$file -> getClientOriginalName());
 			$image = $file -> getClientOriginalName();
 		}else{
-			$image = $pro->image;
+			$image = $ban->image;
 		}
 		$updated = $this->update([
 			'name' => request()->name,
