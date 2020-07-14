@@ -24,7 +24,7 @@
 		}
 		public function store(Request $request,attrValue $attrValue){
 			$request->validate([
-                'attr_id' => 'required',
+                'attr_name' => 'required',
                 'value' => 'required'
 			]);
 			$attrValue->add();
