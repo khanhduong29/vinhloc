@@ -4,25 +4,32 @@
 	use App\Http\Controllers\Controller;
 	use Illuminate\Http\Request;
 	use App\Models\products;
-	use App\Models\categories;
+    use App\Models\categories;
+    use App\Models\attrName;
+    use App\Models\attrValue;
 	use File;
 
 	class productsController extends Controller {
 
 		//danh sách dữ liệu
 		public function list_pro(){
-			$products = products::all();
+            $products = products::all();
         	return view('pages.admin.products.list', [
-        		'products' => $products
+                'products' => $products
         	]);
 		}
 
 
 		// thêm dữ liệu
 		public function create(){
-			$categories = categories::all();
+            $categories = categories::all();
+            $attrName = attrName::all();
+            $where = attrName::select('name')->get()->toArray();
+            $attrValue = attrvalue::where('attr_name',$where)->get();
 			return view('pages.admin.products.add',[
 				'categories' => $categories,
+                'attrName' => $attrName,
+                'attrValue' => $attrValue
 			]);
 		}
 		public function store(Request $request,products $products){

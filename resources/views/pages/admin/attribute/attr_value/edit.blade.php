@@ -62,10 +62,10 @@
                 <div class="card-body">
                     <div class="form-group">
                     <label for="">Thuộc tính</label>
-                    <select name="attr_id" class="form-control" required>
+                    <select name="attr_name" class="form-control" required>
                         <option >--Chọn loại sản phẩm--</option>
                         @foreach($attrName as $value)
-                        <option value="{{ $value->id }}" {{ $attrValue->attr_id == $value->id ? "selected" : "" }}>{{ $value->name }}</option>
+                        <option value="{{ $value->name }}" {{ $attrValue->attr_id == $value->id ? "selected" : "" }}>{{ $value->name }}</option>
                         @endforeach
                     </select>
                     </div>

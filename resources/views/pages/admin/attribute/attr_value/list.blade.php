@@ -64,7 +64,7 @@
                   @foreach($attrValue as $value)
                   <tr>
                     <td>{{$value->id}}</td>
-                    <td>{{$value->attr_id}}</td>
+                    <td>{{$value->attr_name}}</td>
                     <td>{{$value->value}}</td>
                     <td>{{$value->created_at}}</td>
                     <td>

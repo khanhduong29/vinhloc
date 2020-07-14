@@ -15,7 +15,7 @@ class CreateAttrValuesTable extends Migration
     {
         Schema::create('attr_values', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('attr_id');
+            $table->string('attr_name');
             $table->string('value');
             $table->timestamps();
         });

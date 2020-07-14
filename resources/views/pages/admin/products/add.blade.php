@@ -98,6 +98,17 @@
                                   style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"></textarea>
                       </div>
                   </div>
+                  @foreach($attrName as $att)
+                  <div class="form-group">
+                    <label for="">{{$att->name}}</label>
+                    <div class="form-check">
+                        @foreach($attrValue as $attrValues)
+                            <input type="checkbox" class="form-check-input" value="{{$attrValues->id}}" id="exampleCheck1" name="attrValue">
+                            <label class="form-check-label" for="exampleCheck1">{{$attrValues->value}}</label>
+                        @endforeach
+                    </div>
+                  </div>
+                  @endforeach
                   <div class="form-check">
                     <input type="checkbox" class="form-check-input" id="exampleCheck1" name="status">
                     <label class="form-check-label" for="exampleCheck1">Hiện</label>
