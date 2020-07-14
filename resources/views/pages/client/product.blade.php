@@ -15,7 +15,7 @@
                 </select>
                 <select class="js-example-basic-single m-2">
                     @foreach($products as $pr)
-                    <option value="AL">Giá : {{$pr -> price}}</option>    
+                    <option value="AL">Giá sản phẩm : {{number_format ($pr -> price)}}</option>    
                     @endforeach
                 </select>
                 <select class="js-example-basic-single m-2">
@@ -37,7 +37,7 @@
 
                                         <a href="{{route('product-detail',['slug'=>$pro->slug])}}" title="" class="c-fff text-uppercase f-16">{{$pro -> name}}</a>
                                     </h3>
-                                    <span class="c-feb f-16 text-uppercase">{{$pro -> price}}</span>
+                                    <span class="c-feb f-16 text-uppercase">Giá : {{number_format ($pr -> price)}}</span>
                                     <a href="" class="add-cart"><img src="{{url('public')}}/frontend/images/icon/ic-cart-feb.png" alt=""></a>
                                 </div>
                             </div>
