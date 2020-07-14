@@ -257,7 +257,7 @@
                         </a>
                         <div class="desc s-content mt-2">
                             <h3>
-                                <a href="{{route('blog-detail',['slug'=>$blog->slug])}}" title="" class="c-feb f-18">{{$blog -> name }}</a>
+                                <a href="{{route('blog-detail',['slug'=>$blog->slug])}}" title="" class="c-feb f-18 row-2">{{$blog -> name }}</a>
                             </h3>
                             <span class="date">{{$blog -> created_at}} - 65 lượt xem</span>
                             <div class="content_news c-fff row-6">
@@ -271,12 +271,12 @@
                         @foreach($blg as $value)
                         <div class="box">
                             <a href="{{route('blog-detail',['slug'=>$value->slug])}}" class="smooth hv-scale">
-                                <img src="{{asset('public/Uploads')}}/{{$value -> image}}" />
+                                <img src="{{asset('public/Uploads')}}/{{$value -> image}}" class="img-fluid"/>
                             </a>
                             <div class="desc">
-                                <a href="{{route('blog-detail',['slug'=>$value->slug])}}" title="" class="c-feb f-16">{{$value -> name}}</a>
-                                <div class="content_news c-fff f-14 row-3">
-                                {!!$value->des!!}
+                                <a href="{{route('blog-detail',['slug'=>$value->slug])}}" title="" class="c-feb f-16 row-2">{{$value -> name}}</a>
+                                <div class="content_news c-fff f-14 row-2">
+                                    {!!$value->des!!}
                                 </div>
                             </div>
                         </div>
@@ -292,46 +292,14 @@
                 <span class="title-big">Khách hàng tiêu biểu</span>
             </h2>
             <section class="slick5 pt-lg-5 pt-4 pb-5 wow zoomIn">
+                @foreach($brand as $value)
                 <div>
                     <a href="" title="" class="avt">
-                        <img src="{{url('public')}}/frontend/images/thumbs/02fe85320661ff3fa670.jpg" alt="">
+                        <img src="{{asset('public/Uploads')}}/{{$value -> image}}" alt="">
                     </a>
+                   
                 </div>
-                <div>
-                    <a href="" title="" class="avt">
-                        <img src="{{url('public')}}/frontend/images/thumbs/dabaco-logo.jpg" alt="">
-                    </a>
-                </div>
-                <div>
-                    <a href="" title="" class="avt">
-                        <img src="{{url('public')}}/frontend/images/thumbs/logo-phuthai.jpg" alt="">
-                    </a>
-                </div>
-                <div>
-                    <a href="" title="" class="avt">
-                        <img src="{{url('public')}}/frontend/images/thumbs/single-logo.png" alt="">
-                    </a>
-                </div>
-                <div>
-                    <a href="" title="" class="avt">
-                        <img src="{{url('public')}}/frontend/images/thumbs/tai-xuong-1.jpg" alt="">
-                    </a>
-                </div>
-                <div>
-                    <a href="" title="" class="avt">
-                        <img src="{{url('public')}}/frontend/images/thumbs/tai-xuong.jpg" alt="">
-                    </a>
-                </div>
-                <div>
-                    <a href="" title="" class="avt">
-                        <img src="{{url('public')}}/frontend/images/thumbs/tai-xuong.png" alt="">
-                    </a>
-                </div>
-                <div>
-                    <a href="" title="" class="avt">
-                        <img src="{{url('public')}}/frontend/images/thumbs/thong-tu-quy-dinh-ve-cac-bieu-mau-su-dung-de-xu-phat-vi-pham-hanh-chinh-thuoc-tham-quyen-cua-cong-an-nhan-dan-2.png" alt="">
-                    </a>
-                </div>
+                @endforeach
             </section>
         </div>
     </section>
