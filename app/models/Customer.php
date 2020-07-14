@@ -27,19 +27,22 @@ class Customer extends Authenticatable
 			[
 				'name' => 'required',
 				'email' => 'required|unique:customer,email',
-				'password' => 'required|min:6',
+                'password' => 'required|min:6',
+                'phone' => 'required',
 				'confirm_password' => 'required|same:password',
 			],
 			[
-				'required' => ':attribute Đang bỏ trống.',
+				'required' => ':attribute đang bỏ trống.',
 				'unique' => ':attribute đã tồn tại',
-				'min' => ':attribute phai tren 6 ky tu',
+                'min' => ':attribute phải trên 6 ký tự',
+                'same' => ':attribute phải giống mật khẩu'
 			],
 			[
-                 'name' => 'Ten san pham',
+                 'name' => 'Tên',
                  'email' => 'Email',
-                 'phone' => 'So dien thoai',
-                 'password' => 'Mat khau',
+                 'phone' => 'Số điện thoại',
+                 'password' => 'Mật khẩu',
+                 'confirm_password' => 'Xác nhận mật khẩu'
 			]
         );
         $models = $this->create([
@@ -53,19 +56,20 @@ class Customer extends Authenticatable
     }
 
     public function login() {
-        $validate = request()->validate(
+        $validator = request()->validate(
 			[
 				'email' => 'required',
 				'password' => 'required',
 			],
 			[
-				'required' => ':attribute Đang bỏ trống.',
+				'required' => ':attribute đang bỏ trống.',
 			],
 			[
                  'email' => 'Email',
-                 'password' => 'Mat khau',
+                 'password' => 'Mật khẩu',
 			]
         );
+
         if (Auth::guard('customer')->attempt(request()->only('email','password'))){
             return true;
          } else {

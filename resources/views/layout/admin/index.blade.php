@@ -65,15 +65,28 @@
             $('#customer').prop("checked", false);
             $('#category').prop("checked", false);
             $('#product').prop("checked ", false);
+            $('#attr').prop("checked ", false);
+            $('#banner').prop("checked ", false);
+            $('#blog').prop("checked ", false);
+            $('#brand').prop("checked ", false);
+
             $('#user').attr("disabled", true);
             $('#customer').attr("disabled", true);
             $('#category').attr("disabled", true);
             $('#product').attr("disabled", true);
+            $('#attr').attr("disabled", true);
+            $('#banner').attr("disabled", true);
+            $('#blog').attr("disabled", true);
+            $('#brand').attr("disabled", true);
         } else {
             $('#user').removeAttr("disabled");
             $('#customer').removeAttr("disabled");
             $('#category').removeAttr("disabled");
             $('#product').removeAttr("disabled");
+            $('#attr').removeAttr("disabled");
+            $('#banner').removeAttr("disabled");
+            $('#blog').removeAttr("disabled");
+            $('#brand').removeAttr("disabled");
         }
     });
   });

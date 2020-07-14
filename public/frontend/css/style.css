@@ -302,7 +302,7 @@ a.c-feb:hover{
     transform: translateX(-50%);
     background: url(../images/border/ic-afterhd.png) no-repeat;
 }
-.body-sticker .menu-left, 
+.body-sticker .menu-left,
 .body-sticker .menu-right {
     list-style: none;
     margin: 0;
@@ -375,7 +375,7 @@ a.c-feb:hover{
 .body-sticker ul li ul li ul{
     background: rgba(0, 0, 0, .8);
 }
-.body-sticker li ul { 
+.body-sticker li ul {
     opacity: 0;
     pointer-events: none;
     visibility: hidden;
@@ -501,8 +501,8 @@ a.c-feb:hover{
     height: 39px;
     padding-top: 40px;
 }
-.nav-toggler span, 
-.nav-toggler span:before, 
+.nav-toggler span,
+.nav-toggler span:before,
 .nav-toggler span:after {
     width: 24px;
     height: 3px;
@@ -971,7 +971,7 @@ a.c-feb:hover{
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
     background: url(../images/border/before-pro3.png) no-repeat;
-    
+
 }
 
 .share .item {
@@ -1051,7 +1051,7 @@ a.c-feb:hover{
     position: relative;
     background: url(../images/border/bk-menu.png) no-repeat;
     background-size: 100% 90%;
-    overflow: hidden;   
+    overflow: hidden;
     padding: 0 30px;
 }
 .menu-footer ul{
@@ -1065,7 +1065,7 @@ a.c-feb:hover{
     height: 86px;
     left: 0px;
     right: 0px;
-    background: url(../images/border/ic-bg-fter1.png)left no-repeat, url(../images/border/ic-bg-fter2.png)right no-repeat;   
+    background: url(../images/border/ic-bg-fter1.png)left no-repeat, url(../images/border/ic-bg-fter2.png)right no-repeat;
 }
 .menu-footer>ul>li {
     position: relative;
@@ -1324,11 +1324,11 @@ a.c-feb:hover{
     color: #dbaf56;
     text-transform: uppercase;
     font-size: 20px;
-    
+
 }
 .service a{
     color: #feb300;
-} 
+}
 .contain-sr{
     display: block;
     overflow: hidden;
@@ -1409,7 +1409,7 @@ a.c-feb:hover{
 .pagination a{
     width: 2.5rem;
     height: 2.5rem;
-    
+
     text-align: center;
     border: 1px solid #fdb300;
     color: #fff;
@@ -1924,4 +1924,9 @@ a.c-feb:hover{
 	background: rgba(0, 0, 0, 0.1) !important;
 	color: #E7AB3C;
 	transition: all 0.5s;
+}
+.error-message {
+    color: #f73838;
+    font-weight: 400;
+    font-size: 13px;
 }

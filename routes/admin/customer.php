@@ -1,5 +1,5 @@
 <?php
-Route::group(['prefix' => 'customer', 'middleware'=>'hasPermission:3'],function(){
+Route::group(['prefix' => 'customer', 'middleware'=>'hasPermission:2'],function(){
 		//danh sách danh mục
 		Route::get('/','customerController@list_cus')-> name('list-customer');
 		// thêm danh mục

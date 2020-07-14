@@ -1,6 +1,6 @@
 <?php
 
-	Route::group(['prefix' => 'attribute', 'middleware'=>'hasPermission:6'],function(){
+	Route::group(['prefix' => 'attribute', 'middleware'=>'hasPermission:5'],function(){
         //danh sách danh mục
 
         Route::get('attrName','attrNameController@list_attrName') -> name('list-attrName');

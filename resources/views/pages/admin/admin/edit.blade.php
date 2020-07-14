@@ -83,14 +83,20 @@
                   <div class="form-check">
                     <input type="checkbox" name="full" id="full" class="form-check-input" value="1" {{ in_array(1,$arr_role) ?"checked" : ""}}>
                     <label class="form-check-label" for="exampleCheck1">Full</label>
-                    <input type="checkbox" name="user" id="user" class="form-check-input" value="2" {{ in_array(2,$arr_role) ?"checked" : ""}}>
-                    <label class="form-check-label" for="exampleCheck1">Table Admin</label>
-                    <input type="checkbox" name="customer" id="customer"  class="form-check-input" value="3" {{ in_array(3,$arr_role) ?"checked" : ""}}>
+                    <input type="checkbox" name="customer" id="customer"  class="form-check-input" value="2" {{ in_array(2,$arr_role) ?"checked" : ""}}>
                     <label class="form-check-label" for="exampleCheck1">Table Customer</label>
-                    <input type="checkbox" name="category" id="category" class="form-check-input" value="4" {{ in_array(4,$arr_role) ?"checked" : ""}}>
+                    <input type="checkbox" name="category" id="category" class="form-check-input" value="3" {{ in_array(3,$arr_role) ?"checked" : ""}}>
                     <label class="form-check-label" for="exampleCheck1">Table Category</label>
-                    <input type="checkbox" name="product" id="product" class="form-check-input" value="5" {{ in_array(5,$arr_role) ?"checked" : ""}}>
+                    <input type="checkbox" name="product" id="product" class="form-check-input" value="4" {{ in_array(4,$arr_role) ?"checked" : ""}}>
                     <label class="form-check-label" for="exampleCheck1">Table Product</label>
+                    <input type="checkbox" name="attr" id="attr" class="form-check-input" value="5" {{ in_array(5,$arr_role) ?"checked" : ""}}>
+                    <label class="form-check-label" for="attr">Manager Attribute</label>
+                    <input type="checkbox" name="banner" id="banner" class="form-check-input" value="6" {{ in_array(6,$arr_role) ?"checked" : ""}}>
+                    <label class="form-check-label" for="exampleCheck1">Table Banner</label>
+                    <input type="checkbox" name="blog" id="blog" class="form-check-input" value="7" {{ in_array(7,$arr_role) ?"checked" : ""}}>
+                    <label class="form-check-label" for="exampleCheck1">Table Blog</label>
+                    <input type="checkbox" name="brand" id="brand" class="form-check-input" value="8" {{ in_array(8,$arr_role) ?"checked" : ""}}>
+                    <label class="form-check-label" for="exampleCheck1">Table Brand</label>
                   </div>
                 <!-- /.card-body -->
 

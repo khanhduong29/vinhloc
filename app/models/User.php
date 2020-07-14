@@ -67,21 +67,31 @@ class User extends Authenticatable
 			]
 		);
 		$roles = [];
-        if (request()->product) {
-            array_push($roles, 5);
-        }
-        if (request()->category) {
-            array_push($roles, 4);
-        }
-        if (request()->customer) {
-            array_push($roles, 3);
-        }
-        if (request()->user) {
-            array_push($roles, 2);
-        }
         if (request()->full) {
             array_push($roles, 1);
         }
+        if (request()->customer) {
+            array_push($roles, 2);
+        }
+        if (request()->category) {
+            array_push($roles, 3);
+        }
+        if (request()->product) {
+            array_push($roles, 4);
+        }
+        if (request()->attr) {
+            array_push($roles, 5);
+        }
+        if (request()->banner) {
+            array_push($roles, 6);
+        }
+        if (request()->blog) {
+            array_push($roles, 7);
+        }
+        if (request()->brand) {
+            array_push($roles, 8);
+        }
+
         $role = implode(",",$roles);
 		$avatar = 'user1.png';
 		if(request() -> has('file')){
@@ -112,7 +122,7 @@ class User extends Authenticatable
 				'required' => ':attribute đang bỏ trống.',
 				'min' => ':attribute ít nhất 6 kí tự',
 				'max' => ':attribute quá lớn',
-				'mimes' => 'Không đúng định dạng ảnh'
+				'mimes' => 'không đúng định dạng ảnh'
 			],
 			[
                  'name' => 'Name',
@@ -135,27 +145,31 @@ class User extends Authenticatable
 			);
 		}
         $roles = [];
-        if (request()->product) {
-            array_push($roles, 5);
-        }
-        if (request()->category) {
-            array_push($roles, 4);
-        }
-        if (request()->customer) {
-            array_push($roles, 3);
-        }
-        if (request()->user) {
-            array_push($roles, 2);
-        }
         if (request()->full) {
             array_push($roles, 1);
         }
-        $role = implode(",",$roles);
-
-        if(empty($roles)) {
-            $role = $user->role;
+        if (request()->customer) {
+            array_push($roles, 2);
         }
-
+        if (request()->category) {
+            array_push($roles, 3);
+        }
+        if (request()->product) {
+            array_push($roles, 4);
+        }
+        if (request()->attr) {
+            array_push($roles, 5);
+        }
+        if (request()->banner) {
+            array_push($roles, 6);
+        }
+        if (request()->blog) {
+            array_push($roles, 7);
+        }
+        if (request()->brand) {
+            array_push($roles, 8);
+        }
+        $role = implode(",",$roles);
 		$avatar = '';
 		if(request() -> has('file')){
 			$file = request() -> file;

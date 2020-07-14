@@ -84,14 +84,20 @@
                   <div class="form-check">
                     <input type="checkbox" name="full" id="full" class="form-check-input" value="1">
                     <label class="form-check-label" for="full">Full</label>
-                    <input type="checkbox" name="user" id="user" class="form-check-input" value="2">
-                    <label class="form-check-label" for="user">Table Admin</label>
-                    <input type="checkbox" name="customer" id="customer"  class="form-check-input" value="3">
+                    <input type="checkbox" name="customer" id="customer"  class="form-check-input" value="2">
                     <label class="form-check-label" for="customer">Table Customer</label>
-                    <input type="checkbox" name="category" id="category" class="form-check-input" value="4">
+                    <input type="checkbox" name="category" id="category" class="form-check-input" value="3">
                     <label class="form-check-label" for="category">Table Category</label>
-                    <input type="checkbox" name="product" id="product" class="form-check-input" value="5">
+                    <input type="checkbox" name="product" id="product" class="form-check-input" value="4">
                     <label class="form-check-label" for="product">Table Product</label>
+                    <input type="checkbox" name="attr" id="attr" class="form-check-input" value="5">
+                    <label class="form-check-label" for="attr">Manager Attribute</label>
+                    <input type="checkbox" name="banner" id="banner" class="form-check-input" value="6">
+                    <label class="form-check-label" for="banner">Table Banner</label>
+                    <input type="checkbox" name="blog" id="blog" class="form-check-input" value="7">
+                    <label class="form-check-label" for="blog">Table Blog</label>
+                    <input type="checkbox" name="brand" id="brand" class="form-check-input" value="8">
+                    <label class="form-check-label" for="brand">Table Brand</label>
                   </div>
                   {{-- <div class="form-check">
                     <input type="checkbox" class="form-check-input" value="6" id="exampleCheck1" name="role">

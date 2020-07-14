@@ -6,6 +6,8 @@ use App\Models\Customer;
 use App\Models\categories;
 use App\Models\products;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Redirect;
 
 class LoginController extends Controller
 {
@@ -38,7 +40,8 @@ class LoginController extends Controller
             $user->login();
             return redirect()->route('product') -> with('success','Thêm mới thành công');
         } else {
-            return redirect()->back()->with('error','Add products ' .request()->cate_name. ' fail' );
+            Session::flash('message', "Email hoặc mật khẩu không đúng");
+            return Redirect::back();
         }
 
     }

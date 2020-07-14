@@ -7,15 +7,6 @@
             <h2 class="text-center">
                 <span class="title-big">Đăng ký</span>
             </h2>
-            @if ($errors->any())
-            <div class="alert alert-danger">
-                <ul>
-                    @foreach ($errors->all() as $error)
-                        <li>{{ $error }}</li>
-                    @endforeach
-                </ul>
-            </div>
-             @endif
             <section class="s-content">
                 <div class="row">
                     <div class="col-md-6 col-lg-6 pt-lg-5 pt-4">
@@ -25,22 +16,37 @@
                                 <div class="col-12 form-group">
                                     <label for="" >Họ và tên</label>
                                     <input type="text" name="name" class="form-control" value=""  id="" placeholder="Họ và tên">
+                                    @error('name')
+                                        <span class="error-message">{{$message}}</span>
+                                    @enderror
                                 </div>
                                 <div class="col-12 form-group">
                                     <label for="" >Email</label>
                                     <input type="email" name="email" class="form-control" value="" id="" placeholder="Email">
+                                    @error('email')
+                                        <span class="error-message">{{$message}}</span>
+                                    @enderror
                                 </div>
                                 <div class="col-12 form-group">
                                     <label for="" >Số điện thoại</label>
                                     <input type="text" name="phone" class="form-control" value="" id="" placeholder="Số điện thoại">
+                                    @error('phone')
+                                        <span class="error-message">{{$message}}</span>
+                                    @enderror
                                 </div>
                                 <div class="col-12  form-group">
                                     <label for="">Mật khẩu	</label>
                                     <input type="password" name="password" class="form-control" id="" placeholder="Password">
+                                    @error('password')
+                                        <span class="error-message">{{$message}}</span>
+                                    @enderror
                                 </div>
                                 <div class="col-12  form-group">
                                     <label for="">Nhập lại mật khẩu	</label>
                                     <input type="password" name="confirm_password" class="form-control" id="" placeholder="Confirm password">
+                                    @error('confirm_password')
+                                        <span class="error-message">{{$message}}</span>
+                                    @enderror
                                 </div>
 
                                 <div class="col-12  form-group">

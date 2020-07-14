@@ -1,5 +1,5 @@
 <?php
-Route::group(['prefix' => 'products', 'middleware'=>'hasPermission:5'],function(){
+Route::group(['prefix' => 'products', 'middleware'=>'hasPermission:4'],function(){
 		//danh sách danh mục
 		Route::get('/','productsController@list_pro')-> name('list-products');
 		// thêm danh mục
