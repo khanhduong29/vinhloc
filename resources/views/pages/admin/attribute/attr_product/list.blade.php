@@ -63,8 +63,8 @@
                   @foreach($attrProduct as $value)
                   <tr>
                     <td>{{$value->id}}</td>
-                    <td>{{$value->id_attr}}</td>
-                    <td>{{$value->product_id}}</td>
+                    <td>{{$value->products_id}}</td>
+                    <td>{{$value->attribute_id}}</td>
                     <td>{{$value->created_at}}</td>
                   </tr>
                   @endforeach

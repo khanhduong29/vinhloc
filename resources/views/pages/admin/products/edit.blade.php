@@ -97,11 +97,24 @@
                         </textarea>
                       </div>
                   </div>
-                  <div class="form-check">
-                    <input type="checkbox" class="form-check-input" id="exampleCheck1" {{ $products->status == 1 ? "checked" : "" }} name="status">
-                    <label class="form-check-label" for="exampleCheck1">Hiện</label>
+                  @foreach($attributes as $att)
+                  <div class="form-group">
+                    <label for="">{{$att->name}}</label>
+                    <div class="form-check">
+                        @foreach($att->attrValue as $attrValues)
+                            <input type="checkbox" class="form-check-input" value="{{$attrValues->id}}"  name="attribute_id[]" >
+                            <label class="form-check-label" for="exampleCheck1">{{$attrValues->value}}</label>
+                        @endforeach
+                    </div>
                   </div>
-                </div>
+                  @endforeach
+                    <div class="form-group">
+                        <label for="">Trạng thái</label>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1" {{ $products->status == 1 ? "checked" : "" }} name="status">
+                            <label class="form-check-label" for="exampleCheck1">Hiện</label>
+                        </div>
+                    </div>
                 <!-- /.card-body -->
 
                 <div class="card-footer">

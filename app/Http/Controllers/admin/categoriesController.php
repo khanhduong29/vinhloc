@@ -25,9 +25,9 @@
 
 			$model = $categories->add();
 	        if ($categories) {
-	            return redirect()->route('list-categories') -> with('success','Thêm mới thành công');
+	            return redirect()->route('list-categories') -> with('message','Thêm mới thành công');
 	        }else{
-	            return redirect()->back()->with('error','Add categories ' .request()->cate_name. ' fail' );
+	            return redirect()->back()->with('message','Thêm mới thất bại' );
 	        }
 		}
 		// sửa dữ liệu
@@ -38,11 +38,11 @@
         	]);
 		}
 		public function update(request $request,categories $id){
-			$updated = $id->update_data();
+			$updated = $id->update_data($id);
 	       	if ($id) {
-	        	return redirect()->route('list-categories') -> with('success','Sửa thành công');
+	        	return redirect()->route('list-categories') -> with('message','Sửa thành công');
 	    	} else {
-	     		return redirect()->back()->with('error','Update category'.request()->cate_name.' fail');
+	     		return redirect()->back()->with('message','Sửa không thành công');
 	    	}
 		}
 		// xóa dữ liệu
@@ -50,9 +50,9 @@
 	    {
 	        $delete = $id->delete();
 	        if ($id) {
-	           return redirect()->route('list-categories') -> with('success','Xóa thành công');
+	           return redirect()->route('list-categories') -> with('message','Xóa thành công');
 	       } else {
-	        return redirect()->back()->with('error','Delete category '.request()->cate_name.' fail');
+	        return redirect()->back()->with('message','Xóa thành công');
 	       }
 	    }
 	}

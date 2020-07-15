@@ -13,11 +13,16 @@
                     <option value="{{$cate->id}}">{{$cate -> name}}</option>
                     @endforeach
                 </select>
+
                 <select class="js-example-basic-single m-2" id="giasp">
                     <option value="">---Chọn giá sản phẩm---</option>}
                     <option value="" data-giatri1="250000" data-giatri2="300000">Từ 250000 đến 300000</option> 
                     <option value="" data-giatri1="300000" data-giatri2="350000">Từ 300000 đến 350000</option>    
                     <option value="" data-giatri1="350000" data-giatri2="500000">Từ 350000 đến 500000</option>    
+                <select class="js-example-basic-single m-2">
+                    <option value="AL">Alabama</option>
+                    <option value="WY">Wyoming</option>
+
                 </select>
                 <select class="js-example-basic-single m-2">
                     <option value="AL">Alabama</option>
@@ -38,7 +43,11 @@
 
                                         <a href="{{route('product-detail',['slug'=>$pro->slug])}}" title="" class="c-fff text-uppercase f-16">{{$pro -> name}}</a>
                                     </h3>
+
                                     <span class="c-feb f-16 text-uppercase">Giá : {{number_format ($pro -> price)}}</span>
+
+                                    <span class="c-feb f-16 text-uppercase">Giá : {{number_format($pro->price)}}</span>
+
                                     <a href="" class="add-cart"><img src="{{url('public')}}/frontend/images/icon/ic-cart-feb.png" alt=""></a>
                                 </div>
                             </div>
@@ -123,7 +132,7 @@
                     <a href="" title="" class="avt">
                         <img src="{{asset('public/Uploads')}}/{{$value -> image}}" alt="">
                     </a>
-                   
+
                 </div>
                 @endforeach
             </section>

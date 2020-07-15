@@ -88,7 +88,7 @@
                   </div>
                   <div class="form-group">
                     <label for="">Giá sản phẩm</label>
-                    <input type="text" class="form-control" id="price" name="price" required placeholder="price">
+                    <input type="number" class="form-control" id="price" name="price" required placeholder="price">
                     <div class="help-block"></div>
                   </div>
                   <div class="form-group">
@@ -102,16 +102,19 @@
                   <div class="form-group">
                     <label for="">{{$att->name}}</label>
                     <div class="form-check">
-                        @foreach($att->values as $attrValues)
-                            <input type="checkbox" class="form-check-input" value="{{$attrValues->id}}" id="exampleCheck1" name="attrValue">
+                        @foreach($att->attrValue as $attrValues)
+                            <input type="checkbox" class="form-check-input" value="{{$attrValues->attribute_id}}" id="exampleCheck1" name="attribute_id[]">
                             <label class="form-check-label" for="exampleCheck1">{{$attrValues->value}}</label>
                         @endforeach
                     </div>
                   </div>
                   @endforeach
-                  <div class="form-check">
-                    <input type="checkbox" class="form-check-input" id="exampleCheck1" name="status">
-                    <label class="form-check-label" for="exampleCheck1">Hiện</label>
+                  <div class="form-group">
+                    <label for="">Trạng thái</label>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1" name="status">
+                        <label class="form-check-label" for="exampleCheck1">Hiện</label>
+                    </div>
                   </div>
                 </div>
                 <!-- /.card-body -->
