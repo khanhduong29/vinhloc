@@ -19,7 +19,7 @@ class CreateProductsTable extends Migration
             $table->string('code');
             $table->string('slug');
             $table->string('name');
-            $table->float('price');
+            $table->integer('price');
             $table->string('image');
             $table->longText('des');
             $table->boolean('status');

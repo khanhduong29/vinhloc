@@ -20,7 +20,7 @@
 							<div class="row border-2 m-0 pt-5 pb-5">
 								<div class="col-12 form-group">
 									<label for="" >Email</label>
-                                    <input type="email" name="email" class="form-control " id="" placeholder="Email">
+                                    <input type="email" name="email" class="form-control" value="{{old('email')}}" id="" placeholder="Email">
                                    @error('email')
                                         <span class="error-message">{{$message}}</span>
                                    @enderror

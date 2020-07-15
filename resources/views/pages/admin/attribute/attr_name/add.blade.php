@@ -63,7 +63,6 @@
                   <div class="form-group">
                     <label for="">Tên thuộc tính</label>
                     <input type="text" class="form-control" value="" id="name" name="name" required>
-                    <div class="help-block"></div>
                   </div>
                 </div>
                 <!-- /.card-body -->

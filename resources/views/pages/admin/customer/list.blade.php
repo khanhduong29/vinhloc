@@ -25,8 +25,6 @@
               <?php endfor ?>
             </h5>
           </section>
-            <a href="{{route('add-admin')}}">Thêm customer</a>
-
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -61,14 +59,10 @@
                 <tbody>
                   @foreach($customer as $cus)
                   <tr>
-                    <td>{{$cus -> id}}</td>
-                    <td>{{$cus -> name}}</td>
-                    <td>{{$cus -> email}}</td>
-                    <td>{{$cus -> created_at}}</td>
-                    <td>
-                      <a href="{{ Route('edit-cus',$cus) }}" class="btn btn-primary btn-xs">Sửa</a>
-                      <a href="{{ Route('delete-cus',$cus) }}" class="btn btn-danger btn-xs" onclick="return confirm('Xác nhận xoá ?')">Xóa</a>
-                    </td>
+                    <td>{{$cus->id}}</td>
+                    <td>{{$cus->name}}</td>
+                    <td>{{$cus->email}}</td>
+                    <td>{{$cus->created_at}}</td>
                   </tr>
                   @endforeach
                 </tbody>

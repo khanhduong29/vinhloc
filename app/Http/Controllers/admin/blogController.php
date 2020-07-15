@@ -24,9 +24,9 @@
 		public function store(Request $request,blog $blog){
 			$model = $blog->add();
 	        if ($blog) {
-	            return redirect()->route('list-blog') -> with('success','Thêm mới thành công');
+	            return redirect()->route('list-blog') -> with('message','Thêm mới thành công');
 	        }else{
-	            return redirect()->back()->with('error','Add blog fail' );
+	            return redirect()->back()->with('message','Thêm thất bại' );
 	        }
 		}
 		// sửa dữ liệu
@@ -39,9 +39,9 @@
 		public function update(request $request,blog $id){
 			$updated = $id->update_data($id);
 	       	if ($id) {
-	        	return redirect()->route('list-blog') -> with('success','Sửa thành công');
+	        	return redirect()->route('list-blog') -> with('message','Sửa thành công');
 	    	} else {
-	     		return redirect()->back()->with('error','Update category fail');
+	     		return redirect()->back()->with('message','Sửa thất bại');
 	    	}
 		}
 
@@ -50,9 +50,9 @@
 	    {
 	        $delete = $id->delete();
 	        if ($id) {
-	           return redirect()->route('list-blog') -> with('success','Xóa thành công');
+	           return redirect()->route('list-blog') -> with('message','Xóa thành công');
 	       } else {
-	        return redirect()->back()->with('error','Delete category fail');
+	        return redirect()->back()->with('message','Xóa thất bại');
 	       }
 	    }
 	}

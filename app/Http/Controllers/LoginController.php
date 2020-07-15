@@ -26,9 +26,9 @@ class LoginController extends Controller
     public function postRegister(Request $request,Customer $user) {
         $user->register();
         if ($user) {
-            return redirect()->route('login_user') -> with('success','Thêm mới thành công');
+            return redirect()->route('login_user') -> with('success','Đăng ký thành công');
         }else{
-            return redirect()->back()->with('error','Add products ' .request()->cate_name. ' fail' );
+            return redirect()->back()->withInput();
         }
     }
 
@@ -38,10 +38,10 @@ class LoginController extends Controller
     public function postLogin(Request $request,Customer $user) {
         if($user->login()) {
             $user->login();
-            return redirect()->route('product') -> with('success','Thêm mới thành công');
+            return redirect()->route('product')->with('success','Đăng nhập thành công');
         } else {
             Session::flash('message', "Email hoặc mật khẩu không đúng");
-            return Redirect::back();
+            return Redirect::back()->withInput();
         }
 
     }

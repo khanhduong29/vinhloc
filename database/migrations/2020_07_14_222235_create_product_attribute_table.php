@@ -15,8 +15,8 @@ class CreateProductAttributeTable extends Migration
     {
         Schema::create('product_attribute', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('attribute_id');
             $table->integer('products_id');
+            $table->integer('attribute_id');
             $table->timestamps();
         });
     }

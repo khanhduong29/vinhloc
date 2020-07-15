@@ -65,7 +65,7 @@
                     <select name="attr_name" class="form-control" required>
                         <option >--Chọn loại sản phẩm--</option>
                         @foreach($attrName as $value)
-                        <option value="{{ $value->name }}">{{ $value->name }}</option>
+                        <option value="{{ $value->id }}">{{ $value->name }}</option>
                         @endforeach
                     </select>
                     </div>

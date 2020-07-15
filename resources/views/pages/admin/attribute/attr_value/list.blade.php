@@ -6,6 +6,14 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <div class="container-fluid">
+        @if (session()->has('message'))
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <strong>{{ session()->get('message') }}</strong>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        @endif
         <div class="row mb-2">
           <div class="col-sm-6">
             <!-- <h1>DataTables</h1> -->
@@ -25,7 +33,7 @@
               <?php endfor ?>
             </h5>
           </section>
-            <a href="{{route('add-value-attr')}}">Thêm admin</a>
+            <a href="{{route('add-value-attr')}}">Thêm giá trị thuộc tính</a>
 
           </div>
           <div class="col-sm-6">
@@ -59,12 +67,11 @@
                     <th>#</th>
                   </tr>
                 </thead>
-
                 <tbody>
                   @foreach($attrValue as $value)
                   <tr>
                     <td>{{$value->id}}</td>
-                    <td>{{$value->attr_name}}</td>
+                    <td>{{$value->attribute->name}}</td>
                     <td>{{$value->value}}</td>
                     <td>{{$value->created_at}}</td>
                     <td>

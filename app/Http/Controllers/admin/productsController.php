@@ -7,6 +7,7 @@
     use App\Models\categories;
     use App\Models\attribute;
     use App\Models\attributeValue;
+    use App\Models\productAttribute;
 	use File;
 
 	class productsController extends Controller {
@@ -30,28 +31,30 @@
 			]);
 		}
 		public function store(Request $request,products $products){
-			$model = $products->add();
+            $products->add();
 	        if ($products) {
-	            return redirect()->route('list-products') -> with('success','Thêm mới thành công');
+	            return redirect()->route('list-products') -> with('message','Thêm mới thành công');
 	        }else{
-	            return redirect()->back()->with('error','Add products fail' );
+	            return redirect()->back()->with('message','Thêm mới thất bại' );
 	        }
 		}
 		// sửa dữ liệu
 		public function edit($id){
 			$products = products::where('id', $id)->first();
-			$categories = categories::all();
+            $categories = categories::all();
+            $attributes = attribute::all();
         	return view('pages.admin.products.edit',[
         		'products' => $products,
-        		'categories' => $categories,
+                'categories' => $categories,
+                'attributes' => $attributes
         	]);
 		}
 		public function update(request $request,products $id){
 			$updated = $id->update_data($id);
 	       	if ($id) {
-	        	return redirect()->route('list-products') -> with('success','Sửa thành công');
+	        	return redirect()->route('list-products') -> with('message','Sửa thành công');
 	    	} else {
-	     		return redirect()->back()->with('error','Update category fail');
+	     		return redirect()->back()->with('message','Sửa thất bại');
 	    	}
 		}
 
@@ -60,9 +63,9 @@
 	    {
 	        $delete = $id->delete();
 	        if ($id) {
-	           return redirect()->route('list-products') -> with('success','Xóa thành công');
+	           return redirect()->route('list-products') -> with('message','Xóa thành công');
 	       } else {
-	        return redirect()->back()->with('error','Delete category fail');
+	        return redirect()->back()->with('message','Xóa không thành công');
 	       }
 	    }
 	}

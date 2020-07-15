@@ -8,7 +8,7 @@ use App\Models\attributeValue;
 
 class attribute extends Model
 {
-    protected $table = 'attributes';
+    protected $table = 'attribute';
 
     protected $fillable = ['name'];
 
@@ -31,7 +31,7 @@ class attribute extends Model
 		]);
     }
 
-    public function values()
+    public function attrValue()
     {
         return $this->hasMany('App\Models\attributeValue');
     }
