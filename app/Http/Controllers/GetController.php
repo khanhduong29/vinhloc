@@ -10,7 +10,7 @@ class GetController extends Controller
     public function getPrice(Request $req)
     {
     	$price = $req->price;
-    		$product = products::whereBetween('price',$price)->get();
+    	$product = products::whereBetween('price',$price)->get();
     	foreach ($product as $key => $value) {
     		echo '<div class="col-12 col-sm-6 col-md-4 col-lg-3">';
     		echo '<div class="pt-4">';

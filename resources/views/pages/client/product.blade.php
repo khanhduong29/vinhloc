@@ -137,35 +137,3 @@
     </section>
 </main>
 @endsection
-@section('script')
-<script>
-        $('#giasp').on('change',function() {
-            let values = [];
-            values[0] = $('option:selected',this).data('giatri1');
-            values[1] = $('option:selected',this).data('giatri2');
-            $.ajax({
-                type: "GET",
-                url: "{{route('getprice')}}",
-                data: {
-                    price: values
-                },
-                success: function (res) {
-                    $('#content').html(res);
-                }
-            });
-        });
-        $('#cate').on('change',function() {
-            $cateid = $('option:selected',this).val();
-            $.ajax({
-                type: "GET",
-                url: "{{route('getcategory')}}",
-                data: {
-                    id: $cateid
-                },
-                success: function (res) {
-                    $('#content').html(res);
-                }
-            });
-        });
-</script>
-@stop
