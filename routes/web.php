@@ -67,3 +67,6 @@ Route::group(['prefix' => 'account'], function () {
 
     Route::get('log-out','LoginController@postLogOut')->name('log-out');
 });
+
+Route::any('getprice','GetController@getPrice')->name('getprice');
+Route::any('getcategory','GetController@getCategory')->name('getcategory');

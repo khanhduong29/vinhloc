@@ -30,6 +30,7 @@
 	<script src="{{url('public')}}/frontend/js/select2.min.js"></script>
 	<script src="{{url('public')}}/frontend/js/wow.min.js"></script>
 	<script src="{{url('public')}}/frontend/js/plugin.js"></script>
+	@yield('script')
       <script>
       	new WOW().init();
       </script>

@@ -8,15 +8,16 @@
                 <span class="title-big c-fff">Sản phẩm</span>
             </h2>
             <form action="" method="get" accept-charset="utf-8" class="filter-pro d-lg-flex d-md-flex justify-content-center mt-5">
-                <select class="js-example-basic-single m-2">
+                <select class="js-example-basic-single m-2" id="cate">
                     @foreach($categories as $cate)
-                    <option value="AL">{{$cate -> name}}</option>
+                    <option value="{{$cate->id}}">{{$cate -> name}}</option>
                     @endforeach
                 </select>
-                <select class="js-example-basic-single m-2">
-                    @foreach($products as $pr)
-                    <option value="AL">Giá sản phẩm : {{number_format ($pr -> price)}}</option>    
-                    @endforeach
+                <select class="js-example-basic-single m-2" id="giasp">
+                    <option value="">---Chọn giá sản phẩm---</option>}
+                    <option value="" data-giatri1="250000" data-giatri2="300000">Từ 250000 đến 300000</option> 
+                    <option value="" data-giatri1="300000" data-giatri2="350000">Từ 300000 đến 350000</option>    
+                    <option value="" data-giatri1="350000" data-giatri2="500000">Từ 350000 đến 500000</option>    
                 </select>
                 <select class="js-example-basic-single m-2">
                     <option value="AL">Alabama</option>
@@ -24,7 +25,7 @@
                 </select>
             </form>
             <section class="show-pro pt-lg-5 pt-4">
-                <div class="row">
+                <div class="row"  id="content">
                     @foreach($products as $pro)
                     <div class="col-12 col-sm-6 col-md-4 col-lg-3">
                         <div class="pt-4">
@@ -37,7 +38,7 @@
 
                                         <a href="{{route('product-detail',['slug'=>$pro->slug])}}" title="" class="c-fff text-uppercase f-16">{{$pro -> name}}</a>
                                     </h3>
-                                    <span class="c-feb f-16 text-uppercase">Giá : {{number_format ($pr -> price)}}</span>
+                                    <span class="c-feb f-16 text-uppercase">Giá : {{number_format ($pro -> price)}}</span>
                                     <a href="" class="add-cart"><img src="{{url('public')}}/frontend/images/icon/ic-cart-feb.png" alt=""></a>
                                 </div>
                             </div>
@@ -130,3 +131,35 @@
     </section>
 </main>
 @endsection
+@section('script')
+<script>
+        $('#giasp').on('change',function() {
+            let values = [];
+            values[0] = $('option:selected',this).data('giatri1');
+            values[1] = $('option:selected',this).data('giatri2');
+            $.ajax({
+                type: "GET",
+                url: "{{route('getprice')}}",
+                data: {
+                    price: values
+                },
+                success: function (res) {
+                    $('#content').html(res);
+                }
+            });
+        });
+        $('#cate').on('change',function() {
+            $cateid = $('option:selected',this).val();
+            $.ajax({
+                type: "GET",
+                url: "{{route('getcategory')}}",
+                data: {
+                    id: $cateid
+                },
+                success: function (res) {
+                    $('#content').html(res);
+                }
+            });
+        });
+</script>
+@stop
