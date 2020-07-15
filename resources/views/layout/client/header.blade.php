@@ -109,7 +109,7 @@
                             </ul>
                         </div>
                         <div class="col-lg-2">
-                            <a href="home" title="" class="logo-word">Vĩnh lộc luxury</a>
+                            <a href="{{route('home')}}" title="" class="logo-word">Vĩnh lộc luxury</a>
                         </div>
                         <div class="col-lg-5">
                             <ul class="menu-right d-flex justify-content-center">
