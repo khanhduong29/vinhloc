@@ -25,7 +25,6 @@
             $categories = categories::all();
             $attrName = attrName::all();
             $where = attrName::select('name')->get()->toArray();
-            dd(($where));
             $attrValue = attrvalue::where('attr_name',$where)->get();
 			return view('pages.admin.products.add',[
 				'categories' => $categories,

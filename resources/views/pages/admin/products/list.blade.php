@@ -70,7 +70,7 @@
                     <td>{{$pro -> id}}</td>
                     <td>{{$pro -> code}}</td>
                     <td>{{$pro -> name}}</td>
-                    <td><img src="{{asset('public/Uploads')}}/{{$pro -> image}}" alt="" width="100px"></td>
+                    <td><img src="{{asset('public/Uploads/products')}}/{{$pro -> image}}" alt="" width="100px"></td>
                     <td>{{$pro -> cate_id}}</td>
                     <td>{{$pro -> price}}</td>
                     <td>{{ $pro->status == 1 ? "Hiện" : "Ẩn" }}</td>

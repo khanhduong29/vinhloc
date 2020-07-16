@@ -23,9 +23,9 @@
 						</a>
 						<div class="desc">
 							<a href="{{route('blog-detail',['slug'=>$value->slug])}}" title="" class="c-feb f-16 row-1">{{$value -> name}}</a>
-							<p class="content_news c-fff f-14 row-3">
-								 {!!$value->content!!}
-							</p>
+							<div class="content_news c-fff f-14 row-3">
+								 {!!Str::limit($value->des,150)!!}
+							</div>
 						</div>
 					</div>
 					@endforeach

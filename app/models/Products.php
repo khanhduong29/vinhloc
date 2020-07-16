@@ -49,7 +49,7 @@ class Products extends Model
 	    $image = '';
 		if(request() -> has('file')){
 			$file = request() -> file;
-			$file -> move(base_path('public/Uploads'),$file -> getClientOriginalName());
+			$file -> move(base_path('public/Uploads/products'),$file -> getClientOriginalName());
 			$image = $file -> getClientOriginalName();
 		}
 		 $models = $this->create([
@@ -113,7 +113,7 @@ class Products extends Model
 	    $image = '';
 		if(request() -> has('file')){
 			$file = request() -> file;
-			$file -> move(base_path('public/Uploads'),$file -> getClientOriginalName());
+			$file -> move(base_path('public/Uploads/products'),$file -> getClientOriginalName());
 			$image = $file -> getClientOriginalName();
 		}else{
 			$image = $pro->image;
