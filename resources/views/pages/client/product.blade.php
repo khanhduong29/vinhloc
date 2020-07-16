@@ -15,8 +15,8 @@
                 </select>
                 <select class="js-example-basic-single m-2" id="giasp">
                     <option value="">---Chọn giá sản phẩm---</option>
-                    <option value="" data-giatri1="250000" data-giatri2="300000">Từ 250000 đến 300000</option> 
-                    <option value="" data-giatri1="300000" data-giatri2="350000">Từ 300000 đến 350000</option>    
+                    <option value="" data-giatri1="250000" data-giatri2="300000">Từ 250000 đến 300000</option>
+                    <option value="" data-giatri1="300000" data-giatri2="350000">Từ 300000 đến 350000</option>
                     <option value="" data-giatri1="350000" data-giatri2="500000">Từ 350000 đến 500000</option>
                 </select>
                 <select class="js-example-basic-single m-2">
@@ -31,7 +31,7 @@
                         <div class="pt-4">
                             <div class="thumbnail pb-4">
                                 <a href="{{route('product-detail',['slug'=>$pro->slug])}}" class="hv-scale p-3 b-ra-30">
-                                    <img src="{{asset('public/Uploads/products')}}/{{$pro -> image}}" alt="" width="a"class ="img-fluid">
+                                    <img src="{{asset('public/Uploads')}}/{{$pro -> image}}" alt="" width="a"class ="img-fluid">
                                 </a>
                                 <div class="desc text-center">
                                     <h3>
