@@ -50,6 +50,7 @@
 	    {
 	        $delete = $id->delete();
 	        if ($id) {
+	        	$id -> deletePro($id);
 	           return redirect()->route('list-categories') -> with('message','Xóa thành công');
 	       } else {
 	        return redirect()->back()->with('message','Xóa thành công');

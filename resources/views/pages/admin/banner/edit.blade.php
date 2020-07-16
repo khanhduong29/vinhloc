@@ -60,18 +60,24 @@
                   </div>
                   <div class="form-group">
                     <label for="">location</label>
-                    <input type="text" class="form-control" id="location" name="location" value="{{$banner->location}}" required placeholder="Nhập location">
+                    <select name="location" class="form-control" required>
+                      <option>--Chọn vị trí--</option>
+                      <option value="1" {{ $banner->location == 1 ? "selected" : "" }}>Trang chủ</option>
+                      <option value="2" {{ $banner->location == 2 ? "selected" : "" }}>Giới thiệu</option>
+                      <option value="3" {{ $banner->location == 3 ? "selected" : "" }}>Dịch vụ</option>
+                      <option value="4" {{ $banner->location == 4 ? "selected" : "" }}>Liên hệ</option>
+                    </select>
                   </div>
                   <div class="form-group">
                     <label for="exampleInputFile">Chọn ảnh sản phẩm</label>
                     <div class="input-group row">
                       <div class="col-8"><input type="file" name="file" class="text-center center-block file-upload" accept="image/gif, image/jpeg, image/jpg, image/png"/>  </div>
-                      <div class="col-4"><img src="{{asset('public/Uploads')}}/{{$banner-> image}}" alt="Chưa có hình ảnh" width="100%"></div>
+                      <div class="col-4"><img src="{{asset('public/Uploads/banner')}}/{{$banner-> image}}" alt="Chưa có hình ảnh" width="100%"></div>
                     </div>
                   </div>
                   <div class="form-check">
                     <input type="checkbox" class="form-check-input" id="exampleCheck1" {{ $banner->status == 1 ? "checked" : "" }} name="status">
-                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                    <label class="form-check-label" for="exampleCheck1">Hiện</label>
                   </div> 
                 </div>
                 <!-- /.card-body -->

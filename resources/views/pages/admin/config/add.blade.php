@@ -7,7 +7,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <!-- <h1>Thêm banner</h1> -->
+            <!-- <h1>Thêm config</h1> -->
             <section class="content-header">
              <?php $url = url('').'/'.Request::segment(1).'/'?>
              <h4>
@@ -28,7 +28,7 @@
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="{{ asset('/') }}admin">Trang chủ</a></li>
-              <li class="breadcrumb-item active">Thêm banner</li>
+              <li class="breadcrumb-item active">Thêm config</li>
             </ol>
           </div>
         </div>
@@ -51,39 +51,28 @@
               <form  method="post" role="form" enctype="multipart/form-data">
                 <div class="card-body">
                   <div class="form-group">
+                  <div class="form-group">
                     <label for="">Tên</label>
-                    <input type="text" class="form-control" id="name" name="name" required placeholder="Nhập tên ">
-                    <div class="help-block"></div>
-                  </div>
-                  <div class="form-group">
-                    <label for="">Link</label>
-                    <input type="text" class="form-control" id="link" name="link" required placeholder="Nhập link">
-                  </div>
-                  <div class="form-group">
-                    <label for="">location</label>
-                    <select name="location" class="form-control" required>
-                      <option>--Chọn vị trí--</option>
-                      <option value="1">Trang chủ</option>
-                      <option value="2">Giới thiệu</option>
-                      <option value="3">Dịch vụ</option>
-                      <option value="4">Liên hệ</option>
+                    <select name="name" class="form-control" required>
+                      <option>--Chọn giá trị--</option>
+                      <option value="email">email</option>
+                      <option value="phone">phone</option>
+                      <option value="address">address</option>
+                      <option value="about">about</option>
+                      <option value="company">company</option>
+                      <option value="website">website</option>
+                      <option value="service">service</option>
                     </select>
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputFile">Chọn ảnh sản phẩm</label>
-                    <div class="input-group">
-                      <input type="file" name="file" class="text-center center-block file-upload" required accept="image/gif, image/jpeg, image/jpg, image/png"/>  
-                    </div>
+                    <label for="">Giá trị</label>
+                    <input type="text" class="form-control" id="name" name="value" required placeholder="Nhập tên ">
                   </div>
-                  <div class="form-check">
-                    <input type="checkbox" class="form-check-input" id="exampleCheck1" name="status">
-                    <label class="form-check-label" for="exampleCheck1">Hiện</label>
-                  </div> 
                 </div>
                 <!-- /.card-body -->
                 
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">Thêm banner</button>
+                  <button type="submit" class="btn btn-primary">Thêm config</button>
                 </div>
                 <input type="hidden" name="_token" value="{{csrf_token()}}">
               </form>

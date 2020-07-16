@@ -14,6 +14,7 @@ class productAttribute extends Model
 
 
 
+    
     public function getAtt()
 	{
 		return $this->hasOne('App\Models\attribute','id','attribute_id')->orderBy('created_at','desc');

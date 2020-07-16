@@ -33,7 +33,6 @@ class attributeValue extends Model
             'value' => $value
 		]);
     }
-
     public function attribute()
     {
         return $this->belongsTo('App\Models\attribute');

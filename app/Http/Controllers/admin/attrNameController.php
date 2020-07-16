@@ -49,6 +49,8 @@
 	    {
 	        $id->delete();
 	        if ($id) {
+	        	$id->deleteProAtt($id);
+	        	$id->deleteAttValue($id);
 	           return redirect()->route('list-attrName') -> with('message','Xóa thành công');
 	       } else {
 	        return redirect()->back()->with('message','Xóa thất bại');

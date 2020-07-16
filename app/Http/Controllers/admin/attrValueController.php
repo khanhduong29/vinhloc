@@ -56,6 +56,7 @@
 	    {
 	        $id->delete();
 	        if ($id) {
+	        	$id->deleteAttValue($id);
 	           return redirect()->route('list-attrValue') -> with('message','Xóa thành công');
 	       } else {
 	        return redirect()->back()->with('message','Xóa thất bại');

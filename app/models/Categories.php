@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Support\Str;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\products;
 
 class categories extends Model
 {
@@ -46,4 +47,7 @@ class categories extends Model
 			'image' => $image,
 		]);
 	}
+    public function deletePro($value){
+        products::where('cate_id',$value->id)->delete();
+    }
 }

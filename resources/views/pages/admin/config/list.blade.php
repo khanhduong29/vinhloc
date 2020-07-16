@@ -33,7 +33,7 @@
               <?php endfor ?>
             </h4>
           </section>
-            <a href="{{route('add-banner')}}">Thêm banner</a>
+            <a href="{{route('add-config')}}">Thêm config</a>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -52,7 +52,7 @@
 
           <div class="card">
             <div class="card-header">
-              <h3 class="card-title">Danh sách banner</h3>
+              <h3 class="card-title">Danh sách config</h3>
             </div>
             <!-- /.card-header -->
             <div class="card-body">
@@ -71,11 +71,11 @@
                 </thead>
 
                   <tbody>
-                    @foreach($banner as $ban)
+                    @foreach($config as $ban)
                     <tr>
                       <td>{{$ban -> id}}</td>
                       <td>{{$ban -> name}}</td>
-                      <td><img src="{{ asset('public/Uploads/banner') }}/{{ $ban->image}}" style="width: 100px;" alt=""></td>
+                      <td><img src="{{ asset('public/Uploads/config') }}/{{ $ban->image}}" style="width: 100px;" alt=""></td>
                       <td>{{$ban -> link}}</td>
                       <td>
                         @if($ban -> location == 1)
@@ -91,8 +91,8 @@
                       <td>{{ $ban->status == 1 ? "Hiện" : "Ẩn" }}</td>
                       <td>{{$ban->updated_at}}</td>
                       <td>
-                        <a href="{{ Route('edit-banner',$ban) }}" class="btn btn-primary btn-xs">Sửa</a>
-                        <a href="{{Route('delete-banner',$ban)}}" class="btn btn-danger btn-xs" onclick="return confirm('Xác nhận xoá ?')">Xóa</a>
+                        <a href="{{ Route('edit-config',$ban) }}" class="btn btn-primary btn-xs">Sửa</a>
+                        <a href="{{Route('delete-config',$ban)}}" class="btn btn-danger btn-xs" onclick="return confirm('Xác nhận xoá ?')">Xóa</a>
                       </td>
                     </tr>
                     @endforeach

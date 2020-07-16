@@ -5,6 +5,8 @@ namespace App\Models;
 use Illuminate\Support\Str;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\attributeValue;
+use App\Models\productAttribute;
+use DB;
 
 class attribute extends Model
 {
@@ -30,7 +32,12 @@ class attribute extends Model
 			'name' => $name
 		]);
     }
-
+    public function deleteAttValue($value){
+    	$attValue = attributeValue::where('attribute_id',$value->id)->delete();
+    }
+    public function deleteProAtt($value){
+        $ProAtt = productAttribute::where('attribute_id',$value->id)->delete();
+    }
     public function attrValue()
     {
         return $this->hasMany('App\Models\attributeValue');
