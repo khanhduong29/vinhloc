@@ -8,7 +8,7 @@ use App\Models\products;
 class GetController extends Controller
 {
     public function getPrice(Request $req)
-    {	
+    {
     	$price = $req->price;
     	$product = products::whereBetween('price',$price)->get();
     	foreach ($product as $key => $value) {
@@ -30,7 +30,7 @@ class GetController extends Controller
 
     }
 	public function getCategory(Request $req)
-	{	
+	{
 		$id = $req->id;
 		$product = products::where('cate_id',$id)->get();
 		foreach ($product as $key => $value) {

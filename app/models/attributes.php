@@ -6,9 +6,9 @@ use Illuminate\Support\Str;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\attributeValue;
 
-class attribute extends Model
+class attributes extends Model
 {
-    protected $table = 'attribute';
+    protected $table = 'attributes';
 
     protected $fillable = ['name'];
 
