@@ -97,6 +97,8 @@
                         </textarea>
                       </div>
                   </div>
+                </div>
+            </div>
                   @foreach($attributes as $att)
                   <div class="form-group">
                     <label for="">{{$att->name}}</label>

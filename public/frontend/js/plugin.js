@@ -237,7 +237,7 @@ $(".slick3").slick({
 		{
 			breakpoint:800,
 			settings:{
-				slidesToShow:2,
+				slidesToShow:3,
 				slidesToScroll:2
 			}
 		},
