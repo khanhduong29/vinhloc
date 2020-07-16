@@ -24,13 +24,15 @@
 		// thêm dữ liệu
 		public function create(){
             $categories = categories::all();
-            $attrName = attrName::all();
-            $where = attrName::select('name')->get()->toArray();
-            $attrValue = attrvalue::where('attr_name',$where)->get();
+            $attrName = attribute::all();
+            $where = attribute::select('name')->get()->toArray();
+            $attrValue = attributeValue::where('attribute_id',$where)->get();
             $attributes = attribute::all();
 			return view('pages.admin.products.add',[
 				'categories' => $categories,
-                'attributes' => $attributes
+                'attributes' => $attributes,
+                'attribute_name' => $attrName,
+                'attrValue' => $attrValue
 			]);
 		}
 		public function store(Request $request,products $products){

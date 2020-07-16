@@ -6,7 +6,7 @@ use Illuminate\Support\Str;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\attributeValue;
 
-class attributes extends Model
+class attribute extends Model
 {
     protected $table = 'attributes';
 
