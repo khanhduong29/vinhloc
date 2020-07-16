@@ -20,7 +20,7 @@
 		}
 		public function store(Request $request,attribute $attrName){
 			$request->validate([
-			    'name' => 'required|unique:attribute|max:255',
+			    'name' => 'required|unique:attributes|max:255',
 			]);
 			$attrName->add();
 	        if ($attrName) {
