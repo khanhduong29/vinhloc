@@ -218,10 +218,10 @@
                 <i class="right fas fa-angle-left"></i>
               </p>
             </a>
-            <ul class="nav nav-treeview">
+            <ul class="nav nav-treeview ml-3">
               <li class="nav-item has-treeview">
                 <a href="#" class="nav-link">
-                  <i class="nav-icon fas fa-tachometer-alt"></i>
+                  <i class="nav-icon fas fa-copy"></i>
                   <p>
                    Tên thuộc tính
                     <i class="right fas fa-angle-left"></i>
@@ -244,7 +244,7 @@
               </li>
               <li class="nav-item has-treeview">
                 <a href="#" class="nav-link">
-                  <i class="nav-icon fas fa-tachometer-alt"></i>
+                  <i class="nav-icon fas fa-copy"></i>
                   <p>
                     Giá trị thuộc tính
                     <i class="right fas fa-angle-left"></i>
@@ -267,7 +267,7 @@
               </li>
               <li class="nav-item has-treeview">
                 <a href="#" class="nav-link">
-                  <i class="nav-icon fas fa-tachometer-alt"></i>
+                  <i class="nav-icon fas fa-copy"></i>
                   <p>
                     DS thuộc tính
                     <i class="right fas fa-angle-left"></i>

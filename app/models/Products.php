@@ -143,4 +143,8 @@ class Products extends Model
     {
         return $this->hasMany('App\Models\productAttribute');
     }
+    public function getCat()
+	{
+		return $this->hasOne('App\Models\Categories','id','cate_id')->orderBy('created_at','desc');
+	}
 }

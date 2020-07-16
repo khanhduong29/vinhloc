@@ -35,4 +35,9 @@ class attribute extends Model
     {
         return $this->hasMany('App\Models\attributeValue');
     }
+
+    public function getAttValue()
+	{
+		return $this->hasOne('App\Models\attributeValue','attribute_id','id')->orderBy('created_at','desc');
+	}
 }

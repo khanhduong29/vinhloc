@@ -11,4 +11,15 @@ class productAttribute extends Model
     protected $table = 'product_attribute';
 
     protected $fillable = ['products_id','attribute_id'];
+
+
+
+    public function getAtt()
+	{
+		return $this->hasOne('App\Models\attribute','id','attribute_id')->orderBy('created_at','desc');
+	}
+    public function getPro()
+	{
+		return $this->hasOne('App\Models\Products','id','products_id')->orderBy('created_at','desc');
+	}
 }

@@ -53,8 +53,9 @@
                 <thead>
                   <tr>
                     <th>ID</th>
-                    <th>Id thuộc tính</th>
-                    <th>Id sản phẩm</th>
+                    <th>Sản phẩm</th>
+                    <th>Thuộc tính</th>
+                    <th>Giá trị thuộc tính</th>
                     <th>Ngày tạo</th>
                   </tr>
                 </thead>
@@ -63,8 +64,9 @@
                   @foreach($attrProduct as $value)
                   <tr>
                     <td>{{$value->id}}</td>
-                    <td>{{$value->products_id}}</td>
-                    <td>{{$value->attribute_id}}</td>
+                    <td>{{$value-> getPro -> name}}</td>
+                    <td>{{$value-> getAtt -> name}}</td>
+                    <td>{{$value-> getAtt -> getAttValue -> value}}</td>
                     <td>{{$value->created_at}}</td>
                   </tr>
                   @endforeach
