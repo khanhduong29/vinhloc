@@ -4,7 +4,8 @@ namespace App\Models;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use Illuminate\Database\Eloquent\Model;
-use App\Models\products;
+use App\Models\Products;
+use App\Models\productAttribute;
 
 class Products extends Model
 {
@@ -21,7 +22,7 @@ class Products extends Model
 				'price' => 'required',
 				'cate_id' => 'required',
 				'des' => 'required',
-				'file'=>'required|max:10000|mimes:jpg,jpeg,png,gif'
+                'file'=>'required|max:10000|mimes:jpg,jpeg,png,gif',
 			],
 			[
 				'required' => ':attribute Đang bỏ trống.',
@@ -37,10 +38,10 @@ class Products extends Model
                  'price' => 'Giá',
                  'descriptions' => 'Mô tả',
                  'cate_id' => 'Loại sản phẩm',
-                 'file' =>'Ảnh'
+                 'file' =>'Ảnh',
 			]
 		);
-    	$status = request()->status;
+        $status = request()->status;
 	    if($status){
 	    	$status = 1;
 	    }else{
@@ -51,7 +52,8 @@ class Products extends Model
 			$file = request() -> file;
 			$file -> move(base_path('public/Uploads/products'),$file -> getClientOriginalName());
 			$image = $file -> getClientOriginalName();
-		}
+        }
+
 		 $models = $this->create([
 			'cate_id' => request()->cate_id,
 			'code' => request()->code,
@@ -61,9 +63,17 @@ class Products extends Model
 			'des' => request()->des,
 			'image' => $image,
 			'status' => $status,
-		]);
-		return $models;
-
+        ]);
+        if(request()->attribute_id) {
+            foreach(request()->attribute_id as $value){
+                $attr_pro = productAttribute::create([
+                    'products_id' => $models->id,
+                    'attribute_id' => $value
+                ]);
+            }
+        }
+        return $models;
+        return $attr_pro;
 	}
 	// cập nhật dữ liệu
 	public function update_data($pro){
@@ -117,7 +127,7 @@ class Products extends Model
 			$image = $file -> getClientOriginalName();
 		}else{
 			$image = $pro->image;
-		}
+        }
 		$updated = $this->update([
 			'cate_id' => request()->cate_id,
 			'code' => request()->code,
@@ -127,6 +137,10 @@ class Products extends Model
 			'des' => request()->des,
 			'image' => $image,
 			'status' => $status,
-		]);
-	}
+        ]);
+    }
+    public function productAttr()
+    {
+        return $this->hasMany('App\Models\productAttribute');
+    }
 }

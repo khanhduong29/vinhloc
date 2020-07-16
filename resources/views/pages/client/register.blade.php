@@ -15,21 +15,21 @@
                             <div class="row border-2 m-0 pt-5 pb-5">
                                 <div class="col-12 form-group">
                                     <label for="" >Họ và tên</label>
-                                    <input type="text" name="name" class="form-control" value=""  id="" placeholder="Họ và tên">
+                                    <input type="text" name="name" class="form-control" value="{{old('name')}}"  id="" placeholder="Họ và tên">
                                     @error('name')
                                         <span class="error-message">{{$message}}</span>
                                     @enderror
                                 </div>
                                 <div class="col-12 form-group">
                                     <label for="" >Email</label>
-                                    <input type="email" name="email" class="form-control" value="" id="" placeholder="Email">
+                                    <input type="email" name="email" class="form-control" value="{{old('email')}}" id="" placeholder="Email">
                                     @error('email')
                                         <span class="error-message">{{$message}}</span>
                                     @enderror
                                 </div>
                                 <div class="col-12 form-group">
                                     <label for="" >Số điện thoại</label>
-                                    <input type="text" name="phone" class="form-control" value="" id="" placeholder="Số điện thoại">
+                                    <input type="text" name="phone" class="form-control" value="{{old('phone')}}" id="" placeholder="Số điện thoại">
                                     @error('phone')
                                         <span class="error-message">{{$message}}</span>
                                     @enderror

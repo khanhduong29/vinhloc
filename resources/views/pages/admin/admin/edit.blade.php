@@ -74,11 +74,11 @@
                     <div class="help-block"></div>
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputFile">Chọn ảnh admin</label>
-                    <div class="input-group row">
-                      <div class="col-8"><input type="file" name="file" class="text-center center-block file-upload" accept="image/gif, image/jpeg, image/jpg, image/png"/>  </div>
-                      <div class="col-4"><img src="{{asset('public/Uploads')}}/{{$admin-> avatar}}" alt="Chưa có hình ảnh" width="100%"></div>
+                    <label for="exampleInputFile">Chọn ảnh</label>
+                    <div class="input-group">
+                      <input type="file" name="file" class="form-control mb-3" accept="image/gif, image/jpeg, image/jpg, image/png"/>
                     </div>
+                    <img src="{{asset('public/Uploads')}}/{{$admin-> avatar}}" class="d-block" alt="Chưa có hình ảnh" width="120">
                   </div>
                   <div class="form-check">
                     <input type="checkbox" name="full" id="full" class="form-check-input" value="1" {{ in_array(1,$arr_role) ?"checked" : ""}}>

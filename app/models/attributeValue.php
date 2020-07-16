@@ -5,16 +5,16 @@ namespace App\Models;
 use Illuminate\Support\Str;
 use Illuminate\Database\Eloquent\Model;
 
-class attrValue extends Model
+class attributeValue extends Model
 {
-    protected $table = 'attr_values';
+    protected $table = 'attribute_values';
 
-    protected $fillable = ['attr_name','value'];
+    protected $fillable = ['attribute_id','value'];
 
     // thêm dữ liệu
     public function add(){
 		$models = $this->create([
-            'attr_name' => request()->attr_name,
+            'attribute_id' => request()->attr_name,
             'value' => request()->value,
 		]);
 		return $models;
@@ -32,5 +32,10 @@ class attrValue extends Model
             'attr_name' => $attr_name,
             'value' => $value
 		]);
-	}
+    }
+
+    public function attribute()
+    {
+        return $this->belongsTo('App\Models\attribute');
+    }
 }

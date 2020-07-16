@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateAttributeTable extends Migration
+class CreateOderDetailTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,12 @@ class CreateAttributeTable extends Migration
      */
     public function up()
     {
-        Schema::create('attribute', function (Blueprint $table) {
+        Schema::create('oder_detail', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name');
+            $table->integer('id_oder');
+            $table->integer('id_product');
+            $table->integer('quantity');
+            $table->float('price');
             $table->timestamps();
         });
     }
@@ -27,6 +30,6 @@ class CreateAttributeTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('attribute');
+        Schema::dropIfExists('oder_detail');
     }
 }

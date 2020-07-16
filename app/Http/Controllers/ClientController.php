@@ -36,7 +36,7 @@ class ClientController extends Controller {
         return view('pages.client.about');
     }
     public function product() {
-        $products = products::where('status',1)->paginate(4);
+        $products = products::where('status',1)->paginate(8);
         return view('pages.client.product',compact('products'));
     }
     public function service() {

@@ -3,13 +3,13 @@
 
 	use App\Http\Controllers\Controller;
 	use Illuminate\Http\Request;
-	use App\Models\attrName;
+	use App\Models\attribute;
 	use File;
 
 	class attrNameController extends Controller {
 		//danh sách dữ liệu
 		public function list_attrName(){
-			$attrName=attrName::all();
+			$attrName=attribute::all();
         	return view('pages.admin.attribute.attr_name.list', [
         		'attrName' => $attrName
         	]);
@@ -18,40 +18,40 @@
 		public function create(){
 			return view('pages.admin.attribute.attr_name.add');
 		}
-		public function store(Request $request,attrName $attrName){
+		public function store(Request $request,attribute $attrName){
 			$request->validate([
 			    'name' => 'required|unique:attribute|max:255',
 			]);
 			$attrName->add();
 	        if ($attrName) {
-	            return redirect()->route('list-attrName') -> with('success','Thêm mới thành công');
+	            return redirect()->route('list-attrName') -> with('message','Thêm mới thành công');
 	        }else{
-	            return redirect()->back()->with('error','Add categories ' .request()->cate_name. ' fail' );
+	            return redirect()->back()->with('message','Thêm mới thất bại' );
 	        }
 		}
 		// sửa dữ liệu
 		public function edit($id){
-			$attrName = attrName::where('id', $id)->first();
+			$attrName = attribute::where('id', $id)->first();
         	return view('pages.admin.attribute.attr_name.edit',[
         		'attrName' => $attrName
         	]);
 		}
-		public function update(request $request,attrName $id){
+		public function update(request $request,attribute $id){
 			$id->update_data();
 	       	if ($id) {
-	        	return redirect()->route('list-attrName') -> with('success','Sửa thành công');
+	        	return redirect()->route('list-attrName') -> with('message','Sửa thành công');
 	    	} else {
-	     		return redirect()->back()->with('error','Update category'.request()->cate_name.' fail');
+	     		return redirect()->back()->with('message','Sửa thất bại');
 	    	}
 		}
 		// xóa dữ liệu
-		public function delete(attrName $id)
+		public function delete(attribute $id)
 	    {
 	        $id->delete();
 	        if ($id) {
-	           return redirect()->route('list-attrName') -> with('success','Xóa thành công');
+	           return redirect()->route('list-attrName') -> with('message','Xóa thành công');
 	       } else {
-	        return redirect()->back()->with('error','Delete category '.request()->cate_name.' fail');
+	        return redirect()->back()->with('message','Xóa thất bại');
 	       }
 	    }
 	}

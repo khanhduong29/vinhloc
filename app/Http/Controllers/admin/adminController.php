@@ -4,6 +4,7 @@
     use App\Http\Controllers\Controller;
     use Illuminate\Http\Request;
     use App\Models\User;
+    use Illuminate\Support\Facades\Session;
     use Auth;
 	use Hash;
 
@@ -28,9 +29,9 @@
 		public function store(Request $request,User $User){
             $model = $User->add();
 	        if ($User) {
-	            return redirect()->route('list-admin') -> with('success','Thêm mới thành công');
+	            return redirect()->route('list-admin') -> with('message','Thêm mới thành công');
 	        }else{
-	            return redirect()->back()->with('error','Add admin fail' );
+	            return redirect()->back()->with('message','Thêm mới thất bại' );
 	        }
 		}
 		// sửa dữ liệu
@@ -46,9 +47,10 @@
 		public function update(request $request,User $id){
 			$updated = $id->update_data($id);
 	       	if ($id) {
-	        	return redirect()->route('list-admin') -> with('success','Sửa thành công');
+	        	return redirect()->route('list-admin')->with('message','Sửa thành công');
 	    	} else {
-	     		return redirect()->back()->with('error','Update category fail');
+                Session::flash('message', "Sửa không thành công");
+	     		return redirect()->back()->withInput();
 	    	}
 		}
 
@@ -57,9 +59,9 @@
 	    {
 	        $delete = $id->delete();
 	        if ($id) {
-	           return redirect()->route('list-admin') -> with('success','Xóa thành công');
+	           return redirect()->route('list-admin') -> with('message','Xóa thành công');
 	       } else {
-	        return redirect()->back()->with('error','Delete category fail');
+	        return redirect()->back()->with('message','Xóa thất bại');
 	       }
 	    }
 	    function login_admin(){
@@ -68,9 +70,9 @@
 		}
 		public function postLogin_admin(Request $request,User $user){
 			if($user->login()) {
-	            return redirect()->route('admin') -> with('success','Thêm mới thành công');
+	            return redirect()->route('admin') -> with('message','Đăng nhập thành công');
 	        } else {
-	            return redirect()->back()->with('error','Add products ' .request()->cate_name. ' fail' );
+	            return redirect()->back()->with('message','Đăng nhập thất bại' );
 	        }
 		}
 		public function logout_admin(){

@@ -6,6 +6,14 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <div class="container-fluid">
+        @if (session()->has('message'))
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <strong>{{ session()->get('message') }}</strong>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        @endif
         <div class="row mb-2">
           <div class="col-sm-6">
             <!-- <h1>DataTables</h1> -->
@@ -25,7 +33,7 @@
               <?php endfor ?>
             </h5>
           </section>
-            <a href="{{route('add')}}">Thêm admin</a>
+            <a href="{{route('add-name-attr')}}">Thêm thuộc tính</a>
 
           </div>
           <div class="col-sm-6">

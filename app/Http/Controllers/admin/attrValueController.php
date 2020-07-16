@@ -3,62 +3,62 @@
 
 	use App\Http\Controllers\Controller;
 	use Illuminate\Http\Request;
-    use App\Models\attrValue;
-    use App\Models\attrName;
+    use App\Models\attributeValue;
+    use App\Models\attribute;
 	use File;
 
 	class attrValueController extends Controller {
 		//danh sách dữ liệu
 		public function list_attrValue(){
-            $attrValue = attrValue::all();
+            $attrValue = attributeValue::all();
         	return view('pages.admin.attribute.attr_value.list', [
                 'attrValue' => $attrValue
         	]);
 		}
 		// thêm dữ liệu
 		public function create(){
-            $attrName = attrName::all();
+            $attrName = attribute::all();
 			return view('pages.admin.attribute.attr_value.add',[
                 'attrName' => $attrName
             ]);
 		}
-		public function store(Request $request,attrValue $attrValue){
+		public function store(Request $request,attributeValue $attrValue){
 			$request->validate([
                 'attr_name' => 'required',
                 'value' => 'required'
 			]);
 			$attrValue->add();
 	        if ($attrValue) {
-	            return redirect()->route('list-attrValue') -> with('success','Thêm mới thành công');
+	            return redirect()->route('list-attrValue') -> with('message','Thêm mới thành công');
 	        }else{
-	            return redirect()->back()->with('error','Add categories ' .request()->cate_name. ' fail' );
+	            return redirect()->back()->with('message','Thêm mới thất bại' );
 	        }
 		}
 		// sửa dữ liệu
 		public function edit($id){
-            $attrName = attrName::all();
-            $attrValue = attrValue::where('id', $id)->first();
+            $attrName = attribute::all();
+            $attrValue = attributeValue::where('id', $id)->first();
         	return view('pages.admin.attribute.attr_value.edit',[
                 'attrValue' => $attrValue,
                 'attrName' => $attrName
             ]);
 		}
-		public function update(request $request,attrValue $id){
+		public function update(request $request,attributeValue $id){
 			$id->update_data();
 	       	if ($id) {
-	        	return redirect()->route('list-attrValue') -> with('success','Sửa thành công');
+	        	return redirect()->route('list-attrValue') -> with('message','Sửa thành công');
 	    	} else {
-	     		return redirect()->back()->with('error','Update category'.request()->cate_name.' fail');
+	     		return redirect()->back()->with('message','Sửa thất bại');
 	    	}
 		}
 		// xóa dữ liệu
-		public function delete(attrValue $id)
+		public function delete(attributeValue $id)
 	    {
 	        $id->delete();
 	        if ($id) {
-	           return redirect()->route('list-attrValue') -> with('success','Xóa thành công');
+	           return redirect()->route('list-attrValue') -> with('message','Xóa thành công');
 	       } else {
-	        return redirect()->back()->with('error','Delete category '.request()->cate_name.' fail');
+	        return redirect()->back()->with('message','Xóa thất bại');
 	       }
 	    }
 	}

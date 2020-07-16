@@ -22,9 +22,9 @@
 		public function store(Request $request,banner $banner){
 			$model = $banner->add();
 	        if ($banner) {
-	            return redirect()->route('list-banner') -> with('success','Thêm mới thành công');
+	            return redirect()->route('list-banner') -> with('message','Thêm mới thành công');
 	        }else{
-	            return redirect()->back()->with('error','Add banner fail' );
+	            return redirect()->back()->with('message','Thêm mới thất bại' );
 	        }
 		}
 		// sửa dữ liệu
@@ -37,9 +37,9 @@
 		public function update(request $request,banner $id){
 			$updated = $id->update_data($id);
 	       	if ($id) {
-	        	return redirect()->route('list-banner') -> with('success','Sửa thành công');
+	        	return redirect()->route('list-banner') -> with('message','Sửa thành công');
 	    	} else {
-	     		return redirect()->back()->with('error','Update category fail');
+	     		return redirect()->back()->with('message','Sửa thất bại');
 	    	}
 		}
 
@@ -48,9 +48,9 @@
 	    {
 	        $delete = $id->delete();
 	        if ($id) {
-	           return redirect()->route('list-banner') -> with('success','Xóa thành công');
+	           return redirect()->route('list-banner') -> with('message','Xóa thành công');
 	       } else {
-	        return redirect()->back()->with('error','Delete category fail');
+	        return redirect()->back()->with('message','Xóa thất bại');
 	       }
 	    }
 	}
