@@ -48,6 +48,20 @@
 <script src="{{ asset('public/frontend/admin/plugins/datatables-bs4/js/dataTables.bootstrap4.js') }}"></script>
 
 <script>
+    function onFileChange(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                $('#image-change')
+                    .attr('src', e.target.result);
+            };
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+</script>
+
+<script>
   $(function () {
     $("#example1").DataTable();
     $('#example2').DataTable({
