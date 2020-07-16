@@ -1602,11 +1602,15 @@ a.c-feb:hover{
     opacity: 0;
     z-index: -1;
     visibility: hidden;
-    transition: all 0.5s;
-    left: 0;
-    top: -100%;
+    right: 0;
+    top: 127%;
     color: #fff;
     border-radius: 5px;
+    box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.07);
+    z-index: 99;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    transition: all 0.5s ease;
 }
 
 .cart-hover-active {

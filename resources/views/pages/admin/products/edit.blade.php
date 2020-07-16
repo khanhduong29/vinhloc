@@ -82,7 +82,7 @@
                     <div class="input-group">
                       <input type="file" name="file" class="form-control mb-3" accept="image/gif, image/jpeg, image/jpg, image/png"/>
                     </div>
-                    <img src="{{asset('public/Uploads')}}/{{$products-> image}}" class="d-block" alt="Chưa có hình ảnh" width="120">
+                    <img src="{{asset('public/Uploads/products')}}/{{$products-> image}}" class="d-block" alt="Chưa có hình ảnh" width="120">
                   </div>
                   <div class="form-group">
                     <label for="">Giá sản phẩm</label>

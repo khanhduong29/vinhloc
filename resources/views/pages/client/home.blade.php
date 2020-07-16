@@ -251,24 +251,27 @@
             </h2>
             <div class="row">
                 <div class="col-lg-6 col-md-12 col-xs-12 mb-4">
+                    @foreach($blog as $blg)
                     <div class="item">
-                        <a href="{{route('blog-detail',['slug'=>$blog->slug])}}" class="smooth hv-scale" title="">
-                            <img src="{{asset('public/Uploads')}}/{{$blog -> image}}" alt="lỗi" title="" class="img-fluid" />
+                        <a href="{{route('blog-detail',['slug'=>$blg->slug])}}" class="smooth hv-scale" title="">
+                            <img src="{{asset('public/Uploads')}}/{{$blg -> image}}" alt="lỗi" title="" class="img-fluid" />
                         </a>
                         <div class="desc s-content mt-2">
                             <h3>
-                                <a href="{{route('blog-detail',['slug'=>$blog->slug])}}" title="" class="c-feb f-18 row-2">{{$blog -> name }}</a>
+                                <a href="{{route('blog-detail',['slug'=>$blg->slug])}}" title="" class="c-feb f-18 row-2">{{$blg -> name }}</a>
                             </h3>
-                            <span class="date">{{$blog -> created_at}} - 65 lượt xem</span>
+                            <span class="date">{{$blg -> created_at}} - 65 lượt xem</span>
                             <div class="content_news c-fff row-6">
-                                {!!$blog->des!!}
+                                {!!Str::limit($blg->des,350)!!}
                             </div>
                         </div>
                     </div>
+                    @break;
+                    @endforeach
                 </div>
                 <div class="col-lg-6 col-md-12 col-xs-12 mb-4">
                     <div class="item slick4">
-                        @foreach($blg as $value)
+                        @foreach($blog as $value)
                         <div class="box">
                             <a href="{{route('blog-detail',['slug'=>$value->slug])}}" class="smooth hv-scale">
                                 <img src="{{asset('public/Uploads')}}/{{$value -> image}}" class="img-fluid"/>
@@ -276,7 +279,7 @@
                             <div class="desc">
                                 <a href="{{route('blog-detail',['slug'=>$value->slug])}}" title="" class="c-feb f-16 row-2">{{$value -> name}}</a>
                                 <div class="content_news c-fff f-14 row-2">
-                                    {!!$value->des!!}
+                                    {!!Str::limit($value->des,250)!!}
                                 </div>
                             </div>
                         </div>

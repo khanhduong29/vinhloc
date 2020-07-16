@@ -24,6 +24,9 @@
 		// thêm dữ liệu
 		public function create(){
             $categories = categories::all();
+            $attrName = attrName::all();
+            $where = attrName::select('name')->get()->toArray();
+            $attrValue = attrvalue::where('attr_name',$where)->get();
             $attributes = attribute::all();
 			return view('pages.admin.products.add',[
 				'categories' => $categories,

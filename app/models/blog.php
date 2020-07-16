@@ -57,7 +57,7 @@ class blog extends Model
 				'name' => 'required',
 				'content' => 'required',
 				'des' => 'required',
-				'file'=>'required|max:10000|mimes:jpg,jpeg,png,gif'
+				'file'=>'max:10000|mimes:jpg,jpeg,png,gif'
 			],
 			[
 				'required' => ':attribute đang bỏ trống.',

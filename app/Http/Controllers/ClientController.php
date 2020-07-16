@@ -29,9 +29,7 @@ class ClientController extends Controller {
     }
     public function home() {
         $products = products::all();
-        $blog = blog::first();
-        $blg = blog::all();
-        return view('pages.client.home',compact('products','blog','blg'));
+        $blog = blog::all();
         return view('pages.client.home',compact('products','blog'));
     }
     public function about() {
