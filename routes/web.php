@@ -54,7 +54,7 @@ Route::get('admin/logout','admin\adminController@logout_admin') -> name('logout'
 
 
 Route::group(['prefix' => 'cart'], function () {
-    Route::get('/','CartController@cart')->name('cart');
+    Route::get('cart','CartController@cart')->name('cart');
     Route::get('checkout','CartController@checkout')->name('checkout');
 });
 
@@ -70,3 +70,4 @@ Route::group(['prefix' => 'account'], function () {
 
 Route::any('getprice','GetController@getPrice')->name('getprice');
 Route::any('getcategory','GetController@getCategory')->name('getcategory');
+Route::any('orderby','GetController@getOrDerby')->name('orderby');

@@ -7,7 +7,7 @@
             <h2 class="text-center">
                 <span class="title-big c-fff">Sản phẩm</span>
             </h2>
-            <form action="" method="get" accept-charset="utf-8" class="filter-pro d-lg-flex d-md-flex justify-content-center mt-5">
+            <form action="{{route('orderby')}}" method="get" accept-charset="utf-8" class="filter-pro d-lg-flex d-md-flex justify-content-center mt-5" id="form_order">
                 <select class="js-example-basic-single m-2" id="cate">
                     @foreach($categories as $cate)
                     <option value="{{$cate->id}}">{{$cate -> name}}</option>
@@ -19,9 +19,11 @@
                     <option value="" data-giatri1="300000" data-giatri2="350000">Từ 300000 đến 350000</option>
                     <option value="" data-giatri1="350000" data-giatri2="500000">Từ 350000 đến 500000</option>
                 </select>
-                <select class="js-example-basic-single m-2">
-                    <option value="AL">Alabama</option>
-                    <option value="WY">Wyoming</option>
+                <select class="js-example-basic-single m-2" id ="orderby" name="order">
+                    <option value="">---Sắp xếp theo---</option>
+                    <option value="1">Giá giảm dần </option>
+                    <option value="2">Giá tăng dần</option>
+                    <option value="3">Tên sản phẩm</option>
                 </select>
             </form>
             <section class="show-pro pt-lg-5 pt-4">
