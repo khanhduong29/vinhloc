@@ -10,7 +10,7 @@ class construction extends Model
     protected $table = 'construction';
 
     protected $fillable = ['name','image','des','title','status'];
-    
+
     // thêm dữ liệu
     public function add(){
     	$validate = request()->validate(
