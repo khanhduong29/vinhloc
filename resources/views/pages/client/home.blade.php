@@ -47,28 +47,51 @@
                 <ul class="nav nav-tabs" role="tablist">
                     @foreach($con as $value)
                     <li role="presentation" class="nav-item">
-                        <a href="#tab2" aria-controls="tab2" role="tab" data-toggle="tab" class="nav-link">{{$value -> name}}</a>
+                        <a href="#{{$value -> name}}" aria-controls="{{$value -> name}}" role="tab" data-toggle="tab" class="nav-link">{{$value -> name}}</a>
                     </li>
                     @endforeach
                 </ul>
+
                 <div class="tab-content pt-lg-5 pt-4">
-                    <div role="tabpanel" class="tab-pane active list-pro" id="tab2">
-                        <div class="slick2 sublist imglist">
-                           @foreach(json_decode($value->image) as $img)
-                            <div class="item">
-                                <a href="" class="smooth hv-scale" title="Ảnh nhà hàng">
-                                    <img src="{{asset('public/Uploads/'.$img)}}" alt="Ảnh nhà hàng" title="Ảnh nhà hàng" class="img-fluid" />
-                                </a>
+                    @foreach($con as $key => $value)
+                        @if($key === 0)
+                            <div role="tabpanel" class="tab-pane active list-pro" id="{{$value -> name}}">
+                                <div class="slick2 sublist imglist">
+                                @foreach(json_decode($value->image) as $img)
+                                    <div class="item">
+                                        <a href="" class="smooth hv-scale" title="Ảnh nhà hàng">
+                                            <img src="{{asset('public/Uploads/'.$img)}}" alt="Ảnh nhà hàng" title="Ảnh nhà hàng" class="img-fluid" />
+                                        </a>
+                                    </div>
+                                    @endforeach
+                                </div>
+                                <div class="desc d-none d-md-block d-lg-block">
+                                    <h3>
+                                        <a title="CÁC DỰ ÁN NHÀ HÀNG VÀ KHÁCH SẠN NỔI BẬT ĐÃ ĐƯỢC VĨNH LỘC LUXURY THIẾT KẾ VÀ THI CÔNG">{{$value -> title}}</a>
+                                    </h3>
+                                    <p class="c-fff f-14 row-4">{{$value -> des}}</p>
+                                </div>
                             </div>
-                            @endforeach
+                        @else
+                        <div role="tabpanel" class="tab-pane list-pro" id="{{$value -> name}}">
+                            <div class="slick2 sublist imglist">
+                            @foreach(json_decode($value->image) as $img)
+                                <div class="item">
+                                    <a href="" class="smooth hv-scale" title="Ảnh nhà hàng">
+                                        <img src="{{asset('public/Uploads/'.$img)}}" alt="Ảnh nhà hàng" title="Ảnh nhà hàng" class="img-fluid" />
+                                    </a>
+                                </div>
+                                @endforeach
+                            </div>
+                            <div class="desc d-none d-md-block d-lg-block">
+                                <h3>
+                                    <a title="CÁC DỰ ÁN NHÀ HÀNG VÀ KHÁCH SẠN NỔI BẬT ĐÃ ĐƯỢC VĨNH LỘC LUXURY THIẾT KẾ VÀ THI CÔNG">{{$value -> title}}</a>
+                                </h3>
+                                <p class="c-fff f-14 row-4">{{$value -> des}}</p>
+                            </div>
                         </div>
-                        <div class="desc d-none d-md-block d-lg-block">
-                            <h3>
-                                <a title="CÁC DỰ ÁN NHÀ HÀNG VÀ KHÁCH SẠN NỔI BẬT ĐÃ ĐƯỢC VĨNH LỘC LUXURY THIẾT KẾ VÀ THI CÔNG">{{$value -> title}}</a>
-                            </h3>
-                            <p class="c-fff f-14 row-4">{{$value -> des}}</p>
-                        </div>
-                    </div>
+                        @endif
+                    @endforeach
                     <!-- <div role="tabpanel" class="tab-pane list-pro" id="tab1">
                         <div class="slick2 sublist imglist">
                                 <div class="item">
@@ -147,6 +170,7 @@
                             </div>
                     </div> -->
                 </div>
+
             </div>
         </div>
     </section>
