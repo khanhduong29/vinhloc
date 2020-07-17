@@ -15,7 +15,7 @@ class config extends Model
     public function add(){
     	$validate = request()->validate(
 			[
-				'name' => 'required',
+				'name' => 'required|unique:config',
 				'value' => 'required',
 			],
 			[
