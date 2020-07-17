@@ -35,8 +35,11 @@
                                     <span class="error-message">{{ Session::get('message') }}</span>
                                 @endif
                                 </div>
-								<div class="col-12  form-group">
+								<div class="col-4 form-group">
 									<button type="submit" name="submit" class="btn btn-lg btn-primary btn-lg-feb">Đăng nhập</button>
+                                </div>
+                                <div class="col-8">
+									<p class="sugges">Nếu chưa có tài khoản vui lòng <a href="{{route('register_user')}}"> Đăng ký</a></p>
 								</div>
 							</div>
 						</form>

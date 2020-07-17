@@ -1950,3 +1950,15 @@ a.c-feb:hover{
     font-weight: 400;
     font-size: 13px;
 }
+.sugges {
+    color: #fff;
+    font-size: 12px;
+    float: right;
+
+}
+.sugges a{
+    color: #d8c190;
+}
+.sugges a:hover{
+    color: #fdb300;
+}
