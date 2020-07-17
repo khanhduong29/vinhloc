@@ -263,7 +263,7 @@
                 <div class="col-lg-6 col-md-12 col-xs-12 mb-4">
                     <div class="item slick4">
                         @foreach($blog as $value)
-                        <div class="box">
+                        <div class="box" style="padding: 5px">
                             <a href="{{route('blog-detail',['slug'=>$value->slug])}}" class="smooth hv-scale">
                                 <img src="{{asset('public/Uploads')}}/{{$value -> image}}" class="img-fluid"/>
                             </a>
