@@ -59,6 +59,24 @@
                 }
             });
         });
+        $('#orderby').on('change',function() {
+            $orderby = $('option:selected',this).val();
+            if ($orderby != '') {
+                $.ajax({
+                type: "GET",
+                url: "{{route('orderby')}}",
+                data: {
+                    data: $orderby
+                },
+                success: function (res) {
+                    $('#content').html(res);
+                }
+            });
+            } else {
+                $('#content').html('');
+            }
+            
+        }); 
     </script>
 
       <script>

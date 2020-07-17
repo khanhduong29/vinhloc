@@ -80,9 +80,9 @@
                   <div class="form-group">
                     <label for="exampleInputFile">Chọn ảnh sản phẩm</label>
                     <div class="input-group">
-                      <input type="file" name="file" class="form-control mb-3" accept="image/gif, image/jpeg, image/jpg, image/png"/>
+                      <input type="file" name="file" class="form-control mb-3"  onchange="onFileChange(this)" accept="image/gif, image/jpeg, image/jpg, image/png"/>
                     </div>
-                    <img src="{{asset('public/Uploads/products')}}/{{$products-> image}}" class="d-block" alt="Chưa có hình ảnh" width="120">
+                    <img src="{{asset('public/Uploads/products')}}/{{$products-> image}}" id="image-change" class="d-block" alt="Chưa có hình ảnh" width="120">
                   </div>
                   <div class="form-group">
                     <label for="">Giá sản phẩm</label>
@@ -97,6 +97,8 @@
                         </textarea>
                       </div>
                   </div>
+                </div>
+            </div>
                   @foreach($attributes as $att)
                   <div class="form-group">
                     <label for="">{{$att->name}}</label>

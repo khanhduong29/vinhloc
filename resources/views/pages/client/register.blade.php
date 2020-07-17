@@ -49,8 +49,11 @@
                                     @enderror
                                 </div>
 
-                                <div class="col-12  form-group">
+                                <div class="col-4  form-group">
                                     <button type="submit" name="submit" class="btn btn-lg btn-primary btn-lg-feb">Đăng ký </button>
+                                </div>
+                                <div class="col-8">
+                                    <p class="sugges">Nếu đã có tài khoản vui lòng <a href="{{route('login_user')}}"> Đăng nhập</a></p>
                                 </div>
                             </div>
                         </form>
