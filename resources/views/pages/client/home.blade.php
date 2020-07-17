@@ -45,51 +45,31 @@
             </h2>
             <div role="tabpanel" class="pt-lg-5 pt-4">
                 <ul class="nav nav-tabs" role="tablist">
+                    @foreach($con as $value)
                     <li role="presentation" class="nav-item">
-                        <a href="#home" aria-controls="home" role="tab" data-toggle="tab" class="active nav-link">Nhà hàng khách sạn</a>
+                        <a href="#tab2" aria-controls="tab2" role="tab" data-toggle="tab" class="nav-link">{{$value -> name}}</a>
                     </li>
-                    <li role="presentation" class="nav-item">
-                        <a href="#tab1" aria-controls="tab1" role="tab" data-toggle="tab" class="nav-link">Chung cư biệt thự</a>
-                    </li>
-                    <li role="presentation" class="nav-item">
-                        <a href="#tab2" aria-controls="tab2" role="tab" data-toggle="tab" class="nav-link">Hội trường và nhà khách</a>
-                    </li>
-                    <li role="presentation" class="nav-item">
-                        <a href="#tab3" aria-controls="tab3" role="tab" data-toggle="tab" class="nav-link">Nhà thờ dòng họ</a>
-                    </li>
+                    @endforeach
                 </ul>
                 <div class="tab-content pt-lg-5 pt-4">
-                    <div role="tabpanel" class="tab-pane active list-pro" id="home">
+                    <div role="tabpanel" class="tab-pane active list-pro" id="tab2">
                         <div class="slick2 sublist imglist">
+                           @foreach(json_decode($value->image) as $img)
                             <div class="item">
-                                <a href="{{url('public')}}/frontend/images/slide/bn-ctent.jpg" class="smooth hv-scale" title="Ảnh nhà hàng" data-fancybox="gallery">
-                                    <img src="{{url('public')}}/frontend/images/slide/bn-ctent.jpg" alt="Ảnh nhà hàng" title="Ảnh nhà hàng" class="img-fluid" />
+                                <a href="" class="smooth hv-scale" title="Ảnh nhà hàng">
+                                    <img src="{{asset('public/Uploads/'.$img)}}" alt="Ảnh nhà hàng" title="Ảnh nhà hàng" class="img-fluid" />
                                 </a>
                             </div>
-                            <div class="item">
-                                <a href="{{url('public')}}/frontend/images/slide/slide3.jpg" class="smooth hv-scale" title="Ảnh nhà hàng" data-fancybox="gallery">
-                                    <img src="{{url('public')}}/frontend/images/slide/slide3.jpg" alt="Ảnh nhà hàng" title="Ảnh nhà hàng" class="img-fluid" />
-                                </a>
-                            </div>
-                            <div class="item">
-                                <a href="{{url('public')}}/frontend/images/slide/slide0.jpg" class="smooth hv-scale" title="Ảnh nhà hàng" data-fancybox="gallery">
-                                    <img src="{{url('public')}}/frontend/images/slide/slide0.jpg" alt="Ảnh nhà hàng" title="Ảnh nhà hàng" class="img-fluid" />
-                                </a>
-                            </div>
-                            <div class="item">
-                                <a href="{{url('public')}}/frontend/images/slide/slide1.jpg" class="smooth hv-scale" title="Ảnh nhà hàng"data-fancybox="gallery" >
-                                    <img src="{{url('public')}}/frontend/images/slide/slide1.jpg" alt="Ảnh nhà hàng" title="Ảnh nhà hàng" class="img-fluid" />
-                                </a>
-                            </div>
+                            @endforeach
                         </div>
                         <div class="desc d-none d-md-block d-lg-block">
                             <h3>
-                                <a title="CÁC DỰ ÁN NHÀ HÀNG VÀ KHÁCH SẠN NỔI BẬT ĐÃ ĐƯỢC VĨNH LỘC LUXURY THIẾT KẾ VÀ THI CÔNG">CÁC DỰ ÁN NHÀ HÀNG VÀ KHÁCH SẠN NỔI BẬT ĐÃ ĐƯỢC VĨNH LỘC LUXURY THIẾT KẾ VÀ THI CÔNG</a>
+                                <a title="CÁC DỰ ÁN NHÀ HÀNG VÀ KHÁCH SẠN NỔI BẬT ĐÃ ĐƯỢC VĨNH LỘC LUXURY THIẾT KẾ VÀ THI CÔNG">{{$value -> title}}</a>
                             </h3>
-                            <p class="c-fff f-14 row-4">Quý khách đang tìm mọi địa chỉ uy tín cung cấp các sản phẩm hiện đại, Các dự án nhà hàng và khách sạn nổi bật đã được vĩnh lộc Luxury thiết kế và thi công Các dự án nhà hàng và khách sạn nổi </p>
-                            </div>
+                            <p class="c-fff f-14 row-4">{{$value -> des}}</p>
+                        </div>
                     </div>
-                    <div role="tabpanel" class="tab-pane list-pro" id="tab1">
+                    <!-- <div role="tabpanel" class="tab-pane list-pro" id="tab1">
                         <div class="slick2 sublist imglist">
                                 <div class="item">
                                 <a href="{{url('public')}}/frontend/images/slide/bn-ctent.jpg" class="smooth hv-scale" title="Ảnh nhà hàng" data-fancybox="gallery">
@@ -121,26 +101,13 @@
                         </div>
                     <div role="tabpanel" class="tab-pane list-pro" id="tab2">
                         <div class="slick2 sublist imglist">
-                            <div class="item">
-                                <a href="{{url('public')}}/frontend/images/slide/bn-ctent.jpg" class="smooth hv-scale" title="Ảnh nhà hàng" data-fancybox="gallery">
-                                    <img src="{{url('public')}}/frontend/images/slide/bn-ctent.jpg" alt="Ảnh nhà hàng" title="Ảnh nhà hàng" class="img-fluid" />
-                                </a>
-                            </div>
-                            <div class="item">
-                                <a href="{{url('public')}}/frontend/images/slide/slide3.jpg" class="smooth hv-scale" title="Ảnh nhà hàng" data-fancybox="gallery">
-                                    <img src="{{url('public')}}/frontend/images/slide/slide3.jpg" alt="Ảnh nhà hàng" title="Ảnh nhà hàng" class="img-fluid" />
-                                </a>
-                            </div>
-                            <div class="item">
-                                <a href="{{url('public')}}/frontend/images/slide/slide0.jpg" class="smooth hv-scale" title="Ảnh nhà hàng" data-fancybox="gallery">
-                                    <img src="{{url('public')}}/frontend/images/slide/slide0.jpg" alt="Ảnh nhà hàng" title="Ảnh nhà hàng" class="img-fluid" />
-                                </a>
-                            </div>
-                            <div class="item">
-                                <a href="{{url('public')}}/frontend/images/slide/slide1.jpg" class="smooth hv-scale" title="Ảnh nhà hàng"data-fancybox="gallery" >
-                                    <img src="{{url('public')}}/frontend/images/slide/slide1.jpg" alt="Ảnh nhà hàng" title="Ảnh nhà hàng" class="img-fluid" />
-                                </a>
-                            </div>
+                           @foreach(json_decode($value->image) as $img)
+                        <div class="item">
+                           <a href="" class="smooth hv-scale" title="Ảnh nhà hàng">
+                              <img src="{{asset('public/Uploads/'.$img)}}" alt="Ảnh nhà hàng" title="Ảnh nhà hàng" class="img-fluid" />
+                           </a>
+                        </div>
+                            @endforeach
                         </div>
                         <div class="desc d-none d-md-block d-lg-block">
                             <h3>
@@ -178,7 +145,7 @@
                             </h3>
                             <p class="c-fff f-14 row-4">Quý khách đang tìm mọi địa chỉ uy tín cung cấp các sản phẩm hiện đại, Các dự án nhà hàng và khách sạn nổi bật đã được vĩnh lộc Luxury thiết kế và thi công Các dự án nhà hàng và khách sạn nổi </p>
                             </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>

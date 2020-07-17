@@ -7,138 +7,28 @@
             <h2 class="text-center">
                 <span class="title-big c-fff">Công trình</span>
             </h2>
+            @foreach($con as $value)
             <div class="subconstruc pt-lg-5 pt-4">
-                <a href="" title="" class="btn btn-lg-feb">Nhà hàng khách sạn</a>
+                <a href="" title="" class="btn btn-lg-feb">{{$value -> name}}</a>
                 <div class="list-pro">
                     <div class="slick2 sublist">
+                        @foreach(json_decode($value->image) as $img)
                         <div class="item">
                            <a href="" class="smooth hv-scale" title="Ảnh nhà hàng">
-                              <img src="{{url('public')}}/frontend/images/slide/bn-ctent.jpg" alt="Ảnh nhà hàng" title="Ảnh nhà hàng" class="img-fluid" />
+                              <img src="{{asset('public/Uploads/'.$img)}}" alt="Ảnh nhà hàng" title="Ảnh nhà hàng" class="img-fluid" />
                            </a>
                         </div>
-                        <div class="item">
-                           <a href="" class="smooth hv-scale" title="Ảnh nhà hàng">
-                              <img src="{{url('public')}}/frontend/images/slide/bn-ctent.jpg" alt="Ảnh nhà hàng" title="Ảnh nhà hàng" class="img-fluid" />
-                           </a>
-                        </div>
-                        <div class="item">
-                           <a href="" class="smooth hv-scale" title="Ảnh nhà hàng">
-                              <img src="{{url('public')}}/frontend/images/slide/bn-slider1.jpg" alt="Ảnh nhà hàng" title="Ảnh nhà hàng" class="img-fluid" />
-                           </a>
-                        </div>
-                        <div class="item">
-                           <a href="" class="smooth hv-scale" title="Ảnh nhà hàng">
-                              <img src="{{url('public')}}/frontend/images/slide/bn-ctent.jpg" alt="Ảnh nhà hàng" title="Ảnh nhà hàng" class="img-fluid" />
-                           </a>
-                        </div>
+                        @endforeach
                     </div>
                     <div class="desc d-none d-md-block d-lg-block">
                         <h3>
-                            <a title="CÁC DỰ ÁN NHÀ HÀNG VÀ KHÁCH SẠN NỔI BẬT ĐÃ ĐƯỢC VĨNH LỘC LUXURY THIẾT KẾ VÀ THI CÔNG">CÁC DỰ ÁN NHÀ HÀNG VÀ KHÁCH SẠN NỔI BẬT ĐÃ ĐƯỢC VĨNH LỘC LUXURY THIẾT KẾ VÀ THI CÔNG</a>
+                            <a title="CÁC DỰ ÁN NHÀ HÀNG VÀ KHÁCH SẠN NỔI BẬT ĐÃ ĐƯỢC VĨNH LỘC LUXURY THIẾT KẾ VÀ THI CÔNG">{{$value -> title}}</a>
                         </h3>
-                        <p class="c-fff row-4 f-14">Quý khách đang tìm mọi địa chỉ uy tín cung cấp các sản phẩm hiện đại, Các dự án nhà hàng và khách sạn nổi bật đã được vĩnh lộc Luxury thiết kế và thi công Các dự án nhà hàng và khách sạn nổi </p>
+                        <p class="c-fff row-4 f-14">{{$value -> des}}</p>
                      </div>
                 </div>
             </div>
-            <div class="subconstruc pt-lg-5 pt-4">
-                <a href="" title="" class="btn btn-lg-feb">Chung cư và biệt thự</a>
-                <div class="list-pro">
-                    <div class="slick2 sublist">
-                        <div class="item">
-                           <a href="" class="smooth hv-scale" title="Ảnh nhà hàng">
-                              <img src="{{url('public')}}/frontend/images/slide/bn-ctent.jpg" alt="Ảnh nhà hàng" title="Ảnh nhà hàng" class="img-fluid" />
-                           </a>
-                        </div>
-                        <div class="item">
-                           <a href="" class="smooth hv-scale" title="Ảnh nhà hàng">
-                              <img src="{{url('public')}}/frontend/images/slide/29f366813ee3c7bd9ef2.jpg" alt="Ảnh nhà hàng" title="Ảnh nhà hàng" class="img-fluid" />
-                           </a>
-                        </div>
-                        <div class="item">
-                           <a href="" class="smooth hv-scale" title="Ảnh nhà hàng">
-                              <img src="{{url('public')}}/frontend/images/slide/bn-slider1.jpg" alt="Ảnh nhà hàng" title="Ảnh nhà hàng" class="img-fluid" />
-                           </a>
-                        </div>
-                        <div class="item">
-                           <a href="" class="smooth hv-scale" title="Ảnh nhà hàng">
-                              <img src="{{url('public')}}/frontend/images/slide/bn-ctent.jpg" alt="Ảnh nhà hàng" title="Ảnh nhà hàng" class="img-fluid" />
-                           </a>
-                        </div>
-                    </div>
-                    <div class="desc d-none d-md-block d-lg-block">
-                        <h3>
-                            <a title="CÁC DỰ ÁN NHÀ HÀNG VÀ KHÁCH SẠN NỔI BẬT ĐÃ ĐƯỢC VĨNH LỘC LUXURY THIẾT KẾ VÀ THI CÔNG">CÁC DỰ ÁN NHÀ HÀNG VÀ KHÁCH SẠN NỔI BẬT ĐÃ ĐƯỢC VĨNH LỘC LUXURY THIẾT KẾ VÀ THI CÔNG</a>
-                        </h3>
-                        <p class="c-fff row-4 f-14">Quý khách đang tìm mọi địa chỉ uy tín cung cấp các sản phẩm hiện đại, Các dự án nhà hàng và khách sạn nổi bật đã được vĩnh lộc Luxury thiết kế và thi công Các dự án nhà hàng và khách sạn nổi </p>
-                     </div>
-                </div>
-            </div>
-            <div class="subconstruc pt-lg-5 pt-4">
-                <a href="" title="" class="btn btn-lg-feb">Hội trường và nhà khách</a>
-                <div class="list-pro">
-                    <div class="slick2 sublist">
-                        <div class="item">
-                           <a href="" class="smooth hv-scale" title="Ảnh nhà hàng">
-                              <img src="{{url('public')}}/frontend/images/slide/bn-ctent.jpg" alt="Ảnh nhà hàng" title="Ảnh nhà hàng" class="img-fluid" />
-                           </a>
-                        </div>
-                        <div class="item">
-                           <a href="" class="smooth hv-scale" title="Ảnh nhà hàng">
-                              <img src="{{url('public')}}/frontend/images/slide/slide0.jpg" alt="Ảnh nhà hàng" title="Ảnh nhà hàng" class="img-fluid" />
-                           </a>
-                        </div>
-                        <div class="item">
-                           <a href="" class="smooth hv-scale" title="Ảnh nhà hàng">
-                              <img src="{{url('public')}}/frontend/images/slide/bn-slider1.jpg" alt="Ảnh nhà hàng" title="Ảnh nhà hàng" class="img-fluid" />
-                           </a>
-                        </div>
-                        <div class="item">
-                           <a href="" class="smooth hv-scale" title="Ảnh nhà hàng">
-                              <img src="{{url('public')}}/frontend/images/slide/bn-ctent.jpg" alt="Ảnh nhà hàng" title="Ảnh nhà hàng" class="img-fluid" />
-                           </a>
-                        </div>
-                    </div>
-                    <div class="desc d-none d-md-block d-lg-block">
-                        <h3>
-                            <a title="CÁC DỰ ÁN NHÀ HÀNG VÀ KHÁCH SẠN NỔI BẬT ĐÃ ĐƯỢC VĨNH LỘC LUXURY THIẾT KẾ VÀ THI CÔNG">CÁC DỰ ÁN NHÀ HÀNG VÀ KHÁCH SẠN NỔI BẬT ĐÃ ĐƯỢC VĨNH LỘC LUXURY THIẾT KẾ VÀ THI CÔNG</a>
-                        </h3>
-                        <p class="c-fff row-4 f-14">Quý khách đang tìm mọi địa chỉ uy tín cung cấp các sản phẩm hiện đại, Các dự án nhà hàng và khách sạn nổi bật đã được vĩnh lộc Luxury thiết kế và thi công Các dự án nhà hàng và khách sạn nổi </p>
-                     </div>
-                </div>
-            </div>
-            <div class="subconstruc pt-lg-5 pt-4">
-                <a href="" title="" class="btn btn-lg-feb">Nhà thờ dòng họ</a>
-                <div class="list-pro">
-                    <div class="slick2 sublist">
-                        <div class="item">
-                           <a href="" class="smooth hv-scale" title="Ảnh nhà hàng">
-                              <img src="{{url('public')}}/frontend/images/slide/bn-ctent.jpg" alt="Ảnh nhà hàng" title="Ảnh nhà hàng" class="img-fluid" />
-                           </a>
-                        </div>
-                        <div class="item">
-                           <a href="" class="smooth hv-scale" title="Ảnh nhà hàng">
-                              <img src="{{url('public')}}/frontend/images/slide/slide2.jpg" alt="Ảnh nhà hàng" title="Ảnh nhà hàng" class="img-fluid" />
-                           </a>
-                        </div>
-                        <div class="item">
-                           <a href="" class="smooth hv-scale" title="Ảnh nhà hàng">
-                              <img src="{{url('public')}}/frontend/images/slide/bn-slider1.jpg" alt="Ảnh nhà hàng" title="Ảnh nhà hàng" class="img-fluid" />
-                           </a>
-                        </div>
-                        <div class="item">
-                           <a href="" class="smooth hv-scale" title="Ảnh nhà hàng">
-                              <img src="{{url('public')}}/frontend/images/slide/bn-ctent.jpg" alt="Ảnh nhà hàng" title="Ảnh nhà hàng" class="img-fluid" />
-                           </a>
-                        </div>
-                    </div>
-                    <div class="desc d-none d-md-block d-lg-block">
-                        <h3>
-                            <a title="CÁC DỰ ÁN NHÀ HÀNG VÀ KHÁCH SẠN NỔI BẬT ĐÃ ĐƯỢC VĨNH LỘC LUXURY THIẾT KẾ VÀ THI CÔNG">CÁC DỰ ÁN NHÀ HÀNG VÀ KHÁCH SẠN NỔI BẬT ĐÃ ĐƯỢC VĨNH LỘC LUXURY THIẾT KẾ VÀ THI CÔNG</a>
-                        </h3>
-                        <p class="c-fff row-4 f-14">Quý khách đang tìm mọi địa chỉ uy tín cung cấp các sản phẩm hiện đại, Các dự án nhà hàng và khách sạn nổi bật đã được vĩnh lộc Luxury thiết kế và thi công Các dự án nhà hàng và khách sạn nổi </p>
-                     </div>
-                </div>
-            </div>
+            @endforeach
         </div>
     </section>
     <section class="thumbs-cus space-title">
