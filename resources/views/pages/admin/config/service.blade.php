@@ -45,19 +45,30 @@
               <div class="card-header">
                 <h3 class="card-title">Quick Example</h3>
               </div>
+              @if ($errors->any())
+                  <div class="alert alert-danger">
+                      <ul>
+                          @foreach ($errors->all() as $error)
+                              <li>{{ $error }}</li>
+                          @endforeach
+                      </ul>
+                  </div>
+              @endif
               <!-- /.card-header -->
               <!-- form start -->
-              <form  method="post" role="form" enctype="multipart/form-data">
+              <form action="{{route('edit-config',$config)}}" method="post" role="form" enctype="multipart/form-data">
                 <div class="card-body">
                   <div class="form-group">
                     <label for="">Tên</label>
-                    <select name="name" class="form-control" required>
-                      <option value="{{$config->name}}" >{{$config->name}}</option>
+                    <select name="name" class="form-control">
+                      <option value="about">about</option>
                     </select>
                   </div>
                   <div class="form-group">
                     <label for="">Giá trị</label>
-                    <input type="text" class="form-control" id="name" name="value" value="{{$config->value}}" required placeholder="Nhập tên ">
+                    <textarea class="textarea form-control" required id="des" name="value" placeholder="Place some text here">
+                      {{$config->value}}
+                    </textarea>
                   </div>
                 </div>
                 <!-- /.card-body -->

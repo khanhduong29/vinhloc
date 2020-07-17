@@ -98,7 +98,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="" class="nav-link">
+            <a href="{{route('edit-config',$id = 4)}}" class="nav-link">
               <i class="nav-icon fas fa-shopping-cart"></i>
               <p>
                 Trang giới thiệu
@@ -106,7 +106,15 @@
               </p>
             </a>
           </li>
-
+          <li class="nav-item">
+            <a href="{{route('edit-config',$id = 7)}}" class="nav-link">
+              <i class="nav-icon fas fa-shopping-cart"></i>
+              <p>
+                Trang dịch vụ
+                <!-- <span class="right badge badge-danger">New</span> -->
+              </p>
+            </a>
+          </li>
           @if(strpos(Auth::user()->role, '1') !== false )
           <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
@@ -133,7 +141,30 @@
             </ul>
           </li>
           @endif
-
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-copy"></i>
+              <p>
+                Config
+                <i class="fas fa-angle-left right"></i>
+                <!-- <span class="badge badge-info right">6</span> -->
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <!-- <li class="nav-item">
+                <a href="{{route('add-config')}}" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Thêm config </p>
+                </a>
+              </li> -->
+              <li class="nav-item">
+                <a href="{{route('list-config')}}" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Danh sách config</p>
+                </a>
+              </li>
+            </ul>
+          </li>
           @if(strpos(Auth::user()->role, '1') !== false || strpos(Auth::user()->role, '2') !== false)
           <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
@@ -335,6 +366,29 @@
             </ul>
           </li>
           @endif
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <p>
+                Công trình
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="{{route('add-construction')}}" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Thêm công trình</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{route('list-construction')}}" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Danh sách công trình</p>
+                </a>
+              </li>
+            </ul>
+          </li>
           @if(strpos(Auth::user()->role, '1') !== false || strpos(Auth::user()->role, '8') !== false)
           <li class="nav-item has-treeview">
             <a href="#" class="nav-link">

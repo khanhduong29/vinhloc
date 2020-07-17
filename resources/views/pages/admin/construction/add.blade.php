@@ -1,16 +1,17 @@
 @extends('layout.admin.index')
 @section('content')
 
-<!-- Content Wrapper. Contains page content -->
+
+  <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <section class="content-header">
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <!-- <h1>Sửa config</h1> -->
+            <!-- <h1>Thêm construction</h1> -->
             <section class="content-header">
              <?php $url = url('').'/'.Request::segment(1).'/'?>
-             <h4>
+             <h5>
                <?php for ($i = 1; $i <= count(Request::segments()) ; $i ++): ?>
                  <?php if ($i > 1): ?>
                   <?php $url .= Request::segment($i).'/'?>
@@ -22,13 +23,13 @@
                   <?= '/' ?>
                 <?php endif ?>
               <?php endfor ?>
-            </h4>
+            </h5>
           </section>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Trang chủ</a></li>
-              <li class="breadcrumb-item active">Sửa config</li>
+              <li class="breadcrumb-item"><a href="{{ asset('/') }}admin">Trang chủ</a></li>
+              <li class="breadcrumb-item active">Thêm construction</li>
             </ol>
           </div>
         </div>
@@ -42,32 +43,58 @@
           <div class="col-md-12">
             <!-- general form elements -->
             <div class="card card-primary">
+              @if ($errors->any())
+                  <div class="alert alert-danger">
+                      <ul>
+                          @foreach ($errors->all() as $error)
+                              <li>{{ $error }}</li>
+                          @endforeach
+                      </ul>
+                  </div>
+              @endif
               <div class="card-header">
                 <h3 class="card-title">Quick Example</h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
+
               <form  method="post" role="form" enctype="multipart/form-data">
+
                 <div class="card-body">
                   <div class="form-group">
-                    <label for="">Tên</label>
-                    <select name="name" class="form-control" required>
-                      <option value="{{$config->name}}" >{{$config->name}}</option>
-                    </select>
+                    <label for="">Tên construction</label>
+                    <input type="text" class="form-control" id="name" name="name" required placeholder="Name">
+                    <div class="help-block"></div>
                   </div>
                   <div class="form-group">
-                    <label for="">Giá trị</label>
-                    <input type="text" class="form-control" id="name" name="value" value="{{$config->value}}" required placeholder="Nhập tên ">
+                    <label for="exampleInputFile">Chọn ảnh construction</label>
+                    <div class="input-group">
+                      <input type="file" name="file[]" multiple required class="text-center center-block file-upload" accept="image/gif, image/jpeg, image/jpg, image/png"/>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="">Tiêu đề</label>
+                    <textarea class="form-control" required id="des" name="title" placeholder="Place some text here"></textarea>
+                  </div>
+                  <div class="form-group">
+                    <label for="">Mô tả ngắn</label>
+                    <textarea class="form-control" required id="des" name="des" placeholder="Place some text here"></textarea>
+                  </div>
+                  <div class="form-group">
+                    <label for="">Trạng thái</label>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1" name="status">
+                        <label class="form-check-label" for="exampleCheck1">Hiện</label>
+                    </div>
                   </div>
                 </div>
                 <!-- /.card-body -->
-                
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">Sửa config</button>
+                  <button type="submit" class="btn btn-primary">Thêm construction</button>
                 </div>
                 <input type="hidden" name="_token" value="{{csrf_token()}}">
               </form>
-              
+
             </div>
             <!-- /.card -->
           </div>
@@ -84,13 +111,8 @@
 
 
 </div>
-  <script>
-  $(function () {
-    // Summernote
-    $('.textarea').summernote()
-  })
-</script>
-<script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-<!-- AdminLTE App -->
 
 @stop()
+
+
+

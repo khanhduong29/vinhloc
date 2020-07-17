@@ -19,7 +19,7 @@
             <!-- <h1>DataTables</h1> -->
             <section class="content-header">
              <?php $url = url('').'/'.Request::segment(1).'/'?>
-             <h4>
+             <h5>
                <?php for ($i = 1; $i <= count(Request::segments()) ; $i ++): ?>
                  <?php if ($i > 1): ?>
                   <?php $url .= Request::segment($i).'/'?>
@@ -31,9 +31,10 @@
                   <?= '/' ?>
                 <?php endif ?>
               <?php endfor ?>
-            </h4>
+            </h5>
           </section>
-            <a href="{{route('add-config')}}">Thêm config</a>
+            <a href="{{route('add-construction')}}">Thêm construction</a>
+
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -52,7 +53,7 @@
 
           <div class="card">
             <div class="card-header">
-              <h3 class="card-title">Danh sách config</h3>
+              <h3 class="card-title">DataTable with default features</h3>
             </div>
             <!-- /.card-header -->
             <div class="card-body">
@@ -60,32 +61,41 @@
                 <thead>
                   <tr>
                     <th>ID</th>
-                    <th>Tên </th>
-                    <th>Giá trị</th>
-                    <th>Ngày thêm</th>
+                    <th>Tên construction</th>
+                    <!-- <th>Ảnh construction</th> -->
+                    <th>Tiêu đề</th>
+                    <th>Mô tả</th>
+                    <th>Trạng thái</th>
+                    <th>Ngày tạo</th>
                     <th>#</th>
                   </tr>
                 </thead>
 
-                  <tbody>
-                    @foreach($config as $con)
-                    @if($con->id != 4 && $con->id != 7)
-                    <tr>
-                      <td>{{$con -> id}}</td>
-                      <td>{{$con -> name}}</td>
-                      <td>{{$con -> value}}</td>
-                      <td>{{$con->updated_at}}</td>
-                      <td>
-                        <a href="{{ Route('edit-config',$con) }}" class="btn btn-primary btn-xs">Sửa</a>
-                        <a href="{{Route('delete-config',$con)}}" class="btn btn-danger btn-xs" onclick="return confirm('Xác nhận xoá ?')">Xóa</a>
-                      </td>
-                    </tr>
-                    @endif
-                    @endforeach
-                  </tbody>
+                <tbody>
+                  @foreach($construction as $con)
+                  <tr>
+                    <td>{{$con -> id}}</td>
+                    <td>{{$con -> name}}</td>
+                    <td>
+                      @foreach(json_decode($con->image) as $img)
+                      <img src="{{asset('public/Uploads/'.$img)}}" alt="" width="100px">
+                      @endforeach
+                    </td>
+                    <td>{!!$con->title!!}</td>
+                    <td>{!!$con->des!!}</td>
+                    <td>{{ $con->status == 1 ? "Hiện" : "Ẩn" }}</td>
+                    <td>{{$con -> created_at}}</td>
+                    <td>
+                      <a href="{{ Route('edit-construction',$con) }}" class="btn btn-primary btn-xs">Sửa</a>
+                      <a href="{{ Route('delete-construction',$con) }}" class="btn btn-danger btn-xs" onclick="return confirm('Xác nhận xoá ?')">Xóa</a>
+                    </td>
+                  </tr>
+                  @endforeach
+                </tbody>
               </table>
             </div>
             <!-- /.card-body -->
+
           </div>
           <!-- /.card -->
         </div>

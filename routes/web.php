@@ -45,6 +45,8 @@ Route::group(['prefix' => 'admin','namespace'=>'admin','middleware'=>'auth'],fun
     include 'admin/blog.php';
     include 'admin/brand.php';
     include 'admin/banner.php';
+    include 'admin/config.php';
+    include 'admin/construction.php';
 });
 
 // giao diện login
