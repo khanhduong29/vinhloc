@@ -30,9 +30,9 @@
 		public function confirm_order($id)
 		{
 
-			// Orders::find($id)->update([
-			// 	'status' => 1
-			// ]);
+			Orders::find($id)->update([
+				'status' => 1
+			]);
 			$orders = orders::where('id', $id)->first();
 			$order_detail = order_detail::All()->where('id_oder',$id);
 			$email = $orders->getCus->email;
