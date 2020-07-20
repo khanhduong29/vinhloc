@@ -69,7 +69,7 @@
 
                   <tbody>
                     @foreach($config as $con)
-                    @if($con->id != 4 && $con->id != 7)
+                    @if($con->name != 'about' && $con->name != 'service')
                     <tr>
                       <td>{{$con -> id}}</td>
                       <td>{{$con -> name}}</td>
@@ -77,7 +77,7 @@
                       <td>{{$con->updated_at}}</td>
                       <td>
                         <a href="{{ Route('edit-config',$con) }}" class="btn btn-primary btn-xs">Sửa</a>
-                        <a href="{{Route('delete-config',$con)}}" class="btn btn-danger btn-xs" onclick="return confirm('Xác nhận xoá ?')">Xóa</a>
+                        <!-- <a href="{{Route('delete-config',$con)}}" class="btn btn-danger btn-xs" onclick="return confirm('Xác nhận xoá ?')">Xóa</a> -->
                       </td>
                     </tr>
                     @endif

@@ -8,6 +8,7 @@ use App\Models\products;
 use App\Models\brand;
 use App\Models\blog;
 use App\Models\banner;
+use App\Models\Cart;
 use App\Models\construction;
 use File;
 use Illuminate\Support\Facades\Auth;
@@ -15,16 +16,12 @@ use Illuminate\Support\Facades\Auth;
 class ClientController extends Controller {
 
     public function __construct(){
-        $banner = new banner;
-        $banners = $banner -> get_list();
-        // dd($banners);
         $this->middleware(function($request,$next){
             view()->share([
                 'categories' => Categories::all(),
                 'banners' => banner::all(),
                 'brand' => brand::all(),
-
-                // 'banners' => $banners,
+                'cart' => new cart()
             ]);
             return $next($request);
         });
