@@ -39,9 +39,6 @@ class ClientController extends Controller {
         return view('pages.client.about');
     }
     public function product(Request $request) {
-        if($request->price){
-            dd($request->price);
-        }
         $products = products::where('status',1)->paginate(8);
         return view('pages.client.product',compact('products'));
     }

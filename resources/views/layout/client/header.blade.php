@@ -93,17 +93,9 @@
                                     <i class="fa fa-angle-right"></i>
                                     <a href="{{route('product')}}">Sản phẩm</a>
                                     <ul>
-                                        <li><a href="#" class="smooth">Link 1</a></li>
-                                        <li>
-                                            <i class="fa fa-angle-right"></i>
-                                            <a href="#" class="smooth">Link 2</a>
-                                            <ul>
-                                                <li><a href="news-detail.html" class="smooth">Link 1</a></li>
-                                                <li><a href="news-detail.html" class="smooth">Link 2</a></li>
-                                                <li><a href="news-detail.html" class="smooth">Link 3</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="#" class="smooth">Link 3</a></li>
+                                        @foreach($categories as $cat)
+                                        <li><a href="{{route('cate-product',['slug'=>$cat->slug])}}" class="smooth">{{$cat -> name}}</a></li>
+                                        @endforeach
                                     </ul>
                                 </li>
                             </ul>
@@ -202,17 +194,9 @@
                         <i class="change-down fa fa-angle-right"></i>
                         <a href="product">Sản phẩm</a>
                         <ul>
-                            <li><a href="" class="smooth">Link 2 Lorem ipsum dolor</a></li>
-                            <li>
-                                <i class="change-down fa fa-angle-right"></i>
-                                <a href="#" class="smooth">Dropdown</a>
-                                <ul>
-                                    <li><a href="news-detail.html" class="smooth">Chi tiết tin</a></li>
-                                    <li><a href="" class="smooth">Link 2 Lorem ipsum dolor</a></li>
-                                    <li><a href="" class="smooth">Link 3 Lorem ipsum dolor</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="" class="smooth">Link 3 Lorem ipsum dolor</a></li>
+                            @foreach($categories as $cat)
+                            <li><a href="{{route('cate-product',['slug'=>$cat->slug])}}" class="smooth">{{$cat -> name}}</a></li>
+                            @endforeach
                         </ul>
                     </li>
                     <li><a href="service">Dịch vụ</a></li>
