@@ -111,7 +111,7 @@ $(".slick0").slick({
 	slidesToShow:1,
 	slidesToScroll:1,
     pauseOnHover:true,
-    adaptiveHeight: true,
+    // adaptiveHeight: true,
 	autoplay:true,
 	arrows:true,
 	prevArrow:'<img src="public/frontend/images/icon/ic-prevPr.png" alt="" class="bn-prev"></i>',

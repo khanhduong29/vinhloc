@@ -92,25 +92,19 @@
                     <label class="form-check-label" for="product">Table Product</label>
                     <input type="checkbox" name="attr" id="attr" class="form-check-input" value="5">
                     <label class="form-check-label" for="attr">Manager Attribute</label>
+                  </div>
+                  <div class="form-check">
                     <input type="checkbox" name="banner" id="banner" class="form-check-input" value="6">
                     <label class="form-check-label" for="banner">Table Banner</label>
                     <input type="checkbox" name="blog" id="blog" class="form-check-input" value="7">
                     <label class="form-check-label" for="blog">Table Blog</label>
                     <input type="checkbox" name="brand" id="brand" class="form-check-input" value="8">
                     <label class="form-check-label" for="brand">Table Brand</label>
+                    <input type="checkbox" name="construction" id="construction" class="form-check-input" value="9">
+                    <label class="form-check-label" for="brand">Table Construction</label>
+                    <input type="checkbox" name="config" id="config" class="form-check-input" value="10">
+                    <label class="form-check-label" for="exampleCheck1">Table Config</label>
                   </div>
-                  {{-- <div class="form-check">
-                    <input type="checkbox" class="form-check-input" value="6" id="exampleCheck1" name="role">
-                    <label class="form-check-label" for="exampleCheck1">Full</label>
-                    <input type="checkbox" class="form-check-input" value="7" id="exampleCheck1" name="role">
-                    <label class="form-check-label" for="exampleCheck1">Table Admin</label>
-                    <input type="checkbox" class="form-check-input" value="8" id="exampleCheck1" name="role">
-                    <label class="form-check-label" for="exampleCheck1">Table Customer</label>
-                    <input type="checkbox" class="form-check-input" value="9" id="exampleCheck1" name="role">
-                    <label class="form-check-label" for="exampleCheck1">Table Category</label>
-                    <input type="checkbox" class="form-check-input" value="9" id="exampleCheck1" name="role">
-                    <label class="form-check-label" for="exampleCheck1">Table Product</label>
-                  </div> --}}
                   <div class="form-group">
                     <label for="exampleInputFile">Chọn ảnh admin</label>
                     <div class="input-group">
