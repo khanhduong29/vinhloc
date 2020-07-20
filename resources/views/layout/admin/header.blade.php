@@ -98,7 +98,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="{{route('edit-config',$id = 4)}}" class="nav-link">
+            <a href="{{route('list-about')}}" class="nav-link">
               <i class="nav-icon fas fa-shopping-cart"></i>
               <p>
                 Trang giới thiệu
@@ -107,7 +107,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="{{route('edit-config',$id = 7)}}" class="nav-link">
+            <a href="{{route('list-service')}}" class="nav-link">
               <i class="nav-icon fas fa-shopping-cart"></i>
               <p>
                 Trang dịch vụ

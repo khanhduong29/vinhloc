@@ -1,13 +1,22 @@
 @extends('layout.admin.index')
 @section('content')
 
-<!-- Content Wrapper. Contains page content -->
+  <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
     <section class="content-header">
       <div class="container-fluid">
+        @if (session()->has('message'))
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <strong>{{ session()->get('message') }}</strong>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        @endif
         <div class="row mb-2">
           <div class="col-sm-6">
-            <!-- <h1>Sửa config</h1> -->
+            <!-- <h1>DataTables</h1> -->
             <section class="content-header">
              <?php $url = url('').'/'.Request::segment(1).'/'?>
              <h4>
@@ -24,84 +33,82 @@
               <?php endfor ?>
             </h4>
           </section>
+            <a href="{{route('add-config')}}">Thêm config</a>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Trang chủ</a></li>
-              <li class="breadcrumb-item active">Sửa config</li>
+              <li class="breadcrumb-item"><a href="{{route('admin')}}">Home</a></li>
+              <li class="breadcrumb-item active">DataTables</li>
             </ol>
           </div>
         </div>
       </div><!-- /.container-fluid -->
     </section>
+
     <!-- Main content -->
     <section class="content">
-      <div class="container-fluid">
-        <div class="row">
-          <!-- left column -->
-          <div class="col-md-12">
-            <!-- general form elements -->
-            <div class="card card-primary">
-              <div class="card-header">
-                <h3 class="card-title">Quick Example</h3>
-              </div>
-              @if ($errors->any())
-                  <div class="alert alert-danger">
-                      <ul>
-                          @foreach ($errors->all() as $error)
-                              <li>{{ $error }}</li>
-                          @endforeach
-                      </ul>
-                  </div>
-              @endif
-              <!-- /.card-header -->
-              <!-- form start -->
-              <form action="{{route('edit-config',$config)}}" method="post" role="form" enctype="multipart/form-data">
-                <div class="card-body">
-                  <div class="form-group">
-                    <label for="">Tên</label>
-                    <select name="name" class="form-control">
-                      <option value="about">about</option>
-                    </select>
-                  </div>
-                  <div class="form-group">
-                    <label for="">Giá trị</label>
-                    <textarea class="textarea form-control" required id="des" name="value" placeholder="Place some text here">
-                      {{$config->value}}
-                    </textarea>
-                  </div>
-                </div>
-                <!-- /.card-body -->
-                
-                <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">Sửa config</button>
-                </div>
-                <input type="hidden" name="_token" value="{{csrf_token()}}">
-              </form>
-              
+      <div class="row">
+        <div class="col-12">
+
+          <div class="card">
+            <div class="card-header">
+              <h3 class="card-title">Nội dung trang dịch vụ</h3>
             </div>
-            <!-- /.card -->
+            <!-- /.card-header -->
+            <div class="card-body">
+
+              @foreach($config as $con)
+                @if($con->name == 'service')
+                  {!!$con->value!!}
+                  <a href="{{ Route('edit-config',$con) }}" class="btn float-right btn-primary btn-xs mt-5">Sửa</a>
+                @endif
+              @endforeach
+              <!-- <table id="example1" class="table table-bordered table-striped">
+                <thead>
+                  <tr>
+                    <th>ID</th>
+                    <th>Tên </th>
+                    <th>Giá trị</th>
+                    <th>Ngày thêm</th>
+                    <th>#</th>
+                  </tr>
+                </thead>
+
+                  <tbody>
+                    @foreach($config as $con)
+                    @if($con->name != 'about' && $con->name != 'service')
+                    <tr>
+                      <td>{{$con -> id}}</td>
+                      <td>{{$con -> name}}</td>
+                      <td>{{$con -> value}}</td>
+                      <td>{{$con->updated_at}}</td>
+                      <td>
+                        <a href="{{ Route('edit-config',$con) }}" class="btn btn-primary btn-xs">Sửa</a>
+                      </td>
+                    </tr>
+                    @endif
+                    @endforeach
+                  </tbody>
+              </table> -->
+            </div>
+            <!-- /.card-body -->
           </div>
-          <!--/.col (left) -->
+          <!-- /.card -->
         </div>
-        <!-- /.row -->
-      </div><!-- /.container-fluid -->
+        <!-- /.col -->
+      </div>
+      <!-- /.row -->
     </section>
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
-
-  <div class="wrapper">
-
-
 </div>
-  <script>
-  $(function () {
-    // Summernote
-    $('.textarea').summernote()
-  })
-</script>
-<script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-<!-- AdminLTE App -->
+<!-- ./wrapper -->
+
+
+
 
 @stop()
+
+
+

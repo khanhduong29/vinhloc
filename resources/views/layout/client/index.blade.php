@@ -23,6 +23,7 @@
 
         @include('layout.client.footer')
     </body>
+    </script>
 	<script src="{{url('public')}}/frontend/js/jquery-3.5.1.min.js"></script>
 	<script src="{{url('public')}}/frontend/js/bootstrap.min.js"></script>
 	<script src="{{url('public')}}/frontend/js/slick.js"></script>

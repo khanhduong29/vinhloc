@@ -5,6 +5,7 @@ use Illuminate\Http\Request;
 use App\Models\Customer;
 use App\Models\categories;
 use App\Models\products;
+use App\Models\Cart;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Redirect;
@@ -15,7 +16,7 @@ class LoginController extends Controller
         $this->middleware(function($request,$next){
             view()->share([
                 'categories' => Categories::all(),
-                // 'cart' => new cart()
+                'cart' => new cart()
             ]);
             return $next($request);
         });

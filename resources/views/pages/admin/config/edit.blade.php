@@ -48,6 +48,7 @@
               <!-- /.card-header -->
               <!-- form start -->
               <form  method="post" role="form" enctype="multipart/form-data">
+                @if($config->name != 'about' && $config->name != 'service')
                 <div class="card-body">
                   <div class="form-group">
                     <label for="">Tên</label>
@@ -60,6 +61,22 @@
                     <input type="text" class="form-control" id="name" name="value" value="{{$config->value}}" required placeholder="Nhập tên ">
                   </div>
                 </div>
+                @else
+                <div class="card-body">
+                  <div class="form-group">
+                    <label for="">Tên</label>
+                    <select name="name" class="form-control">
+                      <option value="{{$config->name}}">{{$config->name}}</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="">Giá trị</label>
+                    <textarea class="textarea form-control" required id="des" name="value" placeholder="Place some text here">
+                      {{$config->value}}
+                    </textarea>
+                  </div>
+                </div>
+                @endif
                 <!-- /.card-body -->
                 
                 <div class="card-footer">

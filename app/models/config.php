@@ -20,6 +20,7 @@ class config extends Model
 			],
 			[
 				'required' => ':attribute đang bỏ trống.',
+				'unique' => ':attribute đã tồn tại.',
 			],
 			[
                  'name' => 'Tên',
@@ -34,7 +35,7 @@ class config extends Model
 
 	}
 	// cập nhật dữ liệu
-	public function update_data($pro){
+	public function update_data($con){
 		$validate = request()->validate(
 			[
 				'value' => 'required',

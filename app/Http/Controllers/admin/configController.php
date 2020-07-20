@@ -15,7 +15,18 @@
         		'config' => $config
         	]);
 		}
-
+		public function about(){
+			$config = config::all();
+        	return view('pages.admin.config.about', [
+        		'config' => $config
+        	]);
+		}
+		public function service(){
+			$config = config::all();
+        	return view('pages.admin.config.service', [
+        		'config' => $config
+        	]);
+		}
 
 		// thêm dữ liệu
 		public function create(){
@@ -32,22 +43,13 @@
 		// sửa dữ liệu
 		public function edit($id){
 			$config = config::where('id', $id)->first();
-			if($id == 4){
-				return view('pages.admin.config.about',[
-	        		'config' => $config,
-	        	]);
-			}else if($id == 7){
-				return view('pages.admin.config.service',[
-	        		'config' => $config,
-	        	]);
-			}
-        	return view('pages.admin.config.edit',[
+			return view('pages.admin.config.edit',[
         		'config' => $config,
         	]);
+        	
 		}
 		public function update(request $request,config $id){
 			$updated = $id->update_data($id);
-			// dd($id);
 	       	if ($id) {
 	        	return redirect()->route('admin') -> with('message','Sửa thành công');
 	    	} else {
