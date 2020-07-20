@@ -1368,6 +1368,7 @@ a.c-feb:hover{
 .pro-detail ul li{
     position: relative;
     padding-left: 1rem;
+    padding-bottom: 10px;
     overflow: hidden;
 }
 .pro-detail .tb1 {

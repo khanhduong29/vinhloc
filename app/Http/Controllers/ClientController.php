@@ -11,6 +11,7 @@ use App\Models\banner;
 use App\Models\Cart;
 use App\Models\Config;
 use App\Models\construction;
+use App\Models\productAttribute;
 use File;
 use Illuminate\Support\Facades\Auth;
 
@@ -34,16 +35,14 @@ class ClientController extends Controller {
         return view('pages.client.home',compact('products','blog','con'));
     }
     public function about() {
-        $config = config::all();
-        return view('pages.client.about',compact('config'));
+        return view('pages.client.about');
     }
     public function product(Request $request) {
         $products = products::where('status',1)->paginate(8);
         return view('pages.client.product',compact('products'));
     }
     public function service() {
-        $config = config::all();
-        return view('pages.client.service',compact('config'));
+        return view('pages.client.service');
     }
     public function construction() {
         $con = construction::all();
@@ -54,7 +53,8 @@ class ClientController extends Controller {
     }
     public function product_detail($slug) {
         $pro = products::where('slug',$slug)->first();
-        return view('pages.client.product-detail',compact('pro'));
+        $attrProduct = productAttribute::where('products_id',$pro->id)->get();
+        return view('pages.client.product-detail',compact('pro','attrProduct'));
     }
     public function blog_detail($slug) {
         $detail = blog::where('slug',$slug)->first();
