@@ -17,7 +17,10 @@
                             Cảm ơn bạn đã quan tâm tới sản phẩm của Vĩnh Lộc Luxury, Xin vui lòng điền thông tin của bạn vào form dưới đây :
                         </p>
                         <div class="link-pro">
-                            <span>Sản phẩm: </span> <a href="product-detail.html" title="" class="c-fff">https://vinhlocluxury.com/den-dong-op-tran-12</a>
+                            <span>Sản phẩm: </span> 
+                            <a href="product-detail.html" title="" class="c-fff">https://vinhlocluxury.com/den-dong-op-tran-12</a>
+                            <a href="product-detail.html" title="" class="c-fff">https://vinhlocluxury.com/den-dong-op-tran-12</a>
+                            <a href="product-detail.html" title="" class="c-fff">https://vinhlocluxury.com/den-dong-op-tran-12</a>
                         </div>
                         <h3>
                             <span>ĐỂ LẠI THÔNG TIN ĐƯỢC TƯ VẤN MIỄN PHÍ</span>

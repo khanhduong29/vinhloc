@@ -34,6 +34,7 @@
 	    		$this -> items[$models->id] = [
 		    		'id' => $models->id,
 		    		'name' => $models->name,
+		    		'name' => $models->slug,
 		    		'price' => $models->price,
 		    		'quantity' => 1,
 		    		'image' => $models ->image,
