@@ -140,7 +140,9 @@ class Products extends Model
 			'image' => $image,
 			'status' => $status,
         ]);
+
         productAttribute::where('products_id', $pro->id)->delete();
+
         if(request()->attribute_values) {
             foreach(request()->attribute_values as $value){
                 $value = json_decode($value);
@@ -152,6 +154,7 @@ class Products extends Model
             }
         }
     }
+
     public function productAttr()
     {
         return $this->hasMany('App\Models\productAttribute', 'products_id', 'id');
