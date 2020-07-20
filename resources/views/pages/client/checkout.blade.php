@@ -34,14 +34,15 @@
                                     <input type="text" class="form-control" name="name" id="" placeholder="Họ và tên" value="{{Auth::guard('customer')->user()->name}}">
                                 </div>
                                 <div class="col-12 col-sm-12 col-md-6 col-lg-6 form-group">
-                                    <input type="text" class="form-control" name="phone" id="" placeholder="Số điện thoại" value="{{Auth::guard('customer')->user()->phone}}">
+                                    <input type="text" class="form-control" name="phone" id="" placeholder="Số điện thoại" >
                                 </div>
                                 <div class="col-12 form-group">
-                                    <input type="text" class="form-control" id=""  value="{{Auth::guard('customer')->user()->address}}" placeholder="Địa chỉ">
+                                    <input type="text" class="form-control" name="address" id="" placeholder="Địa chỉ">
                                 </div>
                             </div>
 
                             <button type="submit" class="btn btn-primary btn-lg-feb">Đặt hàng ngay</button>
+                            <input type="hidden" name="_token" value="{{csrf_token()}}">
                         </form>
                         @else
                         <div class="alert alert-danger">

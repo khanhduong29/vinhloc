@@ -25,6 +25,7 @@ Route::group(['prefix' => '/'],function(){
     Route::get('blog-detail/{slug}','ClientController@blog_detail')->name('blog-detail');
     Route::get('cate-product/{slug}','ClientController@cate_product')->name('cate-product');
     Route::get('search','ClientController@getsearch')->name('search');
+    Route::get('/my-account','ClientController@my_account')->name('my-account');
 });
 
 Route::group(['prefix' => 'admin','namespace'=>'admin','middleware'=>'auth'],function(){
@@ -47,6 +48,7 @@ Route::group(['prefix' => 'admin','namespace'=>'admin','middleware'=>'auth'],fun
     include 'admin/banner.php';
     include 'admin/config.php';
     include 'admin/construction.php';
+    include 'admin/order.php';
 });
 
 // giao diện login
@@ -65,7 +67,7 @@ Route::group(['prefix' => 'cart'], function () {
     Route::post('/checkout.html','orderController@post_checkout') -> name('post-checkout');
     Route::get('/order-error.html','orderController@error') -> name('order-error');
     Route::get('/history.html','orderController@history') -> name('history-checkout');
-    Route::get('/detail-order/{id_ord}.html','orderController@detail') -> name('detail-order');
+    Route::get('/detail-order/{id}.html','orderController@detail') -> name('detail-order');
 });
 
 Route::group(['prefix' => 'account'], function () {

@@ -10,6 +10,8 @@ use App\Models\blog;
 use App\Models\banner;
 use App\Models\Cart;
 use App\Models\Config;
+use App\Models\orders;
+use App\Models\order_detail;
 use App\Models\construction;
 use File;
 use Illuminate\Support\Facades\Auth;
@@ -50,6 +52,19 @@ class ClientController extends Controller {
     }
     public function contact() {
         return view('pages.client.contact');
+    }
+    public function my_account() {
+        if(Auth::guard('customer')->check()){
+            $orders = orders::where('id_cus',Auth::guard('customer')->user()->id)
+                ->orderBy('created_at','desc')
+                ->get();
+            return view('pages.client.my-account',[
+                'orders' => $orders,
+            ]);
+        }
+        else{
+            return redirect() -> route('login_user');
+        }
     }
     public function product_detail($slug) {
         $pro = products::where('slug',$slug)->first();

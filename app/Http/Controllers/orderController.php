@@ -3,7 +3,8 @@
 	use App\Http\Controllers;
 	use Illuminate\Http\Request;
 	use Illuminate\Support\Facades\Redirect;
-	use App\Models\Categories;	use App\Models\Cart;
+	use App\Models\Categories;	
+	use App\Models\Cart;
 	use App\Models\Products;
 	use App\Models\Config;
 	use App\Models\customer;
@@ -29,63 +30,13 @@
 			});
 		}
 
-		public function checkout(Cart $cart){
-			// dd($cart);
+		public function checkout(){
 			return view('pages.client.checkout');
 		}
-		public function post_checkout(Request $request,Cart $cart){
-			 $validate = $request->validate(
-	            [
-	                'first_name' => 'required',
-	                'last_name' => 'required',
-	                'phone' => 'required',
-	                'address' => 'required',
-	                'payment_method' => 'required',
-	                'shipping_method' => 'required',
-	            ],
-	            [
-	                'required' => ':attribute đang bỏ trống.',
-	            ],
-	            [
-	                 'first_name' => 'First name',
-	                 'last_name' => 'Last name',
-	                 'phone' => 'Số điện thoại',
-	                 'address' => 'Địa chỉ',
-	                 'payment_method' => 'Phương thức thanh toán',
-	                 'shipping_method' => 'Phương thức giao hàng',
-	            ]
-	        );
-			$id_cus = Auth::guard('customer')->user()->id_cus;
-			$request -> merge(['id_cus'=>Auth::guard('customer')->user()->id_cus]);
-			$orders = orders::create([				
-				'id_cus' => $id_cus,
-				'address' => $request -> address,
-				'note' => $request -> note,
-				'payment_method' => $request -> payment_method,
-				'shipping_method' => $request -> shipping_method,
-				'total_amount' => $cart -> total_amount,
-				'total_quantity' => $cart -> total_quantity,
-				'status' => 0,
-			]);
-			$datas = [];
-			foreach ($cart->items as $item) {
-				$datas[] = [
-					'id_ord' => $orders -> id_ord,
-					'id_pro' => $item['id_pro'],
-					'quantity' => $item['quantity'],
-					'price' => $item['price'],
-				];
-			}
-			if($datas){
-				if(order_detail::insert($datas)){
-					$cart->clear();
-					return Redirect() -> route('history-checkout') -> with('success','Đặt hàng thành công');
-				}else{
-					$orders->delete();
-					return Redirect() -> route('order-error') -> with('error','Đặt hàng thất bại');
-				}
-			}
-			return Redirect() -> route('history-checkout') -> with('success','Đặt hàng thành công');
+		public function post_checkout(Request $request,Cart $cart,Orders $orders, order_detail $order_detail){
+			$orders -> add($cart);
+			$cart->clear();
+			return Redirect() -> route('my-account') -> with('success','Đặt hàng thành công');
 			
 		}
 		public function error(){
@@ -93,26 +44,26 @@
 		}
 		public function history(){
 			if(Auth::guard('customer')->check()){
-				$orders = orders::where('id_cus',Auth::guard('customer')->user()->id_cus)
+				$orders = orders::where('id_cus',Auth::guard('customer')->user()->id)
 					->orderBy('created_at','desc')
 					->get();
-				return view('client.ordered',[
+				return view('pages.client.my-account',[
 					'orders' => $orders,
 				]);
 			}else{
-				return Redirect() -> route('login-cus');
+				return Redirect() -> route('login_user');
 			}
 			
 		}
-		public function detail($id_ord){
+		public function detail($id){
 			if(Auth::guard('customer')->check()){
-				$orders = orders::where('id_ord', $id_ord)->first();
-				// dd($orders);
-				return view('client.order-detail',[
+				$orders = orders::where('id', $id)->first();
+				// dd($orders -> detail);
+				return view('pages.client.order-detail',[
 					'orders' => $orders,
 				]);
 			}else{
-				return Redirect() -> route('login-cus');
+				return Redirect() -> route('login_user');
 			}
 		}
 	}
