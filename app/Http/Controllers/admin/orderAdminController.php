@@ -1,4 +1,4 @@
-<?php 
+<?php
 	namespace App\Http\Controllers\admin;
 	use App\Http\Controllers\Controller;
 	use Illuminate\Http\Request;
@@ -22,7 +22,7 @@
 			]);
 		}
 		public function detail($id){
-			$orders = orders::where('id', $id)->first();
+            $orders = orders::where('id', $id)->first();
 			return view('pages.admin.customer.order-detail',[
 				'orders' => $orders,
 			]);
@@ -62,7 +62,7 @@
 			]);
 			return redirect()->route('order-customer');
 		}
-		
+
 	}
 
  ?>
