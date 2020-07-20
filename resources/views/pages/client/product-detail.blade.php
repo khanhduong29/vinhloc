@@ -13,7 +13,7 @@
                         <div class="border-1 mt-2 mb-4">
                             <a href="" title="" class="img-detail">
                                 <img src="{{asset('public/Uploads/products')}}/{{$pro -> image}}" alt="">
-                                
+
                             </a>
                         </div>
                     </div>
@@ -54,7 +54,7 @@
                                  </li>
                             </ul>
 
-                            <a href="checkout.html" title="" class="btn btn-lg-feb btn-cart">Đặt hàng ngay</a>
+                            <a href="{{ Route('add_cart',['id'=>$pro->id]) }}" title="" class="btn btn-lg-feb btn-cart">Thêm vào giỏ hàng</a>
                         </div>
                     </div>
                 </div>
@@ -133,7 +133,7 @@
                     <a href="" title="" class="avt">
                         <img src="{{asset('public/Uploads')}}/{{$value -> image}}" alt="">
                     </a>
-                   
+
                 </div>
                 @endforeach
             </section>

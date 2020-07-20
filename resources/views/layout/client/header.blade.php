@@ -46,7 +46,9 @@
                                 <button type="submit" value="search"></button>
                             </form>
                         </div>
-                        <a  title="" class="img-cart cart-lap"><img src="{{url('public')}}/frontend/images/icon/ic-cart-feb.png" alt="error"></a>
+                        <a  href="{{route('cart')}}" class="img-cart cart-lap">
+                            <img src="{{url('public')}}/frontend/images/icon/ic-cart-feb.png" alt="error">
+                        </a>
                         <span class="amount-cart">{{$cart->total_quantity}}</span>
                         @if($cart -> items)
                         <div class="cart-hover">

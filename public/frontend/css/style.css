@@ -1962,3 +1962,12 @@ a.c-feb:hover{
 .sugges a:hover{
     color: #fdb300;
 }
+.alert-danger {
+    color: #d8c190;
+    background: rgba(0, 0, 0,0);
+    border: none;
+}
+.alert-danger a {
+    color: #fdb300;
+}
+
