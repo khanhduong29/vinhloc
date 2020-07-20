@@ -1966,6 +1966,7 @@ a.c-feb:hover{
     color: #d8c190;
     background: rgba(0, 0, 0,0);
     border: none;
+    padding: 2.75rem 1.25rem;
 }
 .alert-danger a {
     color: #fdb300;
