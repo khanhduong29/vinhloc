@@ -19,39 +19,17 @@
                     </div>
                     <div class="col-12 col-sm-12 col-md-6 col-lg-6">
                         <div class="s-content">
-                            <h1 class="c-fff f-24">{{$pro -> name}}</h1>
+                            <h1 class="c-fff f-24 text-uppercase">{{$pro -> name}}</h1>
                             <span class="c-feb font-weight-bold f-18">
-                               Giá sản phẩm: {{number_format ($pro -> price)}}
+                               Giá sản phẩm:  {{number_format ($pro -> price)}} VNĐ
                             </span>
                             <ul>
+                                @foreach($attrProduct as $key => $value)
                                 <li>
-                                    <span class="tb1">Xuất xứ: </span>
-                                    <span class="tb2">Đài Loan</span>
+                                    <span class="tb1">{{$value->getAtt->name}}: </span>
+                                    <span class="tb2">{{$value->getAtt->getAttValue->value}}</span>
                                 </li>
-                                <li>
-                                    <span class="tb1">Thương hiệu: </span>
-                                    <span class="tb2">Vĩnh Lộc Luxury</span>
-                                </li>
-                                <li>
-                                     <span class="tb1">Chất liệu : </span>
-                                     <span class="tb2">Đồng nguyên chất</span>
-                                 </li>
-                                 <li>
-                                     <span class="tb1">Kích thước : </span>
-                                     <span class="tb2">Ø450 mm</span>
-                                 </li>
-                                 <li>
-                                     <span class="tb1">Công suất : </span>
-                                     <span class="tb2">8W</span>
-                                 </li>
-                                 <li>
-                                     <span class="tb1">Ứng dụng : </span>
-                                     <span class="tb2">Trang trí chung cư, biệt thự, penthouse theo phong cách Cổ Điển</span>
-                                 </li>
-                                 <li>
-                                     <span class="tb1">Bảo hành : </span>
-                                     <span class="tb2">24 tháng</span>
-                                 </li>
+                                @endforeach
                             </ul>
 
                             <a href="{{ Route('add_cart',['id'=>$pro->id]) }}" title="" class="btn btn-lg-feb btn-cart">Thêm vào giỏ hàng</a>

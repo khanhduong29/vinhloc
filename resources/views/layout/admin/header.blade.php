@@ -141,6 +141,7 @@
             </ul>
           </li>
           @endif
+          @if(strpos(Auth::user()->role, '1') !== false || strpos(Auth::user()->role, '10') !== false)
           <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-copy"></i>
@@ -165,6 +166,7 @@
               </li>
             </ul>
           </li>
+          @endif
           @if(strpos(Auth::user()->role, '1') !== false || strpos(Auth::user()->role, '2') !== false)
           <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
@@ -366,6 +368,7 @@
             </ul>
           </li>
           @endif
+          @if(strpos(Auth::user()->role, '1') !== false || strpos(Auth::user()->role, '9') !== false)
           <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-tachometer-alt"></i>
@@ -389,6 +392,7 @@
               </li>
             </ul>
           </li>
+          @endif
           @if(strpos(Auth::user()->role, '1') !== false || strpos(Auth::user()->role, '8') !== false)
           <li class="nav-item has-treeview">
             <a href="#" class="nav-link">

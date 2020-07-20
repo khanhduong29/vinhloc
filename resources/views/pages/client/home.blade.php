@@ -251,7 +251,7 @@
                             <h3>
                                 <a href="{{route('blog-detail',['slug'=>$blg->slug])}}" title="" class="c-feb f-18 row-2">{{$blg -> name }}</a>
                             </h3>
-                            <span class="date">{{$blg -> created_at}} - 65 lượt xem</span>
+                            <span class="date">{{$blg -> created_at}}</span>
                             <div class="content_news c-fff row-6">
                                 {!!Str::limit($blg->des,350)!!}
                             </div>

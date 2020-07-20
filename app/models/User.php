@@ -91,6 +91,12 @@ class User extends Authenticatable
         if (request()->brand) {
             array_push($roles, 8);
         }
+        if (request()->construction) {
+            array_push($roles, 9);
+        }
+        if (request()->config) {
+            array_push($roles, 10);
+        }
 
         $role = implode(",",$roles);
 		$avatar = 'user1.png';
@@ -168,6 +174,12 @@ class User extends Authenticatable
         }
         if (request()->brand) {
             array_push($roles, 8);
+        }
+        if (request()->construction) {
+            array_push($roles, 9);
+        }
+        if (request()->config) {
+            array_push($roles, 10);
         }
         $role = implode(",",$roles);
 		$avatar = '';

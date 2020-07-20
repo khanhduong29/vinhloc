@@ -22,5 +22,5 @@ class productAttribute extends Model
     public function getPro()
 	{
 		return $this->hasOne('App\Models\Products','id','products_id')->orderBy('created_at','desc');
-	}
+    }
 }

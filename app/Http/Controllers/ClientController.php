@@ -13,6 +13,7 @@ use App\Models\Config;
 use App\Models\orders;
 use App\Models\order_detail;
 use App\Models\construction;
+use App\Models\productAttribute;
 use File;
 use Illuminate\Support\Facades\Auth;
 
@@ -68,7 +69,8 @@ class ClientController extends Controller {
     }
     public function product_detail($slug) {
         $pro = products::where('slug',$slug)->first();
-        return view('pages.client.product-detail',compact('pro'));
+        $attrProduct = productAttribute::where('products_id',$pro->id)->get();
+        return view('pages.client.product-detail',compact('pro','attrProduct'));
     }
     public function blog_detail($slug) {
         $detail = blog::where('slug',$slug)->first();
