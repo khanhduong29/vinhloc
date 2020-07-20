@@ -71,9 +71,10 @@
 		}
 
 		// xóa dữ liệu
-		public function delete(products $id)
+		public function delete(products $id,productAttribute $attr)
 	    {
             $delete = $id->delete();
+            productAttribute::where('products_id',$id->id)->delete();
 	        if ($delete) {
 	           return redirect()->route('list-products') -> with('message','Xóa thành công');
 	       } else {

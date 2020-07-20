@@ -64,9 +64,9 @@
                   @foreach($attrProduct as $value)
                   <tr>
                     <td>{{$value->id}}</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                    <td>{{$value->getPro->name}}</td>
+                    <td>{{$value->getAtt->name}}</td>
+                    <td>{{$value->getAtt->getAttValue->value}}</td>
                     <td>{{$value->created_at}}</td>
                   </tr>
                   @endforeach
