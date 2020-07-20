@@ -10,11 +10,11 @@ class productAttribute extends Model
 {
     protected $table = 'product_attribute';
 
-    protected $fillable = ['products_id','attribute_id'];
+    protected $fillable = ['products_id','attribute_id','attribute_value'];
 
 
 
-    
+
     public function getAtt()
 	{
 		return $this->hasOne('App\Models\attribute','id','attribute_id')->orderBy('created_at','desc');

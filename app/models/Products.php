@@ -64,11 +64,13 @@ class Products extends Model
 			'image' => $image,
 			'status' => $status,
         ]);
-        if(request()->attribute_id) {
-            foreach(request()->attribute_id as $value){
+        if(request()->attribute_values) {
+            foreach(request()->attribute_values as $value){
+                $value = json_decode($value);
                 $attr_pro = productAttribute::create([
                     'products_id' => $models->id,
-                    'attribute_id' => $value
+                    'attribute_id' => $value->attribute_id,
+                    'attribute_value' => $value->id
                 ]);
             }
         }
@@ -138,13 +140,24 @@ class Products extends Model
 			'image' => $image,
 			'status' => $status,
         ]);
+        productAttribute::where('products_id', $pro->id)->delete();
+        if(request()->attribute_values) {
+            foreach(request()->attribute_values as $value){
+                $value = json_decode($value);
+                $attr_pro = productAttribute::create([
+                    'products_id' => $pro->id,
+                    'attribute_id' => $value->attribute_id,
+                    'attribute_value' => $value->id
+                ]);
+            }
+        }
     }
     public function productAttr()
     {
-        return $this->hasMany('App\Models\productAttribute');
+        return $this->hasMany('App\Models\productAttribute', 'products_id', 'id');
     }
     public function getCat()
 	{
 		return $this->hasOne('App\Models\Categories','id','cate_id')->orderBy('created_at','desc');
-	}
+    }
 }
