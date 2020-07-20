@@ -23,6 +23,7 @@ class ClientController extends Controller {
                 'categories' => Categories::all(),
                 'banners' => banner::all(),
                 'brand' => brand::all(),
+                'config' => Config::all(),
                 'cart' => new cart()
             ]);
             return $next($request);

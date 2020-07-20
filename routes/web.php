@@ -61,12 +61,11 @@ Route::group(['prefix' => 'cart'], function () {
     Route::get('delete-cart/{id}','cartController@delete_cart') -> name('delete-cart');
     Route::get('clear-cart','cartController@clear_cart') -> name('clear-cart');
     Route::get('update-cart/{id_pro}','cartController@update_cart') -> name('update-cart');
-    Route::get('checkout','CartController@checkout')->name('checkout');
-    // Route::get('/checkout.html','orderController@get_checkout') -> name('checkout');
-    // Route::post('/checkout.html','orderController@post_checkout') -> name('post-checkout');
-    // Route::get('/order-error.html','orderController@error') -> name('order-error');
-    // Route::get('/history.html','orderController@history') -> name('history-checkout');
-    // Route::get('/detail-order/{id_ord}.html','orderController@detail') -> name('detail-order');
+    Route::get('checkout','orderController@checkout')->name('checkout');
+    Route::post('/checkout.html','orderController@post_checkout') -> name('post-checkout');
+    Route::get('/order-error.html','orderController@error') -> name('order-error');
+    Route::get('/history.html','orderController@history') -> name('history-checkout');
+    Route::get('/detail-order/{id_ord}.html','orderController@detail') -> name('detail-order');
 });
 
 Route::group(['prefix' => 'account'], function () {

@@ -26,23 +26,53 @@
                         <table cellpadding="5" cellspacing="5" class="fr-tb">
                             <tr>
                                 <td>Tên công ty</td>
-                                <td>Công ty Cổ Phẩn Đầu Tư Nội Thất Và Dịch Vụ Phú Vinh - Vĩnh Lộc Lighting</td>
+                                <td>
+                                    @foreach($config as $con)
+                                    @if($con->name == 'company')
+                                      {!!$con->value!!}
+                                    @endif
+                                    @endforeach
+                                </td>
                             </tr>
                             <tr>
                                 <td>Địa chỉ	</td>
-                                <td> 243 Tôn Đức Thắng, Đống Đa,Hà Nội</td>
+                                <td>
+                                    @foreach($config as $con)
+                                    @if($con->name == 'address')
+                                      {!!$con->value!!}
+                                    @endif
+                                    @endforeach
+                                </td>
                             </tr>
                             <tr>
                                 <td>Điện thoại	</td>
-                                <td> 091 668 1919 - 0243.513.5724</td>
+                                <td>
+                                    @foreach($config as $con)
+                                    @if($con->name == 'phone')
+                                      {!!$con->value!!}
+                                    @endif
+                                    @endforeach
+                                </td>
                             </tr>
                             <tr>
                                 <td>Website	 </td>
-                                <td><a href="index.html">https://vinhlocluxury.com/</a></td>
+                                <td><a href="index.html">
+                                @foreach($config as $con)
+                                    @if($con->name == 'website')
+                                      {!!$con->value!!}
+                                    @endif
+                                @endforeach
+                                </a></td>
                             </tr>
                             <tr>
                                 <td>Email</td>
-                                <td><a href="mailto: denvinhloc243@gmail.com?subject=feedback" "email me"> denvinhloc243@gmail.com</a></td>
+                                <td><a href="mailto: denvinhloc243@gmail.com?subject=feedback" "email me"> 
+                                    @foreach($config as $con)
+                                    @if($con->name == 'email')
+                                      {!!$con->value!!}
+                                    @endif
+                                    @endforeach
+                                </a></td>
                             </tr>
                         </table>
                         <h3>
