@@ -15,9 +15,21 @@
                 <div class="col-12 col-sm-12 col-md-6 col-lg-3 items f-contact">
                     <h3>Thông tin liên hệ</h3>
                     <ul>
-                        <li>234 Tôn Đức Thắng, Đống Đa, Hà Nội</li>
+                        <li>
+                        @foreach($config as $con)
+                            @if($con->name == 'address')
+                              {!!$con->value!!}
+                            @endif
+                        @endforeach
+                        </li>
                         <li>8h30 am - 9h00 pm</li>
-                        <li>091 668 1919</li>
+                        <li>
+                        @foreach($config as $con)
+                            @if($con->name == 'phone')
+                              {!!$con->value!!}
+                            @endif
+                        @endforeach
+                        </li>
                     </ul>
                 </div>
                 <div class="col-12 col-sm-12 col-md-6 col-lg-3 items f-service">

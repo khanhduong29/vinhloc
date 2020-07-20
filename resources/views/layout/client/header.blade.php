@@ -2,14 +2,27 @@
     <img src="{{url('public')}}/frontend/images/icon/ic-btop.png" alt="">
 </div>
 <div class="number-phone-mobile d-lg-none wow swing">
-    <a href="tel:091 668 1919" class="pline c-feb hv-c-fff" title="091 668 1919">091 668 1919</a>
+    @foreach($config as $con)
+        @if($con->name == 'phone')
+    <a href="tel:{!!$con->value!!}" class="pline c-feb hv-c-fff" title="{!!$con->value!!}">
+        {!!$con->value!!}
+    </a>
+        @endif
+    @endforeach
 </div>
 <header>
     <div id="headerTop" class="d-none d-lg-block">
         <div class="container d-flex justify-content-between">
             <div class="d-flex flex-row">
                 <div class="ht-email pr-5 d-none d-md-block">
-                    <i class="fas fa-envelope"></i><span class="d-inline-block ml-2">Denvinhloc243@gmail.com</span>
+                    <i class="fas fa-envelope"></i>
+                    <span class="d-inline-block ml-2">
+                        @foreach($config as $con)
+                            @if($con->name == 'email')
+                              {!!$con->value!!}
+                            @endif
+                        @endforeach
+                    </span>
                 </div>
             </div>
             <div class="d-flex flex-row">

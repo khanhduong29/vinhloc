@@ -16,30 +16,39 @@
                         <p>
                             Cảm ơn bạn đã quan tâm tới sản phẩm của Vĩnh Lộc Luxury, Xin vui lòng điền thông tin của bạn vào form dưới đây :
                         </p>
-                        <div class="link-pro">
-                            <span>Sản phẩm: </span> 
-                            <a href="product-detail.html" title="" class="c-fff">https://vinhlocluxury.com/den-dong-op-tran-12</a>
-                            <a href="product-detail.html" title="" class="c-fff">https://vinhlocluxury.com/den-dong-op-tran-12</a>
-                            <a href="product-detail.html" title="" class="c-fff">https://vinhlocluxury.com/den-dong-op-tran-12</a>
-                        </div>
-                        <h3>
-                            <span>ĐỂ LẠI THÔNG TIN ĐƯỢC TƯ VẤN MIỄN PHÍ</span>
-                        </h3>
-                        <form action="" method="POST" role="form">
+                        @if(Auth::guard('customer')->check())
+                        <form action="{{route('post-checkout')}}" method="POST" role="form">
+                            <div class="link-pro">
+                                <span>Sản phẩm: </span> 
+                                @if($cart -> items)
+                                @foreach($cart -> items as $item)
+                                <a href="{{route('product-detail',['slug'=>$item['slug']])}}" title="" class="c-fff">https://vinhlocluxury.com/{{$item['slug']}}</a>
+                                @endforeach
+                                @endif
+                            </div>
+                            <h3>
+                                <span>ĐỂ LẠI THÔNG TIN ĐỂ ĐƯỢC GIAO HÀNG MIỄN PHÍ</span>
+                            </h3>
                             <div class="row">
                                 <div class="col-12 col-sm-12 col-md-6 col-lg-6 form-group">
-                                    <input type="text" class="form-control" id="" placeholder="Họ và tên">
+                                    <input type="text" class="form-control" name="name" id="" placeholder="Họ và tên" value="{{Auth::guard('customer')->user()->name}}">
                                 </div>
                                 <div class="col-12 col-sm-12 col-md-6 col-lg-6 form-group">
-                                    <input type="text" class="form-control" id="" placeholder="Số điện thoại">
+                                    <input type="text" class="form-control" name="phone" id="" placeholder="Số điện thoại" value="{{Auth::guard('customer')->user()->phone}}">
                                 </div>
                                 <div class="col-12 form-group">
-                                    <input type="email" class="form-control" id="" placeholder="Email">
+                                    <input type="text" class="form-control" id=""  value="{{Auth::guard('customer')->user()->address}}" placeholder="Địa chỉ">
                                 </div>
                             </div>
 
                             <button type="submit" class="btn btn-primary btn-lg-feb">Đặt hàng ngay</button>
                         </form>
+                        @else
+                        <div class="alert alert-danger">
+                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                            Vui lòng <a href="{{route('login_user')}}" title="">đăng nhập</a> để đặt hàng...
+                        </div>
+                        @endif
                     </div>
                     <div class="col-12 col-sm-12 col-md-12 col-lg-6 pt-4">
                         <h3><span>HOTLINE TƯ VẤN</span></h3>

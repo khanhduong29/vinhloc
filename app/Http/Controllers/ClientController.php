@@ -22,6 +22,7 @@ class ClientController extends Controller {
                 'categories' => Categories::all(),
                 'banners' => banner::all(),
                 'brand' => brand::all(),
+                'config' => Config::all(),
                 'cart' => new cart()
             ]);
             return $next($request);
@@ -34,16 +35,14 @@ class ClientController extends Controller {
         return view('pages.client.home',compact('products','blog','con'));
     }
     public function about() {
-        $config = config::all();
-        return view('pages.client.about',compact('config'));
+        return view('pages.client.about');
     }
     public function product(Request $request) {
         $products = products::where('status',1)->paginate(8);
         return view('pages.client.product',compact('products'));
     }
     public function service() {
-        $config = config::all();
-        return view('pages.client.service',compact('config'));
+        return view('pages.client.service');
     }
     public function construction() {
         $con = construction::all();
