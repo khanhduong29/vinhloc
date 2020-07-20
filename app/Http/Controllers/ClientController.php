@@ -9,6 +9,7 @@ use App\Models\brand;
 use App\Models\blog;
 use App\Models\banner;
 use App\Models\Cart;
+use App\Models\Config;
 use App\Models\construction;
 use File;
 use Illuminate\Support\Facades\Auth;
@@ -33,14 +34,16 @@ class ClientController extends Controller {
         return view('pages.client.home',compact('products','blog','con'));
     }
     public function about() {
-        return view('pages.client.about');
+        $config = config::all();
+        return view('pages.client.about',compact('config'));
     }
     public function product(Request $request) {
         $products = products::where('status',1)->paginate(8);
         return view('pages.client.product',compact('products'));
     }
     public function service() {
-        return view('pages.client.service');
+        $config = config::all();
+        return view('pages.client.service',compact('config'));
     }
     public function construction() {
         $con = construction::all();
