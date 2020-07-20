@@ -70,13 +70,13 @@
                   </div>
                 </div>
                 <!-- /.card-body -->
-                
+
                 <div class="card-footer">
                   <button type="submit" class="btn btn-primary">Thêm config</button>
                 </div>
                 <input type="hidden" name="_token" value="{{csrf_token()}}">
               </form>
-              
+
             </div>
             <!-- /.card -->
           </div>

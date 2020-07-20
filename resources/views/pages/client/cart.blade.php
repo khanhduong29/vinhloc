@@ -77,10 +77,10 @@
 		</div>
 		@else
 		<div class="panel-body mb-5">
-				<div class="alert alert-danger">
-				<strong>Giỏ hàng của bạn đang trống!</strong> Nhấn <a href="{{route('product')}}">vào đây</a> để mua hàng ....
-			</div>
-		</div>
+            <div class="alert alert-danger">
+                <strong>Giỏ hàng của bạn đang trống!</strong> Nhấn <a href="{{route('product')}}">vào đây</a> để mua hàng ....
+            </div>
+        </div>
 		@endif
 	</section>
 </main>

@@ -78,13 +78,13 @@
                 </div>
                 @endif
                 <!-- /.card-body -->
-                
+
                 <div class="card-footer">
                   <button type="submit" class="btn btn-primary">Sửa config</button>
                 </div>
                 <input type="hidden" name="_token" value="{{csrf_token()}}">
               </form>
-              
+
             </div>
             <!-- /.card -->
           </div>
