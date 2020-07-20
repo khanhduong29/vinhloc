@@ -79,7 +79,7 @@
 		<div class="panel-body mb-5">
 				<div class="alert alert-danger">
 				<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-				<strong>Your cart is empty!</strong>
+				<strong>Giỏ hàng của bạn đang trống!</strong> Nhấn <a href="{{route('product')}}">vào đây</a> để mua hàng ....
 			</div>
 		</div>
 		@endif

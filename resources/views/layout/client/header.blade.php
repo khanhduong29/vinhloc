@@ -48,6 +48,7 @@
                         </div>
                         <a  title="" class="img-cart cart-lap"><img src="{{url('public')}}/frontend/images/icon/ic-cart-feb.png" alt="error"></a>
                         <span class="amount-cart">{{$cart->total_quantity}}</span>
+                        @if($cart -> items)
                         <div class="cart-hover">
                             <table class="select-items">
                                 @if(count($cart->items))
@@ -80,6 +81,7 @@
                                 <a href="{{route('checkout')}}" class="btn btn-lg btn-lg-feb">Thanh toán</a>
                             </div>
                         </div>
+                        @endif
                     </div>
                 </div>
             </div>
