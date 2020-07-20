@@ -25,14 +25,14 @@
 		public function create(){
             $categories = categories::all();
             $attrName = attribute::all();
-            $where = attribute::select('name')->get()->toArray();
+            $where = attribute::select('id')->get()->toArray();
             $attrValue = attributeValue::where('attribute_id',$where)->get();
             $attributes = attribute::all();
 			return view('pages.admin.products.add',[
 				'categories' => $categories,
                 'attributes' => $attributes,
                 'attribute_name' => $attrName,
-                'attrValue' => $attrValue
+                'attrValue' => $attrValue,
 			]);
 		}
 		public function store(Request $request,products $products){
@@ -45,13 +45,20 @@
 		}
 		// sửa dữ liệu
 		public function edit($id){
-			$products = products::where('id', $id)->first();
+            $products = products::where('id', $id)->first();
+            $productAttribute = productAttribute::where('products_id',$id);
             $categories = categories::all();
             $attributes = attribute::all();
+            $attributeValues = $products->productAttr()->get()->all();
+            $attributeValues = array_map(function($var) {
+                return $var->attribute_value;
+            },  $attributeValues);
         	return view('pages.admin.products.edit',[
         		'products' => $products,
                 'categories' => $categories,
-                'attributes' => $attributes
+                'attributes' => $attributes,
+                'attributeValues' => $attributeValues,
+                'productAttribute' => $productAttribute
         	]);
 		}
 		public function update(request $request,products $id){
@@ -66,13 +73,13 @@
 		// xóa dữ liệu
 		public function delete(products $id)
 	    {
-	        $delete = $id->delete();
+            $delete = $id->delete();
 	        if ($id) {
 	           return redirect()->route('list-products') -> with('message','Xóa thành công');
 	       } else {
 	        return redirect()->back()->with('message','Xóa không thành công');
 	       }
-	    }
+        }
 	}
 
 

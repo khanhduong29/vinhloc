@@ -103,7 +103,7 @@
                     <label for="">{{$att->name}}</label>
                     <div class="form-check">
                         @foreach($att->attrValue as $attrValues)
-                            <input type="checkbox" class="form-check-input" value="{{$attrValues->attribute_id}}" id="exampleCheck1" name="attribute_id[]">
+                            <input type="checkbox" class="form-check-input" value="{{$attrValues}}" id="exampleCheck1" name="attribute_values[]">
                             <label class="form-check-label" for="exampleCheck1">{{$attrValues->value}}</label>
                         @endforeach
                     </div>
