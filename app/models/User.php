@@ -153,7 +153,60 @@ class User extends Authenticatable
             'role' => $role,
 		]);
     }
-
+    public function update_profile($id){
+        $validate = request()->validate(
+            [
+                'name' => 'required',
+                'email' => 'required',
+                'file'=>'max:10000|mimes:jpg,jpeg,png,gif',
+                'password'=>'required|min:6|max:100',
+                'conf_password'=>'required|same:password',
+            ],
+            [
+                'required' => ':attribute đang bỏ trống.',
+                'unique' => ':attribute đã tồn tại',
+                'min' => ':attribute ít nhất 6 kí tự',
+                'max' => ':attribute quá lớn',
+                'mimes' => 'Không đúng định dạng ảnh',
+                'same' => ':attribute chưa trùng khớp',
+            ],
+            [
+                 'name' => 'Name',
+                 'email' => 'Email',
+                 'password' => 'Mật khẩu',
+                 'role' => 'Quyền',
+                 'conf_password' => 'Mật khẩu xác nhận ',
+                 'file' =>'Ảnh'
+            ]
+        );
+        if(request()->email != $id->email){
+            $validate = request()->validate(
+                [
+                    'email' => 'unique:users',
+                ],
+                [
+                    'unique' => ':attribute đã tồn tại',
+                ],
+                [
+                     'email' => 'Email',
+                ]
+            );
+        }
+        $password = bcrypt(request()->password);
+        $file_name = Auth::user()->avatar;
+        if (request()->hasFile('upload_file')) {
+            $file = request()->file('upload_file');
+            $file_name = time().$file->getClientOriginalName();
+            $file->move(public_path('uploads/avatar'),$file_name);
+        }
+        request()->merge(['avatar'=>$file_name]);
+        $updated = $this->update([
+            'name' => request()->name,
+            'email' => request()->email,
+            'avatar' => $file_name,
+            'password' => $password,
+        ]);
+    }
     public function login() {
         $validate = request()->validate(
 			[
