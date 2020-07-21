@@ -27,7 +27,9 @@
         	]);
 		}
 
-
+		public function ad_detail(){
+        	return view('pages.admin.admin.admin-detail');
+		}
 		// thêm dữ liệu
 		public function create(){
 			return view('pages.admin.admin.add');
@@ -84,6 +86,66 @@
 		public function logout_admin(){
 			Auth::logout();
 			return redirect()->route('login');
+		}
+		// public function edit($id)
+		// {
+		// 	if (Auth::user()->level_id == 0 && Auth::user()->id != $id) {
+		// 		$user = User::find($id);
+		// 		if ($user->username != 'administrator') {
+		// 			$level = LevelAdmin::All();
+		// 			return view('admin.administrator.edit',[
+		// 				'user' => $user,
+		// 				'level' => $level
+		// 			]);
+		// 		} else {
+		// 			return redirect()->route('administrator');
+		// 		}
+				
+		// 	} else {
+		// 		return redirect()->route('administrator');
+		// 	}
+		// }
+		// public function update($id,Request $req)
+		// {
+		// 	User::find($id)->update([
+		// 		'level_id' => $req->level
+		// 	]);
+		// 	return redirect()->route('administrator');
+		// }
+		public function edit_profile($id){	
+			return view('pages.admin.admin.admin-detail');
+		}
+		public function update_profile($id, Request $req){
+			$this->validate($req,[
+				'name'=>'required',
+				'email'=>'required|email|unique:users,email,'.$id,
+				'password'=>'required|min:8',
+				'conf_password'=>'required|same:password',
+			],[
+				'name.required'=>'Họ tên không được để trống',
+				'email.required'=>'Email không được để trống',
+				'email.email'=>'Email không đúng định dạng',
+				'email.unique'=>'Email đã tồn tại',
+				'password.required'=>'Yêu cầu nhập mật khẩu',
+				'password.min'=>'Mật khẩu ít nhất 8	ký tự',
+				'conf_password.required'=>'Yêu cầu xác nhận mật khẩu',
+				'conf_password.same'=>'Mật khẩu không khớp'
+			]);
+			$password = bcrypt($req->password);
+			$file_name = Auth::user()->avatar;
+			if ($req->hasFile('upload_file')) {
+				$file = $req->file('upload_file');
+				$file_name = time().$file->getClientOriginalName();
+				$file->move(public_path('uploads/avatar'),$file_name);
+			}
+			$req->merge(['avatar'=>$file_name]);
+			User::find($id)->update([
+				'name' => $req->name,
+				'email' => $req->email,
+				'avatar' => $file_name,
+				'password' => $password,
+			]);
+			return redirect()->route('admin');
 		}
     }
 

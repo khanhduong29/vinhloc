@@ -48,26 +48,23 @@
               <form  method="post" role="form" enctype="multipart/form-data">
                 <div class="card-body">
                   <div class="form-group">
+                    <div class="text-center">
+                      <img src="{{asset('public/uploads/avatar')}}/{{$admin->avatar}}" class="avatar img-circle img-responsive img-thumbnail" alt="avatar" width="120px">
+                      <h6 class="font-italic font-weight-normal">Tải lên ảnh đại diện khác...</h6>
+                    </div>
+                  </div>
+                  <div class="form-group">
                     <label for="">Username</label>
-                    <input type="text" class="form-control" id="name" value="{{$admin->name}}"  name="name" required placeholder="Name">
+                    <input type="text" class="form-control disabled" id="name" value="{{$admin->name}}"  name="name" required placeholder="Name" disabled>
                     <div class="help-block"></div>
                   </div>
                   <div class="form-group">
                     <label for="">Email</label>
-                    <input type="email" class="form-control" id="email" value="{{$admin->email}}"  name="email" required placeholder="email">
+                    <input type="email" class="form-control disabled" id="email" value="{{$admin->email}}"  name="email" required placeholder="email" disabled>
                     <div class="help-block"></div>
                   </div>
                   <div class="form-group">
-                    <label for="">Mật khẩu</label>
-                    <input type="password" class="form-control" id="password" value="{{$admin->password}}"  name="password" required placeholder="password">
-                    <div class="help-block"></div>
-                  </div>
-                  <div class="form-group">
-                    <label for="exampleInputFile">Chọn ảnh</label>
-                    <div class="input-group">
-                      <input type="file" name="file" class="form-control mb-3" accept="image/gif, image/jpeg, image/jpg, image/png"/>
-                    </div>
-                    <img src="{{asset('public/Uploads')}}/{{$admin-> avatar}}" class="d-block" alt="Chưa có hình ảnh" width="120">
+                    <label for="">Quyền quản trị</label>
                   </div>
                   <div class="form-check">
                     <input type="checkbox" name="full" id="full" class="form-check-input" value="1" {{ in_array(1,$arr_role) ?"checked" : ""}}>

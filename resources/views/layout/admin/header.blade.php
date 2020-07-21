@@ -41,7 +41,7 @@
               <img class="img-circle elevation-2" src="{{asset('public/uploads/avatar')}}/{{Auth::user()->avatar}}" alt="User Avatar">
             </div>
             <div class="card-footer clearfix">
-              <a href="" class="btn btn-xs btn-info float-left">Chi tiết</a>
+              <a href="{{route('edit-profile',['id'=>Auth::user()->id])}}" class="btn btn-xs btn-info float-left">Chi tiết</a>
               <a href="{{route('logout')}}" class="btn btn-xs btn-danger float-right">Đăng xuất</a>
               <!-- /.row -->
             </div>

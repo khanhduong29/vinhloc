@@ -69,8 +69,12 @@
                     <td>{{$ad -> role}}</td>
                     <td>{{$ad -> created_at}}</td>
                     <td>
+                      @if($ad->role == 1)
+                      <span class="btn-sm btn-primary"> Quản trị viên</span>
+                      @else
                       <a href="{{ Route('edit-admin',$ad) }}" class="btn btn-primary btn-xs">Sửa</a>
                       <a href="{{ Route('deletead',$ad) }}" class="btn btn-danger btn-xs" onclick="return confirm('Xác nhận xoá ?')">Xóa</a>
+                      @endif
                     </td>
                   </tr>
                   @endforeach

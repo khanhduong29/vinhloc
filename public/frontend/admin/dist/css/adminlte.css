@@ -30575,4 +30575,11 @@ a.text-muted:hover {
 [class*="accent-"] a.btn-dark {
   color: #ffffff;
 }
+
+.form-control.disabled{
+  /* cursor: no-drop; */
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
 /*# sourceMappingURL=adminlte.css.map */

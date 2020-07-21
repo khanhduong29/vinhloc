@@ -117,39 +117,6 @@ class User extends Authenticatable
 	}
 	// cập nhật dữ liệu
 	public function update_data($user){
-		$validate = request()->validate(
-			[
-				'name' => 'required',
-				'email' => 'required',
-				'file'=>'max:10000|mimes:jpg,jpeg,png,gif',
-				'password'=>'required|min:6|max:100'
-			],
-			[
-				'required' => ':attribute đang bỏ trống.',
-				'min' => ':attribute ít nhất 6 kí tự',
-				'max' => ':attribute quá lớn',
-				'mimes' => 'không đúng định dạng ảnh'
-			],
-			[
-                 'name' => 'Name',
-                 'email' => 'Email',
-                 'password' => 'Mật khẩu',
-                 'file' =>'Ảnh'
-			]
-		);
-		if(request()->email != $user->email){
-			$validate = request()->validate(
-				[
-					'email' => 'unique:users',
-				],
-				[
-					'unique' => ':attribute đã tồn tại',
-				],
-				[
-                 	'email' => 'Email',
-				]
-			);
-		}
         $roles = [];
         if (request()->full) {
             array_push($roles, 1);
@@ -182,20 +149,8 @@ class User extends Authenticatable
             array_push($roles, 10);
         }
         $role = implode(",",$roles);
-		$avatar = '';
-		if(request() -> has('file')){
-			$file = request() -> file;
-			$file -> move(base_path('public/Uploads/Avatar'),$file -> getClientOriginalName());
-			$avatar = $file -> getClientOriginalName();
-		}else{
-			$avatar = $user->avatar;
-		}
 		$updated = $this->update([
-			'name' => request()->name,
-			'email' => request()->email,
-            'avatar' => $avatar,
             'role' => $role,
-			'password' => Hash::make(request()->password),
 		]);
     }
 
