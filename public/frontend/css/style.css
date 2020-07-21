@@ -1363,6 +1363,7 @@ a.c-feb:hover{
 }
 .pro-detail ul{
     list-style: none;
+    display: table;
     color: #fff;
 }
 .pro-detail ul li{

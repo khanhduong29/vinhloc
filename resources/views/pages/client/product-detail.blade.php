@@ -24,10 +24,16 @@
                                Giá sản phẩm:  {{number_format ($pro -> price)}} VNĐ
                             </span>
                             <ul>
-                                @foreach($attrProduct as $key => $value)
+                                @foreach($uniqueAttributes as $key => $value)
                                 <li>
-                                    <span class="tb1">{{$value->getAtt->name}}: </span>
-                                    <span class="tb2">{{$value->getAtt->getAttValue->value}}</span>
+                                    <span class="tb1">{{$value->attribute->name}}: </span>
+                                    <ul>
+                                        @foreach($value->attribute->attrValue as $attrValue)
+                                            @if(in_array($attrValue->id, $productAttributeValues))
+                                                <li class="tb2">{{$attrValue->value}}</li>
+                                            @endif
+                                        @endforeach
+                                    </ul>
                                 </li>
                                 @endforeach
                             </ul>

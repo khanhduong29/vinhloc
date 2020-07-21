@@ -69,8 +69,21 @@ class ClientController extends Controller {
     }
     public function product_detail($slug) {
         $pro = products::where('slug',$slug)->first();
-        $attrProduct = productAttribute::where('products_id',$pro->id)->get();
-        return view('pages.client.product-detail',compact('pro','attrProduct'));
+        $productAttributes = $pro->productAttr()->get()->all();
+        // danh sach product attribute cua san pham khong bi trung lap
+        $uniqueAttributes = [];
+        // danh sach attribute_id cua san pham khong bi trung lap
+        $uniqueAttributeIds = [];
+        foreach($productAttributes as $pa) {
+            if(!in_array($pa->attribute_id, $uniqueAttributeIds)) {
+                array_push($uniqueAttributes, $pa);
+                array_push($uniqueAttributeIds, $pa->attribute_id);
+            }
+        }
+        $productAttributeValues = array_map(function($var) {
+            return $var->attribute_value;
+        },  $productAttributes);
+        return view('pages.client.product-detail',compact('pro', 'uniqueAttributes', 'productAttributeValues'));
     }
     public function blog_detail($slug) {
         $detail = blog::where('slug',$slug)->first();
