@@ -7,7 +7,6 @@ use App\Models\Cart;
 use App\Models\customer;
 use App\Models\products;
 use App\Models\orders;
-use App\Models\order_detail;
 
 class order_detail extends Model
 {

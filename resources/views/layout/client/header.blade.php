@@ -28,7 +28,7 @@
             <div class="d-flex flex-row">
                 @if(Auth::guard('customer')->check())
 
-                    <a href="" class="pr-2  c-fff">
+                    <a href="{{route('my-account')}}" class="pr-2  c-fff">
                         <span class="d-inline-block ml-2">{{Auth::guard('customer')->user()->name}}</span>
                     </a>
                     <a href="{{route('log-out')}}" class="border-left pl-2 c-fff">
