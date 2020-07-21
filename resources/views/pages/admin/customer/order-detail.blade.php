@@ -37,8 +37,9 @@
             <div class="card-body" >
                 <div>
                     <p>- Khách hàng: <b> {{$orders->getCus -> name}} </b></p>
+                    <p>- Số điện thoại: <b> {{$orders->phone}} </b></p>
                     <p>- Địa chỉ giao hàng: <b> {{$orders->address}}</b></p>
-                    <p>- Tổng thanh toán: <b> ${{number_format($orders->total_amount)}}</b></p>
+                    <p>- Tổng thanh toán: <b> {{number_format($orders->total_amount)}} VNĐ</b></p>
                 </div>
                 <table id="" class="table table-bordered table-striped">
                     <thead>
@@ -63,7 +64,7 @@
                                 <a href="#">{{$det->getPro->name}}</a>
                             </td>
                             <td class="product-price">
-                                £{{number_format($det->price)}}
+                                {{number_format($det->price)}} VNĐ
                             </td>
                             <td class="product_quantity">
                                 {{$det->quantity}}
