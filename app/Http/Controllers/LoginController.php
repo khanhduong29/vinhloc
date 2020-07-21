@@ -96,7 +96,6 @@ class LoginController extends Controller
             'code' => $code,
             'email' => $email
         ])->first();
-
         if(!$checkUser) {
             return redirect('/')->with('danger','Đường dẫn lấy lại mật khẩu không đúng,vui lòng thử lại !');
         }
