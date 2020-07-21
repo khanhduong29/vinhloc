@@ -23,7 +23,7 @@
 	      <td>{{$ord ->getPro-> name}}</td>
 	      <td>{{$ord->quantity}}</td>
 	      <td>{{number_format($ord->price)}} vnđ</td>
-	    </tr>	  
+	    </tr>
 	    @endforeach
 	</tbody>
 </table>

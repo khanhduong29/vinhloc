@@ -9,13 +9,13 @@
             </h2>
 			<section class="s-content">
                 @if (session()->has('success'))
-                <div class="alert alert-success alert-dismissible fade show" role="alert">
-                    <strong>{{ session()->get('success') }}</strong>
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-            @endif
+                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                        <strong>{{ session()->get('success') }}</strong>
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                 @endif
 				<div class="row">
 					<div class="d-md-block col-md-4 col-lg-4 pt-lg-5 pt-4">
 						<div class="forget-title">
@@ -37,7 +37,7 @@
 									<button type="submit" class="btn btn-lg btn-primary btn-lg-feb">Xác nhận</button>
                                 </div>
 							</div>
-						</form>
+                        </form>
 					</div>
 				</div>
 			</section>
