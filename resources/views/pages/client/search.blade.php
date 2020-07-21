@@ -8,6 +8,7 @@
                 <span class="title-big c-fff">Tìm kiếm sản phẩm</span>
             </h2>  
             <section class="show-pro pt-lg-5 pt-4">
+                @if(count($products) != 0)
                 <div class="row">
                     @foreach($products as $pro)
                     <div class="col-12 col-sm-6 col-md-4 col-lg-3">
@@ -29,7 +30,13 @@
                     </div>
                     @endforeach
                 </div>
-                
+                @else
+                <div class="desc text-center">
+                    <h3>
+                        <p class="c-fff text-uppercase f-16">Không tìm thấy sản phẩm</>
+                    </h3> 
+                </div>
+                @endif
             </section>
         </div>
     </section>

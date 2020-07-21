@@ -26,7 +26,7 @@ class ClientController extends Controller {
                 'banners' => banner::all(),
                 'brand' => brand::all(),
                 'config' => Config::all(),
-                'cart' => new cart()
+                'cart' => new cart(),
             ]);
             return $next($request);
         });
@@ -39,8 +39,9 @@ class ClientController extends Controller {
         // dd($productNew);
         return view('pages.client.home',compact('products','blog','con','productNew'));
     }
-    public function about() {
-        return view('pages.client.about');
+    public function about(Products $pro) {
+        $productNew = $pro->proNew();
+        return view('pages.client.about',compact('productNew'));
     }
     public function product(Request $request) {
         $products = products::where('status',1)->paginate(8);
