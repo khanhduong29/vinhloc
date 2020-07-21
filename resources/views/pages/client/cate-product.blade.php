@@ -7,7 +7,8 @@
             <h2 class="text-center">
                 <span class="title-big">{{$cate -> name}}</span>
             </h2>
-            <section class="show-pro pt-lg-5 pt-4">
+             <section class="show-pro pt-lg-5 pt-4">
+                @if(count($products) != 0)
                 <div class="row">
                     @foreach($products as $pro)
                     <div class="col-12 col-sm-6 col-md-4 col-lg-3">
@@ -18,18 +19,24 @@
                                 </a>
                                 <div class="desc text-center">
                                     <h3>
-                                        <a href="{{route('product-detail',['slug'=>$pro->slug])}}" title=""
-                                            class="c-fff text-uppercase f-16">{{$pro -> name}}</a>
+
+                                        <a href="{{route('product-detail',['slug'=>$pro->slug])}}" title="" class="c-fff text-uppercase f-16">{{$pro -> name}}</a>
                                     </h3>
-                                    <a href="{{ Route('add_cart',['id'=>$pro->id]) }}" class="add-cart"><img src="{{url('public')}}/frontend/images/icon/ic-cart-feb.png" alt=""></a>
-                                    <span class="c-feb f-16 text-uppercase">Giá : {{number_format ($pro -> price)}}</span>
+                                    <span class="c-feb f-16 text-uppercase">{{$pro -> price}}</span>
+                                    <a href="" class="add-cart"><img src="{{url('public')}}/frontend/images/icon/ic-cart-feb.png" alt=""></a>
                                 </div>
                             </div>
                         </div>
                     </div>
                     @endforeach
                 </div>
-                <div class="pagination">{{$products->links()}}</div>
+                @else
+                <div class="desc text-center">
+                    <h3>
+                        <p class="c-fff text-uppercase f-16">Không tìm thấy sản phẩm theo danh mục {{$cate -> name}}</>
+                    </h3> 
+                </div>
+                @endif
             </section>
         </div>
     </section>
