@@ -1,5 +1,5 @@
 @extends('layout.client.index')
-
+@section('title','Đăng ký')
 @section('content')
 <main>
     <section class="content-contact pb-5 space-title">

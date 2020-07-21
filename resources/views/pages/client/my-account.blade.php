@@ -1,4 +1,5 @@
 @extends('layout.client.index')
+@section('title','Tài khoản')
 @section('content')
 	<main>
 		<section class="main_content_area">

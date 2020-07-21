@@ -1,5 +1,5 @@
 @extends('layout.client.index')
-
+@section('title','Đèn mâm ốp trần')
 @section('content')
 <main>
     <section class="hot-pro space-title">
@@ -29,12 +29,9 @@
                     </div>
                     @endforeach
                 </div>
-                
-                   <div class="pagination">{{$products->links()}}</div>
-               
+                <div class="pagination">{{$products->links()}}</div>
+            </section>
         </div>
-    </section>
-    </div>
     </section>
     <section class="thumbs-cus space-title">
         <div class="container">
