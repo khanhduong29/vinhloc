@@ -36,7 +36,7 @@
     <section class="thumbs-cus space-title">
         <div class="container">
             <h2 class="text-center">
-                <span class="title-big">{{$brand -> name}}</span>
+                <span class="title-big">Khách hàng tiêu biểu</span>
             </h2>
             <section class="slick5 pt-lg-5 pt-4 pb-5 wow zoomIn">
                 @foreach($brand as $value)
