@@ -40,7 +40,10 @@
                                 </div>
                                 <div class="col-8">
 									<p class="sugges">Nếu chưa có tài khoản vui lòng <a href="{{route('register_user')}}"> Đăng ký</a></p>
-								</div>
+                                </div>
+                                <div class="form-group col-12">
+                                    <p class="forget-pass"><a href="{{route('forget-pass')}}">Quên mật khẩu</a></p>
+                                </div>
 							</div>
 						</form>
 					</div>

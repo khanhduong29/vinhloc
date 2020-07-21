@@ -52,4 +52,11 @@ class LoginController extends Controller
         $user->logout();
         return redirect()->route('login_user') -> with('success','Dang xuat thanh cong');
     }
+
+    public function forget_pass() {
+        return view('pages.client.forget-password');
+    }
+    public function sendCodeReset(Request $request) {
+        dd($request->all());
+    }
 }
