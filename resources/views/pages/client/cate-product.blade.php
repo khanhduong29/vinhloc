@@ -1,5 +1,5 @@
 @extends('layout.client.index')
-@section('title','Đèn mâm ốp trần')
+@section('title',$cate -> name)
 @section('content')
 <main>
     <section class="hot-pro space-title">
