@@ -1,5 +1,5 @@
 @extends('layout.client.index')
-@section('title',{{$pro -> name}})
+@section('title',$pro -> name)
 @section('content')
 <main>
     <section class="contain-pro-detail">
