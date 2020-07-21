@@ -15,7 +15,7 @@
     <section class="content-about space-title">
         <div class="container">
             <h2 class="text-center">
-                <span class="title-big">Về chúng tôi</span>
+                <span class="title-big">Về chúng tôii</span>
             </h2>
             <section class="s-content word-about">
                 @foreach($config as $con)
