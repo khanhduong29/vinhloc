@@ -163,4 +163,7 @@ class Products extends Model
 	{
 		return $this->hasOne('App\Models\Categories','id','cate_id')->orderBy('created_at','desc');
     }
+    function proNew(){
+    	return products::where('status',1) -> orderby('created_at', 'DESC')->limit(4)->get();
+    }
 }

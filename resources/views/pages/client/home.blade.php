@@ -21,7 +21,7 @@
                @foreach($categories as $cate )
                 <div class="pt-2">
                     <div class="thumbnail">
-                        <a href="" class="hv-scale p-3">
+                        <a href="{{route('cate-product',['slug'=>$cate->slug])}}" class="hv-scale p-3">
                             <img src="{{asset('public/Uploads')}}/{{$cate -> image}}"  alt="a" />
                         </a>
                         <div class="desc text-center">
@@ -29,7 +29,7 @@
                                 <img src="{{url('public')}}/frontend/images/thumbs-cat/untitled-1.png" alt="">
                             </div>
                             <h3 class="m-0">
-                                <a href="" title="">{{$cate->name}}</a>
+                                <a href="{{route('cate-product',['slug'=>$cate->slug])}}" title="">{{$cate->name}}</a>
                             </h3>
                         </div>
                     </div>
@@ -103,61 +103,26 @@
                 <span class="title-big">Sản phẩm nổi bật</span>
             </h2>
             <section class="slick3 pt-lg-5 pt-4 wow fadeInUp">
+                @foreach($productNew as $pro)
                 <div class="pt-2">
                     <div class="thumbnail pb-4">
-                        <a href="" class="hv-scale p-3 b-ra-30">
-                            <img src="{{url('public')}}/frontend/images/product/8b1b1592df0d3953601c.jpg" class="img-fluid"  alt="a" />
+                        <a href="{{route('product-detail',['slug'=>$pro->slug])}}" class="hv-scale p-3 b-ra-30">
+                            <img src="{{asset('public/Uploads')}}/{{$pro -> image}}" class="img-fluid"  alt="a" />
                         </a>
                         <div class="desc text-center">
                             <h3>
-                                <a href="" title="" class="c-fff text-uppercase f-16">Đèn chùm pha lê</a>
+                                <a href="{{route('product-detail',['slug'=>$pro->slug])}}" title="" class="c-fff text-uppercase f-16">{{$pro -> name}}</a>
                             </h3>
-                            <span class="c-feb f-16 text-uppercase">Liên hệ</span>
+                            <span class="c-feb f-16 text-uppercase">{{number_format ($pro -> price)}} VNĐ</span>
+                            <a href="{{ Route('add_cart',['id'=>$pro->id]) }}" class="add-cart"><img src="{{url('public')}}/frontend/images/icon/ic-cart-feb.png" alt=""></a>
                         </div>
                     </div>
                 </div>
-                <div class="pt-2">
-                    <div class="thumbnail pb-4">
-                        <a href="" class="hv-scale p-3 b-ra-30">
-                            <img src="{{url('public')}}/frontend/images/product/9717852538bddee387ac.jpg" class="img-fluid"  alt="a" />
-                        </a>
-                        <div class="desc text-center">
-                            <h3>
-                                <a href="" title="" class="c-fff text-uppercase f-16">Đèn chùm pha lê</a>
-                            </h3>
-                            <span class="c-feb f-16 text-uppercase">Liên hệ</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="pt-2">
-                    <div class="thumbnail pb-4">
-                        <a href="" class="hv-scale p-3 b-ra-30">
-                            <img src="{{url('public')}}/frontend/images/product/bc7a454119fdffa3a6ec.jpg" class="img-fluid"  alt="a" />
-                        </a>
-                        <div class="desc text-center">
-                            <h3>
-                                <a href="" title="" class="c-fff text-uppercase f-16">Đèn chùm pha lê</a>
-                            </h3>
-                            <span class="c-feb f-16 text-uppercase">Liên hệ</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="pt-2">
-                    <div class="thumbnail pb-4">
-                        <a href="" class="hv-scale p-3 b-ra-30">
-                            <img src="{{url('public')}}/frontend/images/product/feb2ffd14249a417fd581.jpg" class="img-fluid"  alt="a" />
-                        </a>
-                        <div class="desc text-center">
-                            <h3>
-                                <a href="" title="" class="c-fff text-uppercase f-16">Đèn chùm pha lê</a>
-                            </h3>
-                            <span class="c-feb f-16 text-uppercase">Liên hệ</span>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </section>
         </div>
     </section>
+    @if($blog)
     <section class="share space-title">
         <div class="container">
             <h2 class="text-center pb-4">
@@ -203,6 +168,7 @@
             </div>
         </div>
     </section>
+    @endif
     <section class="thumbs-cus space-title">
         <div class="container">
             <h2 class="text-center">

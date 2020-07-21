@@ -68,18 +68,47 @@
                                         <div class="login_form_container">
                                             <div class="account_login_form">
                                                 <form action="#">
-                                                    <label>Tên</label>
-                                                    <input type="text" name="name">
-                                                    <label>Email</label>
-                                                    <input type="email" name="email">
-                                                    <label>Mật khẩu cũ</label>
-                                                    <input type="text" name="pasword-old">
-                                                    <label>Mật khẩu mới</label>
-                                                    <input type="password" name="password">
-                                                    <label>Xác nhận mật khẩu mới</label>
-                                                    <input type="password" name="confirm_password">
-                                                    <div class="save_button primary_btn default_button">
-                                                       <button type="submit">Save</button>
+                                                    <div class="form-group">
+                                                        <label>Họ và tên</label>
+                                                        <div>
+                                                            Customer
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label>Email</label>
+                                                        <div>
+                                                            customer@gmail.com
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label>Mật khẩu</label>
+                                                        <div>
+                                                            ***********
+                                                        </div>
+                                                    </div>
+                                                    <div class="place-reset-pass">
+                                                        Sửa thông tin
+                                                    </div>
+                                                    <div class="form-reset-pass">
+                                                        <div class="form-group">
+                                                            <label>Tên</label>
+                                                            <input type="text" name="name" class="form-control">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label>Mật khẩu cũ</label>
+                                                            <input type="text" name="pasword-old"class="form-control">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label>Mật khẩu mới</label>
+                                                            <input type="password" name="password"class="form-control">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label>Xác nhận mật khẩu mới</label>
+                                                            <input type="password" name="confirm_password"class="form-control">
+                                                        </div>
+                                                        <div class="save_button primary_btn default_button">
+                                                           <button type="submit">Save</button>
+                                                        </div>
                                                     </div>
                                                 </form>
                                             </div>
@@ -92,7 +121,6 @@
                 </div>
             </div>
         </section>
-
     </main>
 @stop()
 

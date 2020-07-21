@@ -1175,6 +1175,7 @@ a.c-feb:hover{
     border-color: #fff;
     outline: 0;
     box-shadow: none;
+    background: rgba(0, 0, 0, .4) !important;
 }
 
 /* page about */
@@ -2089,3 +2090,11 @@ a.c-feb:hover{
 }
 
 /*--------------------------------------- END MY ACCOUNT -----------------------------------------------*/
+
+.place-reset-pass{
+    color: #feb300;
+    cursor: pointer;
+}
+.form-reset-pass{
+    display: none;
+}

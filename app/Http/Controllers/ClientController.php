@@ -31,11 +31,13 @@ class ClientController extends Controller {
             return $next($request);
         });
     }
-    public function home() {
+    public function home(Products $pro) {
         $products = products::all();
         $blog = blog::all();
         $con = construction::all();
-        return view('pages.client.home',compact('products','blog','con'));
+        $productNew = $pro->proNew();
+        // dd($productNew);
+        return view('pages.client.home',compact('products','blog','con','productNew'));
     }
     public function about() {
         return view('pages.client.about');
