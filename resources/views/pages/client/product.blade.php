@@ -9,6 +9,7 @@
             </h2>
             <form action="{{route('orderby')}}" method="get" accept-charset="utf-8" class="filter-pro d-lg-flex d-md-flex justify-content-center mt-5" id="form_order">
                 <select class="js-example-basic-single m-2" id="cate">
+                    <option value="">---Chọn danh mục---</option>
                     @foreach($categories as $cate)
                     <option value="{{$cate->id}}">{{$cate -> name}}</option>
                     @endforeach
