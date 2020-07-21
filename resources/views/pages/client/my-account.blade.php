@@ -68,14 +68,16 @@
                                         <div class="login_form_container">
                                             <div class="account_login_form">
                                                 <form action="#">
-                                                    <label>Name</label>
-                                                    <input type="text" name="first-name">
+                                                    <label>Tên</label>
+                                                    <input type="text" name="name">
                                                     <label>Email</label>
-                                                    <input type="email" name="last-name">
-                                                    <label>Email</label>
-                                                    <input type="text" name="email-name">
-                                                    <label>Password</label>
-                                                    <input type="password" name="user-password">
+                                                    <input type="email" name="email">
+                                                    <label>Mật khẩu cũ</label>
+                                                    <input type="text" name="pasword-old">
+                                                    <label>Mật khẩu mới</label>
+                                                    <input type="password" name="password">
+                                                    <label>Xác nhận mật khẩu mới</label>
+                                                    <input type="password" name="confirm_password">
                                                     <div class="save_button primary_btn default_button">
                                                        <button type="submit">Save</button>
                                                     </div>
