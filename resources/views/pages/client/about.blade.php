@@ -1,4 +1,5 @@
 @extends('layout.client.index')
+@section('title','Giới thiệu')
 @section('content')
 <main>
     <div class="container">

@@ -1,28 +1,12 @@
 @extends('layout.client.index')
-
+@section('title','Sản phẩm')
 @section('content')
 <main>
     <section class="contain-pro-detail">
         <div class="container">
             <h2 class="text-center">
-                <span class="title-big c-fff">Sản phẩm</span>
-            </h2>
-            <form action="" method="get" accept-charset="utf-8" class="filter-pro d-lg-flex d-md-flex justify-content-center mt-5">
-                <select class="js-example-basic-single m-2">
-                    @foreach($categories as $cate)
-                    <option value="AL">{{$cate -> name}}</option>
-                    @endforeach
-                </select>
-                <select class="js-example-basic-single m-2">
-                    @foreach($products as $pr)
-                    <option value="AL">Giá : {{$pr -> price}}</option>    
-                    @endforeach
-                </select>
-                <select class="js-example-basic-single m-2">
-                    <option value="AL">Alabama</option>
-                    <option value="WY">Wyoming</option>
-                </select>
-            </form>
+                <span class="title-big c-fff">Tìm kiếm sản phẩm</span>
+            </h2>  
             <section class="show-pro pt-lg-5 pt-4">
                 <div class="row">
                     @foreach($products as $pro)

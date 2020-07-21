@@ -1,11 +1,11 @@
 @extends('layout.client.index')
-
+@section('title','Đèn mâm ốp trần')
 @section('content')
 <main>
     <section class="hot-pro space-title">
         <div class="container">
             <h2 class="text-center">
-                <span class="title-big">Đèn mâm ốp trần</span>
+                <span class="title-big">{{$cate -> name}}</span>
             </h2>
             <section class="show-pro pt-lg-5 pt-4">
                 <div class="row">
@@ -29,17 +29,14 @@
                     </div>
                     @endforeach
                 </div>
-                
-                   <div class="pagination">{{$products->links()}}</div>
-               
+                <div class="pagination">{{$products->links()}}</div>
+            </section>
         </div>
-    </section>
-    </div>
     </section>
     <section class="thumbs-cus space-title">
         <div class="container">
             <h2 class="text-center">
-                <span class="title-big">Khách hàng tiêu biểu</span>
+                <span class="title-big">{{$brand -> name}}</span>
             </h2>
             <section class="slick5 pt-lg-5 pt-4 pb-5 wow zoomIn">
                 @foreach($brand as $value)

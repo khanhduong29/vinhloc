@@ -1,5 +1,5 @@
 @extends('layout.client.index')
-
+@section('title','Giỏ hàng')
 @section('content')
 <main>
 	<section class="container cart space-title">

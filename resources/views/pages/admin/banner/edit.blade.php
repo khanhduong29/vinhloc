@@ -9,21 +9,8 @@
           <div class="col-sm-6">
             <!-- <h1>Sửa banner</h1> -->
             <section class="content-header">
-             <?php $url = url('').'/'.Request::segment(1).'/'?>
-             <h4>
-               <?php for ($i = 1; $i <= count(Request::segments()) ; $i ++): ?>
-                 <?php if ($i > 1): ?>
-                  <?php $url .= Request::segment($i).'/'?>
-                <?php endif ?>
-                <a href ="{{$url}}">
-                  {{strtoupper(Request::segment($i))}}
-                </a>
-                <?php if ($i < count(Request::segments())): ?>
-                  <?= '/' ?>
-                <?php endif ?>
-              <?php endfor ?>
-            </h4>
-          </section>
+               <h5>Sửa thông tin</h5>
+            </section>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">

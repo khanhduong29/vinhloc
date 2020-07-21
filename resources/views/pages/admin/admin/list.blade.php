@@ -18,19 +18,8 @@
           <div class="col-sm-6">
             <!-- <h1>DataTables</h1> -->
             <section class="content-header">
-             <?php $url = url('').'/'.Request::segment(1).'/'?>
              <h5>
-               <?php for ($i = 1; $i <= count(Request::segments()) ; $i ++): ?>
-                 <?php if ($i > 1): ?>
-                  <?php $url .= Request::segment($i).'/'?>
-                <?php endif ?>
-                <a href ="{{$url}}">
-                  {{strtoupper(Request::segment($i))}}
-                </a>
-                <?php if ($i < count(Request::segments())): ?>
-                  <?= '/' ?>
-                <?php endif ?>
-              <?php endfor ?>
+              Danh sách người quản trị
             </h5>
           </section>
             <a href="{{route('add-admin')}}">Thêm admin</a>
