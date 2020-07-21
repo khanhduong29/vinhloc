@@ -95,7 +95,7 @@ class ClientController extends Controller {
     public function cate_product($slug) {
         $cate = categories::where('slug',$slug)->first() ;
         $products = products::where('cate_id',$cate['id'])->paginate(4);
-        return view('pages.client.cate-product',compact('products'));
+        return view('pages.client.cate-product',compact('products','cate'));
     }
     public function getsearch(Request $req){
         $products =  products::where('name','like','%'.$req->key.'%')->orWhere('price',$req->key)->get();
