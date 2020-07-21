@@ -72,19 +72,13 @@
                                                     <div class="form-group">
                                                         <label>Họ và tên</label>
                                                         <div>
-                                                            Customer
+                                                            {{Auth::guard('customer')->user()->name}}
                                                         </div>
                                                     </div>
                                                     <div class="form-group">
                                                         <label>Email</label>
                                                         <div>
-                                                            customer@gmail.com
-                                                        </div>
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label>Mật khẩu</label>
-                                                        <div>
-                                                            ***********
+                                                            {{Auth::guard('customer')->user()->email}}
                                                         </div>
                                                     </div>
                                                     <div class="place-reset-pass">
