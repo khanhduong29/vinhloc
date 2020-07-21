@@ -33,7 +33,7 @@
                 @else
                 <div class="desc text-center">
                     <h3>
-                        <p class="c-fff text-uppercase f-16">Không tìm thấy sản phẩm theo danh mục {{$cate -> name}}</>
+                        <p class="c-fff text-uppercase f-16">Không tìm thấy sản phẩm theo danh mục {{$cate -> name}}</p>
                     </h3> 
                 </div>
                 @endif

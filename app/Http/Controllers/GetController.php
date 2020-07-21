@@ -33,7 +33,8 @@ class GetController extends Controller
 	{
 		$id = $req->id;
 		$product = products::where('cate_id',$id)->get();
-		foreach ($product as $key => $value) {
+		if(count($products) != 0){
+			foreach ($product as $key => $value) {
 			echo '<div class="col-12 col-sm-6 col-md-4 col-lg-3">';
 			echo '<div class="pt-4">';
 			echo '<div class="thumbnail pb-4">';
@@ -47,7 +48,13 @@ class GetController extends Controller
 			echo "<span class='c-feb f-16 text-uppercase'>Giá : ".number_format ($value->price)."</span>";
 			echo "<a href='' class='add-cart'><img src='".url('public')."/frontend/images/icon/ic-cart-feb.png' alt=''></a>";
 			echo '</div></div></div></div>';
+			}
 		}
+		else{
+			echo '<div class="desc text-center">Không tìm thấy sản phẩm';
+			echo '</div>';
+		}
+		
 
 	}
 	public function getOrDerby(Request $req)
