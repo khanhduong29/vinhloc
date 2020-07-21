@@ -2076,24 +2076,16 @@ a.c-feb:hover{
   padding-right: 10px;
 }
 
-.account_login_form form > input {
-  border: 1px solid #ddd;
+.account_login_form form input {
+  border: 1px solid #ffcb49;
   background: none;
   height: 40px;
   margin-bottom: 20px;
   width: 100%;
   padding: 0 20px;
-  color: #363f4d;
-}
-.account_login_form form span.custom_checkbox {
-  display: flex;
-}
-.account_login_form form span.custom_checkbox input {
-  top: 5px;
-  margin-right: 7px;
-}
-.account_login_form form span.custom_checkbox label {
-  margin-bottom: 0;
+  color: #fdb300;
+  border-radius: 10px;
+  outline: none;
 }
 
 /*--------------------------------------- END MY ACCOUNT -----------------------------------------------*/
