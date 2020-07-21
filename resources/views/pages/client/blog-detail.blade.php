@@ -1,5 +1,5 @@
 @extends('layout.client.index')
-
+@section('title',{{$detail -> name}})
 @section('content')
 <main class="news select-ctent pd_t40_xs">
 	<div class="container">

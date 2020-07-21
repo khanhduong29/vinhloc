@@ -1,5 +1,5 @@
 @extends('layout.client.index')
-
+@section('title','Dịch vụ')
 @section('content')
 <main>
     <section class="representative service space-title">

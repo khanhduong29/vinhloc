@@ -1,5 +1,5 @@
 @extends('layout.client.index')
-
+@section('title','Sản phẩm')
 @section('content')
 <main>
     <section class="contain-pro-detail">
