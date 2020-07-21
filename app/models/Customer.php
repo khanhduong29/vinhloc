@@ -80,4 +80,7 @@ class Customer extends Authenticatable
     public function logout() {
         Auth::guard('customer')->logout();
     }
+    public function countAll(){
+        return count(Customer::get());
+    }
 }

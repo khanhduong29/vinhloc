@@ -4,13 +4,19 @@
     use App\Http\Controllers\Controller;
     use Illuminate\Http\Request;
     use App\Models\User;
+    use App\Models\Customer;
+    use App\Models\Orders;
     use Illuminate\Support\Facades\Session;
     use Auth;
 	use Hash;
 
     class adminController extends Controller {
-        public function admin() {
-            return view('pages.admin.index');
+        public function admin(Customer $cus, Orders $ord) {
+        	$countCus = $cus->countAll();
+        	$countOrd = $ord->countAll();
+        	$countOrdSuc = $ord->countSuc();
+        	$countOrdNew = $ord->countNew();
+            return view('pages.admin.index',compact('countCus','countOrd','countOrdSuc','countOrdNew'));
         }
 
         //danh sách dữ liệu

@@ -70,4 +70,13 @@ class orders extends Model
     public function detail(){
     	return $this -> hasMany('\App\Models\order_detail','id_oder','id');
     }
+    public function countAll(){
+        return count(Orders::get());
+    }
+    public function countSuc(){
+        return count(Orders::where('status',2)->get());
+    }
+    public function countNew(){
+        return count(Orders::where('status',0)->get());
+    }
 }
