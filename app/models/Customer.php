@@ -17,7 +17,7 @@ class Customer extends Authenticatable
 
     protected $table = 'customer';
 
-    protected $fillable = ['name','email','password','token'];
+    protected $fillable = ['name','email','password','code','time_code'];
 
     protected $guard = 'customer';
 
@@ -28,7 +28,6 @@ class Customer extends Authenticatable
 				'name' => 'required',
 				'email' => 'required|unique:customer,email',
                 'password' => 'required|min:6',
-                'phone' => 'required',
 				'confirm_password' => 'required|same:password',
 			],
 			[
@@ -40,7 +39,6 @@ class Customer extends Authenticatable
 			[
                  'name' => 'Tên',
                  'email' => 'Email',
-                 'phone' => 'Số điện thoại',
                  'password' => 'Mật khẩu',
                  'confirm_password' => 'Xác nhận mật khẩu'
 			]
@@ -48,9 +46,7 @@ class Customer extends Authenticatable
         $models = $this->create([
             'name' => request()->name,
             'email' => request()->email,
-            'phone' => request()->phone,
-            'password' => Hash::make(request()['password']),
-            'token' => Str::random(60)
+            'password' => Hash::make(request()['password'])
         ]);
         return $models;
     }

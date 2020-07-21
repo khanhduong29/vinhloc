@@ -7,6 +7,7 @@ use App\Models\categories;
 use App\Models\products;
 use App\Models\Cart;
 use App\Models\Config;
+use Carbon\Carbon;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Redirect;
@@ -57,6 +58,25 @@ class LoginController extends Controller
         return view('pages.client.forget-password');
     }
     public function sendCodeReset(Request $request) {
-        dd($request->all());
+        $email = $request->email;
+
+        $checkUser = Customer::where('email',$email)->first();
+
+        if(!$checkUser) {
+            Session::flash('message', "Email không tồn tại");
+            return redirect()->back();
+        }
+
+        $code = bcrypt(md5(time().$email));
+
+        $checkUser->code = $code;
+        $checkUser->time_code = Carbon::now();
+        $checkUser->save();
+
+        return redirect()->back()->with('success','Link đã được gửi vào email của bạn');
+    }
+
+    public function resetPassword() {
+        return view('pages.client.reset-password');
     }
 }

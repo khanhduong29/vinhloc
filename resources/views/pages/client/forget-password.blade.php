@@ -8,6 +8,14 @@
 				<span class="title-big">Quên mật khẩu</span>
             </h2>
 			<section class="s-content">
+                @if (session()->has('success'))
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    <strong>{{ session()->get('success') }}</strong>
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            @endif
 				<div class="row">
 					<div class="d-md-block col-md-4 col-lg-4 pt-lg-5 pt-4">
 						<div class="forget-title">
@@ -21,12 +29,12 @@
 								<div class="col-12 form-group">
 									<label for="" >Email</label>
                                     <input type="email" name="email" class="form-control" value="" id="" placeholder="Email">
-                                   {{-- @error('email')
-                                        <span class="error-message">{{$message}}</span>
-                                   @enderror --}}
+                                    @if (Session::has('message'))
+                                        <span class="error-message">{{ Session::get('message') }}</span>
+                                    @endif
 								</div>
 								<div class="col-4 form-group">
-									<button type="submit" name="submit" class="btn btn-lg btn-primary btn-lg-feb">Xác nhận</button>
+									<button type="submit" class="btn btn-lg btn-primary btn-lg-feb">Xác nhận</button>
                                 </div>
 							</div>
 						</form>

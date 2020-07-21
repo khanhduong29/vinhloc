@@ -81,6 +81,9 @@ Route::group(['prefix' => 'account'], function () {
 
     Route::get('forget-pass','LoginController@forget_pass')->name('forget-pass');
     Route::post('forget-pass','LoginController@sendCodeReset');
+
+    Route::get('forget-pass/reset','LoginController@resetPassword')->name('resetPassword');
+
 });
 
 Route::any('getprice','GetController@getPrice')->name('getprice');
