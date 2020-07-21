@@ -69,13 +69,13 @@
                                             <div class="account_login_form">
                                                 <form action="#">
                                                     <label>Name</label>
-                                                    <input type="text" name="first-name">
+                                                    <input type="text" name="first-name" class="form-control">
                                                     <label>Email</label>
-                                                    <input type="email" name="last-name">
+                                                    <input type="email" name="last-name"class="form-control">
                                                     <label>Email</label>
-                                                    <input type="text" name="email-name">
+                                                    <input type="text" name="email-name"class="form-control">
                                                     <label>Password</label>
-                                                    <input type="password" name="user-password">
+                                                    <input type="password" name="user-password"class="form-control">
                                                     <div class="save_button primary_btn default_button">
                                                        <button type="submit">Save</button>
                                                     </div>

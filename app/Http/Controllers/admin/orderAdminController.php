@@ -16,7 +16,7 @@
 
 	class orderAdminController extends Controller{
 		public function list_order(){
-			$orders = orders::orderBy('created_at','desc') ->get();
+			$orders = orders::orderBy('status','desc') ->get();
 			return view('pages.admin.customer.list-order',[
 				'orders' => $orders,
 			]);
