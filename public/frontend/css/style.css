@@ -1965,6 +1965,13 @@ a.c-feb:hover{
 .sugges a:hover{
     color: #fdb300;
 }
+.forget-pass a {
+    color: #d8c190;
+    font-size: 14px;
+}
+.forget-title {
+    color: #fff;
+}
 .alert-danger {
     color: #d8c190;
     background: rgba(0, 0, 0,0);

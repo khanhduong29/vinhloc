@@ -78,6 +78,9 @@ Route::group(['prefix' => 'account'], function () {
     Route::post('login','LoginController@postLogin')->name('postLogin_user');
 
     Route::get('log-out','LoginController@postLogOut')->name('log-out');
+
+    Route::get('forget-pass','LoginController@forget_pass')->name('forget-pass');
+    Route::post('forget-pass','LoginController@sendCodeReset');
 });
 
 Route::any('getprice','GetController@getPrice')->name('getprice');
