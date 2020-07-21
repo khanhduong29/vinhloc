@@ -101,7 +101,7 @@
     <section class="hot-pro space-title">
         <div class="container">
             <h2 class="text-center">
-                <span class="title-big">Sản phẩm nổi bật</span>
+                <span class="title-big">Sản phẩm mới nhất</span>
             </h2>
             <section class="slick3 pt-lg-5 pt-4 wow fadeInUp">
                 @foreach($productNew as $pro)
