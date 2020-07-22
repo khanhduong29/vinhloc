@@ -97,7 +97,12 @@ class User extends Authenticatable
         if (request()->config) {
             array_push($roles, 10);
         }
-
+        if (request()->about) {
+            array_push($roles, 11);
+        }
+        if (request()->service) {
+            array_push($roles, 12);
+        }
         $role = implode(",",$roles);
 		$avatar = 'user1.png';
 		if(request() -> has('file')){
@@ -147,6 +152,12 @@ class User extends Authenticatable
         }
         if (request()->config) {
             array_push($roles, 10);
+        }
+        if (request()->about) {
+            array_push($roles, 11);
+        }
+        if (request()->service) {
+            array_push($roles, 12);
         }
         $role = implode(",",$roles);
 		$updated = $this->update([

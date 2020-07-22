@@ -77,10 +77,10 @@
                     <label class="form-check-label" for="exampleCheck1">Table Product</label>
                     <input type="checkbox" name="attr" id="attr" class="form-check-input" value="5" {{ in_array(5,$arr_role) ?"checked" : ""}}>
                     <label class="form-check-label" for="attr">Manager Attribute</label>
-                  </div>
-                  <div class="form-check">
                     <input type="checkbox" name="banner" id="banner" class="form-check-input" value="6" {{ in_array(6,$arr_role) ?"checked" : ""}}>
                     <label class="form-check-label" for="exampleCheck1">Table Banner</label>
+                  </div>
+                  <div class="form-check">
                     <input type="checkbox" name="blog" id="blog" class="form-check-input" value="7" {{ in_array(7,$arr_role) ?"checked" : ""}}>
                     <label class="form-check-label" for="exampleCheck1">Table Blog</label>
                     <input type="checkbox" name="brand" id="brand" class="form-check-input" value="8" {{ in_array(8,$arr_role) ?"checked" : ""}}>
@@ -89,6 +89,10 @@
                     <label class="form-check-label" for="exampleCheck1">Table Construction</label>
                     <input type="checkbox" name="config" id="config" class="form-check-input" value="10" {{ in_array(10,$arr_role) ?"checked" : ""}}>
                     <label class="form-check-label" for="exampleCheck1">Table Config</label>
+                    <input type="checkbox" name="about" id="about" class="form-check-input" value="11" {{ in_array(11,$arr_role) ?"checked" : ""}}>
+                    <label class="form-check-label" for="about">About</label>
+                    <input type="checkbox" name="service" id="service" class="form-check-input" value="12" {{ in_array(12,$arr_role) ?"checked" : ""}}>
+                    <label class="form-check-label" for="service">Service</label>
                   </div>
                 <!-- /.card-body -->
 
