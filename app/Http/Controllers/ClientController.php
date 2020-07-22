@@ -120,7 +120,7 @@ class ClientController extends Controller {
     //         }
     //         $query = $query->where('price','>=',$min_price);
     //         $query = $query->where('price','<=',$max_price);
-            
+
     //     }
     //     $products = $query ->paginate(12);
     //     $count = count($products);
@@ -156,7 +156,7 @@ class ClientController extends Controller {
             'count' => $count,
 
         ]);
-
+    }
 
     public function info_account($id) {
         $customer= Customer::where('id',$id)->first();

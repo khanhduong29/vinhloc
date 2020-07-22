@@ -2045,10 +2045,13 @@ a.c-feb:hover{
 }
 
 .table-responsive table thead {
-  background: #rgba(0, 0, 0, .5);
+  background: rgba(0, 0, 0, .5);
 }
 .table-responsive table thead tr th {
   text-align: center;
+}
+.table td {
+    border-top: 1px solid #fdb300;
 }
 .table-responsive table tbody tr td {
   border-right: 1px solid #fdb300;

@@ -63,7 +63,7 @@
         </div>
     </div>
     <div class="copyright text-center p-3">
-        BẢN QUYỀN THUỘC VỀ VINHLOCLUXURY.COM @ 2019 | THIẾT KẾ WEBSITE BỞI TECH5S
+        BẢN QUYỀN THUỘC VỀ VINHLOCLUXURY.COM @ 2020 | THIẾT KẾ WEBSITE BỞI TECH5S
     </div>
 </footer>
 <!-- end footer -->
