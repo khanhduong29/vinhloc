@@ -7,8 +7,7 @@
             <h2 class="text-center">
                 <span class="title-big c-fff">Sản phẩm</span>
             </h2>
-           <form action="{{route('filter')}}" method="GET" accept-charset="utf-8" class="filter-pro d-lg-flex d-md-flex justify-content-center mt-5" id="form_order">
-               
+            <form action="{{route('filter')}}" method="GET" accept-charset="utf-8" class="filter-pro d-lg-flex d-md-flex justify-content-center mt-5" id="form_order">
                 <select class="js-example-basic-single m-2" name="cate" required>
                     <option value="">-----Chọn Danh mục-----</option>}
                     option
@@ -19,9 +18,9 @@
                 <input type="hidden" name="price2" id="price2">
                 <select class="js-example-basic-single m-2" name="price" id="price" required>
                     <option value="">-----Chọn giá-----</option>
-                    <option value="250000" data-giatri2="300000">Từ 250000 đến 300000</option>
-                    <option value="300000" data-giatri2="350000">Từ 300000 đến 350000</option>
-                    <option value="350000" data-giatri2="500000">Từ 350000 đến 500000</option>
+                    <option value="250000" data-giatri2="500000">Trên 100.000</option>
+                    <option value="500000" data-giatri2="1000000">Dưới 1.000.000</option>
+                    <!-- <option value="350000" data-giatri2="500000">Từ 350000 đến 500000</option> -->
                 </select>
                 <select class="js-example-basic-single m-2" name="order">
                     <option value="0">Giá giảm dần </option>
@@ -29,8 +28,48 @@
                 </select>
                 <button type="submit" class="btn btn-primary btn-lg-feb">Lọc sản phẩm</button>
             </form>
+               <!--  <div class="row">
+                    <div class="col-lg-4">
+                        <div class="sv-form border-1 mb-4 ">
+                            <h3>Lọc theo giá</h3>
+                            <form action="{{route('shop')}}" method="GET">  
+                                <div class="form-group">
+                                <input class="form-control" type="number"  name="min_price" placeholder="min">
+                                <span> - </span>
+                                <input class="form-control" type="number" name="max_price" placeholder="max">
+                        </div>
+                            @if($error)
+                            <div class="col-12" style="color: red">{{$error}}</div>
+                            @endif
+                            <div class="col-12 mt-20">
+                              <button type="submit" class="form-control btn-lg-feb">Áp dụng</button>
+                            </div>
+                            </form> 
+                            </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="sv-form border-1 mb-4 ">
+                            <h3>Lọc theo danh mục</h3>
+                            <form action="{{route('shop')}}" method="GET">  
+                                <div class="form-group">
+                                <input class="form-control" type="number"  name="min_price" placeholder="min">
+                                <span> - </span>
+                                <input class="form-control" type="number" name="max_price" placeholder="max">
+                        </div>
+                            @if($error)
+                            <div class="col-12" style="color: red">{{$error}}</div>
+                            @endif
+                            <div class="col-12 mt-20">
+                              <button type="submit" class="form-control btn-lg-feb">Áp dụng</button>
+                            </div>
+                            </form> 
+                            </div>
+                    </div>
+                </div> -->
+            <!-- </form> -->
             <section class="show-pro pt-lg-5 pt-4">
                 <div class="row"  id="content">
+                    @if($count > 0)
                     @foreach($products as $pro)
                     <div class="col-12 col-sm-6 col-md-4 col-lg-3">
                         <div class="pt-4">
@@ -50,8 +89,11 @@
                     </div>
                     @endforeach
                 </div>
-                <div class="pagination">{{$products->links()}}</div>
-
+                @else 
+                  <div class="col-12 desc text-center c-fff">
+                    Không có sản phẩm nào. Bạn thử tìm lại nhé?
+                  </div>
+                @endif
             </section>
         </div>
     </section>

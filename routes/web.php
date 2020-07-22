@@ -90,3 +90,5 @@ Route::group(['prefix' => 'account'], function () {
 Route::any('getprice','GetController@getPrice')->name('getprice');
 Route::any('getcategory','GetController@getCategory')->name('getcategory');
 Route::any('orderby','GetController@getOrDerby')->name('orderby');
+Route::get('shop','ClientController@shop') -> name('shop');
+Route::any('filter','ClientController@filter') -> name('filter'); 

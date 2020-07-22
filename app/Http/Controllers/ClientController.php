@@ -86,7 +86,8 @@ class ClientController extends Controller {
         $productAttributeValues = array_map(function($var) {
             return $var->attribute_value;
         },  $productAttributes);
-        return view('pages.client.product-detail',compact('pro', 'uniqueAttributes', 'productAttributeValues'));
+        $productNew = $pro->proNew();
+        return view('pages.client.product-detail',compact('pro', 'uniqueAttributes', 'productAttributeValues','productNew'));
     }
     public function blog_detail($slug) {
         $detail = blog::where('slug',$slug)->first();
@@ -101,5 +102,54 @@ class ClientController extends Controller {
     public function getsearch(Request $req){
         $products =  products::where('name','like','%'.$req->key.'%')->orWhere('price',$req->key)->get();
         return view('pages.client.search',compact('products'));
+    }
+    // public function shop(Request $request)
+    // {
+    //     $error = "";
+    //     $max_price = $request->max_price;
+    //     $min_price = request()->min_price > 0 ? request()->min_price : 1;
+    //     $query = Products::orderBy('created_at','desc') -> where('status',1);
+    //     if($min_price && $max_price){
+    //         if($min_price >= $max_price){
+    //             $error = "Vui lòng điền khoảng giá trị phù hợp";
+    //         }
+    //         $query = $query->where('price','>=',$min_price);
+    //         $query = $query->where('price','<=',$max_price);
+            
+    //     }
+    //     $products = $query ->paginate(12);
+    //     $count = count($products);
+    //     $banner = banner::where('status',1) ->get();
+    //     return view('pages.client.shop',[
+    //         'products' => $products,
+    //         'banner' => $banner,
+    //         'error' => $error,
+    //         'count' => $count,
+    //     ]);
+    //     $id = $req->id;
+    //     $product = products::where('cate_id',$id)->get();
+    // }
+    public function filter(Request $req)
+    {
+        $price = [$req->price,$req->price2];
+        if ($req->order == 0) {
+            $order = 'desc';
+        } else {
+            $order = 'asc';
+        }
+        $error = "";
+        $categories = Categories::all();
+        $brand = brand::all();
+        $products = products::where('cate_id',$req->cate)->whereBetween('price',$price)->orderBy('price',$order)->get();
+            $count = count($products);
+
+        return view('pages.client.shop',[
+            'products' => $products,
+            'categories' => $categories,
+            'brand' => $brand,
+            'error' => $error,
+            'count' => $count,
+
+        ]);
     }
 }
