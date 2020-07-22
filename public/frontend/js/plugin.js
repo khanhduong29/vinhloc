@@ -383,11 +383,11 @@ $('.cart-mobile + .cart-hover').click(function() {
 });
 
 
-$('.place-reset-pass').click(function() {
-    $('.form-reset-pass').toggleClass('d-block');
-    $('.place-reset-pass').toggleClass('d-none');
-});
-$('.save_button').click(function() {
-    $('.form-reset-pass').toggleClass('d-block');
-    $('.place-reset-pass').toggleClass('d-none');
-});
+// $('.place-reset-pass').click(function() {
+//     $('.form-reset-pass').toggleClass('d-block');
+//     $('.place-reset-pass').toggleClass('d-none');
+// });
+// $('.save_button').click(function() {
+//     $('.form-reset-pass').toggleClass('d-block');
+//     $('.place-reset-pass').toggleClass('d-none');
+// });

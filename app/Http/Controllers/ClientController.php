@@ -14,6 +14,9 @@ use App\Models\orders;
 use App\Models\order_detail;
 use App\Models\construction;
 use App\Models\productAttribute;
+use App\Models\Customer;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Session;
 use File;
 use Illuminate\Support\Facades\Auth;
 
@@ -70,6 +73,7 @@ class ClientController extends Controller {
             return redirect() -> route('login_user');
         }
     }
+
     public function product_detail($slug) {
         $pro = products::where('slug',$slug)->first();
         $productAttributes = $pro->productAttr()->get()->all();
@@ -103,6 +107,7 @@ class ClientController extends Controller {
         $products =  products::where('name','like','%'.$req->key.'%')->orWhere('price',$req->key)->get();
         return view('pages.client.search',compact('products'));
     }
+
     // public function shop(Request $request)
     // {
     //     $error = "";
@@ -151,5 +156,42 @@ class ClientController extends Controller {
             'count' => $count,
 
         ]);
+
+
+    public function info_account($id) {
+        $customer= Customer::where('id',$id)->first();
+        return view('pages.client.info-account',compact('customer'));
+    }
+
+    public function edit_account($id,Request $request) {
+        $validate = request()->validate(
+			[
+                'password_old' => 'required',
+                'password_new' => 'required|min:6',
+                'confirm' => 'required|same:password_new'
+			],
+			[
+				'required' => ':attribute đang bỏ trống.',
+                'min' => ':attribute phải trên 6 ký tự',
+                'same' => ':attribute phải giống mật khẩu'
+			],
+			[
+                'password_old' => 'Mật khẩu cũ',
+                 'password_new' => 'Mật khẩu mới',
+                 'confirm' => 'Xác nhận mật khẩu'
+			]
+        );
+        $customer= Customer::where('id',$id)->first();
+        $password_old = Hash::make($request->password_old);
+
+        if(!Hash::check($request->password_old,$customer->password)) {
+            Session::flash('message', "Mật khẩu cũ không đúng");
+            return redirect()->back();
+        } else {
+            $customer->password = Hash::make($request->password_new);
+            $customer->save();
+             return redirect('/account/log-out');
+        }
+
     }
 }

@@ -97,6 +97,7 @@
               </p>
             </a>
           </li>
+          @if(strpos(Auth::user()->role, '1') !== false || strpos(Auth::user()->role, '11') !== false)
           <li class="nav-item">
             <a href="{{route('list-about')}}" class="nav-link">
               <i class="nav-icon fas fa-shopping-cart"></i>
@@ -106,6 +107,8 @@
               </p>
             </a>
           </li>
+          @endif
+          @if(strpos(Auth::user()->role, '1') !== false || strpos(Auth::user()->role, '12') !== false)
           <li class="nav-item">
             <a href="{{route('list-service')}}" class="nav-link">
               <i class="nav-icon fas fa-shopping-cart"></i>
@@ -115,6 +118,7 @@
               </p>
             </a>
           </li>
+          @endif
           @if(strpos(Auth::user()->role, '1') !== false )
           <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
@@ -152,12 +156,6 @@
               </p>
             </a>
             <ul class="nav nav-treeview">
-              <!-- <li class="nav-item">
-                <a href="{{route('add-config')}}" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Thêm config </p>
-                </a>
-              </li> -->
               <li class="nav-item">
                 <a href="{{route('list-config')}}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>

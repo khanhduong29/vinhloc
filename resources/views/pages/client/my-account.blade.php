@@ -82,29 +82,29 @@
                                                         </div>
                                                     </div>
                                                     <div class="place-reset-pass">
-                                                        Sửa thông tin
+                                                       <a href="{{route('info-account',Auth::guard('customer')->user()->id) }}">Đổi mật khẩu</a>
                                                     </div>
-                                                    <div class="form-reset-pass">
-                                                        <div class="form-group">
-                                                            <label>Tên</label>
-                                                            <input type="text" name="name" class="form-control">
-                                                        </div>
-                                                        <div class="form-group">
-                                                            <label>Mật khẩu cũ</label>
-                                                            <input type="text" name="pasword-old"class="form-control">
-                                                        </div>
-                                                        <div class="form-group">
-                                                            <label>Mật khẩu mới</label>
-                                                            <input type="password" name="password"class="form-control">
-                                                        </div>
-                                                        <div class="form-group">
-                                                            <label>Xác nhận mật khẩu mới</label>
-                                                            <input type="password" name="confirm_password"class="form-control">
-                                                        </div>
-                                                        <div class="save_button primary_btn default_button">
-                                                           <button type="submit">Save</button>
-                                                        </div>
-                                                    </div>
+                                                    {{-- <div class="form-reset-pass">
+                                                            <div class="form-group">
+                                                                <label>Tên</label>
+                                                                <input type="text" name="name" class="form-control">
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label>Mật khẩu cũ</label>
+                                                                <input type="text" name="pasword-old"class="form-control">
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label>Mật khẩu mới</label>
+                                                                <input type="password" name="password"class="form-control">
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label>Xác nhận mật khẩu mới</label>
+                                                                <input type="password" name="confirm_password"class="form-control">
+                                                            </div>
+                                                            <div class="save_button primary_btn default_button">
+                                                               <button type="submit">Save</button>
+                                                            </div>
+                                                    </div> --}}
                                                 </form>
                                             </div>
                                         </div>
