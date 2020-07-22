@@ -156,7 +156,7 @@ class ClientController extends Controller {
             'count' => $count,
 
         ]);
-
+    }
 
     public function info_account($id) {
         $customer= Customer::where('id',$id)->first();
