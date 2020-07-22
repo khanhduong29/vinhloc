@@ -97,7 +97,7 @@
               </p>
             </a>
           </li>
-          @if(strpos(Auth::user()->role, '1') !== false || strpos(Auth::user()->role, '11') !== false)
+          @if(in_array('1',explode(',',Auth::user()->role)) || in_array('11',explode(',',Auth::user()->role)))
           <li class="nav-item">
             <a href="{{route('list-about')}}" class="nav-link">
               <i class="nav-icon fas fa-shopping-cart"></i>
@@ -108,7 +108,7 @@
             </a>
           </li>
           @endif
-          @if(strpos(Auth::user()->role, '1') !== false || strpos(Auth::user()->role, '12') !== false)
+          @if(in_array('1',explode(',',Auth::user()->role)) || in_array('12',explode(',',Auth::user()->role)))
           <li class="nav-item">
             <a href="{{route('list-service')}}" class="nav-link">
               <i class="nav-icon fas fa-shopping-cart"></i>
@@ -119,7 +119,7 @@
             </a>
           </li>
           @endif
-          @if(strpos(Auth::user()->role, '1') !== false )
+          @if(in_array('1',explode(',',Auth::user()->role)))
           <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-copy"></i>
@@ -145,7 +145,7 @@
             </ul>
           </li>
           @endif
-          @if(strpos(Auth::user()->role, '1') !== false || strpos(Auth::user()->role, '10') !== false)
+          @if(in_array('1',explode(',',Auth::user()->role)) || in_array('10',explode(',',Auth::user()->role)))
           <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-copy"></i>
@@ -165,7 +165,7 @@
             </ul>
           </li>
           @endif
-          @if(strpos(Auth::user()->role, '1') !== false || strpos(Auth::user()->role, '2') !== false)
+          @if(in_array('1',explode(',',Auth::user()->role)) || in_array('2',explode(',',Auth::user()->role)))
           <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-tachometer-alt"></i>
@@ -190,7 +190,7 @@
             </ul>
           </li>
           @endif
-          @if(strpos(Auth::user()->role, '1') !== false || strpos(Auth::user()->role, '3') !== false)
+          @if(in_array('1',explode(',',Auth::user()->role)) || in_array('3',explode(',',Auth::user()->role)))
           <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-tachometer-alt"></i>
@@ -215,7 +215,7 @@
             </ul>
           </li>
           @endif
-          @if(strpos(Auth::user()->role, '1') !== false || strpos(Auth::user()->role, '4') !== false)
+          @if(in_array('1',explode(',',Auth::user()->role)) || in_array('4',explode(',',Auth::user()->role)))
           <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-tachometer-alt"></i>
@@ -240,7 +240,7 @@
             </ul>
           </li>
           @endif
-          @if(strpos(Auth::user()->role, '1') !== false || strpos(Auth::user()->role, '5') !== false)
+          @if(in_array('1',explode(',',Auth::user()->role)) || in_array('5',explode(',',Auth::user()->role)))
           <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-tachometer-alt"></i>
@@ -316,7 +316,7 @@
             </ul>
           </li>
           @endif
-          @if(strpos(Auth::user()->role, '1') !== false || strpos(Auth::user()->role, '6') !== false)
+          @if(in_array('1',explode(',',Auth::user()->role)) || in_array('6',explode(',',Auth::user()->role)))
           <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-tachometer-alt"></i>
@@ -341,7 +341,7 @@
             </ul>
           </li>
           @endif
-          @if(strpos(Auth::user()->role, '1') !== false || strpos(Auth::user()->role, '7') !== false)
+          @if(in_array('1',explode(',',Auth::user()->role)) || in_array('7',explode(',',Auth::user()->role)))
           <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-copy"></i>
@@ -366,7 +366,7 @@
             </ul>
           </li>
           @endif
-          @if(strpos(Auth::user()->role, '1') !== false || strpos(Auth::user()->role, '9') !== false)
+          @if(in_array('1',explode(',',Auth::user()->role)) || in_array('9',explode(',',Auth::user()->role)))
           <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-tachometer-alt"></i>
@@ -391,7 +391,7 @@
             </ul>
           </li>
           @endif
-          @if(strpos(Auth::user()->role, '1') !== false || strpos(Auth::user()->role, '8') !== false)
+          @if(in_array('1',explode(',',Auth::user()->role)) || in_array('8',explode(',',Auth::user()->role)))
           <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-copy"></i>

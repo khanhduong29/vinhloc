@@ -18,7 +18,8 @@ class CheckRole
         // to do: check neu khong co quyen
         // session storage -> get role
         $roles = Auth::user()->role;
-        if (strpos($roles, '1') === false && strpos($roles, strval($role)) === false) {
+        $array_roles = explode(',',$roles);
+        if (!in_array('1', $array_roles) && !in_array(strval($role), $array_roles)) {
             return redirect('admin');
         }
         return $next($request);

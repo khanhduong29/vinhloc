@@ -34,7 +34,6 @@ Route::group(['prefix' => '/'],function(){
 
 Route::group(['prefix' => 'admin','namespace'=>'admin','middleware'=>'auth'],function(){
 
-
     // giao diện quản trị
     Route::get('/','adminController@admin')->name('admin');
 
@@ -95,4 +94,4 @@ Route::any('getprice','GetController@getPrice')->name('getprice');
 Route::any('getcategory','GetController@getCategory')->name('getcategory');
 Route::any('orderby','GetController@getOrDerby')->name('orderby');
 Route::get('shop','ClientController@shop') -> name('shop');
-Route::any('filter','ClientController@filter') -> name('filter'); 
+Route::any('filter','ClientController@filter') -> name('filter');
