@@ -209,8 +209,8 @@
                     </form>
                 </div>
                 <ul>
-                    <li><a href="home">Trang chủ</a></li>
-                    <li><a href="about">Giới thiệu</a></li>
+                    <li><a href="{{route('home')}}">Trang chủ</a></li>
+                    <li><a href="{{route('about')}}">Giới thiệu</a></li>
                     <li>
                         <i class="change-down fa fa-angle-right"></i>
                         <a href="{{route('product')}}">Sản phẩm</a>
@@ -220,9 +220,9 @@
                             @endforeach
                         </ul>
                     </li>
-                    <li><a href="service">Dịch vụ</a></li>
-                    <li><a href="construction">Cồng trình</a></li>
-                    <li><a href="contact">Liên hệ</a></li>
+                    <li><a href="{{route('service')}}">Dịch vụ</a></li>
+                    <li><a href="{{route('construction')}}">Cồng trình</a></li>
+                    <li><a href="{{route('contact')}}">Liên hệ</a></li>
                 </ul>
             </div>
         </div>
