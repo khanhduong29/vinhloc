@@ -8,7 +8,7 @@
                 <span class="title-big c-fff">Sản phẩm</span>
             </h2>
             <form action="{{route('filter')}}" method="GET" accept-charset="utf-8" class="filter-pro d-lg-flex d-md-flex justify-content-center mt-5" id="form_order">
-                <select class="js-example-basic-single m-2" name="cate" required>
+                <select class="js-example-basic-single m-2" name="cate" >
                     <option value="">-----Chọn Danh mục-----</option>}
                     option
                     @foreach($categories as $cate)
@@ -16,7 +16,7 @@
                     @endforeach
                 </select>
                 <input type="hidden" name="price2" id="price2">
-                <select class="js-example-basic-single m-2" name="price" id="price" required>
+                <select class="js-example-basic-single m-2" name="price" id="price" >
                     <option value="">-----Chọn giá-----</option>
                     <option value="250000" data-giatri2="500000">Trên 100.000</option>
                     <option value="500000" data-giatri2="1000000">Dưới 1.000.000</option>
