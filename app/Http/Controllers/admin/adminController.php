@@ -37,7 +37,7 @@
 		public function store(Request $request,User $User){
             $model = $User->add();
 	        if ($User) {
-	            return redirect()->route('list-admin') -> with('message','Thêm mới thành công');
+	            return redirect()->route('list-admin') -> with('success','Thêm mới thành công');
 	        }else{
 	            return redirect()->back()->with('message','Thêm mới thất bại' );
 	        }
