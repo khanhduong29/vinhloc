@@ -32,7 +32,7 @@ class GetController extends Controller
 			echo '<div class="col-12 desc text-center c-fff">Không tìm thấy sản phẩm';
 			echo '</div>';
 		}
-    	
+
 
 
     }
@@ -61,12 +61,12 @@ class GetController extends Controller
 			echo '<div class="col-12 desc text-center c-fff">Không tìm thấy sản phẩm';
 			echo '</div>';
 		}
-		
+
 
 	}
 	public function getOrDerby(Request $req)
 	{
-		
+
 		$order = $req->data;
 		if($order == 1){
 			$product  = products::orderby('price','DESC')->get();
@@ -90,7 +90,7 @@ class GetController extends Controller
 				echo "<a href='' class='add-cart'><img src='".url('public')."/frontend/images/icon/ic-cart-feb.png' alt=''></a>";
 				echo '</div></div></div></div>';
 			}
-		
+
 
 
 	}

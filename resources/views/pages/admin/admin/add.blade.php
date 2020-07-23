@@ -81,10 +81,10 @@
                     <label class="form-check-label" for="product">Table Product</label>
                     <input type="checkbox" name="attr" id="attr" class="form-check-input" value="5">
                     <label class="form-check-label" for="attr">Manager Attribute</label>
-                  </div>
-                  <div class="form-check">
                     <input type="checkbox" name="banner" id="banner" class="form-check-input" value="6">
                     <label class="form-check-label" for="banner">Table Banner</label>
+                  </div>
+                  <div class="form-check">
                     <input type="checkbox" name="blog" id="blog" class="form-check-input" value="7">
                     <label class="form-check-label" for="blog">Table Blog</label>
                     <input type="checkbox" name="brand" id="brand" class="form-check-input" value="8">
@@ -93,6 +93,10 @@
                     <label class="form-check-label" for="brand">Table Construction</label>
                     <input type="checkbox" name="config" id="config" class="form-check-input" value="10">
                     <label class="form-check-label" for="exampleCheck1">Table Config</label>
+                    <input type="checkbox" name="about" id="about" class="form-check-input" value="11">
+                    <label class="form-check-label" for="about">About</label>
+                    <input type="checkbox" name="service" id="service" class="form-check-input" value="12">
+                    <label class="form-check-label" for="service">Service</label>
                   </div>
                   <div class="form-group">
                     <label for="exampleInputFile">Chọn ảnh admin</label>

@@ -14,6 +14,9 @@ use App\Models\orders;
 use App\Models\order_detail;
 use App\Models\construction;
 use App\Models\productAttribute;
+use App\Models\Customer;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Session;
 use File;
 use Illuminate\Support\Facades\Auth;
 
@@ -70,6 +73,7 @@ class ClientController extends Controller {
             return redirect() -> route('login_user');
         }
     }
+
     public function product_detail($slug) {
         $pro = products::where('slug',$slug)->first();
         $productAttributes = $pro->productAttr()->get()->all();
@@ -86,7 +90,8 @@ class ClientController extends Controller {
         $productAttributeValues = array_map(function($var) {
             return $var->attribute_value;
         },  $productAttributes);
-        return view('pages.client.product-detail',compact('pro', 'uniqueAttributes', 'productAttributeValues'));
+        $productNew = $pro->proNew();
+        return view('pages.client.product-detail',compact('pro', 'uniqueAttributes', 'productAttributeValues','productNew'));
     }
     public function blog_detail($slug) {
         $detail = blog::where('slug',$slug)->first();
@@ -101,5 +106,92 @@ class ClientController extends Controller {
     public function getsearch(Request $req){
         $products =  products::where('name','like','%'.$req->key.'%')->orWhere('price',$req->key)->get();
         return view('pages.client.search',compact('products'));
+    }
+
+    // public function shop(Request $request)
+    // {
+    //     $error = "";
+    //     $max_price = $request->max_price;
+    //     $min_price = request()->min_price > 0 ? request()->min_price : 1;
+    //     $query = Products::orderBy('created_at','desc') -> where('status',1);
+    //     if($min_price && $max_price){
+    //         if($min_price >= $max_price){
+    //             $error = "Vui lòng điền khoảng giá trị phù hợp";
+    //         }
+    //         $query = $query->where('price','>=',$min_price);
+    //         $query = $query->where('price','<=',$max_price);
+
+    //     }
+    //     $products = $query ->paginate(12);
+    //     $count = count($products);
+    //     $banner = banner::where('status',1) ->get();
+    //     return view('pages.client.shop',[
+    //         'products' => $products,
+    //         'banner' => $banner,
+    //         'error' => $error,
+    //         'count' => $count,
+    //     ]);
+    //     $id = $req->id;
+    //     $product = products::where('cate_id',$id)->get();
+    // }
+    public function filter(Request $req)
+    {
+        $price = [$req->price,$req->price2];
+        if ($req->order == 0) {
+            $order = 'desc';
+        } else {
+            $order = 'asc';
+        }
+        $error = "";
+        $categories = Categories::all();
+        $brand = brand::all();
+        $products = products::where('cate_id',$req->cate)->whereBetween('price',$price)->orderBy('price',$order)->get();
+            $count = count($products);
+
+        return view('pages.client.shop',[
+            'products' => $products,
+            'categories' => $categories,
+            'brand' => $brand,
+            'error' => $error,
+            'count' => $count,
+
+        ]);
+    }
+
+    public function info_account($id) {
+        $customer= Customer::where('id',$id)->first();
+        return view('pages.client.info-account',compact('customer'));
+    }
+
+    public function edit_account($id,Request $request) {
+        $validate = request()->validate(
+			[
+                'password_old' => 'required',
+                'password_new' => 'required|min:6',
+                'confirm' => 'required|same:password_new'
+			],
+			[
+				'required' => ':attribute đang bỏ trống.',
+                'min' => ':attribute phải trên 6 ký tự',
+                'same' => ':attribute phải giống mật khẩu'
+			],
+			[
+                'password_old' => 'Mật khẩu cũ',
+                 'password_new' => 'Mật khẩu mới',
+                 'confirm' => 'Xác nhận mật khẩu'
+			]
+        );
+        $customer= Customer::where('id',$id)->first();
+        $password_old = Hash::make($request->password_old);
+
+        if(!Hash::check($request->password_old,$customer->password)) {
+            Session::flash('message', "Mật khẩu cũ không đúng");
+            return redirect()->back();
+        } else {
+            $customer->password = Hash::make($request->password_new);
+            $customer->save();
+             return redirect('/account/log-out');
+        }
+
     }
 }

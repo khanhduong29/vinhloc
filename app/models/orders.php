@@ -42,7 +42,7 @@ class orders extends Model
         );
         $id_cus = Auth::guard('customer')->user()->id;
         request()-> merge(['id_cus'=>Auth::guard('customer')->user()->id]);
-        $orders = orders::create([              
+        $orders = orders::create([
             'id_cus' => $id_cus,
             'name' => request()-> name,
             'phone' => request()-> phone,
@@ -62,7 +62,7 @@ class orders extends Model
             ];
         }
         order_detail::insert($datas);
-        
+
     }
     public function getCus(){
         return $this -> hasOne('\App\Models\customer','id','id_cus');

@@ -5,7 +5,7 @@
     <section class="contain-pro-detail">
         <div class="container">
             <h2 class="text-center">
-                <span class="title-big c-fff">Tìm kiếm sản phẩm</span>
+                <span class="title-big c-fff">Kết quả tìm kiếm </span>
             </h2>  
             <section class="show-pro pt-lg-5 pt-4">
                 @if(count($products) != 0)

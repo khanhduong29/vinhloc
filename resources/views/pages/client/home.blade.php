@@ -46,10 +46,16 @@
             </h2>
             <div role="tabpanel" class="pt-lg-5 pt-4">
                 <ul class="nav nav-tabs" role="tablist">
-                    @foreach($con as $value)
-                    <li role="presentation" class="nav-item">
-                        <a href="#{{$value -> name}}" aria-controls="{{$value -> name}}" role="tab" data-toggle="tab" class="nav-link">{{$value -> name}}</a>
-                    </li>
+                    @foreach($con as $key => $value)
+                        @if($key === 0)
+                        <li role="presentation" class="nav-item">
+                            <a href="#{{$value -> name}}" aria-controls="{{$value -> name}}" role="tab" data-toggle="tab" class="nav-link active show">{{$value -> name}}</a>
+                        </li>
+                        @else
+                        <li role="presentation" class="nav-item">
+                            <a href="#{{$value -> name}}" aria-controls="{{$value -> name}}" role="tab" data-toggle="tab" class="nav-link">{{$value -> name}}</a>
+                        </li>
+                        @endif
                     @endforeach
                 </ul>
 
@@ -79,7 +85,7 @@
                             @foreach(json_decode($value->image) as $img)
                                 <div class="item">
                                     <a href="{{asset('public/Uploads/'.$img)}}" class="smooth hv-scale" title="Ảnh nhà hàng" data-fancybox="gallery">
-                                        <img src="{{asset('public/Uploads/'.$img)}}" alt="Ảnh nhà hàng" title="Ảnh nhà hàng" class="img-fluid" />
+                                        <img src="{{asset('public/Uploads/'.$img)}}" alt="Ảnh nhà hàng" title="Ảnh nhà hàng" class="img-fluid " />
                                     </a>
                                 </div>
                                 @endforeach

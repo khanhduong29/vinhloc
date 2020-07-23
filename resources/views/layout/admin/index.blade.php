@@ -84,6 +84,8 @@
             $('#brand').prop("checked ", false);
             $('#construction').prop("checked ", false);
             $('#config').prop("checked ", false);
+            $('#about').prop("checked ", false);
+            $('#service').prop("checked ", false);
 
             $('#customer').attr("disabled", true);
             $('#category').attr("disabled", true);
@@ -94,6 +96,8 @@
             $('#brand').attr("disabled", true);
             $('#construction').attr("disabled", true);
             $('#config').attr("disabled", true);
+            $('#about').attr("disabled", true);
+            $('#service').attr("disabled", true);
         } else {
             $('#customer').removeAttr("disabled");
             $('#category').removeAttr("disabled");
@@ -104,6 +108,8 @@
             $('#brand').removeAttr("disabled");
             $('#construction').removeAttr("disabled");
             $('#config').removeAttr("disabled");
+            $('#about').removeAttr("disabled");
+            $('#service').removeAttr("disabled");
         }
     });
   });

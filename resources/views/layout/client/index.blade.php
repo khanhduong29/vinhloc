@@ -23,7 +23,6 @@
 
         @include('layout.client.footer')
     </body>
-    </script>
 	<script src="{{url('public')}}/frontend/js/jquery-3.5.1.min.js"></script>
 	<script src="{{url('public')}}/frontend/js/bootstrap.min.js"></script>
 	<script src="{{url('public')}}/frontend/js/slick.js"></script>
@@ -31,55 +30,60 @@
 	<script src="{{url('public')}}/frontend/js/select2.min.js"></script>
 	<script src="{{url('public')}}/frontend/js/wow.min.js"></script>
 	<script src="{{url('public')}}/frontend/js/plugin.js"></script>
-	<script>
-        $('#giasp').on('change',function() {
-            let values = [];
-            values[0] = $('option:selected',this).data('giatri1');
-            values[1] = $('option:selected',this).data('giatri2');
-            $.ajax({
-                type: "GET",
-                url: "{{route('getprice')}}",
-                data: {
-                    price: values
-                },
-                success: function (res) {
-                    $('#content').html(res);
-                }
-            });
-        });
-        $('#cate').on('change',function() {
-            $cateid = $('option:selected',this).val();
-            $.ajax({
-                type: "GET",
-                url: "{{route('getcategory')}}",
-                data: {
-                    id: $cateid
-                },
-                success: function (res) {
-                    $('#content').html(res);
-                }
-            });
-        });
-        $('#orderby').on('change',function() {
-            $orderby = $('option:selected',this).val();
-            if ($orderby != '') {
-                $.ajax({
-                type: "GET",
-                url: "{{route('orderby')}}",
-                data: {
-                    data: $orderby
-                },
-                success: function (res) {
-                    $('#content').html(res);
-                }
-            });
-            } else {
-                $('#content').html('');
-            }
-            
-        }); 
-    </script>
+	<!-- <script>
+        // $('#giasp').on('change',function() {
+        //     let values = [];
+        //     values[0] = $('option:selected',this).data('giatri1');
+        //     values[1] = $('option:selected',this).data('giatri2');
+        //     $.ajax({
+        //         type: "GET",
+        //         url: "{{route('getprice')}}",
+        //         data: {
+        //             price: values
+        //         },
+        //         success: function (res) {
+        //             $('#content').html(res);
+        //         }
+        //     });
+        // });
+        // $('#cate').on('change',function() {
+        //     $cateid = $('option:selected',this).val();
+        //     $.ajax({
+        //         type: "GET",
+        //         url: "{{route('getcategory')}}",
+        //         data: {
+        //             id: $cateid
+        //         },
+        //         success: function (res) {
+        //             $('#content').html(res);
+        //         }
+        //     });
+        // });
+        // $('#orderby').on('change',function() {
+        //     $orderby = $('option:selected',this).val();
+        //     if ($orderby != '') {
+        //         $.ajax({
+        //         type: "GET",
+        //         url: "{{route('orderby')}}",
+        //         data: {
+        //             data: $orderby
+        //         },
+        //         success: function (res) {
+        //             $('#content').html(res);
+        //         }
+        //     });
+        //     } else {
+        //         $('#content').html('');
+        //     }
 
+        // });
+    </script> -->
+    <script>
+        $('#price').change(function() {
+            let giatri2 = $('option:selected',this).data('giatri2');
+            $('#price2').val(giatri2);
+        });
+    </script>
       <script>
       	new WOW().init();
       </script>

@@ -25,11 +25,14 @@ Route::group(['prefix' => '/'],function(){
     Route::get('blog-detail/{slug}','ClientController@blog_detail')->name('blog-detail');
     Route::get('cate-product/{slug}','ClientController@cate_product')->name('cate-product');
     Route::get('search','ClientController@getsearch')->name('search');
-    Route::get('/my-account','ClientController@my_account')->name('my-account');
+
+    Route::get('my-account','ClientController@my_account')->name('my-account');
+
+    Route::get('info-account/{id}','ClientController@info_account')->name('info-account');
+    Route::post('info-account/{id}','ClientController@edit_account');
 });
 
 Route::group(['prefix' => 'admin','namespace'=>'admin','middleware'=>'auth'],function(){
-
 
     // giao diện quản trị
     Route::get('/','adminController@admin')->name('admin');
@@ -64,10 +67,10 @@ Route::group(['prefix' => 'cart'], function () {
     Route::get('clear-cart','cartController@clear_cart') -> name('clear-cart');
     Route::get('update-cart/{id_pro}','cartController@update_cart') -> name('update-cart');
     Route::get('checkout','orderController@checkout')->name('checkout');
-    Route::post('/checkout.html','orderController@post_checkout') -> name('post-checkout');
-    Route::get('/order-error.html','orderController@error') -> name('order-error');
-    Route::get('/history.html','orderController@history') -> name('history-checkout');
-    Route::get('/detail-order/{id}.html','orderController@detail') -> name('detail-order');
+    Route::post('/checkout','orderController@post_checkout') -> name('post-checkout');
+    Route::get('/order-error','orderController@error') -> name('order-error');
+    Route::get('/history','orderController@history') -> name('history-checkout');
+    Route::get('/detail-order/{id}','orderController@detail') -> name('detail-order');
 });
 
 Route::group(['prefix' => 'account'], function () {
@@ -90,3 +93,5 @@ Route::group(['prefix' => 'account'], function () {
 Route::any('getprice','GetController@getPrice')->name('getprice');
 Route::any('getcategory','GetController@getCategory')->name('getcategory');
 Route::any('orderby','GetController@getOrDerby')->name('orderby');
+Route::get('shop','ClientController@shop') -> name('shop');
+Route::any('filter','ClientController@filter') -> name('filter');

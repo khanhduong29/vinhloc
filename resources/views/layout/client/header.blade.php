@@ -150,9 +150,9 @@
                         <div id="myOverlay" class="overlay">
                               <span class="closebtn" onclick="closeSearch()" title="Close Overlay">×</span>
                               <div class="overlay-content">
-                                <form action="">
-                                      <input type="text" placeholder="Search.." name="search">
-                                      <button type="submit"></button>
+                                <form action="{{route('search')}}" method="get">
+                                <input type="text" name="key" placeholder="Tìm kiếm sản phẩm ..." value="">
+                                <button type="submit" value="search"></button>
                                 </form>
                               </div>
                         </div>
@@ -203,26 +203,26 @@
                     <i class="fas fa-arrow-left"></i>
                 </div>
                 <div class="mobile-search">
-                    <form action="" method="get" accept-charset="utf-8">
+                    <form action="{{route('search')}}" method="get" accept-charset="utf-8">
                         <input type="text" name="" placeholder="Tìm kiếm sản phẩm...">
                         <button type=""><i class="fas fa-search"></i></button>
                     </form>
                 </div>
                 <ul>
-                    <li><a href="home">Trang chủ</a></li>
-                    <li><a href="about">Giới thiệu</a></li>
+                    <li><a href="{{route('home')}}">Trang chủ</a></li>
+                    <li><a href="{{route('about')}}">Giới thiệu</a></li>
                     <li>
                         <i class="change-down fa fa-angle-right"></i>
-                        <a href="product">Sản phẩm</a>
+                        <a href="{{route('product')}}">Sản phẩm</a>
                         <ul>
                             @foreach($categories as $cat)
                             <li><a href="{{route('cate-product',['slug'=>$cat->slug])}}" class="smooth">{{$cat -> name}}</a></li>
                             @endforeach
                         </ul>
                     </li>
-                    <li><a href="service">Dịch vụ</a></li>
-                    <li><a href="construction">Cồng trình</a></li>
-                    <li><a href="contact">Liên hệ</a></li>
+                    <li><a href="{{route('service')}}">Dịch vụ</a></li>
+                    <li><a href="{{route('construction')}}">Cồng trình</a></li>
+                    <li><a href="{{route('contact')}}">Liên hệ</a></li>
                 </ul>
             </div>
         </div>
