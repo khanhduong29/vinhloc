@@ -7,6 +7,7 @@
 	use App\Models\orders;
 	use App\Models\order_detail;
 	use App\Mail\OrderShipped;
+	use App\Models\consultant;
 	use Auth;
 	use Mail;
 	use Hash;
@@ -15,6 +16,15 @@
 
 
 	class orderAdminController extends Controller{
+
+    	public function __construct(){
+	        $this->middleware(function($request,$next){
+	            view()->share([
+	                'count_consul' => count(Consultant::where('status',0)->get()),
+	            ]);
+	            return $next($request);
+	        });
+	    }
 		public function list_order(){
 			$orders = orders::orderBy('status','desc') ->get();
 			return view('pages.admin.customer.list-order',[

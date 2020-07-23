@@ -38,7 +38,6 @@ Route::group(['prefix' => 'admin','namespace'=>'admin','middleware'=>'auth'],fun
     Route::get('/','adminController@admin')->name('admin');
 
     include 'admin/category.php';
-
     include 'admin/admin.php';
     include 'admin/category.php';
     include 'admin/products.php';
@@ -52,6 +51,7 @@ Route::group(['prefix' => 'admin','namespace'=>'admin','middleware'=>'auth'],fun
     include 'admin/config.php';
     include 'admin/construction.php';
     include 'admin/order.php';
+    include 'admin/consultant.php';
 });
 
 // giao diện login

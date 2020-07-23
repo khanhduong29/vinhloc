@@ -165,6 +165,17 @@
             </ul>
           </li>
           @endif
+          @if(in_array('1',explode(',',Auth::user()->role)) || in_array('14',explode(',',Auth::user()->role)))
+          <li class="nav-item">
+            <a href="{{ route('list-consultant') }}" class="nav-link">
+              <i class="nav-icon fas fa-th"></i>
+              <p>
+                Tư vấn khách hàng
+                <span class="right badge badge-danger">{{$count_consul}}</span>
+              </p>
+            </a>
+          </li>
+          @endif
           @if(in_array('1',explode(',',Auth::user()->role)) || in_array('2',explode(',',Auth::user()->role)))
           <li class="nav-item has-treeview">
             <a href="#" class="nav-link">

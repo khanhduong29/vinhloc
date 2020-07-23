@@ -5,12 +5,21 @@
     use Illuminate\Http\Request;
     use App\Models\User;
     use App\Models\Customer;
+    use App\Models\Consultant;
     use App\Models\Orders;
     use Illuminate\Support\Facades\Session;
     use Auth;
 	use Hash;
 
     class adminController extends Controller {
+    	public function __construct(){
+	        $this->middleware(function($request,$next){
+	            view()->share([
+	                'count_consul' => count(Consultant::where('status',0)->get()),
+	            ]);
+	            return $next($request);
+	        });
+	    }
         public function admin(Customer $cus, Orders $ord) {
         	$countCus = $cus->countAll();
         	$countOrd = $ord->countAll();

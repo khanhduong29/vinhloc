@@ -10,7 +10,7 @@ class brand extends Model
 {
     protected $table = 'brand';
 
-    protected $fillable = ['cate_id','code','slug','name','price','image','des','status'];
+    protected $fillable = ['name','image','status'];
     
     // thêm dữ liệu
     public function add(){

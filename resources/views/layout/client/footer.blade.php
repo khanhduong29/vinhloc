@@ -49,12 +49,12 @@
                 </div>
                 <div class="col-12 col-sm-12 col-md-6 col-lg-3 items">
                     <h3>Tư vấn trực tuyến</h3>
-                    <form action="" method="POST" role="form">
+                    <form action="{{route('add-consultant')}}" method="POST" role="form">
                         <div class="form-group">
-                            <input type="text" class="form-control" id="" placeholder="Họ và tên">
+                            <input type="text" name="name" class="form-control" id="" placeholder="Họ và tên">
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-control" id="" placeholder="Số điện thoại">
+                            <input type="text" class="form-control" name="phone" id="" placeholder="Số điện thoại">
                         </div>
                         <button type="submit" class="btn btn-primary form-control btn-lg-feb ">Đăng ký tư vấn</button>
                     </form>

@@ -4,10 +4,19 @@
 	use App\Http\Controllers\Controller;
 	use Illuminate\Http\Request;
 	use App\Models\construction;
+	use App\Models\consultant;
 	use File;
 
 	class constructionController extends Controller {
-
+		
+    	public function __construct(){
+	        $this->middleware(function($request,$next){
+	            view()->share([
+	                'count_consul' => count(Consultant::where('status',0)->get()),
+	            ]);
+	            return $next($request);
+	        });
+	    }
 		//danh sách dữ liệu
 		public function list_con(){
 			$construction = construction::all();
