@@ -67,7 +67,7 @@
                     <td>{{$pro -> name}}</td>
                     <td><img src="{{asset('public/Uploads/products')}}/{{$pro -> image}}" alt="" width="100px"></td>
                     <td>{{$pro -> getCat -> name}}</td>
-                    <td>{{$pro -> price}}</td>
+                    <td>{{number_format($pro -> price)}} VNĐ</td>
                     <td>{{ $pro->status == 1 ? "Hiện" : "Ẩn" }}</td>
                     <td>{{$pro -> created_at}}</td>
                     <td>

@@ -111,6 +111,10 @@ button:focus{
     background: #000;
     color: #fff;
 }
+.btn-filter{
+    border-radius: 20px;
+    margin: 5px;
+}
 .hv-scale {
     display: inline-block;
     position: relative;
@@ -126,7 +130,7 @@ button:focus{
     transition: all .2s ease-in-out;
     transform: translate(-50%, -50%);
     border-radius: 50%;
-    padding: 10px 13px;
+    padding: 10px;
     border: none;
     box-shadow: 0 0 3px;
     opacity: 0;
@@ -1175,7 +1179,7 @@ a.c-feb:hover{
     border-color: #fff;
     outline: 0;
     box-shadow: none;
-    background: rgba(0, 0, 0, .4) !important;
+    /* background: rgba(0, 0, 0, .4) !important; */
 }
 
 /* page about */
