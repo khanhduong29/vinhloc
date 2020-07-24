@@ -23,7 +23,6 @@
                     <option  value="250000" data-giatri2="500000">Từ 250.000 đến 500.000</option>
                     <option  value="500000" data-giatri2="1000000">Từ 500.000 đến 1.000.000</option>
                     <option  value="1000000" data-giatri2="">Trên 1.000.000</option>
-                    <!-- <option value="350000" data-giatri2="500000">Từ 350000 đến 500000</option> -->
                 </select>
                 <select class="js-example-basic-single m-2" name="order">
                     <option value="0">Giá giảm dần </option>
@@ -68,6 +67,7 @@
                     <a href="" title="" class="avt">
                         <img src="{{asset('public/Uploads')}}/{{$value -> image}}" alt="">
                     </a>
+
                 </div>
                 @endforeach
             </section>

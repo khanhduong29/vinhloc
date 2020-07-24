@@ -107,66 +107,35 @@ class ClientController extends Controller {
         return view('pages.client.search',compact('products'));
     }
 
-    // public function shop(Request $request)
-    // {
-    //     $error = "";
-    //     $max_price = $request->max_price;
-    //     $min_price = request()->min_price > 0 ? request()->min_price : 1;
-    //     $query = Products::orderBy('created_at','desc') -> where('status',1);
-    //     if($min_price && $max_price){
-    //         if($min_price >= $max_price){
-    //             $error = "Vui lòng điền khoảng giá trị phù hợp";
-    //         }
-    //         $query = $query->where('price','>=',$min_price);
-    //         $query = $query->where('price','<=',$max_price);
-
-    //     }
-    //     $products = $query ->paginate(12);
-    //     $count = count($products);
-    //     $banner = banner::where('status',1) ->get();
-    //     return view('pages.client.shop',[
-    //         'products' => $products,
-    //         'banner' => $banner,
-    //         'error' => $error,
-    //         'count' => $count,
-    //     ]);
-    //     $id = $req->id;
-    //     $product = products::where('cate_id',$id)->get();
-    // }
     public function filter(Request $req)
     {
-        $price = [$req->price,$req->price2];
         if ($req->order == 0) {
             $order = 'desc';
         } else {
             $order = 'asc';
         }
-        $products = products::orderBy('price',$order)->paginate(8);
-        if($req->cate == '-1' && $req->price != null || $req->price2 != null){
-            // dd('số 3');
-            $price = [$req->price,$req->price2];
-            $products = products::whereBetween('price',$price)->orderBy('price',$order)->paginate(8);
-        }else
-        if($req->cate != '-1' && $req->price != null || $req->price2 != null){
-            // dd($req->cate);
-            $price = [$req->price,$req->price2];
-            $products = products::where('cate_id',$req->cate)->whereBetween('price',$price)->orderBy('price',$order)->paginate(8);
-        }else if($req->cate){
-
-            // dd('số 2');
-            $products = products::where('cate_id',$req->cate)->orderBy('price',$order)->paginate(8);
-        }
+        $price = [$req->price,$req->price2];
         $products = products::where('cate_id',$req->cate)->whereBetween('price',$price)->orderBy('price',$order)->paginate(8);
-
+        // if($req->cate == '-1' && $req->price != null || $req->price2 != null){
+        //     // dd('số 3');
+        //     $price = [$req->price,$req->price2];
+        //     $products = products::whereBetween('price',$price)->orderBy('price',$order)->paginate(8);
+        // }else
+        // if($req->cate != '-1' && $req->price != null || $req->price2 != null){
+        //     // dd($req->cate);
+        //     $price = [$req->price,$req->price2];
+        //     $products = products::where('cate_id',$req->cate)->whereBetween('price',$price)->orderBy('price',$order)->paginate(8);
+        // }else if($req->cate){
+        //     // dd('số 2');
+        //     $products = products::where('cate_id',$req->cate)->orderBy('price',$order)->paginate(8);
+        // }
         $giatri = $req->price;
         $cate = $req->cate;
         $error = "";
         $categories = Categories::all();
         $brand = brand::all();
-
+        $order = $req->order;
         $count = count($products);
-
-
 
         return view('pages.client.shop',[
             'products' => $products,
