@@ -153,13 +153,11 @@ class ClientController extends Controller {
             $products = products::where('cate_id',$req->cate)->whereBetween('price',$price)->orderBy('price',$order)->paginate(8);
         }else if($req->cate){
 
-            $products = products::where('cate_id',$req->cate)->orderBy('price',$order)->get();
-
             // dd('số 2');
             $products = products::where('cate_id',$req->cate)->orderBy('price',$order)->paginate(8);
         }
-        $products = products::where('cate_id',$req->cate)->whereBetween('price',$price)->orderBy('price',$order)->get();
-        
+        $products = products::where('cate_id',$req->cate)->whereBetween('price',$price)->orderBy('price',$order)->paginate(8);
+
         $giatri = $req->price;
         $cate = $req->cate;
         $error = "";
