@@ -95,3 +95,4 @@ Route::any('getcategory','GetController@getCategory')->name('getcategory');
 Route::any('orderby','GetController@getOrDerby')->name('orderby');
 Route::get('shop','ClientController@shop') -> name('shop');
 Route::any('filter','ClientController@filter') -> name('filter');
+Route::post('/add-consultant','admin\consultantController@store') -> name('add-consultant');

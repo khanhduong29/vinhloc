@@ -52,11 +52,11 @@
                     <td>{{$ord -> created_at}}</td>
                     <td>
                       @if($ord -> status == 0)
-                      <span class="success">Chờ xác nhận</span>
+                      <span class="btn-sm bg-warning">Chờ xác nhận</span>
                       @elseif($ord -> status == 1)
-                      <span class="success">Đã xác nhận đơn hàng</span>
+                      <span class="btn-sm bg-info">Đã xác nhận đơn hàng</span>
                       @elseif($ord -> status == 2)
-                      <span class="success">Đơn hàng đã được giao</span>
+                      <span class="btn-sm bg-success">Đơn hàng đã được giao</span>
                       @endif
                     </td>
                     <td><a href="{{route('ord-detail',['id'=>$ord->id])}}" class="btn btn-primary btn-xs">Xem</a></td>

@@ -78,16 +78,25 @@
                         <h3>
                             <span>ĐỂ LẠI THÔNG TIN ĐƯỢC TƯ VẤN MIỄN PHÍ</span>
                         </h3>
-                        <form action="" method="POST" role="form">
+                        @if (session()->has('message'))
+                        <div class="alert alert-success alert-dismissible fade show" role="alert">
+                            <strong>{{ session()->get('message') }}</strong>
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        @endif
+                        <form action="{{route('add-consultant')}}" method="POST" role="form">
+                            @csrf
                             <div class="row">
                                 <div class="col-12 col-sm-12 col-md-6 col-lg-6 form-group">
-                                    <input type="text" class="form-control" id="" placeholder="Họ và tên">
+                                    <input type="text" class="form-control" id="" name="name" required placeholder="Họ và tên">
                                 </div>
                                 <div class="col-12 col-sm-12 col-md-6 col-lg-6 form-group">
-                                    <input type="text" class="form-control" id="" placeholder="Số điện thoại">
+                                    <input type="text" class="form-control" id="" name="phone" required placeholder="Số điện thoại">
                                 </div>
                                 <div class="col-12 form-group">
-                                    <input type="email" class="form-control" id="" placeholder="Email">
+                                    <input type="email" class="form-control" id=""  name="email" placeholder="Email">
                                 </div>
                             </div>
 

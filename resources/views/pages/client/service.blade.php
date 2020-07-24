@@ -38,14 +38,23 @@
                                 <a href="tel:" title="">091 668 1919</a>
                             </p>
                             <p>Showroom: 243 Tôn Đức Thắng, Đống Đa,Hà Nội</p>
-                            <form action="" class="send-contact2" method="post">
+                            @if (session()->has('message'))
+                            <div class="alert alert-success alert-dismissible fade show p-0" role="alert">
+                                <strong>{{ session()->get('message') }}</strong>
+                                <!-- <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button> -->
+                            </div>
+                            @endif
+                            <form action="{{route('add-consultant')}}" class="send-contact2" method="post">
+                                @csrf
                                  <div class="form-group">
                                      <input type="text" class="form-control" name="name" placeholder="Họ và tên">
                                  </div>
                                  <div class="form-group">
                                      <input type="number" class="form-control" name="phone" placeholder="Số điện thoại">
                                  </div>
-                                 <button type="submit" class="form-control btn-lg-feb">Đặt hàng</button>
+                                 <button type="submit" class="form-control btn-lg-feb">Đăng ký tư vấn</button>
                             </form>
                         </div>
                     </div>

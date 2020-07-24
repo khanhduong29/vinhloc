@@ -29,7 +29,8 @@ class consultant extends Model
 		);
 		 $models = $this->create([
 			'name' => request()->name,
-			'image' => $image,
+			'phone' => request()->phone,
+			'email' => request()->email,
 			'status' => 0,
 		]);
 		return $models;
@@ -41,4 +42,8 @@ class consultant extends Model
 			'status' => 1,
 		]);
 	}
+
+    public function countSuc(){
+        return count(consultant::where('status',1)->get());
+    }
 }
