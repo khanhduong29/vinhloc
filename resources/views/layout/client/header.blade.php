@@ -173,7 +173,7 @@
                                         </div>
                                     </td>
                                     <td class="si-close">
-                                        <a href="#"  ng-click="clear_product($index)" ><i class="far fa-times-circle"></i></a>
+                                        <a href="{{route('delete-cart',['id'=>$item['id']])}}"><i class="far fa-times-circle"></i></a>
                                     </td>
                                 </tr>
                                 @endforeach
