@@ -263,7 +263,7 @@
                 <a href="#" class="nav-link">
                   <i class="nav-icon fas fa-copy"></i>
                   <p>
-                   Tên thuộc tính
+                   Thuộc tính
                     <i class="right fas fa-angle-left"></i>
                   </p>
                 </a>
@@ -271,13 +271,13 @@
                   <li class="nav-item">
                     <a href="{{route('add-name-attr')}}" class="nav-link">
                       <i class="far fa-circle nav-icon"></i>
-                      <p>Thêm tên thuộc tính</p>
+                      <p>Thêm thuộc tính</p>
                     </a>
                   </li>
                   <li class="nav-item">
                     <a href="{{route('list-attrName')}}" class="nav-link">
                       <i class="far fa-circle nav-icon"></i>
-                      <p>DS tên thuộc tính</p>
+                      <p>DS thuộc tính</p>
                     </a>
                   </li>
                 </ul>
