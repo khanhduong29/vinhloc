@@ -10,7 +10,7 @@
             <form action="{{route('filter')}}" method="GET" accept-charset="utf-8" class="filter-pro d-lg-flex d-md-flex justify-content-center mt-5" id="form_order">
                 <select class="js-example-basic-single m-2" name="cate" >
                     <option value="">-----Chọn Danh mục-----</option>}
-                    @foreach($categories as $cate)
+                                @foreach($categories as $cate)
                     <option value="{{$cate->id}}" {{($cate->id == $cateid)?'selected':''}}>{{$cate -> name}}</option>
                     @endforeach
                 </select>
@@ -22,7 +22,7 @@
                     <option {{ ($giatri1 == 250000)?'selected':'' }} value="250000" data-giatri2="500000">Từ 250.000 đến 500.000</option>
                     <option {{ ($giatri1 == 500000)?'selected':'' }} value="500000" data-giatri2="1000000">Từ 500.000 đến 1.000.000</option>
                     <option {{ ($giatri1 == 1000000)?'selected':'' }} value="1000000" data-giatri2="">Trên 1.000.000</option>
-                    <!-- <option value="350000" data-giatri2="500000">Từ 350000 đến 500000</option> -->
+<option value="350000" data-giatri2="500000">Từ 350000 đến 500000</option> -->
                 </select>
                 <select class="js-example-basic-single m-2" name="order">
                     <option value="0">Giá giảm dần </option>
