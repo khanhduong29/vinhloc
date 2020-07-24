@@ -45,7 +45,7 @@
               <!-- /.card-header -->
               <!-- form start -->
 
-              <form  method="post" role="form" enctype="multipart/form-data">
+              <form  method="post" role="form" enctype="multipart/form-data" class="form-submit">
 
                 <div class="card-body">
                   <div class="form-group">
@@ -110,7 +110,6 @@
                 </div>
                 <input type="hidden" name="_token" value="{{csrf_token()}}">
               </form>
-
             </div>
             <!-- /.card -->
           </div>
@@ -124,11 +123,9 @@
   <!-- /.content-wrapper -->
 
   <div class="wrapper">
-
-
 </div>
-
 @stop()
+
 
 
 

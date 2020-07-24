@@ -39,7 +39,6 @@ class ClientController extends Controller {
         $blog = blog::all();
         $con = construction::all();
         $productNew = $pro->proNew();
-        // dd($productNew);
         return view('pages.client.home',compact('products','blog','con','productNew'));
     }
     public function about(Products $pro) {
@@ -141,25 +140,25 @@ class ClientController extends Controller {
         } else {
             $order = 'asc';
         }
-        $products = products::orderBy('price',$order)->get();
+        $products = products::orderBy('price',$order)->paginate(8);
         if($req->cate == '-1' && $req->price != null || $req->price2 != null){
             // dd('số 3');
             $price = [$req->price,$req->price2];
-            $products = products::whereBetween('price',$price)->orderBy('price',$order)->get();
-        }else 
+            $products = products::whereBetween('price',$price)->orderBy('price',$order)->paginate(8);
+        }else
         if($req->cate != '-1' && $req->price != null || $req->price2 != null){
             // dd($req->cate);
             $price = [$req->price,$req->price2];
-            $products = products::where('cate_id',$req->cate)->whereBetween('price',$price)->orderBy('price',$order)->get();
+            $products = products::where('cate_id',$req->cate)->whereBetween('price',$price)->orderBy('price',$order)->paginate(8);
         }else if($req->cate){
             // dd('số 2');
-            $products = products::where('cate_id',$req->cate)->orderBy('price',$order)->get();
+            $products = products::where('cate_id',$req->cate)->orderBy('price',$order)->paginate(8);
         }
         $count = count($products);
         $error = "";
         $categories = Categories::all();
         $brand = brand::all();
-        
+
 
         return view('pages.client.shop',[
             'products' => $products,
