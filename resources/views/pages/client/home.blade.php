@@ -49,11 +49,11 @@
                     @foreach($con as $key => $value)
                         @if($key === 0)
                         <li role="presentation" class="nav-item">
-                            <a href="#{{$value -> name}}" aria-controls="{{$value -> name}}" role="tab" data-toggle="tab" class="nav-link active show btn-lg-feb">{{$value -> name}}</a>
+                            <a href="#{{$value -> name}}" aria-controls="{{$value -> name}}" role="tab" data-toggle="tab" class="nav-link active show">{{$value -> name}}</a>
                         </li>
                         @else
                         <li role="presentation" class="nav-item">
-                            <a href="#{{$value -> name}}" aria-controls="{{$value -> name}}" role="tab" data-toggle="tab" class="nav-link btn-lg-feb">{{$value -> name}}</a>
+                            <a href="#{{$value -> name}}" aria-controls="{{$value -> name}}" role="tab" data-toggle="tab" class="nav-link">{{$value -> name}}</a>
                         </li>
                         @endif
                     @endforeach
