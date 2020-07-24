@@ -157,28 +157,33 @@
                               </div>
                         </div>
                         <a title="" class="img-cart cart-mobile"><img src="{{url('public')}}/frontend/images/icon/ic-cart-feb.png" alt="error"></a>
-                        <span class="amount-cart">3</span>
+                        <span class="amount-cart">{{$cart->total_quantity}}</span>
+                        @if($cart -> items)
                         <div class="cart-hover">
                             <table class="select-items">
+                                @if(count($cart->items))
+                                @foreach($cart -> items as $item)
                                 <tr ng-repeat="c in carts">
                                     <td class="si-img">
-                                        <a href=""><img src="{{url('public')}}/frontend/images/product/061915d98b626d3c3473.jpg" alt=""></a>
+                                        <a href=""><img src="{{ asset('public/Uploads/products') }}/{{$item['image']}}" alt=""></a>
                                     </td>
                                     <td class="si-content">
                                         <div class="si-product">
-                                            <p>200.000 VNĐ <span>x 1</span></p>
-                                            <h6><a href="">Đèn mâm ốp đồng</a></h6>
+                                            <p>{{number_format($item['price'])}} VNĐ <span>x {{$item['quantity']}}</span></p>
+                                            <h6><a href="">{{$item['name']}}</a></h6>
                                         </div>
                                     </td>
                                     <td class="si-close">
                                         <a href="#"  ng-click="clear_product($index)" ><i class="far fa-times-circle"></i></a>
                                     </td>
                                 </tr>
+                                @endforeach
+                                @endif
                             </table>
                             <div class="select-total">
                                 <span>Tổng:</span>
                                 <span>
-                                    <span class="d-inline-block ml-1">200.000 VNĐ </span>
+                                    <span class="d-inline-block ml-1">{{number_format($cart->total_amount)}} VND </span>
                                 </span>
                             </div>
                             <div class="select-button">
@@ -186,6 +191,7 @@
                                 <a href="resource/pages/checkout.php" class="btn btn-lg-feb btn-lg"> Check out</a>
                             </div>
                         </div>
+                        @endif
                     </div>
                 </div>
                 <button class="nav-toggler col-1 pl-0">
