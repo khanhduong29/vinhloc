@@ -136,6 +136,7 @@ class ClientController extends Controller {
     // }
     public function filter(Request $req)
     {
+        $price = [$req->price,$req->price2];
         if ($req->order == 0) {
             $order = 'desc';
         } else {
@@ -152,19 +153,24 @@ class ClientController extends Controller {
             $price = [$req->price,$req->price2];
             $products = products::where('cate_id',$req->cate)->whereBetween('price',$price)->orderBy('price',$order)->get();
         }else if($req->cate){
-            // dd('số 2');
             $products = products::where('cate_id',$req->cate)->orderBy('price',$order)->get();
         }
-        $count = count($products);
+        $products = products::where('cate_id',$req->cate)->whereBetween('price',$price)->orderBy('price',$order)->get();
+        
+        $giatri = $req->price;
+        $cate = $req->cate;
         $error = "";
         $categories = Categories::all();
         $brand = brand::all();
-        
+        $count = count($products);
 
         return view('pages.client.shop',[
             'products' => $products,
             'error' => $error,
             'count' => $count,
+            'giatri1' => $giatri,
+            'cateid' => $cate,
+            'order' => $order,
 
         ]);
     }
