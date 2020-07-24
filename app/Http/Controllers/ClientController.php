@@ -164,6 +164,7 @@ class ClientController extends Controller {
             'products' => $products,
             'error' => $error,
             'count' => $count,
+            'count' => $count
 
         ]);
     }
