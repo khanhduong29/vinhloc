@@ -46,12 +46,12 @@
             <!-- small box -->
             <div class="small-box bg-warning">
               <div class="inner">
-                <h3>{{$countOrd}}</h3>
+                <h3>{{$countConSuc}}</h3>
 
-                <p>Đã đặt hàng</p>
+                <p>Đã tư vấn</p>
               </div>
               <div class="icon">
-                <i class="ion ion-bag"></i>
+                <i class="ion ion-stats-bars"></i>
               </div>
               <a href="{{route('order-customer')}}" class="small-box-footer">Chi tiết <i class="fas fa-arrow-circle-right"></i></a>
             </div>
@@ -66,7 +66,7 @@
                 <p>Đã hoàn thành</p>
               </div>
               <div class="icon">
-                <i class="ion ion-stats-bars"></i>
+                <i class="ion ion-bag"></i>
               </div>
               <a href="{{route('order-customer')}}" class="small-box-footer">Chi tiết <i class="fas fa-arrow-circle-right"></i></a>
             </div>

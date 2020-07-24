@@ -20,12 +20,12 @@
 	            return $next($request);
 	        });
 	    }
-        public function admin(Customer $cus, Orders $ord) {
+        public function admin(Customer $cus, Orders $ord,consultant $con) {
         	$countCus = $cus->countAll();
-        	$countOrd = $ord->countAll();
+        	$countConSuc = $con->countSuc();
         	$countOrdSuc = $ord->countSuc();
         	$countOrdNew = $ord->countNew();
-            return view('pages.admin.index',compact('countCus','countOrd','countOrdSuc','countOrdNew'));
+            return view('pages.admin.index',compact('countCus','countConSuc','countOrdSuc','countOrdNew'));
         }
 
         //danh sách dữ liệu
