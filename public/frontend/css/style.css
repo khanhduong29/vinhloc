@@ -567,7 +567,7 @@ a.c-feb:hover{
     color: #fff;
 }
 .sticker-menu .title{
-    font-size: 20px;
+    font-size: 16px;
     margin: 20px 0;
 }
 .sticker-menu .close-menu{
@@ -1960,8 +1960,6 @@ a.c-feb:hover{
 .sugges {
     color: #fff;
     font-size: 12px;
-    float: right;
-
 }
 .sugges a{
     color: #d8c190;

@@ -27,7 +27,6 @@
             </div>
             <div class="d-flex flex-row">
                 @if(Auth::guard('customer')->check())
-
                     <a href="{{route('my-account')}}" class="pr-2  c-fff">
                         <span class="d-inline-block ml-2">{{Auth::guard('customer')->user()->name}}</span>
                     </a>
@@ -140,7 +139,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-3">
-                    <a href="home" title="" class="logo-mobile">
+                    <a href="{{route('home')}}" title="" class="logo-mobile">
                         <img src="{{url('public')}}/frontend/images/logo-ft.png" alt="">
                     </a>
                 </div>
@@ -156,7 +155,7 @@
                                 </form>
                               </div>
                         </div>
-                        <a title="" class="img-cart cart-mobile"><img src="{{url('public')}}/frontend/images/icon/ic-cart-feb.png" alt="error"></a>
+                        <a class="img-cart cart-mobile"><img src="{{url('public')}}/frontend/images/icon/ic-cart-feb.png" alt="error"></a>
                         <span class="amount-cart">{{$cart->total_quantity}}</span>
                         @if($cart -> items)
                         <div class="cart-hover">
@@ -187,8 +186,8 @@
                                 </span>
                             </div>
                             <div class="select-button">
-                                <a href="resource/pages/cart.php" class="btn btn-dark btn-lg">View card</a>
-                                <a href="resource/pages/checkout.php" class="btn btn-lg-feb btn-lg"> Check out</a>
+                                <a href="{{route('cart')}}" class="btn btn-dark btn-lg">Giỏ Hàng</a>
+                                <a href="{{route('checkout')}}" class="btn btn-lg-feb btn-lg">Thanh Toán</a>
                             </div>
                         </div>
                         @endif
@@ -200,9 +199,20 @@
             </div>
             <div class="sticker-menu" id="menu-mobile">
                 <div class="title">
-                    <a href="login" class="ht-login border-left-1px c-fff">
-                        <i class="fas fa-sign-in-alt"></i>
-                        <span class="d-inline-block ml-2">Đăng nhập</span>
+                    <a href="{{route('login_user')}}" class="ht-login border-left-1px c-fff">
+                        @if(Auth::guard('customer')->check())
+                        <a href="{{route('my-account')}}" class="pr-2  c-fff">
+                            <span class="d-inline-block ml-2">{{Auth::guard('customer')->user()->name}}</span>
+                        </a>
+                        <a href="{{route('log-out')}}" class="border-left pl-2 c-fff">
+                            <span class="d-inline-block ml-2">Đăng xuất</span>
+                        </a>
+                        @else
+                            <i class="fas fa-sign-in-alt"></i>
+                            <span class="d-inline-block ml-2">Đăng nhập |</span>
+                            <span class="d-inline-block ml-2">Đăng Ký</span>
+                        @endif
+
                     </a>
                 </div>
                 <div class="close-menu">
