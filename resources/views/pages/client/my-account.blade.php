@@ -11,7 +11,6 @@
                             <div class="dashboard_tab_button">
                                 <ul role="tablist" class="nav flex-column dashboard-list">
                                     <li class="__web-inspector-hide-shortcut__"> <a href="#orders" data-toggle="tab" class="nav-link active show">Lịch sử đơn hàng</a></li>
-                                    <li><a href="#address" data-toggle="tab" class="nav-link">Địa chỉ</a></li>
                                     <li><a href="#account-details" data-toggle="tab" class="nav-link">Chi tiết tài khoản</a></li>
                                     <li><a href="{{route('log-out')}}" class="nav-link">Đăng xuất</a></li>
                                 </ul>
@@ -55,14 +54,6 @@
                                         </table>
                                     </div>
                                 </div>
-                                <div class="tab-pane" id="address">
-                                   <p>Các địa chỉ sau sẽ được sử dụng trên trang thanh toán theo mặc định.</p>
-                                    <h4 class="billing-address">Địa chỉ thanh toán</h4>
-                                    <a href="#" class="view">Edit</a>
-                                    <address>
-                                       Hoang Quoc Viet - Cau Giay - Ha Noi
-                                    </address>
-                                </div>
                                 <div class="tab-pane fade" id="account-details">
                                     <h3>Chi tiết tài khoản</h3>
                                     <div class="login">
@@ -84,27 +75,6 @@
                                                     <div class="place-reset-pass">
                                                        <a href="{{route('info-account',Auth::guard('customer')->user()->id) }}">Đổi mật khẩu</a>
                                                     </div>
-                                                    {{-- <div class="form-reset-pass">
-                                                            <div class="form-group">
-                                                                <label>Tên</label>
-                                                                <input type="text" name="name" class="form-control">
-                                                            </div>
-                                                            <div class="form-group">
-                                                                <label>Mật khẩu cũ</label>
-                                                                <input type="text" name="pasword-old"class="form-control">
-                                                            </div>
-                                                            <div class="form-group">
-                                                                <label>Mật khẩu mới</label>
-                                                                <input type="password" name="password"class="form-control">
-                                                            </div>
-                                                            <div class="form-group">
-                                                                <label>Xác nhận mật khẩu mới</label>
-                                                                <input type="password" name="confirm_password"class="form-control">
-                                                            </div>
-                                                            <div class="save_button primary_btn default_button">
-                                                               <button type="submit">Save</button>
-                                                            </div>
-                                                    </div> --}}
                                                 </form>
                                             </div>
                                         </div>

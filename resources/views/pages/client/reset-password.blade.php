@@ -1,5 +1,5 @@
 @extends('layout.client.index')
-
+@section('title','Khôi phục mật khẩu')
 @section('content')
 <main>
 	<section class="content-contact pb-5 space-title">
@@ -20,7 +20,7 @@
                         <div class="row border-2 m-0 pt-5 pb-5">
                             <div class="col-12 form-group">
                                 <label for="" >Email</label>
-                                <input type="email" name="email" class="form-control" value="{{$email}}" id="" placeholder="Email">
+                                <input type="email" name="email" class="form-control" value="{{$email}}" id="" placeholder="Email" disabled>
                             </div>
                             <div class="col-12  form-group">
                                 <label for="">Mật khẩu mới</label>
