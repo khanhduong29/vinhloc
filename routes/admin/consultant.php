@@ -1,5 +1,5 @@
 <?php
-Route::group(['prefix' => 'consultant', 'middleware'=>'hasPermission:13'],function(){
+Route::group(['prefix' => 'consultant'],function(){
 		//danh sách
 		Route::get('/','consultantController@list_con')-> name('list-consultant');
 		// thêm
