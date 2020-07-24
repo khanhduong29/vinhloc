@@ -20,7 +20,7 @@
                         <div class="row border-2 m-0 pt-5 pb-5">
                             <div class="col-12 form-group">
                                 <label for="" >Email</label>
-                                <input type="email" name="email" class="form-control" value="{{$email}}" id="" placeholder="Email" disabled>
+                                <input type="email" name="email" class="form-control" value="{{$email}}" id="" placeholder="Email" style="pointer-events: none;">
                             </div>
                             <div class="col-12  form-group">
                                 <label for="">Mật khẩu mới</label>
