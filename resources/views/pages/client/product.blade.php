@@ -68,7 +68,6 @@
                     <a href="" title="" class="avt">
                         <img src="{{asset('public/Uploads')}}/{{$value -> image}}" alt="">
                     </a>
-
                 </div>
                 @endforeach
             </section>
