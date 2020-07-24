@@ -4,8 +4,6 @@
 		//danh sách admin
 		Route::get('/','adminController@list_ad') -> name('list-admin');
 
-		Route::get('edit-profile/{id}','adminController@edit_profile')->name('edit-profile');
-		Route::post('edit-profile/{id}','adminController@update_profile')->name('edit-profile');
 		// thêm admin
 		Route::get('/add-admin','adminController@create') -> name('add');
 		Route::post('/add-admin','adminController@store') -> name('add-admin');

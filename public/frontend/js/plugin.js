@@ -381,4 +381,3 @@ $('.cart-mobile').click(function() {
 $('.cart-mobile + .cart-hover').click(function() {
     $(this).toggleClass('cart-hover-active');
 });
-

@@ -56,8 +56,8 @@
                     <td>
                       @if($con -> status == 0)
                       <form action="{{route('edit-consultant',['id'=>$con->id])}}" method="POST">
+                        @csrf
                         <button type="submit" class="btn-sm btn-info">Xử lý</button>
-                        <!-- <a href="" class="btn-sm btn-info"></a> -->
                       </form>
                       @elseif($con -> status == 1)
                       <span class="btn-sm bg-success">Đã tư vấn</span>

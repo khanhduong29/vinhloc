@@ -23,30 +23,15 @@
         		'consultant' => $consultant
         	]);
 		}
-
-
-		// thêm dữ liệu
-		// public function create(){
-		// 	return view('pages.admin.consultant.list');
-		// }
 		public function store(Request $request,consultant $consultant){
-			dd('gg');
 			$model = $consultant->add();
 	        if ($consultant) {
-	            return redirect()->route('list-consultant') -> with('message','Thêm mới thành công');
+	            return redirect()->back() -> with('message','Đăng ký thành công');
 	        }else{
-	            return redirect()->back()->with('message','Thêm thất bại' );
+	            return redirect()->back()->with('message','Đăng ký thất bại!' );
 	        }
 		}
-		// sửa dữ liệu
-		// public function edit($id){
-		// 	$consultant = consultant::where('id', $id)->first();
-  //       	return view('pages.admin.consultant.edit',[
-  //       		'consultant' => $consultant,
-  //       	]);
-		// }
 		public function update(request $request,consultant $id){
-			dd('fff');
 			$updated = $id->update_data();
 	       	if ($id) {
 	        	return redirect()->route('list-consultant') -> with('message','Sửa thành công');

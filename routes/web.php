@@ -36,6 +36,8 @@ Route::group(['prefix' => 'admin','namespace'=>'admin','middleware'=>'auth'],fun
 
     // giao diện quản trị
     Route::get('/','adminController@admin')->name('admin');
+    Route::get('edit-profile/{id}','adminController@edit_profile')->name('edit-profile');
+    Route::post('edit-profile/{id}','adminController@update_profile')->name('edit-profile');
 
     include 'admin/category.php';
     include 'admin/admin.php';
@@ -95,3 +97,4 @@ Route::any('getcategory','GetController@getCategory')->name('getcategory');
 Route::any('orderby','GetController@getOrDerby')->name('orderby');
 Route::get('shop','ClientController@shop') -> name('shop');
 Route::any('filter','ClientController@filter') -> name('filter');
+Route::post('/add-consultant','admin\consultantController@store') -> name('add-consultant');

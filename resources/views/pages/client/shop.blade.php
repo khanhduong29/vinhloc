@@ -34,7 +34,7 @@
                     <div class="col-lg-4">
                         <div class="sv-form border-1 mb-4 ">
                             <h3>Lọc theo giá</h3>
-                            <form action="{{route('shop')}}" method="GET">  
+                            <form action="{{route('shop')}}" method="GET">
                                 <div class="form-group">
                                 <input class="form-control" type="number"  name="min_price" placeholder="min">
                                 <span> - </span>
@@ -46,13 +46,13 @@
                             <div class="col-12 mt-20">
                               <button type="submit" class="form-control btn-lg-feb">Áp dụng</button>
                             </div>
-                            </form> 
+                            </form>
                             </div>
                     </div>
                     <div class="col-lg-4">
                         <div class="sv-form border-1 mb-4 ">
                             <h3>Lọc theo danh mục</h3>
-                            <form action="{{route('shop')}}" method="GET">  
+                            <form action="{{route('shop')}}" method="GET">
                                 <div class="form-group">
                                 <input class="form-control" type="number"  name="min_price" placeholder="min">
                                 <span> - </span>
@@ -64,7 +64,7 @@
                             <div class="col-12 mt-20">
                               <button type="submit" class="form-control btn-lg-feb">Áp dụng</button>
                             </div>
-                            </form> 
+                            </form>
                             </div>
                     </div>
                 </div> -->
@@ -91,7 +91,8 @@
                     </div>
                     @endforeach
                 </div>
-                @else 
+                <div class="pagination">{{$products->links()}}</div>
+                @else
                   <div class="col-12 desc text-center c-fff">
                     Không có sản phẩm nào. Bạn thử tìm lại nhé?
                   </div>
