@@ -52,7 +52,6 @@ Route::group(['prefix' => 'admin','namespace'=>'admin','middleware'=>'auth'],fun
     include 'admin/banner.php';
     include 'admin/config.php';
     include 'admin/construction.php';
-    include 'admin/order.php';
     include 'admin/consultant.php';
 });
 

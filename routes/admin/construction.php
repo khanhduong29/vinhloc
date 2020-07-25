@@ -1,5 +1,5 @@
 <?php
-Route::group(['prefix' => 'construction', 'middleware'=>'hasPermission:13'],function(){
+Route::group(['prefix' => 'construction', 'middleware'=>'hasPermission:9'],function(){
 		//danh sách danh mục
 		Route::get('/','constructionController@list_con')-> name('list-construction');
 		// thêm danh mục
