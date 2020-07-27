@@ -137,7 +137,8 @@
             </h2>
             <div class="row">
                 <div class="col-lg-6 col-md-12 col-xs-12 mb-4">
-                    @foreach($blog as $blg)
+                    @foreach($blog as $k => $blg)
+                    @if($k == 0)
                     <div class="item">
                         <a href="{{route('blog-detail',['slug'=>$blg->slug])}}" class="smooth hv-scale" title="">
                             <img src="{{asset('public/Uploads')}}/{{$blg -> image}}" alt="lỗi" title="" class="img-fluid" />
@@ -147,12 +148,12 @@
                                 <a href="{{route('blog-detail',['slug'=>$blg->slug])}}" title="" class="c-feb f-18 row-2">{{$blg -> name }}</a>
                             </h3>
                             <span class="date">{{$blg -> created_at}}</span>
-                            <div class="content_news c-fff row-6">
+                            <div class="content_news c-fff">
                                 {!!Str::limit($blg->des,350)!!}
                             </div>
                         </div>
                     </div>
-                    @break;
+                    @endif
                     @endforeach
                 </div>
                 <div class="col-lg-6 col-md-12 col-xs-12 mb-4">
@@ -164,8 +165,8 @@
                             </a>
                             <div class="desc">
                                 <a href="{{route('blog-detail',['slug'=>$value->slug])}}" title="" class="c-feb f-16 row-2">{{$value -> name}}</a>
-                                <div class="content_news c-fff f-14 row-2">
-                                    {!!Str::limit($value->des,250)!!}
+                                <div class="content_news c-fff f-14">
+                                    {!!Str::limit($value->des,100)!!}
                                 </div>
                             </div>
                         </div>

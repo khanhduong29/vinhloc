@@ -61,7 +61,7 @@
                   </div>
                   <div class="form-group">
                     <label for="">Mô tả ngắn</label>
-                    <textarea class="textarea" required id="des" name="des" placeholder="Place some text here"></textarea>
+                    <textarea class="form-control" required id="des" name="des" placeholder="Place some text here"></textarea>
                   </div>
                   <div class="form-group">
                       <label for="">Nội dung</label>

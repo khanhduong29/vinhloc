@@ -61,7 +61,7 @@
                   <div class="form-group">
                       <label for="">Mô tả ngắn</label>
                       <div class="mb-3">
-                        <textarea class="textarea form-control" required id="des" name="des" placeholder="Place some text here">
+                        <textarea class="form-control" required id="des" name="des" placeholder="Place some text here">
                             {{$blog->des}}
                         </textarea>
                       </div>
