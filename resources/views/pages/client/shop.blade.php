@@ -44,7 +44,7 @@
                                     <h3>
                                         <a href="{{route('product-detail',['slug'=>$pro->slug])}}" title="" class="c-fff text-uppercase f-16">{{$pro -> name}}</a>
                                     </h3>
-                                    <span class="c-feb f-16 text-uppercase">Giá : {{number_format ($pro -> price)}}</span>
+                                    <span class="c-feb f-16 text-uppercase">Giá : {{number_format ($pro -> price)}} VNĐ</span>
                                     <a href="{{ Route('add_cart',['id'=>$pro->id]) }}" class="add-cart"><img src="{{url('public')}}/frontend/images/icon/ic-cart-feb.png" alt=""></a>
                                 </div>
                             </div>
