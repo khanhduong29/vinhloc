@@ -18,11 +18,11 @@
                 <input type="hidden" name="price2" id="price2">
                 <select class="js-example-basic-single m-2" name="price" id="price">
                     <option value="-1" >-----Chọn giá-----</option>
-                    <option  value="0" data-giatri2="100000">Dưới 100.000</option>
-                    <option  value="100000" data-giatri2="250000">Từ 100.000 đến 250.000</option>
-                    <option  value="250000" data-giatri2="500000">Từ 250.000 đến 500.000</option>
-                    <option  value="500000" data-giatri2="1000000">Từ 500.000 đến 1.000.000</option>
-                    <option  value="1000000" data-giatri2="">Trên 1.000.000</option>
+                    <option  value="0" data-giatri2="2000000">Dưới 2.000.000</option>
+                    <option  value="2000000" data-giatri2="3500000">Từ 2.000.000 đến 3.500.000</option>
+                    <option  value="4000000" data-giatri2="6000000">Từ 4.000.000 đến 6.000.000</option>
+                    <option  value="6000000" data-giatri2="10000000">Từ 6.000.000 đến 10.000.000</option>
+                    <option  value="1000000" data-giatri2="">Trên 10.000.000</option>
                 </select>
                 <select class="js-example-basic-single m-2" name="order">
                     <option value="0">Giá giảm dần </option>
