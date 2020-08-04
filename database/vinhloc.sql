@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th7 29, 2020 lúc 08:36 AM
+-- Thời gian đã tạo: Th8 04, 2020 lúc 09:33 AM
 -- Phiên bản máy phục vụ: 10.4.11-MariaDB
 -- Phiên bản PHP: 7.4.3
 
@@ -46,7 +46,7 @@ INSERT INTO `attributes` (`id`, `name`, `created_at`, `updated_at`) VALUES
 (4, 'Kích thước', '2020-07-28 09:24:41', '2020-07-28 09:24:41'),
 (5, 'Công suất', '2020-07-28 09:27:09', '2020-07-28 09:27:09'),
 (6, 'Ứng dụng', '2020-07-28 09:28:29', '2020-07-28 09:28:29'),
-(7, 'Bảo hành', '2020-07-28 09:47:15', '2020-07-28 09:47:15');
+(7, 'Bảo hành', '2020-07-28 09:47:15', '2020-08-04 06:22:56');
 
 -- --------------------------------------------------------
 
@@ -278,10 +278,9 @@ CREATE TABLE `customer` (
   `id` int(10) UNSIGNED NOT NULL,
   `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `code` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `code` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `time_code` timestamp NULL DEFAULT NULL,
   `password` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `token` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -290,9 +289,11 @@ CREATE TABLE `customer` (
 -- Đang đổ dữ liệu cho bảng `customer`
 --
 
-INSERT INTO `customer` (`id`, `name`, `email`, `code`, `time_code`, `password`, `token`, `created_at`, `updated_at`) VALUES
-(1, 'Minh', 'minhbs200x@gmail.com', '', NULL, '$2y$10$Fr8rKr8utxlUYcI4M9tjKuJnKQisX1hG0rn15cxj7apd84Z3ifFHa', 'cJLRMLW5fvhbj1wfHgfy1CbY4x8PFJuSTOvoAWUcENrkHynJbDbJbEIAzm9n', '2020-07-14 07:38:50', '2020-07-14 07:38:50'),
-(2, 'nguyen van trang', 'nvtrang2011@gmail.com', '$2y$10$WM7DsRYRYUtIaXjCIhBVbej7M6k9Y.fC.TcnKqTTIoJu2mVyBXXtq', '2020-07-21 09:43:23', '$2y$10$YW6hWHnagjzrfMvLEOy..u7.WqMGquRshQkDdYO0AaOHy611.fQYK', 'PmdHvdJVMx0DeCF5XoFNjybjM2qsGycSlUzpLUQqDczsAm1fJuObBGI4tGPl', '2020-07-21 01:28:37', '2020-07-21 09:43:23');
+INSERT INTO `customer` (`id`, `name`, `email`, `code`, `time_code`, `password`, `created_at`, `updated_at`) VALUES
+(1, 'Minh', 'minhbs200x@gmail.com', '', NULL, '$2y$10$Fr8rKr8utxlUYcI4M9tjKuJnKQisX1hG0rn15cxj7apd84Z3ifFHa', '2020-07-14 07:38:50', '2020-07-14 07:38:50'),
+(2, 'nguyen van trang', 'nvtrang2011@gmail.com', '$2y$10$WM7DsRYRYUtIaXjCIhBVbej7M6k9Y.fC.TcnKqTTIoJu2mVyBXXtq', '2020-07-21 09:43:23', '$2y$10$YW6hWHnagjzrfMvLEOy..u7.WqMGquRshQkDdYO0AaOHy611.fQYK', '2020-07-21 01:28:37', '2020-07-21 09:43:23'),
+(3, 'duong', 'tran.khanhduong.566@gmail.com', '$2y$10$yayE2v1szguIUsRhKigkA.ihR0qtZYTO9Ao6dg4/cR3LDsPC6GpZy', '2020-08-04 06:08:45', '$2y$10$NgNBHVOQ09qHiKAeLqUI9eidkYbTyP7.a1Urk6dVXYgZwo.4yNoQy', '2020-08-04 06:06:29', '2020-08-04 06:09:41'),
+(4, 'aaa', 'aaa@gmail.com', NULL, NULL, '$2y$10$MVytz3QsIxgFIoa9gUU6ku1Mhwzdh9Y1CJGsB0r/wFetbdJn68wUO', '2020-08-04 07:18:23', '2020-08-04 07:18:23');
 
 -- --------------------------------------------------------
 
@@ -372,8 +373,8 @@ CREATE TABLE `orders` (
 --
 
 INSERT INTO `orders` (`id`, `id_cus`, `name`, `phone`, `address`, `total_quantity`, `total_amount`, `status`, `created_at`, `updated_at`) VALUES
-(5, 1, 'Minh', '0944105356', 'Phạm Văn Đồng', 2, 5889, 1, '2020-07-20 08:23:24', '2020-07-21 04:58:05'),
-(6, 2, 'nguyen van trang', '0377372502', 'Thanh Quang-An thượng', 2, 5889, 1, '2020-07-21 01:28:54', '2020-07-21 04:46:51');
+(1, 3, 'duong', '0385996563', '99D Phố Viên', 1, 6000000, 2, '2020-08-04 06:21:42', '2020-08-04 06:22:25'),
+(2, 3, 'duong', '0385996563', '99D Phố Viên', 2, 10000000, 1, '2020-08-04 07:20:57', '2020-08-04 07:21:13');
 
 -- --------------------------------------------------------
 
@@ -386,7 +387,7 @@ CREATE TABLE `order_detail` (
   `id_oder` int(11) NOT NULL,
   `id_pro` int(11) NOT NULL,
   `quantity` int(11) NOT NULL,
-  `price` double(8,2) NOT NULL,
+  `price` int(11) NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -396,10 +397,8 @@ CREATE TABLE `order_detail` (
 --
 
 INSERT INTO `order_detail` (`id`, `id_oder`, `id_pro`, `quantity`, `price`, `created_at`, `updated_at`) VALUES
-(9, 5, 1, 1, 5556.00, NULL, NULL),
-(10, 5, 2, 1, 333.00, NULL, NULL),
-(11, 6, 2, 1, 333.00, NULL, NULL),
-(12, 6, 1, 1, 5556.00, NULL, NULL);
+(1, 1, 12, 1, 6000000, NULL, NULL),
+(2, 2, 2, 2, 5000000, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -574,8 +573,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `avatar`, `email`, `email_verified_at`, `password`, `role`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'minh', 'user1.png', 'admin@gmail.com', NULL, '$2y$10$Fr8rKr8utxlUYcI4M9tjKuJnKQisX1hG0rn15cxj7apd84Z3ifFHa', '1', NULL, NULL, NULL),
-(2, 'nguyen van trang', 'bg-1.jpg', 'nvtrang2011@gmail.com', NULL, '$2y$10$5NV5teUK9.EUkuoOF6B7hO/mYdgXDlT3o0RL.yzZg5yrQdC7yaYOe', '1', NULL, '2020-07-21 01:38:07', '2020-07-21 01:38:07');
+(2, 'admin', 'bg-1.jpg', 'admin@gmail.com', NULL, '$2y$10$3W.Ej6daCuEroCb8LZg5QumLVrcP69wtrsV5Tgg2/6JRViCP6v9Qm', '1', NULL, '2020-07-21 01:38:07', '2020-07-21 01:38:07');
 
 --
 -- Chỉ mục cho các bảng đã đổ
@@ -691,7 +689,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT cho bảng `attributes`
 --
 ALTER TABLE `attributes`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT cho bảng `attribute_values`
@@ -745,7 +743,7 @@ ALTER TABLE `consultant`
 -- AUTO_INCREMENT cho bảng `customer`
 --
 ALTER TABLE `customer`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT cho bảng `failed_jobs`
@@ -763,13 +761,13 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT cho bảng `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT cho bảng `order_detail`
 --
 ALTER TABLE `order_detail`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT cho bảng `products`
