@@ -54,7 +54,7 @@
                     <select name="attr_name" class="form-control" required>
                         <option >--Chọn loại sản phẩm--</option>
                         @foreach($attrName as $value)
-                        <option value="{{ $value->id }}" {{ $attrValue->attr_id == $value->id ? "selected" : "" }}>{{ $value->name }}</option>
+                        <option value="{{ $value->id }}" {{ $attrValue->attribute_id == $value->id ? "selected" : "" }}>{{ $value->name }}</option>
                         @endforeach
                     </select>
                     </div>
