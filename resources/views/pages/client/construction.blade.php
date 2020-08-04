@@ -14,9 +14,9 @@
                     <div class="slick2 sublist">
                         @foreach(json_decode($value->image) as $img)
                         <div class="item">
-                           <a href="" class="smooth hv-scale" title="Ảnh nhà hàng">
-                              <img src="{{asset('public/Uploads/'.$img)}}" alt="Ảnh nhà hàng" title="Ảnh nhà hàng" class="img-fluid" />
-                           </a>
+                            <a href="{{asset('public/Uploads/'.$img)}}" class="smooth hv-scale" title="Ảnh nhà hàng" data-fancybox="gallery">
+                                <img src="{{asset('public/Uploads/'.$img)}}" alt="Ảnh nhà hàng" title="Ảnh nhà hàng" class="img-fluid" />
+                            </a>
                         </div>
                         @endforeach
                     </div>
@@ -42,7 +42,7 @@
                     <a href="" title="" class="avt">
                         <img src="{{asset('public/Uploads')}}/{{$value -> image}}" alt="">
                     </a>
-                   
+
                 </div>
                 @endforeach
             </section>
