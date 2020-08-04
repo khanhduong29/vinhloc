@@ -11,12 +11,12 @@
 			<table class="table-bordered">
 				<thead>
 					<tr>
-						<th>IMAGE</th>
-						<th>PRODUCT NAME</th>
-						<th>PRICE</th>
-						<th>QUANTINY</th>
-						<th>TOTAL</th>
-						<th>ACTION</th>
+						<th>Ảnh</th>
+						<th>Tên sản phẩm</th>
+						<th>Giá</th>
+						<th>Số lượng</th>
+						<th>Tổng</th>
+						<th>Xóa</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -42,7 +42,7 @@
 						<td>
 							<div class="quantity">
 								<div class="pro-qty">
-									<input type="number" value="{{$item['quantity']}}" min="0" class="qty" id="" placeholder="Quantity">
+									<input type="number" value="{{$item['quantity']}}" min="1" class="qty" id="" placeholder="Quantity" style="pointer-events: none;">
 								</div>
 							</div>
 						</td>
@@ -60,8 +60,8 @@
 			<div class="col-lg-4">
 				<div class="discount-coupon">
 					<div class="cart-buttons">
-						<a href="{{route('product')}}" class="primary-btn continue-shop text-center">Continue shopping</a>
-						<a href="{{route('clear-cart')}}" class="btn-danger text-center clear-cart" onclick="return confirm('Xác nhận xoá ?')">Clear cart</a>
+						<a href="{{route('product')}}" class="primary-btn continue-shop text-center">Tiếp tục mua sắm</a>
+						<a href="{{route('clear-cart')}}" class="btn-danger text-center clear-cart" onclick="return confirm('Xác nhận xoá ?')">Xóa giỏ hàng</a>
 					</div>
 				</div>
 			</div>
@@ -71,7 +71,7 @@
 						<li class="subtotal">Số lượng sản phẩm <span class="sumCa">{{$cart->total_quantity}}</span></li>
 						<li class="cart-total">Tổng tiền <span class="sumCa">{{number_format($cart->total_amount)}} VND</span></li>
 					</ul>
-					<a href="{{route('checkout')}}" class="proceed-btn">PROCEED TO CHECK OUT</a>
+					<a href="{{route('checkout')}}" class="proceed-btn">Thanh toán</a>
 				</div>
 			</div>
 		</div>
