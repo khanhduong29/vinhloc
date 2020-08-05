@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th8 05, 2020 lúc 04:32 AM
+-- Thời gian đã tạo: Th8 05, 2020 lúc 07:32 AM
 -- Phiên bản máy phục vụ: 10.4.11-MariaDB
 -- Phiên bản PHP: 7.4.3
 
@@ -99,7 +99,7 @@ CREATE TABLE `banner` (
 --
 
 INSERT INTO `banner` (`id`, `name`, `image`, `location`, `link`, `status`, `created_at`, `updated_at`) VALUES
-(1, 'Trang chủ', 'bn-slider1.jpg', '1', '#', 1, '2020-07-16 08:42:37', '2020-07-25 01:23:45'),
+(1, 'Trang chủ', 'slide0.jpg', '1', '#', 1, '2020-07-16 08:42:37', '2020-08-05 05:25:52'),
 (2, 'đ', 'bn-ctent.jpg', '2', '#', 1, '2020-07-16 08:43:28', '2020-07-25 02:16:40'),
 (3, 'đ', 'slide1.jpg', '3', '#', 1, '2020-07-16 08:44:02', '2020-07-25 02:17:12'),
 (4, 'đ', 'bn-slider1.jpg', '4', '#', 1, '2020-07-16 08:44:22', '2020-07-25 02:17:32'),
@@ -191,7 +191,7 @@ INSERT INTO `categories` (`id`, `slug`, `name`, `image`, `created_at`, `updated_
 (4, 'den-tha-pha-le', 'Đèn thả pha lê', '8b1b1592df0d3953601c.jpg', '2020-07-21 07:23:17', '2020-07-25 01:16:52'),
 (5, 'den-mam-op-tran', 'Đèn mâm ốp trần', '137edd4960d1868fdfc0.jpg', '2020-07-21 07:26:56', '2020-07-25 01:17:08'),
 (6, 'den-ban-den-cay', 'Đèn bàn, Đèn cây', 'bc7a454119fdffa3a6ec.jpg', '2020-07-25 01:18:18', '2020-07-25 01:18:18'),
-(7, 'den-soi-tranh', 'Đèn soi tranh', 'img-5487.jpg', '2020-07-25 01:18:56', '2020-07-25 01:18:56');
+(7, 'den-soi-tranh', 'Đèn soi tranh', 'mam.jpg', '2020-07-25 01:18:56', '2020-08-05 05:24:32');
 
 -- --------------------------------------------------------
 
@@ -665,7 +665,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `avatar`, `email`, `email_verified_at`, `password`, `role`, `remember_token`, `created_at`, `updated_at`) VALUES
-(2, 'admin', 'bg-1.jpg', 'admin@gmail.com', NULL, '$2y$10$3W.Ej6daCuEroCb8LZg5QumLVrcP69wtrsV5Tgg2/6JRViCP6v9Qm', '1', NULL, '2020-07-21 01:38:07', '2020-07-21 01:38:07');
+(2, 'admin', '1596604978user1.png', 'admin@gmail.com', NULL, '$2y$10$a7yJ/XjSj6z4uRfabyHMq.CMS0aJ2tDzSJbfVaWi8wzByAmPKS1aO', '1', NULL, '2020-07-21 01:38:07', '2020-08-05 05:22:58');
 
 --
 -- Chỉ mục cho các bảng đã đổ
