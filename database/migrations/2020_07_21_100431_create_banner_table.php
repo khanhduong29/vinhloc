@@ -17,7 +17,7 @@ class CreateBannerTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->string('image');
-            $table->integer('location');
+            $table->string('location');
             $table->string('link');
             $table->tinyInteger('status');
             $table->timestamps();

@@ -17,10 +17,9 @@ class CreateCustomerTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->string('email');
-            $table->string('code');
+            $table->string('code')->nullable();
             $table->timestamps('time_code');
             $table->string('password');
-            $table->string('token');
             $table->timestamps();
         });
     }
