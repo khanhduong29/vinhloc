@@ -22,7 +22,6 @@
                     <option {{ ($giatri1 == 4000000)?'selected':'' }} value="4000000" data-giatri2="6000000">Từ 4.000.000 đến 6.000.000</option>
                     <option {{ ($giatri1 == 6000000)?'selected':'' }} value="6000000" data-giatri2="10000000"> Từ 6.000.000 đến 10.000.000</option>
                     <option {{ ($giatri1 == 10000000)?'selected':'' }} value="10000000" data-giatri2="">Trên 10.000.000</option>
-                    <!-- <option value="350000" data-giatri2="500000">Từ 350000 đến 500000</option> -->
                 </select>
                 <select class="js-example-basic-single m-2" name="order">
                     <option value="0" {{ ($order == 0)?'selected':'' }}>Giá giảm dần </option>
