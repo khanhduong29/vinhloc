@@ -8,7 +8,6 @@
                 <span class="title-big c-fff">Sản phẩm</span>
             </h2>
            <form action="{{route('filter')}}" method="GET" accept-charset="utf-8" class="filter-pro d-lg-flex d-md-flex justify-content-center mt-5" id="form_order">
-
                 <select class="js-example-basic-single m-2" name="cate" >
                     <option value="">-----Chọn Danh mục-----</option>
                     @foreach($categories as $cate)
