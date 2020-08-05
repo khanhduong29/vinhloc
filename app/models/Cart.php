@@ -1,5 +1,5 @@
-<?php 
-	
+<?php
+
 	use Illuminate\Http\Request;
 	use App\Http\Requests;
 
@@ -14,15 +14,12 @@
 	    public $total_amount = 0;
 	    public function __construct()
 	    {
-
-	       
 			$this->items = session('cart');
 	        if(isset($this->items)){
 
 	        	$this->total_quantity = $this->total_quantity($this->items);
 	        	$this->total_amount = $this->total_amount($this->items);
 	        }
-	        
 	    }
 
 	    //thêm sản phẩm
@@ -41,7 +38,7 @@
 
 		    	];
 	    	}
-	    	
+
 	    	session(['cart'=>$this->items]);
 	    }
 
@@ -84,6 +81,6 @@
 	    }
 
 	};
-	
+
 
  ?>

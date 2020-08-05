@@ -381,3 +381,37 @@ $('.cart-mobile').click(function() {
 $('.cart-mobile + .cart-hover').click(function() {
     $(this).toggleClass('cart-hover-active');
 });
+
+
+function onChangeQuantity(event) {
+    $.ajaxSetup({
+    headers: {
+        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+    }
+    });
+    const total = Number(event.target.value) * document.getElementById('price-' + event.target.id).innerText.replace(/\,/g, '');
+    $.ajax({type: "POST", url: "cart/update-cart/" + event.target.id,
+    data: {"number": Number(event.target.value)},
+    success: function(result){
+        document.getElementById('total-' + event.target.id).innerText = formatNumber(total);
+        let totalNumberPro = 0;
+        let totalAmount = 0;
+        const quantities = $('.qty');
+        for(const element of quantities) {
+            totalNumberPro += Number(element.value);
+        }
+        const prices = $('.totalForProduct');
+        for(const element of prices) {
+            totalAmount += Number(element.innerText.replace(/\,/g, ''));
+        }
+        document.getElementById('total-number-product').innerText = totalNumberPro;
+        document.getElementById('total-amount').innerText = formatNumber(totalAmount);
+
+    },
+    fail: function(error) {
+        console.log('error update cart');
+    }});
+}
+function formatNumber(num) {
+    return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')
+}
