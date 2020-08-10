@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th8 10, 2020 lúc 04:12 AM
+-- Thời gian đã tạo: Th8 10, 2020 lúc 10:26 AM
 -- Phiên bản máy phục vụ: 10.4.13-MariaDB
 -- Phiên bản PHP: 7.4.7
 
@@ -55,7 +55,7 @@ INSERT INTO `attributes` (`id`, `name`, `created_at`, `updated_at`) VALUES
 
 CREATE TABLE `attribute_values` (
   `id` int(10) UNSIGNED NOT NULL,
-  `attribute_id` int(11) NOT NULL,
+  `attribute_id` int(10) NOT NULL,
   `value` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
@@ -358,7 +358,7 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 
 CREATE TABLE `orders` (
   `id` int(10) UNSIGNED NOT NULL,
-  `id_cus` int(11) NOT NULL,
+  `id_cus` int(10) NOT NULL,
   `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `phone` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `address` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -375,7 +375,8 @@ CREATE TABLE `orders` (
 
 INSERT INTO `orders` (`id`, `id_cus`, `name`, `phone`, `address`, `total_quantity`, `total_amount`, `status`, `created_at`, `updated_at`) VALUES
 (1, 3, 'duong', '0385996563', '99D Phố Viên', 1, 6000000, 2, '2020-08-04 06:21:42', '2020-08-04 06:22:25'),
-(2, 3, 'duong', '0385996563', '99D Phố Viên', 2, 10000000, 1, '2020-08-04 07:20:57', '2020-08-04 07:21:13');
+(2, 3, 'duong', '0385996563', '99D Phố Viên', 2, 10000000, 1, '2020-08-04 07:20:57', '2020-08-04 07:21:13'),
+(3, 1, 'Minh Nguyễn', '0944105356', 'Phạm Văn Đồng', 3, 14000000, 0, '2020-08-10 04:11:36', '2020-08-10 04:11:36');
 
 -- --------------------------------------------------------
 
@@ -385,8 +386,8 @@ INSERT INTO `orders` (`id`, `id_cus`, `name`, `phone`, `address`, `total_quantit
 
 CREATE TABLE `order_detail` (
   `id` int(10) UNSIGNED NOT NULL,
-  `id_oder` int(11) NOT NULL,
-  `id_pro` int(11) NOT NULL,
+  `id_oder` int(10) NOT NULL,
+  `id_pro` int(10) NOT NULL,
   `quantity` int(11) NOT NULL,
   `price` int(11) NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
@@ -399,7 +400,9 @@ CREATE TABLE `order_detail` (
 
 INSERT INTO `order_detail` (`id`, `id_oder`, `id_pro`, `quantity`, `price`, `created_at`, `updated_at`) VALUES
 (1, 1, 12, 1, 6000000, NULL, NULL),
-(2, 2, 2, 2, 5000000, NULL, NULL);
+(2, 2, 2, 2, 5000000, NULL, NULL),
+(3, 3, 2, 2, 5000000, NULL, NULL),
+(4, 3, 27, 1, 4000000, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -409,7 +412,7 @@ INSERT INTO `order_detail` (`id`, `id_oder`, `id_pro`, `quantity`, `price`, `cre
 
 CREATE TABLE `products` (
   `id` int(10) UNSIGNED NOT NULL,
-  `cate_id` int(11) NOT NULL,
+  `cate_id` int(10) NOT NULL,
   `code` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `slug` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -463,8 +466,8 @@ INSERT INTO `products` (`id`, `cate_id`, `code`, `slug`, `name`, `price`, `image
 
 CREATE TABLE `product_attribute` (
   `id` int(10) UNSIGNED NOT NULL,
-  `products_id` int(11) NOT NULL,
-  `attribute_id` int(11) NOT NULL,
+  `products_id` int(10) NOT NULL,
+  `attribute_id` int(10) NOT NULL,
   `attribute_value` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
@@ -853,13 +856,13 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT cho bảng `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT cho bảng `order_detail`
 --
 ALTER TABLE `order_detail`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT cho bảng `products`
