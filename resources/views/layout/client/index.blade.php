@@ -4,6 +4,8 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="Vĩnh Lộc luxury">
+		<meta name="keywords" content="den vinh loc, đèn vĩnh lộc, đèn chùm, đèn mâm">
 		<title>@yield('title')</title>
 		<link rel="icon" href="{{url('public')}}/frontend/images/logo1.png">
 		<link rel="stylesheet" type="text/css" href="{{url('public')}}/frontend/css/bootstrap.min.css">

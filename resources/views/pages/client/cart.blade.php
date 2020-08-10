@@ -60,8 +60,8 @@
 			<div class="col-lg-4">
 				<div class="discount-coupon">
 					<div class="cart-buttons">
-						<a href="{{route('product')}}" class="primary-btn continue-shop text-center">Tiếp tục mua sắm</a>
-						<a href="{{route('clear-cart')}}" class="btn-danger text-center clear-cart" onclick="return confirm('Xác nhận xoá ?')">Xóa giỏ hàng</a>
+						<a href="{{route('product')}}" class="btn continue-shop mb-3">Tiếp tục mua sắm</a>
+						<a href="{{route('clear-cart')}}" class="btn d-inline-block clear-cart mb-3" onclick="return confirm('Xác nhận xoá ?')">Xóa giỏ hàng</a>
 					</div>
 				</div>
 			</div>
