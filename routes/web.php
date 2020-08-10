@@ -66,7 +66,7 @@ Route::group(['prefix' => 'cart'], function () {
     Route::get('add-cart/{id}','cartController@add_cart') -> name('add_cart');
     Route::get('delete-cart/{id}','cartController@delete_cart') -> name('delete-cart');
     Route::get('clear-cart','cartController@clear_cart') -> name('clear-cart');
-    Route::get('update-cart/{id_pro}','cartController@update_cart') -> name('update-cart');
+    Route::post('update-cart/{id_pro}','cartController@update_cart') -> name('update-cart');
     Route::get('checkout','orderController@checkout')->name('checkout');
     Route::post('/checkout','orderController@post_checkout') -> name('post-checkout');
     Route::get('/order-error','orderController@error') -> name('order-error');

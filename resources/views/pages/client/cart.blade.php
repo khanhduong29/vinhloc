@@ -2,6 +2,7 @@
 @section('title','Giỏ hàng')
 @section('content')
 <main>
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 	<section class="container cart space-title">
 		<h2 class="text-center title-cart mb-5">
 			<span class="title-big">Giỏ Hàng</span>
@@ -38,15 +39,15 @@
 								<!-- <p>Den chum</p> -->
 							</a>
 						</td>
-						<td class="price-root">{{number_format($item['price'])}} VNĐ</td>
+                    <td class="price-root"><span id="price-{{$item['id']}}">{{number_format($item['price'])}}</span> VNĐ</td>
 						<td>
 							<div class="quantity">
 								<div class="pro-qty">
-									<input type="number" value="{{$item['quantity']}}" min="1" class="qty" id="" placeholder="Quantity" style="pointer-events: none;">
+                                    <input type="number" onkeyup="onChangeQuantity(event)" value="{{$item['quantity']}}" min="1" class="qty" id="{{$item['id']}}" placeholder="Quantity">
 								</div>
 							</div>
 						</td>
-						<td class="price">{{number_format($thanhtien)}} VND</td>
+                    <td class="price"><span id="total-{{$item['id']}}"  class="totalForProduct">{{number_format($thanhtien)}}</span> VND</td>
 						<td>
 							<a href="{{route('delete-cart',['id'=>$item['id']])}}"><i class="fas fa-times"></i></a>
 						</td>
@@ -68,8 +69,8 @@
 			<div class="col-lg-4 offset-lg-4">
 				<div class="proceed-checkout">
 					<ul>
-						<li class="subtotal">Số lượng sản phẩm <span class="sumCa">{{$cart->total_quantity}}</span></li>
-						<li class="cart-total">Tổng tiền <span class="sumCa">{{number_format($cart->total_amount)}} VND</span></li>
+						<li class="subtotal">Số lượng sản phẩm <span class="sumCa" id="total-number-product">{{$cart->total_quantity}}</span></li>
+						<li class="cart-total">Tổng tiền <span class="sumCa"><strong id="total-amount">{{number_format($cart->total_amount)}}</strong> VND</span></li>
 					</ul>
 					<a href="{{route('checkout')}}" class="proceed-btn">Thanh toán</a>
 				</div>

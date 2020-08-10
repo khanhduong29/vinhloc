@@ -36,8 +36,13 @@
                                     </ul>
                                 </li>
                                 @endforeach
+                                <li>
+                                    <span class="tb1">Ứng dụng : </span>
+                                    <ul>
+                                        <li class="tb2">{{$pro->des}}</li>
+                                    </ul>
+                                </li>
                             </ul>
-
                             <a href="{{ Route('add_cart',['id'=>$pro->id]) }}" title="" class="btn btn-lg-feb btn-cart">Thêm vào giỏ hàng</a>
                         </div>
                     </div>

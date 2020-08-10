@@ -46,9 +46,8 @@ class CartController extends Controller
     }
 
     function update_cart($id,Cart $cart){
-        $quantity = request()->quantity > 0 ? request()->quantity : 1;
+        $quantity = request()->number;
         $cart -> update($id,$quantity);
-        return redirect() -> route('cart') -> with('success','Update thành công');
     }
     function clear_cart(Cart $cart){
         $cart -> clear();
